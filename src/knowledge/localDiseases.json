@@ -1,0 +1,115 @@
+{
+  "version": "1.0.0",
+  "description": "Verified agronomic knowledge base for offline disease checking",
+  "crops": {
+    "Tomato": [
+      {
+        "id": "tomato_early_blight",
+        "disease": "Early Blight (Alternaria solani)",
+        "health_status": "Diseased",
+        "severity": "Moderate",
+        "symptoms": [
+          "Brown to black spots with concentric rings on older leaves",
+          "Target-board pattern on leaves",
+          "Lower leaves turning yellow around spots and dropping prematurely"
+        ],
+        "recommendations": [
+          "Prune and safely destroy heavily infected lower leaves",
+          "Water at the base of the plant using drip irrigation; keep leaves dry",
+          "Ensure adequate spacing between plants for good airflow",
+          "Apply copper-based or approved mancozeb fungicide early in the morning"
+        ],
+        "prevention": [
+          "Practice crop rotation with non-solanaceous crops for 2 to 3 years",
+          "Mulch around the base of plants to prevent soil splash onto foliage",
+          "Use certified disease-free seeds and seedlings"
+        ],
+        "organic_management": [
+          "Spray neem seed kernel extract (NSKE 5%) as an early preventative",
+          "Apply Trichoderma viride or Pseudomonas fluorescens to soil and foliage",
+          "Spray diluted sour buttermilk (1:10 with water) on foliage"
+        ],
+        "regional_advice": "Common in warm, humid weather and during monsoon transitions in South & Central India.",
+        "farmer_message": "Act early when you see concentric spots on lower leaves to prevent spread to developing fruits."
+      },
+      {
+        "id": "tomato_late_blight",
+        "disease": "Late Blight (Phytophthora infestans)",
+        "health_status": "Diseased",
+        "severity": "High",
+        "symptoms": [
+          "Water-soaked dark brown or purplish lesions on leaves and stems",
+          "White fungal fuzz visible on the underside of leaves in cool, moist mornings",
+          "Rapid wilting and collapse of leaves"
+        ],
+        "recommendations": [
+          "Immediately destroy severely affected plants to protect the remaining field",
+          "Avoid overhead sprinkler irrigation",
+          "Apply systemic fungicide recommended by your local Krishi Vigyan Kendra immediately"
+        ],
+        "prevention": [
+          "Avoid planting near potato fields",
+          "Choose well-drained raised beds",
+          "Monitor plants closely during foggy, cool, overcast periods"
+        ],
+        "organic_management": [
+          "Apply Bordeaux mixture (1%) as a protective spray before persistent rains",
+          "Neem oil foliar spray (3-5 ml per liter of water)"
+        ],
+        "regional_advice": "Highly destructive during cloudy, cool winter mornings in hilly and plateau regions.",
+        "farmer_message": "Late blight spreads rapidly in cool moist weather. Immediate field sanitation is essential."
+      },
+      {
+        "id": "tomato_leaf_curl",
+        "disease": "Tomato Leaf Curl Virus (ToLCV)",
+        "health_status": "Diseased",
+        "severity": "High",
+        "symptoms": [
+          "Upward curling, puckering, and thickening of leaves",
+          "Severe stunting and bushy appearance of the plant",
+          "Flowers dropping off without setting fruit"
+        ],
+        "recommendations": [
+          "Rogue out and bury infected plants immediately to reduce virus reservoir",
+          "Manage whitefly vector populations",
+          "Install yellow sticky traps (10-12 traps per acre)"
+        ],
+        "prevention": [
+          "Grow barrier crops like maize or sorghum (3-4 border rows)",
+          "Use whitefly-proof nylon nets in nursery beds",
+          "Choose leaf-curl tolerant hybrid varieties"
+        ],
+        "organic_management": [
+          "Spray neem oil (5 ml/L) mixed with mild soap emulsifier to deter whiteflies",
+          "Spray Agniastra or Dashaparni ark weekly during vector peak season"
+        ],
+        "regional_advice": "Whitefly vectors peak in dry, hot months before the rains.",
+        "farmer_message": "The virus is spread by whiteflies. Controlling the pest early protects the whole crop."
+      },
+      {
+        "id": "tomato_healthy",
+        "disease": "Healthy Crop",
+        "health_status": "Healthy",
+        "severity": "None",
+        "symptoms": [
+          "Vibrant green leaves without spots, lesions, or wilting",
+          "Sturdy stems and vigorous flowering/fruiting"
+        ],
+        "recommendations": [
+          "Maintain balanced nutrition with well-decomposed farmyard manure (FYM)",
+          "Ensure uniform soil moisture; avoid water stress during flowering",
+          "Inspect leaf undersides weekly for early pest signs"
+        ],
+        "prevention": [
+          "Clean farm tools regularly",
+          "Maintain field sanitation and remove weeds from bunds"
+        ],
+        "organic_management": [
+          "Apply Jeevamrutha or Panchagavya every 15 days to enhance natural vigor"
+        ],
+        "regional_advice": "Continue standard agronomic practices for your region.",
+        "farmer_message": "Your crop appears healthy! Keep up regular monitoring and soil health management."
+      }
+    ]
+  }
+}
