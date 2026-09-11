@@ -1,33 +1,38 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, ScrollView, RefreshControl, Image } from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Text,
+  TouchableOpacity,
+  ScrollView,
+  RefreshControl,
+  Image,
+} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import NetInfo from '@react-native-community/netinfo';
 import { Colors } from '../theme';
 import { useI18n } from '../services/i18n';
 import { CaseStorage } from '../storage/caseStorage';
 import { DiagnosisCase } from '../models/index';
-import { AuthService } from '../services/authService';
+import { GlobalHeader } from '../components/GlobalHeader';
+import { TopLeafDecoration } from '../components/TopLeafDecoration';
+import { LandscapeBanner } from '../components/LandscapeBanner';
 
 export const HomeScreen = ({ navigation }: any) => {
   const { t } = useI18n();
-  const [isOnline, setIsOnline] = useState<boolean | null>(true);
   const [recentCases, setRecentCases] = useState<DiagnosisCase[]>([]);
   const [refreshing, setRefreshing] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    const unsubscribe = NetInfo.addEventListener((state) => {
-      setIsOnline(state.isConnected && state.isInternetReachable !== false);
+    const unsubscribe = navigation.addListener('focus', () => {
+      loadData();
     });
     loadData();
-    return () => unsubscribe();
-  }, []);
+    return unsubscribe;
+  }, [navigation]);
 
   const loadData = async () => {
     const all = await CaseStorage.getCases();
-    setRecentCases(all.slice(0, 3));
-    const auth = await AuthService.getUserProfile();
-    setIsLoggedIn(auth.isLoggedIn);
+    setRecentCases(all.slice(0, 4));
   };
 
   const onRefresh = async () => {
@@ -37,195 +42,408 @@ export const HomeScreen = ({ navigation }: any) => {
   };
 
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <SafeAreaView style={styles.safeArea} edges={['top', 'left', 'right']}>
+      <TopLeafDecoration />
+      <GlobalHeader onNotificationPress={() => navigation.navigate('Settings')} />
+
       <ScrollView
-        contentContainerStyle={styles.container}
-        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} colors={[Colors.primary]} />}
+        contentContainerStyle={styles.scrollContent}
+        showsVerticalScrollIndicator={false}
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={onRefresh}
+            colors={[Colors.primary]}
+          />
+        }
       >
-        {/* Top Official Header with Logo */}
-        <View style={styles.header}>
-          <View style={styles.headerTop}>
-            <View style={styles.brandRow}>
-              <Image
-                source={require('../../assets/logo/app_logo.jpeg')}
-                style={styles.logo}
-                resizeMode='contain'
-              />
-              <View style={styles.brandTextWrap}>
-                <Text style={styles.appName}>KRISHI MARGA</Text>
-                <Text style={styles.tagline}>{t('tagline')}</Text>
-              </View>
-            </View>
-
-            <View style={[styles.networkBadge, isOnline ? styles.onlineBadge : styles.offlineBadge]}>
-              <Text style={styles.networkBadgeText}>{isOnline ? t('online') : t('offline')}</Text>
-            </View>
+        {/* Farmer Greeting */}
+        <View style={styles.greetingSection}>
+          <View style={styles.greetingRow}>
+            <Text style={styles.greetingTitle}>Namaste, Kisan!</Text>
+            <Text style={styles.leafEmoji}> 🍃</Text>
           </View>
-
-          <Text style={styles.greeting}>{t('farmerGreeting')}</Text>
+          <Text style={styles.greetingSubtitle}>
+            Let's keep your crops healthy.
+          </Text>
         </View>
 
-        {/* Primary Action Button 1: Detect Disease */}
+        {/* Primary Action Hero Card: Detect Disease */}
         <TouchableOpacity
-          style={styles.primaryActionCard}
-          activeOpacity={0.88}
+          style={styles.heroCard}
+          activeOpacity={0.9}
           onPress={() => navigation.navigate('CropSelect')}
         >
-          <View style={styles.detectIconWrap}>
-            <Text style={styles.detectIcon}>📷</Text>
+          <View style={styles.heroIconCircle}>
+            <Text style={styles.heroCameraEmoji}>📷</Text>
           </View>
-          <View style={styles.actionTextContainer}>
-            <Text style={styles.primaryActionTitle}>{t('detectDisease')}</Text>
-            <Text style={styles.primaryActionSubtitle}>{t('checkCropSubtitle')}</Text>
+          <View style={styles.heroTextWrap}>
+            <Text style={styles.heroTitle}>Detect Disease</Text>
+            <Text style={styles.heroSubtitle}>
+              Take a photo of your crop leaf to inspect for diseases instantly
+            </Text>
           </View>
-          <Text style={styles.arrowText}>➔</Text>
+          <View style={styles.heroArrowCircle}>
+            <Text style={styles.heroArrowText}>➔</Text>
+          </View>
         </TouchableOpacity>
 
-        {/* Guest Status / Cloud Sync Banner */}
-        {!isLoggedIn && (
-          <TouchableOpacity
-            style={styles.guestBar}
-            activeOpacity={0.8}
-            onPress={() => navigation.navigate('Settings')}
-          >
-            <Text style={styles.guestText}>{t('guestModeActive')} <Text style={styles.loginLink}>{t('loginToSync')}</Text></Text>
-          </TouchableOpacity>
-        )}
-
-        {/* The 4 Main Navigation Action Grid */}
-        <View style={styles.actionGrid}>
-          {/* Button 2: My History */}
+        {/* 2-Column Action Cards: My History & Nearby Help */}
+        <View style={styles.twoColumnRow}>
+          {/* Card 1: My History */}
           <TouchableOpacity
             style={styles.gridCard}
             activeOpacity={0.85}
             onPress={() => navigation.navigate('My Cases')}
           >
-            <View style={styles.cardIconCircle}>
-              <Text style={styles.cardEmoji}>📋</Text>
+            <View style={styles.cardIconCircleBeige}>
+              <Text style={styles.gridEmoji}>📋</Text>
             </View>
-            <Text style={styles.cardTitle}>{t('myHistory')}</Text>
-            <Text style={styles.cardSubtitle}>{recentCases.length} {t('recordsSaved')}</Text>
+            <Text style={styles.cardTitle}>My History</Text>
+            <Text style={styles.cardSubtitle}>View your past inspections</Text>
+            <View style={styles.cardActionRow}>
+              <Text style={styles.cardActionText}>
+                {recentCases.length} records saved
+              </Text>
+              <Text style={styles.chevron}>›</Text>
+            </View>
           </TouchableOpacity>
 
-          {/* Button 3: Nearby Help */}
+          {/* Card 2: Nearby Help */}
           <TouchableOpacity
             style={styles.gridCard}
             activeOpacity={0.85}
             onPress={() => navigation.navigate('Nearby Help')}
           >
-            <View style={styles.cardIconCircle}>
-              <Text style={styles.cardEmoji}>📞</Text>
+            <View style={styles.cardIconCircleGreen}>
+              <Text style={styles.gridEmoji}>📞</Text>
             </View>
-            <Text style={styles.cardTitle}>{t('nearbyHelp')}</Text>
-            <Text style={styles.cardSubtitle}>{t('cropDoctorsAndExperts')}</Text>
+            <Text style={styles.cardTitle}>Nearby Help</Text>
+            <Text style={styles.cardSubtitle}>
+              Connect with crop doctors & experts
+            </Text>
+            <View style={styles.cardActionRow}>
+              <Text style={styles.cardActionText}>Find experts</Text>
+              <Text style={styles.chevron}>›</Text>
+            </View>
           </TouchableOpacity>
         </View>
 
-        {/* Button 4: Offline Mode Guide Card */}
+        {/* Full-width Field Mode Card */}
         <TouchableOpacity
-          style={styles.offlineCard}
+          style={styles.fieldModeCard}
           activeOpacity={0.85}
-          onPress={() => navigation.navigate('CropSelect')}
+          onPress={() => navigation.navigate('Settings')}
         >
-          <View style={styles.offlineIconCircle}>
-            <Text style={styles.cardEmoji}>📡</Text>
+          <View style={styles.fieldModeIconCircle}>
+            <Text style={styles.fieldModeEmoji}>📡</Text>
           </View>
-          <View style={styles.offlineTextWrap}>
-            <Text style={styles.offlineTitle}>{t('offlineModeAvailable')}</Text>
-            <Text style={styles.offlineSubtitle}>{t('offlineModeDesc')}</Text>
+          <View style={styles.fieldModeTextWrap}>
+            <Text style={styles.fieldModeTitle}>Field Mode</Text>
+            <Text style={styles.fieldModeSubtitle}>
+              Check your crops even without internet.
+            </Text>
+          </View>
+          <View style={styles.learnMorePill}>
+            <Text style={styles.learnMoreText}>Learn More</Text>
           </View>
         </TouchableOpacity>
 
-        {/* Recent Diagnoses */}
-        {recentCases.length > 0 && (
-          <View style={styles.recentSection}>
-            <View style={styles.sectionHeaderRow}>
-              <Text style={styles.sectionHeader}>{t('myCases')}</Text>
-              <TouchableOpacity onPress={() => navigation.navigate('My Cases')}>
-                <Text style={styles.seeAllText}>{t('viewAll')}</Text>
-              </TouchableOpacity>
-            </View>
-            {recentCases.map((c) => (
-              <TouchableOpacity
-                key={c.caseId}
-                style={styles.recentItem}
-                activeOpacity={0.8}
-                onPress={() => navigation.navigate('Result', { result: c.result, crop: c.crop, imageUris: c.imageUris })}
-              >
-                <View style={styles.recentItemLeft}>
-                  <Text style={styles.recentCrop}>{c.crop}</Text>
-                  <Text style={styles.recentDisease}>{c.result.disease}</Text>
-                  <Text style={styles.recentDate}>{new Date(c.timestamp).toLocaleDateString()}</Text>
-                </View>
-                <View style={[styles.recentBadge, c.result.analysis_source === 'online' ? styles.onlineBadge : styles.offlineBadge]}>
-                  <Text style={styles.recentBadgeText}>{c.result.analysis_source === 'online' ? t('online') : t('offline')}</Text>
-                </View>
-              </TouchableOpacity>
-            ))}
+        {/* Crop Protection & Farm Guides Section */}
+        <View style={styles.guidesSection}>
+          <Text style={styles.sectionHeaderTitle}>Crop Protection & Guides</Text>
+          <View style={styles.guidesGrid}>
+            {/* Guide 1: Pesticide Guide */}
+            <TouchableOpacity
+              style={styles.guideCard}
+              activeOpacity={0.85}
+              onPress={() => navigation.navigate('PesticideGuide')}
+            >
+              <View style={[styles.guideIconCircle, { backgroundColor: '#FEF3C7' }]}>
+                <Text style={styles.guideEmoji}>🧪</Text>
+              </View>
+              <Text style={styles.guideCardTitle}>Pesticide Guide</Text>
+              <Text style={styles.guideCardDesc}>CIBRC dosages & safety</Text>
+            </TouchableOpacity>
+
+            {/* Guide 2: Pests & Diseases */}
+            <TouchableOpacity
+              style={styles.guideCard}
+              activeOpacity={0.85}
+              onPress={() => navigation.navigate('PestExplorer')}
+            >
+              <View style={[styles.guideIconCircle, { backgroundColor: '#FEE2E2' }]}>
+                <Text style={styles.guideEmoji}>🐛</Text>
+              </View>
+              <Text style={styles.guideCardTitle}>Pests & Disease</Text>
+              <Text style={styles.guideCardDesc}>14 verified pests</Text>
+            </TouchableOpacity>
+
+            {/* Guide 3: Nutrient & Fertilizer */}
+            <TouchableOpacity
+              style={styles.guideCard}
+              activeOpacity={0.85}
+              onPress={() => navigation.navigate('NutrientGuide')}
+            >
+              <View style={[styles.guideIconCircle, { backgroundColor: '#E0F2FE' }]}>
+                <Text style={styles.guideEmoji}>🌾</Text>
+              </View>
+              <Text style={styles.guideCardTitle}>Nutrient / Soil</Text>
+              <Text style={styles.guideCardDesc}>Deficiency signs</Text>
+            </TouchableOpacity>
           </View>
-        )}
+        </View>
+
+        {/* Landscape Banner at bottom above navigation */}
+        <LandscapeBanner />
       </ScrollView>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: Colors.background },
-  container: { padding: 18 },
-  header: { marginBottom: 16 },
-  headerTop: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  brandRow: { flexDirection: 'row', alignItems: 'center' },
-  logo: { width: 50, height: 50, borderRadius: 25, marginRight: 12 },
-  brandTextWrap: { justifyContent: 'center' },
-  appName: { fontSize: 22, fontWeight: '800', color: Colors.primary, letterSpacing: 0.5 },
-  tagline: { fontSize: 13, color: Colors.textSecondary, marginTop: 1 },
-  greeting: { fontSize: 16, fontWeight: '600', color: Colors.textPrimary, marginTop: 12 },
-  networkBadge: { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 12 },
-  onlineBadge: { backgroundColor: '#DCFCE7' },
-  offlineBadge: { backgroundColor: '#FEF3C7' },
-  networkBadgeText: { fontSize: 12, fontWeight: '700', color: Colors.textPrimary },
-  primaryActionCard: {
-    flexDirection: 'row',
-    backgroundColor: Colors.primary,
-    borderRadius: 18,
-    padding: 18,
-    alignItems: 'center',
-    marginTop: 8,
-    elevation: 4,
-    shadowColor: Colors.primaryDark,
-    shadowOffset: { width: 0, height: 3 },
-    shadowOpacity: 0.2,
-    shadowRadius: 6,
+  safeArea: {
+    flex: 1,
+    backgroundColor: '#F8FAF8',
   },
-  detectIconWrap: { width: 48, height: 48, borderRadius: 24, backgroundColor: Colors.primaryDark, justifyContent: 'center', alignItems: 'center', marginRight: 14 },
-  detectIcon: { fontSize: 24 },
-  actionTextContainer: { flex: 1 },
-  primaryActionTitle: { fontSize: 20, fontWeight: '700', color: '#FFFFFF' },
-  primaryActionSubtitle: { fontSize: 13, color: '#E8F5E9', marginTop: 2 },
-  arrowText: { fontSize: 20, color: '#FFFFFF', marginLeft: 6 },
-  guestBar: { marginTop: 10, paddingVertical: 8, paddingHorizontal: 12, backgroundColor: Colors.earthBeige, borderRadius: 10, borderWidth: 1, borderColor: Colors.cardBorder },
-  guestText: { fontSize: 13, color: Colors.textSecondary },
-  loginLink: { color: Colors.primary, fontWeight: '700' },
-  actionGrid: { flexDirection: 'row', justifyContent: 'space-between', marginTop: 16 },
-  gridCard: { flex: 0.48, backgroundColor: Colors.surface, padding: 16, borderRadius: 16, borderWidth: 1, borderColor: Colors.cardBorder, elevation: 1 },
-  cardIconCircle: { width: 42, height: 42, borderRadius: 21, backgroundColor: Colors.primarySoft, justifyContent: 'center', alignItems: 'center', marginBottom: 10 },
-  cardEmoji: { fontSize: 22 },
-  cardTitle: { fontSize: 17, fontWeight: '700', color: Colors.textPrimary },
-  cardSubtitle: { fontSize: 13, color: Colors.textMuted, marginTop: 3 },
-  offlineCard: { flexDirection: 'row', alignItems: 'center', backgroundColor: Colors.surface, padding: 16, borderRadius: 16, borderWidth: 1, borderColor: Colors.cardBorder, marginTop: 14 },
-  offlineIconCircle: { width: 44, height: 44, borderRadius: 22, backgroundColor: Colors.primarySoft, justifyContent: 'center', alignItems: 'center', marginRight: 14 },
-  offlineTextWrap: { flex: 1 },
-  offlineTitle: { fontSize: 16, fontWeight: '700', color: Colors.textPrimary },
-  offlineSubtitle: { fontSize: 13, color: Colors.textSecondary, marginTop: 2 },
-  recentSection: { marginTop: 24 },
-  sectionHeaderRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 },
-  sectionHeader: { fontSize: 18, fontWeight: '700', color: Colors.textPrimary },
-  seeAllText: { fontSize: 14, color: Colors.primary, fontWeight: '600' },
-  recentItem: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', backgroundColor: Colors.surface, padding: 14, borderRadius: 14, marginBottom: 10, borderWidth: 1, borderColor: Colors.cardBorder },
-  recentItemLeft: { flex: 1 },
-  recentCrop: { fontSize: 16, fontWeight: '700', color: Colors.primary },
-  recentDisease: { fontSize: 14, color: Colors.textPrimary, marginTop: 2 },
-  recentDate: { fontSize: 12, color: Colors.textMuted, marginTop: 3 },
-  recentBadge: { paddingHorizontal: 8, paddingVertical: 4, borderRadius: 8 },
-  recentBadgeText: { fontSize: 11, fontWeight: '700', color: Colors.textPrimary },
+  scrollContent: {
+    paddingHorizontal: 16,
+    paddingBottom: 16,
+  },
+  greetingSection: {
+    marginTop: 10,
+    marginBottom: 16,
+  },
+  greetingRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  greetingTitle: {
+    fontSize: 24,
+    fontWeight: '800',
+    color: '#162836',
+  },
+  leafEmoji: {
+    fontSize: 22,
+  },
+  greetingSubtitle: {
+    fontSize: 14,
+    color: '#5A6E60',
+    marginTop: 4,
+    fontWeight: '500',
+  },
+  heroCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#1E6335',
+    borderRadius: 22,
+    padding: 18,
+    shadowColor: '#1E6335',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    elevation: 4,
+    marginBottom: 16,
+  },
+  heroIconCircle: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 14,
+  },
+  heroCameraEmoji: {
+    fontSize: 26,
+  },
+  heroTextWrap: {
+    flex: 1,
+  },
+  heroTitle: {
+    fontSize: 19,
+    fontWeight: '800',
+    color: '#FFFFFF',
+    marginBottom: 3,
+  },
+  heroSubtitle: {
+    fontSize: 12.5,
+    color: '#D4EAD9',
+    lineHeight: 17,
+  },
+  heroArrowCircle: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    backgroundColor: '#FFFFFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 10,
+  },
+  heroArrowText: {
+    fontSize: 18,
+    fontWeight: '800',
+    color: '#1E6335',
+  },
+  twoColumnRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 14,
+  },
+  gridCard: {
+    flex: 0.48,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 20,
+    padding: 16,
+    borderWidth: 1,
+    borderColor: '#E8EDE9',
+    shadowColor: '#000000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.04,
+    shadowRadius: 5,
+    elevation: 2,
+  },
+  cardIconCircleBeige: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    backgroundColor: '#FAF5EE',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  cardIconCircleGreen: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    backgroundColor: '#EEF7F0',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  gridEmoji: {
+    fontSize: 22,
+  },
+  cardTitle: {
+    fontSize: 16,
+    fontWeight: '800',
+    color: '#162836',
+    marginBottom: 4,
+  },
+  cardSubtitle: {
+    fontSize: 12,
+    color: '#6F8275',
+    lineHeight: 16,
+    marginBottom: 14,
+    minHeight: 32,
+  },
+  cardActionRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  cardActionText: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: '#2E7D32',
+  },
+  chevron: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: '#2E7D32',
+  },
+  fieldModeCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#F0F9F3',
+    borderWidth: 1,
+    borderColor: '#DBEFE2',
+    borderRadius: 18,
+    padding: 16,
+    marginBottom: 18,
+  },
+  fieldModeIconCircle: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    backgroundColor: '#DCF1E3',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 12,
+  },
+  fieldModeEmoji: {
+    fontSize: 22,
+  },
+  fieldModeTextWrap: {
+    flex: 1,
+  },
+  fieldModeTitle: {
+    fontSize: 16,
+    fontWeight: '800',
+    color: '#162836',
+    marginBottom: 2,
+  },
+  fieldModeSubtitle: {
+    fontSize: 12,
+    color: '#5A6E60',
+  },
+  learnMorePill: {
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: '#CBE5D4',
+  },
+  learnMoreText: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: '#1B5E20',
+  },
+  guidesSection: {
+    marginBottom: 10,
+  },
+  sectionHeaderTitle: {
+    fontSize: 16,
+    fontWeight: '800',
+    color: '#162836',
+    marginBottom: 10,
+  },
+  guidesGrid: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  guideCard: {
+    flex: 0.31,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 16,
+    padding: 12,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#E8EDE9',
+    elevation: 1,
+  },
+  guideIconCircle: {
+    width: 38,
+    height: 38,
+    borderRadius: 19,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  guideEmoji: {
+    fontSize: 18,
+  },
+  guideCardTitle: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: '#162836',
+    textAlign: 'center',
+    marginBottom: 2,
+  },
+  guideCardDesc: {
+    fontSize: 10,
+    color: '#78909C',
+    textAlign: 'center',
+  },
 });

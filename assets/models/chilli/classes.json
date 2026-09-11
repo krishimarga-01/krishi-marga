@@ -1,10 +1,10 @@
 {
-  "0": "Anthracnose",
-  "1": "Damping Off",
-  "2": "Leaf Curl Virus",
-  "3": "Leaf Spot",
-  "4": "Veinal Mottle Virus",
-  "5": "Whitefly Damage",
-  "6": "Yellowish Deficiency",
-  "7": "Healthy"
+  "0": "Chilli __Whitefly",
+  "1": "Chilli __Yellowish",
+  "2": "Chilli__Anthracnos",
+  "3": "Chilli__Damping_Off",
+  "4": "Chilli__Leaf_Curl_Virus",
+  "5": "Chilli__Leaf_Spot",
+  "6": "Chilli__Veinal_Mottle_Virus",
+  "7": "Chilli___healthy"
 }

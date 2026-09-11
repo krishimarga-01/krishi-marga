@@ -179,24 +179,24 @@ export const DevBuildStatusScreen = ({ navigation }: any) => {
           <Text style={styles.sectionHeader}>📋 MODULE REALITY AUDIT</Text>
           
           <View style={styles.moduleRow}>
-            <Text style={styles.moduleName}>1. Crop Doctors & KVKs:</Text>
-            <Text style={styles.moduleStatus}>VISIBLE IN UI ({runtimeExperts} verified)</Text>
+            <Text style={styles.moduleName}>1. Crop Doctors & University Clinics:</Text>
+            <Text style={styles.moduleStatus}>REACHABLE ({runtimeExperts} verified clinics)</Text>
           </View>
           <View style={styles.moduleRow}>
-            <Text style={styles.moduleName}>2. Pesticide Guide & Scanner:</Text>
-            <Text style={styles.moduleStatusNotExposed}>NOT EXPOSED IN UI (CSV Master in repo)</Text>
+            <Text style={styles.moduleName}>2. Corporate Farmer Helplines:</Text>
+            <Text style={styles.moduleStatus}>REACHABLE (5 toll-free helplines)</Text>
           </View>
           <View style={styles.moduleRow}>
-            <Text style={styles.moduleName}>3. Pest Identification Module:</Text>
-            <Text style={styles.moduleStatusNotExposed}>NOT EXPOSED IN UI (CSV Master in repo)</Text>
+            <Text style={styles.moduleName}>3. Pesticide Guide & Scanner:</Text>
+            <Text style={styles.moduleStatus}>REACHABLE (9 CIBRC approved + scanner UI)</Text>
           </View>
           <View style={styles.moduleRow}>
-            <Text style={styles.moduleName}>4. Nutrient Deficiency Module:</Text>
-            <Text style={styles.moduleStatusNotExposed}>NOT EXPOSED IN UI (CSV Master in repo)</Text>
+            <Text style={styles.moduleName}>4. Pest Explorer & Management:</Text>
+            <Text style={styles.moduleStatus}>REACHABLE (14 verified South Indian pests)</Text>
           </View>
           <View style={styles.moduleRow}>
-            <Text style={styles.moduleName}>5. Crop Health Alerts:</Text>
-            <Text style={styles.moduleStatusNotExposed}>PLANNED ONLY</Text>
+            <Text style={styles.moduleName}>5. Nutrient & Soil Deficiencies:</Text>
+            <Text style={styles.moduleStatus}>REACHABLE (7 verified deficiencies)</Text>
           </View>
         </View>
 

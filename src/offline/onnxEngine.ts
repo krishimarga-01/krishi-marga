@@ -6,9 +6,9 @@ const LOCALIZED_FALLBACK: Record<string, string> = {
   en: 'Information unavailable',
   kn: 'ಮಾಹಿತಿ ಲಭ್ಯವಿಲ್ಲ',
   ta: 'தகவல் கிடைக்கவில்லை',
-  ml: 'വിവരങ്ങൾ ലഭ്യമല്ല',
+  ml: 'ವಿವರങ്ങൾ ലഭ്യമല്ല',
   hi: 'जानकारी उपलब्ध नहीं है',
-  te: 'ಸಮಾచారం అందుబాటులో లేదు',
+  te: 'సమాచారం అందుబాటులో లేదు',
 };
 
 /**
@@ -108,6 +108,7 @@ export const OnnxEngine = {
 
   /**
    * Dynamically loads ONLY the selected crop's ONNX model into memory.
+   * Path: assets/models/<crop>/disease.onnx
    * If onnxruntime-react-native is compiled in custom native/dev client, it creates an InferenceSession.
    * Otherwise, safely falls back to native WebGL/WASM or verified offline knowledge.
    */
@@ -150,10 +151,11 @@ export const OnnxEngine = {
       }
 
       if (ort && ort.InferenceSession) {
-        const session = await ort.InferenceSession.create(meta.model_path);
+        const modelPath = `assets/models/${meta.crop_id}/disease.onnx`;
+        const session = await ort.InferenceSession.create(modelPath);
         activeSession = session;
         activeCropId = norm;
-        console.log(`[ONNX] Successfully loaded model session for ${crop} (${meta.num_classes} classes)`);
+        console.log(`[ONNX] Successfully loaded model session for ${crop} from ${modelPath} (${meta.num_classes} classes)`);
         return session;
       }
     } catch (err) {

@@ -10,6 +10,9 @@ import { DiagnosisApi, DiagnosisApiError } from '../services/diagnosisApi';
 import { OnnxEngine } from '../offline/onnxEngine';
 import { CaseStorage } from '../storage/caseStorage';
 import { ImageQualityService } from '../services/imageQualityService';
+import { GlobalHeader } from '../components/GlobalHeader';
+import { TopLeafDecoration } from '../components/TopLeafDecoration';
+import { LandscapeBanner } from '../components/LandscapeBanner';
 
 export const CameraCaptureScreen = ({ route, navigation }: any) => {
   const { crop, cropDisplayName } = route.params;
@@ -121,113 +124,23 @@ export const CameraCaptureScreen = ({ route, navigation }: any) => {
       setLowQualityNotice(t('photoQualityLowWarning'));
     }
 
-    setIsAnalyzing(true);
-    try {
-      const net = await NetInfo.fetch();
-      const isOnline = net.isConnected && net.isInternetReachable !== false;
-
-      let finalResult;
-      if (isOnline) {
-        try {
-          finalResult = await DiagnosisApi.detectDiseaseOnline({
-            crop,
-            imageUris: images,
-            language,
-            symptoms,
-            latitude: locationCoords?.latitude,
-            longitude: locationCoords?.longitude,
-          });
-        } catch (apiError) {
-          console.log('Online diagnosis failed, trying offline engine:', apiError);
-          if (OnnxEngine.isModelAvailable()) {
-            finalResult = await OnnxEngine.runInference(crop, images, language);
-          } else {
-            throw apiError;
-          }
-        }
-      } else {
-        if (!OnnxEngine.isModelAvailable()) {
-          Alert.alert(
-            t('offlineNotice'),
-            t('offlineModelUnavailable')
-          );
-          setIsAnalyzing(false);
-          return;
-        }
-        finalResult = await OnnxEngine.runInference(crop, images, language);
-      }
-
-      const caseRecord = {
-        caseId: 'case_' + Date.now(),
-        crop,
-        imageUris: images,
-        imageCount: images.length,
-        timestamp: new Date().toISOString(),
-        symptoms,
-        latitude: locationCoords?.latitude,
-        longitude: locationCoords?.longitude,
-        language,
-        result: finalResult,
-        syncStatus: 'synced' as const,
-      };
-      await CaseStorage.saveCase(caseRecord);
-
-      setIsAnalyzing(false);
-      navigation.navigate('Result', {
-        result: finalResult,
-        crop: cropDisplayName,
-        imageUris: images,
-      });
-    } catch (err: any) {
-      setIsAnalyzing(false);
-      const errMsg = err?.message || '';
-      let title = t('serverUnavailable');
-      let detail = t('serverUnavailable');
-
-      if (err instanceof DiagnosisApiError) {
-        if (err.caseType === 'NETWORK_ERROR') {
-          // CASE A: Genuine network error
-          title = t('networkErrorTitle');
-          detail = t('networkErrorDetail');
-        } else if (err.caseType === 'EMPTY_RESPONSE') {
-          // CASE B: Server returned HTTP 200 with empty body
-          title = t('serverErrorTitle');
-          detail = t('emptyResponseError');
-        } else if (err.caseType === 'SERVER_ERROR') {
-          // CASE C: HTTP 4xx/5xx or server-controlled error
-          title = t('serverUnavailable');
-          detail = t('onlineDiagnosisFailed');
-        } else {
-          title = t('serverErrorTitle');
-          detail = `${t('serverErrorDetail')}\n\n${errMsg}`;
-        }
-      } else if (errMsg.includes('Network request failed') || errMsg.includes('Network failed connecting')) {
-        title = t('networkErrorTitle');
-        detail = t('networkErrorDetail');
-      } else if (errMsg.includes('empty response body') || errMsg.includes('empty response')) {
-        title = t('serverErrorTitle');
-        detail = t('emptyResponseError');
-      } else if (errMsg) {
-        detail = `${detail}\n\nDetails: ${errMsg}`;
-      }
-
-      Alert.alert(title, detail);
-    }
+    // Navigate to dedicated AnalyzingScreen (Reference 1)
+    navigation.navigate('Analyzing', {
+      crop,
+      imageUris: images,
+      language,
+      symptoms,
+      latitude: locationCoords?.latitude,
+      longitude: locationCoords?.longitude,
+      cropDisplayName,
+    });
   };
 
   return (
-    <SafeAreaView style={styles.safeArea}>
-      {isAnalyzing ? (
-        <View style={styles.analyzingContainer}>
-          <View style={styles.pulseCircle}>
-            <Text style={styles.pulseEmoji}>🌿</Text>
-          </View>
-          <ActivityIndicator size='large' color={Colors.primary} style={styles.spinner} />
-          <Text style={styles.analyzingTitle}>{t('analyzingTitle')}</Text>
-          <Text style={styles.analyzingSubtitle}>{t('analyzingSubtitle')}</Text>
-        </View>
-      ) : (
-        <ScrollView contentContainerStyle={styles.container}>
+    <SafeAreaView style={styles.safeArea} edges={['top', 'left', 'right']}>
+      <TopLeafDecoration />
+      <GlobalHeader />
+      <ScrollView contentContainerStyle={styles.container}>
           {/* Header Banner */}
           <View style={styles.cropBanner}>
             <Text style={styles.cropBannerTitle}>{t('selectedCropLabel')}: <Text style={styles.cropHighlight}>{cropDisplayName}</Text></Text>
@@ -319,8 +232,8 @@ export const CameraCaptureScreen = ({ route, navigation }: any) => {
           >
             <Text style={styles.analyzeBtnText}>{t('startDiagnosis')} ({images.length})</Text>
           </TouchableOpacity>
+          <LandscapeBanner />
         </ScrollView>
-      )}
     </SafeAreaView>
   );
 };

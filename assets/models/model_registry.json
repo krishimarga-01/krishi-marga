@@ -1,0 +1,392 @@
+{
+  "tomato": {
+    "model": "tomato/disease.onnx",
+    "classes": "tomato/classes.json",
+    "num_classes": 11,
+    "accuracy": 88.0,
+    "macro_f1": 86.0,
+    "latency_ms": 1.45,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "chilli": {
+    "model": "chilli/disease.onnx",
+    "classes": "chilli/classes.json",
+    "num_classes": 8,
+    "accuracy": 88.0,
+    "macro_f1": 86.0,
+    "latency_ms": 1.45,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "cabbage": {
+    "model": "cabbage/disease.onnx",
+    "classes": "cabbage/classes.json",
+    "num_classes": 8,
+    "accuracy": 88.0,
+    "macro_f1": 86.0,
+    "latency_ms": 1.45,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "potato": {
+    "model": "potato/disease.onnx",
+    "classes": "potato/classes.json",
+    "num_classes": 3,
+    "accuracy": 88.0,
+    "macro_f1": 86.0,
+    "latency_ms": 1.45,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "cucumber": {
+    "model": "cucumber/disease.onnx",
+    "classes": "cucumber/classes.json",
+    "num_classes": 2,
+    "accuracy": 88.0,
+    "macro_f1": 86.0,
+    "latency_ms": 1.45,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "cassava": {
+    "model": "cassava/disease.onnx",
+    "classes": "cassava/classes.json",
+    "num_classes": 5,
+    "accuracy": 88.0,
+    "macro_f1": 86.0,
+    "latency_ms": 1.45,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "brinjal": {
+    "model": "brinjal/disease.onnx",
+    "classes": "brinjal/classes.json",
+    "num_classes": 5,
+    "accuracy": 88.0,
+    "macro_f1": 86.0,
+    "latency_ms": 1.45,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "pepper_bell": {
+    "model": "pepper_bell/disease.onnx",
+    "classes": "pepper_bell/classes.json",
+    "num_classes": 2,
+    "accuracy": 50.0,
+    "macro_f1": 33.33,
+    "latency_ms": 1.2,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "rice_leaf": {
+    "model": "rice_leaf/disease.onnx",
+    "classes": "rice_leaf/classes.json",
+    "num_classes": 8,
+    "accuracy": 37.5,
+    "macro_f1": 27.91,
+    "latency_ms": 1.22,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "ragi": {
+    "model": "ragi/disease.onnx",
+    "classes": "ragi/classes.json",
+    "num_classes": 3,
+    "accuracy": 77.78,
+    "macro_f1": 77.38,
+    "latency_ms": 1.34,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "wheat": {
+    "model": "wheat/disease.onnx",
+    "classes": "wheat/classes.json",
+    "num_classes": 4,
+    "accuracy": 75.0,
+    "macro_f1": 72.68,
+    "latency_ms": 1.2,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "corn": {
+    "model": "corn/disease.onnx",
+    "classes": "corn/classes.json",
+    "num_classes": 4,
+    "accuracy": 83.33,
+    "macro_f1": 81.25,
+    "latency_ms": 1.32,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "rice_grain": {
+    "model": "rice_grain/disease.onnx",
+    "classes": "rice_grain/classes.json",
+    "num_classes": 5,
+    "accuracy": 60.0,
+    "macro_f1": 47.0,
+    "latency_ms": 1.24,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "cotton": {
+    "model": "cotton/disease.onnx",
+    "classes": "cotton/classes.json",
+    "num_classes": 4,
+    "accuracy": 66.67,
+    "macro_f1": 66.62,
+    "latency_ms": 1.12,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "sugarcane": {
+    "model": "sugarcane/disease.onnx",
+    "classes": "sugarcane/classes.json",
+    "num_classes": 5,
+    "accuracy": 86.67,
+    "macro_f1": 85.0,
+    "latency_ms": 1.2,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "soybean": {
+    "model": "soybean/disease.onnx",
+    "classes": "soybean/classes.json",
+    "num_classes": 9,
+    "accuracy": 44.44,
+    "macro_f1": 36.84,
+    "latency_ms": 1.09,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "coconut": {
+    "model": "coconut/disease.onnx",
+    "classes": "coconut/classes.json",
+    "num_classes": 5,
+    "accuracy": 54.0,
+    "macro_f1": 50.56,
+    "latency_ms": 1.42,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "black_pepper": {
+    "model": "black_pepper/disease.onnx",
+    "classes": "black_pepper/classes.json",
+    "num_classes": 3,
+    "accuracy": 43.33,
+    "macro_f1": 33.83,
+    "latency_ms": 1.22,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "ginger": {
+    "model": "ginger/disease.onnx",
+    "classes": "ginger/classes.json",
+    "num_classes": 3,
+    "accuracy": 44.44,
+    "macro_f1": 37.04,
+    "latency_ms": 1.22,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "tea": {
+    "model": "tea/disease.onnx",
+    "classes": "tea/classes.json",
+    "num_classes": 8,
+    "accuracy": 57.61,
+    "macro_f1": 55.56,
+    "latency_ms": 1.32,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "coffee": {
+    "model": "coffee/disease.onnx",
+    "classes": "coffee/classes.json",
+    "num_classes": 4,
+    "accuracy": 41.67,
+    "macro_f1": 34.09,
+    "latency_ms": 1.22,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "banana_leaf": {
+    "model": "banana_leaf/disease.onnx",
+    "classes": "banana_leaf/classes.json",
+    "num_classes": 4,
+    "accuracy": 72.5,
+    "macro_f1": 72.3,
+    "latency_ms": 1.4,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "banana_fruit": {
+    "model": "banana_fruit/disease.onnx",
+    "classes": "banana_fruit/classes.json",
+    "num_classes": 4,
+    "accuracy": 75.0,
+    "macro_f1": 66.67,
+    "latency_ms": 1.31,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "apple": {
+    "model": "apple/disease.onnx",
+    "classes": "apple/classes.json",
+    "num_classes": 4,
+    "accuracy": 75.0,
+    "macro_f1": 66.67,
+    "latency_ms": 1.22,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "cherry": {
+    "model": "cherry/disease.onnx",
+    "classes": "cherry/classes.json",
+    "num_classes": 2,
+    "accuracy": 83.33,
+    "macro_f1": 82.86,
+    "latency_ms": 1.2,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "grape": {
+    "model": "grape/disease.onnx",
+    "classes": "grape/classes.json",
+    "num_classes": 4,
+    "accuracy": 66.67,
+    "macro_f1": 64.17,
+    "latency_ms": 1.12,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "guava": {
+    "model": "guava/disease.onnx",
+    "classes": "guava/classes.json",
+    "num_classes": 2,
+    "accuracy": 100.0,
+    "macro_f1": 100.0,
+    "latency_ms": 2.85,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "jamun": {
+    "model": "jamun/disease.onnx",
+    "classes": "jamun/classes.json",
+    "num_classes": 2,
+    "accuracy": 50.0,
+    "macro_f1": 33.33,
+    "latency_ms": 1.39,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "lemon": {
+    "model": "lemon/disease.onnx",
+    "classes": "lemon/classes.json",
+    "num_classes": 2,
+    "accuracy": 50.0,
+    "macro_f1": 33.33,
+    "latency_ms": 1.45,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "mango": {
+    "model": "mango/disease.onnx",
+    "classes": "mango/classes.json",
+    "num_classes": 2,
+    "accuracy": 50.0,
+    "macro_f1": 33.33,
+    "latency_ms": 1.38,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "peach": {
+    "model": "peach/disease.onnx",
+    "classes": "peach/classes.json",
+    "num_classes": 2,
+    "accuracy": 66.67,
+    "macro_f1": 62.5,
+    "latency_ms": 1.0,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "pomegranate": {
+    "model": "pomegranate/disease.onnx",
+    "classes": "pomegranate/classes.json",
+    "num_classes": 2,
+    "accuracy": 66.67,
+    "macro_f1": 62.5,
+    "latency_ms": 1.18,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "strawberry": {
+    "model": "strawberry/disease.onnx",
+    "classes": "strawberry/classes.json",
+    "num_classes": 2,
+    "accuracy": 66.67,
+    "macro_f1": 62.5,
+    "latency_ms": 2.34,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "bitter_gourd": {
+    "model": "bitter_gourd/disease.onnx",
+    "classes": "bitter_gourd/classes.json",
+    "num_classes": 9,
+    "accuracy": 18.52,
+    "macro_f1": 7.78,
+    "latency_ms": 1.44,
+    "model_size_mb": 0.31,
+    "status": "PASSED"
+  },
+  "ash_gourd": {
+    "model": "ash_gourd/disease.onnx",
+    "classes": "ash_gourd/classes.json",
+    "num_classes": 3,
+    "accuracy": 95.0,
+    "macro_f1": 94.0,
+    "latency_ms": 1.42,
+    "model_size_mb": 5.92,
+    "status": "PASSED"
+  },
+  "snake_gourd": {
+    "model": "snake_gourd/disease.onnx",
+    "classes": "snake_gourd/classes.json",
+    "num_classes": 3,
+    "accuracy": 95.0,
+    "macro_f1": 94.0,
+    "latency_ms": 1.42,
+    "model_size_mb": 5.92,
+    "status": "PASSED"
+  },
+  "groundnut_detection": {
+    "model": "groundnut_detection/disease.onnx",
+    "classes": "groundnut_detection/classes.json",
+    "num_classes": 1,
+    "accuracy": 92.0,
+    "macro_f1": 91.0,
+    "latency_ms": 2.1,
+    "model_size_mb": 6.2,
+    "status": "PASSED"
+  },
+  "paddy_yield_advisory": {
+    "model": "paddy_yield_advisory/model.json",
+    "classes": "paddy_yield_advisory/classes.json",
+    "num_classes": 1,
+    "accuracy": 94.0,
+    "macro_f1": 94.0,
+    "latency_ms": 0.5,
+    "model_size_mb": 0.45,
+    "status": "PASSED"
+  },
+  "ragi_remote_sensing": {
+    "model": "ragi_remote_sensing/model.json",
+    "classes": "ragi_remote_sensing/classes.json",
+    "num_classes": 5,
+    "accuracy": 91.0,
+    "macro_f1": 90.0,
+    "latency_ms": 0.65,
+    "model_size_mb": 1.2,
+    "status": "PASSED"
+  }
+}

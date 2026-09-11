@@ -91,7 +91,7 @@
   "severityLow": "Low",
   "photosAnalyzed": "Photos Analyzed",
   "photosCount": "photos",
-  "lowConfidenceWarning": "We are not fully sure. Try taking clearer photos in daylight or contact an agriculture expert.",
+  "lowConfidenceWarning": "Low confidence. Please capture a clearer image.",
   "symptomsObserved": "Symptoms Observed",
   "recommendations": "Immediate Actions (What to do)",
   "prevention": "Prevention Guidance",
