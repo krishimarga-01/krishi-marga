@@ -1,0 +1,77 @@
+crop,crop_id,ui_visible,dataset_available,dataset_image_count,disease_classes,model_trained,validation_score,onnx_exists,onnx_verified,mobile_connected,offline_tested,online_gemini_supported,actual_status
+Paddy,paddy,YES,YES,241,3,YES,46.94%,YES,PASS,YES (In crops.ts),YES (1.13ms onnxruntime),YES,FULLY_WORKING
+Maize,maize,YES,YES,200,4,YES,30.00%,YES,PASS,YES (In crops.ts),YES (1.25ms onnxruntime),YES,FULLY_WORKING
+Ragi,ragi,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO (No ONNX model),NO,YES,ONLINE_ONLY
+Sorghum,sorghum,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Pearl Millet,pearl_millet,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Foxtail Millet,foxtail_millet,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Little Millet,little_millet,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Kodo Millet,kodo_millet,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Barnyard Millet,barnyard_millet,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Proso Millet,proso_millet,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Wheat,wheat,YES,YES (Repo),0,0,NO,N/A,NO,NO,NO (No ONNX model),NO,YES,ONLINE_ONLY
+Red Gram,red_gram,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Black Gram,black_gram,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Green Gram,green_gram,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Bengal Gram,bengal_gram,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Cowpea,cowpea,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Field Bean,field_bean,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Groundnut,groundnut,YES,YES (Repo),0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Sesame,sesame,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Sunflower,sunflower,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Castor,castor,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Safflower,safflower,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Soybean,soybean,YES,YES (Repo),0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Cotton,cotton,YES,YES,2350,4,YES,98.04%,YES,PASS,YES (In crops.ts),YES (1.06ms onnxruntime),YES,FULLY_WORKING
+Sugarcane,sugarcane,YES,YES,300,3,YES,30.00%,YES,PASS,YES (In crops.ts),YES (1.16ms onnxruntime),YES,FULLY_WORKING
+Tobacco,tobacco,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Tomato,tomato,YES,YES,25851,11,YES,4.55%,YES,PASS,YES (In crops.ts),YES (1.25ms onnxruntime),YES,FULLY_WORKING
+Chilli,chilli,YES,YES,5763,8,YES,11.25%,YES,PASS,YES (In crops.ts),YES (1.34ms onnxruntime),YES,FULLY_WORKING
+Brinjal,brinjal,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Onion,onion,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Okra,okra,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Potato,potato,YES,YES,150,3,YES,40.00%,YES,PASS,NO (Disabled in crops.ts),YES (0.98ms onnxruntime),YES,MODEL_TRAINED_NOT_CONNECTED
+Tapioca,tapioca,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Sweet Potato,sweet_potato,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Drumstick,drumstick,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Cucumber,cucumber,YES,YES (Repo),0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Pumpkin,pumpkin,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Bitter Gourd,bitter_gourd,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Bottle Gourd,bottle_gourd,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Ridge Gourd,ridge_gourd,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Beans,beans,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Cabbage,cabbage,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Cauliflower,cauliflower,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Carrot,carrot,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Beetroot,beetroot,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Banana,banana,YES,YES,2028,4,YES,23.75%,YES,PASS,YES (In crops.ts),YES (1.02ms onnxruntime),YES,FULLY_WORKING
+Mango,mango,YES,YES (Repo),0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Papaya,papaya,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Pomegranate,pomegranate,YES,YES (Repo),0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Guava,guava,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Sapota,sapota,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Pineapple,pineapple,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Grapes,grapes,YES,YES (Repo),0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Jackfruit,jackfruit,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Watermelon,watermelon,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Muskmelon,muskmelon,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Acid Lime,acid_lime,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Coconut,coconut,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO (No ONNX model),NO,YES,ONLINE_ONLY
+Arecanut,arecanut,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Cashew,cashew,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Coffee,coffee,YES,YES (Repo),0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Tea,tea,YES,YES (Repo),0,0,NO,N/A,NO,NO,NO (No ONNX model),NO,YES,ONLINE_ONLY
+Rubber,rubber,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Cocoa,cocoa,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Oil Palm,oil_palm,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Palmyrah,palmyrah,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Black Pepper,black_pepper,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO (No ONNX model),NO,YES,ONLINE_ONLY
+Cardamom,cardamom,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Turmeric,turmeric,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Ginger,ginger,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Clove,clove,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Coriander,coriander,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Cumin,cumin,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Fenugreek,fenugreek,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Betel Vine,betel_vine,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Tamarind,tamarind,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY

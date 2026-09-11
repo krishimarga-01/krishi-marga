@@ -9,6 +9,7 @@ import { HomeScreen } from '../screens/HomeScreen';
 import { CropSelectScreen } from '../screens/CropSelectScreen';
 import { CameraCaptureScreen } from '../screens/CameraCaptureScreen';
 import { ResultScreen } from '../screens/ResultScreen';
+import { DevBuildStatusScreen } from '../screens/DevBuildStatusScreen';
 import { HistoryScreen } from '../screens/HistoryScreen';
 import { NearbyHelpScreen } from '../screens/NearbyHelpScreen';
 import { SettingsScreen } from '../screens/SettingsScreen';
@@ -61,6 +62,7 @@ export const RootNavigator = () => {
         <Stack.Screen name='CropSelect' component={CropSelectScreen} />
         <Stack.Screen name='CameraCapture' component={CameraCaptureScreen} />
         <Stack.Screen name='Result' component={ResultScreen} />
+        <Stack.Screen name='DevBuildStatus' component={DevBuildStatusScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

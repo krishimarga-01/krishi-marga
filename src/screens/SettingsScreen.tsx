@@ -7,15 +7,25 @@ import { AuthService } from '../services/authService';
 import { UserProfile } from '../models/index';
 import { OnnxEngine } from '../offline/onnxEngine';
 
-export const SettingsScreen = () => {
+export const SettingsScreen = ({ navigation }: any) => {
   const { language, setLanguage, t } = useI18n();
   const [user, setUser] = useState<UserProfile>({ isLoggedIn: false });
   const [phoneInput, setPhoneInput] = useState('');
   const [showPhoneLogin, setShowPhoneLogin] = useState(false);
+  const [devTapCount, setDevTapCount] = useState(0);
 
   useEffect(() => {
     loadUser();
   }, []);
+
+  const handleDevTap = () => {
+    const nextCount = devTapCount + 1;
+    setDevTapCount(nextCount);
+    if (nextCount >= 5) {
+      setDevTapCount(0);
+      navigation.navigate('DevBuildStatus');
+    }
+  };
 
   const loadUser = async () => {
     const u = await AuthService.getUserProfile();
@@ -143,11 +153,22 @@ export const SettingsScreen = () => {
         {/* About App */}
         <View style={styles.card}>
           <Text style={styles.sectionHeader}>ℹ️ {t('aboutKrishiMarga')}</Text>
-          <Text style={styles.infoText}>{t('appEdition')}</Text>
+          <TouchableOpacity activeOpacity={0.7} onPress={handleDevTap}>
+            <Text style={styles.infoText}>{t('appEdition')}</Text>
+          </TouchableOpacity>
           <Text style={styles.infoDesc}>
             {t('appMission')}
           </Text>
           <Text style={styles.privacyLink}>{t('privacyTerms')}</Text>
+
+          {/* Discreet Developer Panel Entry */}
+          <TouchableOpacity
+            style={styles.devEntryBtn}
+            onPress={() => navigation.navigate('DevBuildStatus')}
+            activeOpacity={0.6}
+          >
+            <Text style={styles.devEntryText}>🛠️ Developer Build Status & Diagnostics</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -188,4 +209,19 @@ const styles = StyleSheet.create({
   infoText: { fontSize: 14, fontWeight: '600', color: Colors.textPrimary },
   infoDesc: { fontSize: 13, color: Colors.textSecondary, lineHeight: 18, marginTop: 4 },
   privacyLink: { fontSize: 12, color: Colors.textMuted, marginTop: 8 },
+  devEntryBtn: {
+    marginTop: 16,
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+    backgroundColor: Colors.earthBeige,
+    borderRadius: 8,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: Colors.cardBorder,
+  },
+  devEntryText: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: Colors.textSecondary,
+  },
 });
