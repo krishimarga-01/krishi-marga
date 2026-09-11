@@ -1,0 +1,1232 @@
+{
+  "id": "Hr2DwMRfJZpqSYDQ",
+  "name": "SIH - Single Crop Multi-Image Diagnosis (Sequential 3-Model Failover)",
+  "description": null,
+  "active": true,
+  "activeVersionId": "c1d3da22-4740-41c8-a745-e6bdb1f3ab18",
+  "createdAt": "2026-08-28T11:14:58.853Z",
+  "updatedAt": "2026-09-11T12:51:31.985Z",
+  "isArchived": false,
+  "versionId": "c1d3da22-4740-41c8-a745-e6bdb1f3ab18",
+  "versionCounter": 48,
+  "sourceWorkflowId": null,
+  "triggerCount": 1,
+  "nodes": [
+    {
+      "id": "7db29347-efa3-408b-b59b-250c03999389",
+      "name": "1. Webhook (Farmer API)",
+      "webhookId": "5b2e6809-9965-4976-b663-cfe20844e66b",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -640,
+        736
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "detect-disease",
+        "responseMode": "responseNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "5f12d649-607f-4978-8c65-10d12e0a7a24",
+      "name": "2. Validate Input & Crop",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -432,
+        720
+      ],
+      "parameters": {
+        "jsCode": "const binaryKeys = Object.keys($binary || {});\n\n// 1. Validate Image Count (1 to 10)\nif (binaryKeys.length === 0) {\n  return [{\n    json: {\n      isValid: false,\n      errorCode: 'NO_IMAGES_UPLOADED',\n      errorMessage: 'Please upload at least 1 image (up to 10 images supported).'\n    }\n  }];\n}\n\nif (binaryKeys.length > 10) {\n  return [{\n    json: {\n      isValid: false,\n      errorCode: 'TOO_MANY_IMAGES',\n      errorMessage: 'Maximum 10 images allowed per diagnosis request. Please select between 1 and 10 photos.'\n    }\n  }];\n}\n\n// 2. Validate Selected Crop (Strictly ONE crop required)\nconst rawCrop = $json.body?.crop || $json.query?.crop || null;\n\nif (!rawCrop || typeof rawCrop !== 'string' || rawCrop.trim() === '') {\n  return [{\n    json: {\n      isValid: false,\n      errorCode: 'INVALID_CROP',\n      errorMessage: 'Please select exactly one target crop for this diagnosis case.'\n    }\n  }];\n}\n\nconst cropTrimmed = rawCrop.trim();\nif (cropTrimmed.includes(',') || cropTrimmed.includes(';') || Array.isArray(rawCrop)) {\n  return [{\n    json: {\n      isValid: false,\n      errorCode: 'MULTIPLE_CROPS_NOT_SUPPORTED',\n      errorMessage: 'Only one crop can be diagnosed per request. Please submit separate requests for different crops.'\n    }\n  }];\n}\n\n// 3. Validate and Extract Binary Images\nconst imagesList = [];\nfor (let i = 0; i < binaryKeys.length; i++) {\n  const key = binaryKeys[i];\n  const bin = $binary[key];\n  const mimeType = bin.mimeType || 'image/jpeg';\n  \n  if (!mimeType.startsWith('image/')) {\n    return [{\n      json: {\n        isValid: false,\n        errorCode: 'INVALID_FILE_TYPE',\n        errorMessage: `File '${bin.fileName || key}' is not a supported image format (JPEG, PNG, WEBP).`\n      }\n    }];\n  }\n  \n  let base64Data = '';\n  try {\n    const buffer = await this.helpers.getBinaryDataBuffer(0, key);\n    base64Data = buffer.toString('base64');\n  } catch (e) {\n    base64Data = bin.data || '';\n  }\n  \n  imagesList.push({\n    mimeType: mimeType,\n    data: base64Data,\n    fileName: bin.fileName || `image_${i+1}.jpg`\n  });\n}\n\n// 4. Extract and Map Language\nconst langMap = {\n  'en': 'English',\n  'kn': 'Kannada',\n  'ta': 'Tamil',\n  'te': 'Telugu',\n  'ml': 'Malayalam',\n  'hi': 'Hindi'\n};\nconst rawLang = String($json.body?.language || $json.query?.language || 'en').toLowerCase().trim();\nconst languageCode = langMap[rawLang] ? rawLang : (Object.keys(langMap).find(k => langMap[k].toLowerCase() === rawLang) || 'en');\nconst requestedLanguage = langMap[languageCode] || 'English';\n\nconst symptoms = $json.body?.symptoms || $json.body?.farmer_notes || $json.query?.symptoms || null;\nconst latitude = $json.body?.latitude || $json.query?.latitude || null;\nconst longitude = $json.body?.longitude || $json.query?.longitude || null;\nconst state = $json.body?.state || 'South India';\n\n// 5. Pre-build Clean Gemini Multimodal Payload with Realism & Deterministic Configuration\nconst promptText = `Expert Plant Pathologist AI for South Indian agriculture.\nCASE: Crop=\"${cropTrimmed}\", Images=${imagesList.length}${symptoms ? `, Symptoms=\"${symptoms}\"` : ''}, Language=${requestedLanguage}.\n\nRULES:\n1. CROP MISMATCH: If images do NOT match \"${cropTrimmed}\": health_status=\"Uncertain\", confidence=0.20, disease=\"Unknown\", explain mismatch in user_message (${requestedLanguage}).\n2. LOW QUALITY / BLUR / DISTANT / POOR LIGHTING:\n- If photos are blurry, low-resolution (e.g. 240p/360p), poorly lit, or taken from far away:\n  * DO NOT hallucinate or pretend certainty.\n  * If lesion details are ambiguous or not discernible: health_status=\"Uncertain\", confidence between 0.30 and 0.50 (low confidence). Give suspected disease if any, and gently advise the farmer in user_message (${requestedLanguage}) to take a closer, clearer photo in good daylight.\n  * If key symptoms are identifiable despite low quality: diagnose the condition, but calibrate confidence realistically (e.g. 0.50 - 0.70) reflecting image quality.\n3. HEALTHY: If healthy: health_status=\"Healthy\", disease=\"None\", severity=\"None\", standard care advice in recommendations (${requestedLanguage}).\n4. DISEASED: If diseased, diagnose condition for \"${cropTrimmed}\".\n- disease: Canonical agronomic disease name in ${requestedLanguage} (e.g. \"Anthracnose (Fruit Rot / Dieback)\")\n- severity: \"Mild\" | \"Moderate\" | \"Severe\"\n- symptoms: Array in ${requestedLanguage}\n- recommendations: Practical actionable steps in ${requestedLanguage}\n- prevention: Practical prevention steps in ${requestedLanguage}\n- regional_advice: Practical advice for South Indian farmers in ${requestedLanguage}\n- user_message: Direct message to farmer in ${requestedLanguage}\n\nMANDATORY: Return ALL natural language fields in ${requestedLanguage}. Keep JSON keys in English.\n\nJSON format:\n{\n  \"crop\": \"${cropTrimmed}\",\n  \"health_status\": \"Healthy\",\n  \"disease\": \"None\",\n  \"confidence\": 0.95,\n  \"severity\": \"None\",\n  \"symptoms\": [\"...\"],\n  \"recommendations\": [\"...\"],\n  \"prevention\": [\"...\"],\n  \"regional_advice\": \"...\",\n  \"user_message\": \"...\"\n}`;\n\nconst imageParts = imagesList.map(img => ({\n  inlineData: {\n    mimeType: img.mimeType || 'image/jpeg',\n    data: img.data\n  }\n}));\n\nconst geminiPayload = {\n  contents: [\n    {\n      parts: [\n        { text: promptText },\n        ...imageParts\n      ]\n    }\n  ],\n  generationConfig: {\n    responseMimeType: 'application/json',\n    temperature: 0.0,\n    seed: 42\n  }\n};\n\nreturn [{\n  json: {\n    isValid: true,\n    crop: cropTrimmed,\n    imageCount: imagesList.length,\n    images: imagesList,\n    symptoms: symptoms,\n    language: languageCode,\n    requestedLanguage: requestedLanguage,\n    latitude: latitude,\n    longitude: longitude,\n    state: state,\n    geminiPayload: geminiPayload\n  }\n}];"
+      }
+    },
+    {
+      "id": "d134d3ba-63bb-4bca-8ece-24c4bfaf5767",
+      "name": "3. Valid Request?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -208,
+        720
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c1",
+              "leftValue": "={{ $json.isValid }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "9f377d1c-9782-4a30-abf0-b656a9bef672",
+      "name": "4A. Model 1: Gemini 3.7 Flash",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "onError": "continueRegularOutput",
+      "position": [
+        16,
+        592
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $('2. Validate Input & Crop').item.json.geminiPayload }}",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "qbu4mlRvjbp9lB87",
+          "name": "Google Gemini API Key"
+        }
+      }
+    },
+    {
+      "id": "ea941811-3121-4d54-8f21-a340c7da1eaf",
+      "name": "5A. Evaluate Model 1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        592
+      ],
+      "parameters": {
+        "jsCode": "const res = $json;\n\ntry {\n  if (res.error || !res.candidates || !res.candidates[0]?.content?.parts?.[0]?.text) {\n    return [{ json: { is_usable: false, error_reason: 'HTTP_OR_EMPTY_RESPONSE' } }];\n  }\n  \n  const rawText = res.candidates[0].content.parts[0].text;\n  const cleaned = rawText.replace(/```json\\n?|\\n?```/g, '').trim();\n  const parsed = JSON.parse(cleaned);\n  \n  if (!parsed.crop || !parsed.health_status || parsed.confidence === undefined) {\n    return [{ json: { is_usable: false, error_reason: 'MISSING_REQUIRED_FIELDS' } }];\n  }\n  \n  return [{ json: { is_usable: true, model_used: 'Gemini 3.5 Flash Lite', parsed_data: parsed } }];\n} catch (e) {\n  return [{ json: { is_usable: false, error_reason: 'INVALID_JSON_SYNTAX', details: e.message } }];\n}"
+      }
+    },
+    {
+      "id": "022c6861-05d4-4194-be52-f182a0fbb5fe",
+      "name": "Check Model 1 Usable?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        448,
+        592
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c1",
+              "leftValue": "={{ $json.is_usable }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "7325a098-3988-42c7-963e-da99106dc945",
+      "name": "4B. Model 2: Gemini 3.5 Flash Lite",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "onError": "continueRegularOutput",
+      "position": [
+        656,
+        720
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $('2. Validate Input & Crop').item.json.geminiPayload }}",
+        "options": {
+          "timeout": 12000
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "qbu4mlRvjbp9lB87",
+          "name": "Google Gemini API Key"
+        }
+      }
+    },
+    {
+      "id": "4f2dec08-4ff8-4757-8b97-da489c9eb4cb",
+      "name": "5B. Evaluate Model 2",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        720
+      ],
+      "parameters": {
+        "jsCode": "const res = $json;\n\ntry {\n  if (res.error || !res.candidates || !res.candidates[0]?.content?.parts?.[0]?.text) {\n    return [{ json: { is_usable: false, error_reason: 'HTTP_OR_EMPTY_RESPONSE' } }];\n  }\n  \n  const rawText = res.candidates[0].content.parts[0].text;\n  const cleaned = rawText.replace(/```json\\n?|\\n?```/g, '').trim();\n  const parsed = JSON.parse(cleaned);\n  \n  if (!parsed.crop || !parsed.health_status || parsed.confidence === undefined) {\n    return [{ json: { is_usable: false, error_reason: 'MISSING_REQUIRED_FIELDS' } }];\n  }\n  \n  return [{ json: { is_usable: true, model_used: 'Gemini 3.6 Flash', parsed_data: parsed } }];\n} catch (e) {\n  return [{ json: { is_usable: false, error_reason: 'INVALID_JSON_SYNTAX', details: e.message } }];\n}"
+      }
+    },
+    {
+      "id": "914cf105-9119-4ea6-ad3d-7f7b095b50ed",
+      "name": "Check Model 2 Usable?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1088,
+        720
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c1",
+              "leftValue": "={{ $json.is_usable }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "2a0c1b52-e047-4c10-bebf-81947133d629",
+      "name": "4C. Model 3: Gemini 2.5 Pro",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "onError": "continueRegularOutput",
+      "position": [
+        1296,
+        832
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $('2. Validate Input & Crop').item.json.geminiPayload }}",
+        "options": {
+          "timeout": 15000
+        }
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "qbu4mlRvjbp9lB87",
+          "name": "Google Gemini API Key"
+        }
+      }
+    },
+    {
+      "id": "518d2185-c52b-4b03-84cc-8c5f2a32bb26",
+      "name": "5C. Evaluate Model 3",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1520,
+        832
+      ],
+      "parameters": {
+        "jsCode": "const res = $json;\n\ntry {\n  if (res.error || !res.candidates || !res.candidates[0]?.content?.parts?.[0]?.text) {\n    return [{ json: { is_usable: false, error_reason: 'HTTP_OR_EMPTY_RESPONSE' } }];\n  }\n  \n  const rawText = res.candidates[0].content.parts[0].text;\n  const cleaned = rawText.replace(/```json\\n?|\\n?```/g, '').trim();\n  const parsed = JSON.parse(cleaned);\n  \n  if (!parsed.crop || !parsed.health_status || parsed.confidence === undefined) {\n    return [{ json: { is_usable: false, error_reason: 'MISSING_REQUIRED_FIELDS' } }];\n  }\n  \n  return [{ json: { is_usable: true, model_used: 'Gemini 2.5 Pro', parsed_data: parsed } }];\n} catch (e) {\n  return [{ json: { is_usable: false, error_reason: 'INVALID_JSON_SYNTAX', details: e.message } }];\n}"
+      }
+    },
+    {
+      "id": "139aa2e5-61d4-41c4-8434-5dbac7d4d341",
+      "name": "Check Model 3 Usable?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1728,
+        832
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c1",
+              "leftValue": "={{ $json.is_usable }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "b1d65faa-71c4-49bf-9927-6e081413078e",
+      "name": "6. Format Final Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1968,
+        592
+      ],
+      "parameters": {
+        "jsCode": "const data = ($json && $json.parsed_data) ? $json.parsed_data : null;\nlet inputMeta = {};\ntry {\n  inputMeta = $('2. Validate Input & Crop').item.json || {};\n} catch (e) {\n  inputMeta = {};\n}\n\nif (!data) {\n  return [{\n    json: {\n      success: false,\n      errorCode: 'DIAGNOSIS_FAILED',\n      message: 'Online diagnosis could not be completed.'\n    }\n  }];\n}\n\nlet confidenceLevel = 'High';\nlet healthStatus = data.health_status || 'Uncertain';\n\nconst confNum = typeof data.confidence === 'number' ? data.confidence : Number(data.confidence || 0);\nif (confNum < 0.50) {\n  confidenceLevel = 'Low';\n  healthStatus = 'Uncertain';\n} else if (confNum < 0.75) {\n  confidenceLevel = 'Medium';\n}\n\nreturn [{\n  json: {\n    success: true,\n    timestamp: new Date().toISOString(),\n    crop_selected: inputMeta.crop || data.crop || 'Unknown',\n    images_analyzed: inputMeta.imageCount || 1,\n    model_provider: $json.model_used || 'Gemini AI',\n    result: {\n      crop: data.crop || inputMeta.crop || 'Unknown',\n      health_status: healthStatus,\n      disease: data.disease || 'None',\n      confidence: confNum,\n      confidence_level: confidenceLevel,\n      severity: data.severity || 'None',\n      symptoms: Array.isArray(data.symptoms) ? data.symptoms : (data.symptoms ? [data.symptoms] : []),\n      recommendations: Array.isArray(data.recommendations) ? data.recommendations : (data.recommendations ? [data.recommendations] : []),\n      prevention: Array.isArray(data.prevention) ? data.prevention : (data.prevention ? [data.prevention] : []),\n      regional_advice: data.regional_advice || '',\n      user_message: data.user_message || '',\n      location_context: {\n        state: inputMeta.state || 'South India',\n        latitude: inputMeta.latitude || null,\n        longitude: inputMeta.longitude || null\n      }\n    }\n  }\n}];"
+      }
+    },
+    {
+      "id": "7804dbe0-9bf9-458e-8fcd-ccf441bd828d",
+      "name": "7. Respond to Frontend (200 OK)",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        2176,
+        592
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify($json) }}",
+        "options": {
+          "responseCode": 200,
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "Access-Control-Allow-Origin",
+                "value": "*"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "f1e98190-9be4-4e39-9c9b-16bf09e5779e",
+      "name": "Error Response (400 Bad Request)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        16,
+        896
+      ],
+      "parameters": {
+        "jsCode": "const errCode = $json.errorCode || 'INVALID_REQUEST';\nconst errMsg = $json.errorMessage || 'Invalid request parameters';\nreturn [{\n  json: {\n    success: false,\n    errorCode: errCode,\n    message: errMsg\n  }\n}];",
+        "mode": "runOnceForAllItems",
+        "language": "javaScript"
+      }
+    },
+    {
+      "id": "b2c641d7-83ac-46cc-a466-5be6d2cebd02",
+      "name": "Controlled Error JSON",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1968,
+        896
+      ],
+      "parameters": {
+        "jsCode": "return [{\n  json: {\n    success: false,\n    errorCode: 'DIAGNOSIS_FAILED',\n    message: 'Online diagnosis could not be completed.'\n  }\n}];",
+        "mode": "runOnceForAllItems",
+        "language": "javaScript"
+      }
+    }
+  ],
+  "connections": {
+    "1. Webhook (Farmer API)": {
+      "main": [
+        [
+          {
+            "node": "2. Validate Input & Crop",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2. Validate Input & Crop": {
+      "main": [
+        [
+          {
+            "node": "3. Valid Request?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3. Valid Request?": {
+      "main": [
+        [
+          {
+            "node": "4A. Model 1: Gemini 3.7 Flash",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Error Response (400 Bad Request)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "4A. Model 1: Gemini 3.7 Flash": {
+      "main": [
+        [
+          {
+            "node": "5A. Evaluate Model 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "5A. Evaluate Model 1": {
+      "main": [
+        [
+          {
+            "node": "Check Model 1 Usable?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Model 1 Usable?": {
+      "main": [
+        [
+          {
+            "node": "6. Format Final Response",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "4B. Model 2: Gemini 3.5 Flash Lite",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "4B. Model 2: Gemini 3.5 Flash Lite": {
+      "main": [
+        [
+          {
+            "node": "5B. Evaluate Model 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "5B. Evaluate Model 2": {
+      "main": [
+        [
+          {
+            "node": "Check Model 2 Usable?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Model 2 Usable?": {
+      "main": [
+        [
+          {
+            "node": "6. Format Final Response",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "4C. Model 3: Gemini 2.5 Pro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "4C. Model 3: Gemini 2.5 Pro": {
+      "main": [
+        [
+          {
+            "node": "5C. Evaluate Model 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "5C. Evaluate Model 3": {
+      "main": [
+        [
+          {
+            "node": "Check Model 3 Usable?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Model 3 Usable?": {
+      "main": [
+        [
+          {
+            "node": "6. Format Final Response",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Controlled Error JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "6. Format Final Response": {
+      "main": [
+        [
+          {
+            "node": "7. Respond to Frontend (200 OK)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Controlled Error JSON": {
+      "main": [
+        [
+          {
+            "node": "7. Respond to Frontend (200 OK)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Error Response (400 Bad Request)": {
+      "main": [
+        [
+          {
+            "node": "7. Respond to Frontend (200 OK)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "nodeGroups": [],
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "staticData": null,
+  "pinData": {},
+  "meta": null,
+  "tags": [],
+  "shared": [
+    {
+      "role": "workflow:owner",
+      "workflowId": "Hr2DwMRfJZpqSYDQ",
+      "projectId": "lkmJejO9cPlLRfce",
+      "project": {
+        "id": "lkmJejO9cPlLRfce",
+        "name": "PRATHICK RAJ <prathickraj20@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "customTelemetryTags": [],
+        "creatorId": "bb5f1b45-689b-4667-b63a-a0072b72bfa0",
+        "createdAt": "2026-08-28T09:04:12.563Z",
+        "updatedAt": "2026-08-28T09:09:42.344Z"
+      },
+      "createdAt": "2026-08-28T11:14:58.860Z",
+      "updatedAt": "2026-08-28T11:14:58.860Z"
+    }
+  ],
+  "activeVersion": {
+    "versionId": "c1d3da22-4740-41c8-a745-e6bdb1f3ab18",
+    "workflowId": "Hr2DwMRfJZpqSYDQ",
+    "nodes": [
+      {
+        "id": "7db29347-efa3-408b-b59b-250c03999389",
+        "name": "1. Webhook (Farmer API)",
+        "webhookId": "5b2e6809-9965-4976-b663-cfe20844e66b",
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 2,
+        "position": [
+          -640,
+          736
+        ],
+        "parameters": {
+          "httpMethod": "POST",
+          "path": "detect-disease",
+          "responseMode": "responseNode",
+          "options": {}
+        }
+      },
+      {
+        "id": "5f12d649-607f-4978-8c65-10d12e0a7a24",
+        "name": "2. Validate Input & Crop",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          -432,
+          720
+        ],
+        "parameters": {
+          "jsCode": "const binaryKeys = Object.keys($binary || {});\n\n// 1. Validate Image Count (1 to 10)\nif (binaryKeys.length === 0) {\n  return [{\n    json: {\n      isValid: false,\n      errorCode: 'NO_IMAGES_UPLOADED',\n      errorMessage: 'Please upload at least 1 image (up to 10 images supported).'\n    }\n  }];\n}\n\nif (binaryKeys.length > 10) {\n  return [{\n    json: {\n      isValid: false,\n      errorCode: 'TOO_MANY_IMAGES',\n      errorMessage: 'Maximum 10 images allowed per diagnosis request. Please select between 1 and 10 photos.'\n    }\n  }];\n}\n\n// 2. Validate Selected Crop (Strictly ONE crop required)\nconst rawCrop = $json.body?.crop || $json.query?.crop || null;\n\nif (!rawCrop || typeof rawCrop !== 'string' || rawCrop.trim() === '') {\n  return [{\n    json: {\n      isValid: false,\n      errorCode: 'INVALID_CROP',\n      errorMessage: 'Please select exactly one target crop for this diagnosis case.'\n    }\n  }];\n}\n\nconst cropTrimmed = rawCrop.trim();\nif (cropTrimmed.includes(',') || cropTrimmed.includes(';') || Array.isArray(rawCrop)) {\n  return [{\n    json: {\n      isValid: false,\n      errorCode: 'MULTIPLE_CROPS_NOT_SUPPORTED',\n      errorMessage: 'Only one crop can be diagnosed per request. Please submit separate requests for different crops.'\n    }\n  }];\n}\n\n// 3. Validate and Extract Binary Images\nconst imagesList = [];\nfor (let i = 0; i < binaryKeys.length; i++) {\n  const key = binaryKeys[i];\n  const bin = $binary[key];\n  const mimeType = bin.mimeType || 'image/jpeg';\n  \n  if (!mimeType.startsWith('image/')) {\n    return [{\n      json: {\n        isValid: false,\n        errorCode: 'INVALID_FILE_TYPE',\n        errorMessage: `File '${bin.fileName || key}' is not a supported image format (JPEG, PNG, WEBP).`\n      }\n    }];\n  }\n  \n  let base64Data = '';\n  try {\n    const buffer = await this.helpers.getBinaryDataBuffer(0, key);\n    base64Data = buffer.toString('base64');\n  } catch (e) {\n    base64Data = bin.data || '';\n  }\n  \n  imagesList.push({\n    mimeType: mimeType,\n    data: base64Data,\n    fileName: bin.fileName || `image_${i+1}.jpg`\n  });\n}\n\n// 4. Extract and Map Language\nconst langMap = {\n  'en': 'English',\n  'kn': 'Kannada',\n  'ta': 'Tamil',\n  'te': 'Telugu',\n  'ml': 'Malayalam',\n  'hi': 'Hindi'\n};\nconst rawLang = String($json.body?.language || $json.query?.language || 'en').toLowerCase().trim();\nconst languageCode = langMap[rawLang] ? rawLang : (Object.keys(langMap).find(k => langMap[k].toLowerCase() === rawLang) || 'en');\nconst requestedLanguage = langMap[languageCode] || 'English';\n\nconst symptoms = $json.body?.symptoms || $json.body?.farmer_notes || $json.query?.symptoms || null;\nconst latitude = $json.body?.latitude || $json.query?.latitude || null;\nconst longitude = $json.body?.longitude || $json.query?.longitude || null;\nconst state = $json.body?.state || 'South India';\n\n// 5. Pre-build Clean Gemini Multimodal Payload with Realism & Deterministic Configuration\nconst promptText = `Expert Plant Pathologist AI for South Indian agriculture.\nCASE: Crop=\"${cropTrimmed}\", Images=${imagesList.length}${symptoms ? `, Symptoms=\"${symptoms}\"` : ''}, Language=${requestedLanguage}.\n\nRULES:\n1. CROP MISMATCH: If images do NOT match \"${cropTrimmed}\": health_status=\"Uncertain\", confidence=0.20, disease=\"Unknown\", explain mismatch in user_message (${requestedLanguage}).\n2. LOW QUALITY / BLUR / DISTANT / POOR LIGHTING:\n- If photos are blurry, low-resolution (e.g. 240p/360p), poorly lit, or taken from far away:\n  * DO NOT hallucinate or pretend certainty.\n  * If lesion details are ambiguous or not discernible: health_status=\"Uncertain\", confidence between 0.30 and 0.50 (low confidence). Give suspected disease if any, and gently advise the farmer in user_message (${requestedLanguage}) to take a closer, clearer photo in good daylight.\n  * If key symptoms are identifiable despite low quality: diagnose the condition, but calibrate confidence realistically (e.g. 0.50 - 0.70) reflecting image quality.\n3. HEALTHY: If healthy: health_status=\"Healthy\", disease=\"None\", severity=\"None\", standard care advice in recommendations (${requestedLanguage}).\n4. DISEASED: If diseased, diagnose condition for \"${cropTrimmed}\".\n- disease: Canonical agronomic disease name in ${requestedLanguage} (e.g. \"Anthracnose (Fruit Rot / Dieback)\")\n- severity: \"Mild\" | \"Moderate\" | \"Severe\"\n- symptoms: Array in ${requestedLanguage}\n- recommendations: Practical actionable steps in ${requestedLanguage}\n- prevention: Practical prevention steps in ${requestedLanguage}\n- regional_advice: Practical advice for South Indian farmers in ${requestedLanguage}\n- user_message: Direct message to farmer in ${requestedLanguage}\n\nMANDATORY: Return ALL natural language fields in ${requestedLanguage}. Keep JSON keys in English.\n\nJSON format:\n{\n  \"crop\": \"${cropTrimmed}\",\n  \"health_status\": \"Healthy\",\n  \"disease\": \"None\",\n  \"confidence\": 0.95,\n  \"severity\": \"None\",\n  \"symptoms\": [\"...\"],\n  \"recommendations\": [\"...\"],\n  \"prevention\": [\"...\"],\n  \"regional_advice\": \"...\",\n  \"user_message\": \"...\"\n}`;\n\nconst imageParts = imagesList.map(img => ({\n  inlineData: {\n    mimeType: img.mimeType || 'image/jpeg',\n    data: img.data\n  }\n}));\n\nconst geminiPayload = {\n  contents: [\n    {\n      parts: [\n        { text: promptText },\n        ...imageParts\n      ]\n    }\n  ],\n  generationConfig: {\n    responseMimeType: 'application/json',\n    temperature: 0.0,\n    seed: 42\n  }\n};\n\nreturn [{\n  json: {\n    isValid: true,\n    crop: cropTrimmed,\n    imageCount: imagesList.length,\n    images: imagesList,\n    symptoms: symptoms,\n    language: languageCode,\n    requestedLanguage: requestedLanguage,\n    latitude: latitude,\n    longitude: longitude,\n    state: state,\n    geminiPayload: geminiPayload\n  }\n}];"
+        }
+      },
+      {
+        "id": "d134d3ba-63bb-4bca-8ece-24c4bfaf5767",
+        "name": "3. Valid Request?",
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2,
+        "position": [
+          -208,
+          720
+        ],
+        "parameters": {
+          "conditions": {
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 2
+            },
+            "conditions": [
+              {
+                "id": "c1",
+                "leftValue": "={{ $json.isValid }}",
+                "rightValue": true,
+                "operator": {
+                  "type": "boolean",
+                  "operation": "equals"
+                }
+              }
+            ],
+            "combinator": "and"
+          },
+          "options": {}
+        }
+      },
+      {
+        "id": "9f377d1c-9782-4a30-abf0-b656a9bef672",
+        "name": "4A. Model 1: Gemini 3.7 Flash",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "onError": "continueRegularOutput",
+        "position": [
+          16,
+          592
+        ],
+        "parameters": {
+          "method": "POST",
+          "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+          "authentication": "genericCredentialType",
+          "genericAuthType": "httpHeaderAuth",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          },
+          "sendBody": true,
+          "specifyBody": "json",
+          "jsonBody": "={{ $('2. Validate Input & Crop').item.json.geminiPayload }}",
+          "options": {
+            "timeout": 10000
+          }
+        },
+        "credentials": {
+          "httpHeaderAuth": {
+            "id": "qbu4mlRvjbp9lB87",
+            "name": "Google Gemini API Key"
+          }
+        }
+      },
+      {
+        "id": "ea941811-3121-4d54-8f21-a340c7da1eaf",
+        "name": "5A. Evaluate Model 1",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          240,
+          592
+        ],
+        "parameters": {
+          "jsCode": "const res = $json;\n\ntry {\n  if (res.error || !res.candidates || !res.candidates[0]?.content?.parts?.[0]?.text) {\n    return [{ json: { is_usable: false, error_reason: 'HTTP_OR_EMPTY_RESPONSE' } }];\n  }\n  \n  const rawText = res.candidates[0].content.parts[0].text;\n  const cleaned = rawText.replace(/```json\\n?|\\n?```/g, '').trim();\n  const parsed = JSON.parse(cleaned);\n  \n  if (!parsed.crop || !parsed.health_status || parsed.confidence === undefined) {\n    return [{ json: { is_usable: false, error_reason: 'MISSING_REQUIRED_FIELDS' } }];\n  }\n  \n  return [{ json: { is_usable: true, model_used: 'Gemini 3.5 Flash Lite', parsed_data: parsed } }];\n} catch (e) {\n  return [{ json: { is_usable: false, error_reason: 'INVALID_JSON_SYNTAX', details: e.message } }];\n}"
+        }
+      },
+      {
+        "id": "022c6861-05d4-4194-be52-f182a0fbb5fe",
+        "name": "Check Model 1 Usable?",
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2,
+        "position": [
+          448,
+          592
+        ],
+        "parameters": {
+          "conditions": {
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 2
+            },
+            "conditions": [
+              {
+                "id": "c1",
+                "leftValue": "={{ $json.is_usable }}",
+                "rightValue": true,
+                "operator": {
+                  "type": "boolean",
+                  "operation": "equals"
+                }
+              }
+            ],
+            "combinator": "and"
+          },
+          "options": {}
+        }
+      },
+      {
+        "id": "7325a098-3988-42c7-963e-da99106dc945",
+        "name": "4B. Model 2: Gemini 3.5 Flash Lite",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "onError": "continueRegularOutput",
+        "position": [
+          656,
+          720
+        ],
+        "parameters": {
+          "method": "POST",
+          "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent",
+          "authentication": "genericCredentialType",
+          "genericAuthType": "httpHeaderAuth",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          },
+          "sendBody": true,
+          "specifyBody": "json",
+          "jsonBody": "={{ $('2. Validate Input & Crop').item.json.geminiPayload }}",
+          "options": {
+            "timeout": 12000
+          }
+        },
+        "credentials": {
+          "httpHeaderAuth": {
+            "id": "qbu4mlRvjbp9lB87",
+            "name": "Google Gemini API Key"
+          }
+        }
+      },
+      {
+        "id": "4f2dec08-4ff8-4757-8b97-da489c9eb4cb",
+        "name": "5B. Evaluate Model 2",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          880,
+          720
+        ],
+        "parameters": {
+          "jsCode": "const res = $json;\n\ntry {\n  if (res.error || !res.candidates || !res.candidates[0]?.content?.parts?.[0]?.text) {\n    return [{ json: { is_usable: false, error_reason: 'HTTP_OR_EMPTY_RESPONSE' } }];\n  }\n  \n  const rawText = res.candidates[0].content.parts[0].text;\n  const cleaned = rawText.replace(/```json\\n?|\\n?```/g, '').trim();\n  const parsed = JSON.parse(cleaned);\n  \n  if (!parsed.crop || !parsed.health_status || parsed.confidence === undefined) {\n    return [{ json: { is_usable: false, error_reason: 'MISSING_REQUIRED_FIELDS' } }];\n  }\n  \n  return [{ json: { is_usable: true, model_used: 'Gemini 3.6 Flash', parsed_data: parsed } }];\n} catch (e) {\n  return [{ json: { is_usable: false, error_reason: 'INVALID_JSON_SYNTAX', details: e.message } }];\n}"
+        }
+      },
+      {
+        "id": "914cf105-9119-4ea6-ad3d-7f7b095b50ed",
+        "name": "Check Model 2 Usable?",
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2,
+        "position": [
+          1088,
+          720
+        ],
+        "parameters": {
+          "conditions": {
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 2
+            },
+            "conditions": [
+              {
+                "id": "c1",
+                "leftValue": "={{ $json.is_usable }}",
+                "rightValue": true,
+                "operator": {
+                  "type": "boolean",
+                  "operation": "equals"
+                }
+              }
+            ],
+            "combinator": "and"
+          },
+          "options": {}
+        }
+      },
+      {
+        "id": "2a0c1b52-e047-4c10-bebf-81947133d629",
+        "name": "4C. Model 3: Gemini 2.5 Pro",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "onError": "continueRegularOutput",
+        "position": [
+          1296,
+          832
+        ],
+        "parameters": {
+          "method": "POST",
+          "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent",
+          "authentication": "genericCredentialType",
+          "genericAuthType": "httpHeaderAuth",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          },
+          "sendBody": true,
+          "specifyBody": "json",
+          "jsonBody": "={{ $('2. Validate Input & Crop').item.json.geminiPayload }}",
+          "options": {
+            "timeout": 15000
+          }
+        },
+        "credentials": {
+          "httpHeaderAuth": {
+            "id": "qbu4mlRvjbp9lB87",
+            "name": "Google Gemini API Key"
+          }
+        }
+      },
+      {
+        "id": "518d2185-c52b-4b03-84cc-8c5f2a32bb26",
+        "name": "5C. Evaluate Model 3",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1520,
+          832
+        ],
+        "parameters": {
+          "jsCode": "const res = $json;\n\ntry {\n  if (res.error || !res.candidates || !res.candidates[0]?.content?.parts?.[0]?.text) {\n    return [{ json: { is_usable: false, error_reason: 'HTTP_OR_EMPTY_RESPONSE' } }];\n  }\n  \n  const rawText = res.candidates[0].content.parts[0].text;\n  const cleaned = rawText.replace(/```json\\n?|\\n?```/g, '').trim();\n  const parsed = JSON.parse(cleaned);\n  \n  if (!parsed.crop || !parsed.health_status || parsed.confidence === undefined) {\n    return [{ json: { is_usable: false, error_reason: 'MISSING_REQUIRED_FIELDS' } }];\n  }\n  \n  return [{ json: { is_usable: true, model_used: 'Gemini 2.5 Pro', parsed_data: parsed } }];\n} catch (e) {\n  return [{ json: { is_usable: false, error_reason: 'INVALID_JSON_SYNTAX', details: e.message } }];\n}"
+        }
+      },
+      {
+        "id": "139aa2e5-61d4-41c4-8434-5dbac7d4d341",
+        "name": "Check Model 3 Usable?",
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2,
+        "position": [
+          1728,
+          832
+        ],
+        "parameters": {
+          "conditions": {
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 2
+            },
+            "conditions": [
+              {
+                "id": "c1",
+                "leftValue": "={{ $json.is_usable }}",
+                "rightValue": true,
+                "operator": {
+                  "type": "boolean",
+                  "operation": "equals"
+                }
+              }
+            ],
+            "combinator": "and"
+          },
+          "options": {}
+        }
+      },
+      {
+        "id": "b1d65faa-71c4-49bf-9927-6e081413078e",
+        "name": "6. Format Final Response",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1968,
+          592
+        ],
+        "parameters": {
+          "jsCode": "const data = ($json && $json.parsed_data) ? $json.parsed_data : null;\nlet inputMeta = {};\ntry {\n  inputMeta = $('2. Validate Input & Crop').item.json || {};\n} catch (e) {\n  inputMeta = {};\n}\n\nif (!data) {\n  return [{\n    json: {\n      success: false,\n      errorCode: 'DIAGNOSIS_FAILED',\n      message: 'Online diagnosis could not be completed.'\n    }\n  }];\n}\n\nlet confidenceLevel = 'High';\nlet healthStatus = data.health_status || 'Uncertain';\n\nconst confNum = typeof data.confidence === 'number' ? data.confidence : Number(data.confidence || 0);\nif (confNum < 0.50) {\n  confidenceLevel = 'Low';\n  healthStatus = 'Uncertain';\n} else if (confNum < 0.75) {\n  confidenceLevel = 'Medium';\n}\n\nreturn [{\n  json: {\n    success: true,\n    timestamp: new Date().toISOString(),\n    crop_selected: inputMeta.crop || data.crop || 'Unknown',\n    images_analyzed: inputMeta.imageCount || 1,\n    model_provider: $json.model_used || 'Gemini AI',\n    result: {\n      crop: data.crop || inputMeta.crop || 'Unknown',\n      health_status: healthStatus,\n      disease: data.disease || 'None',\n      confidence: confNum,\n      confidence_level: confidenceLevel,\n      severity: data.severity || 'None',\n      symptoms: Array.isArray(data.symptoms) ? data.symptoms : (data.symptoms ? [data.symptoms] : []),\n      recommendations: Array.isArray(data.recommendations) ? data.recommendations : (data.recommendations ? [data.recommendations] : []),\n      prevention: Array.isArray(data.prevention) ? data.prevention : (data.prevention ? [data.prevention] : []),\n      regional_advice: data.regional_advice || '',\n      user_message: data.user_message || '',\n      location_context: {\n        state: inputMeta.state || 'South India',\n        latitude: inputMeta.latitude || null,\n        longitude: inputMeta.longitude || null\n      }\n    }\n  }\n}];"
+        }
+      },
+      {
+        "id": "7804dbe0-9bf9-458e-8fcd-ccf441bd828d",
+        "name": "7. Respond to Frontend (200 OK)",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "typeVersion": 1.1,
+        "position": [
+          2176,
+          592
+        ],
+        "parameters": {
+          "respondWith": "json",
+          "responseBody": "={{ JSON.stringify($json) }}",
+          "options": {
+            "responseCode": 200,
+            "responseHeaders": {
+              "entries": [
+                {
+                  "name": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "name": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": "f1e98190-9be4-4e39-9c9b-16bf09e5779e",
+        "name": "Error Response (400 Bad Request)",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          16,
+          896
+        ],
+        "parameters": {
+          "jsCode": "const errCode = $json.errorCode || 'INVALID_REQUEST';\nconst errMsg = $json.errorMessage || 'Invalid request parameters';\nreturn [{\n  json: {\n    success: false,\n    errorCode: errCode,\n    message: errMsg\n  }\n}];",
+          "mode": "runOnceForAllItems",
+          "language": "javaScript"
+        }
+      },
+      {
+        "id": "b2c641d7-83ac-46cc-a466-5be6d2cebd02",
+        "name": "Controlled Error JSON",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1968,
+          896
+        ],
+        "parameters": {
+          "jsCode": "return [{\n  json: {\n    success: false,\n    errorCode: 'DIAGNOSIS_FAILED',\n    message: 'Online diagnosis could not be completed.'\n  }\n}];",
+          "mode": "runOnceForAllItems",
+          "language": "javaScript"
+        }
+      }
+    ],
+    "connections": {
+      "1. Webhook (Farmer API)": {
+        "main": [
+          [
+            {
+              "node": "2. Validate Input & Crop",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "2. Validate Input & Crop": {
+        "main": [
+          [
+            {
+              "node": "3. Valid Request?",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "3. Valid Request?": {
+        "main": [
+          [
+            {
+              "node": "4A. Model 1: Gemini 3.7 Flash",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Error Response (400 Bad Request)",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "4A. Model 1: Gemini 3.7 Flash": {
+        "main": [
+          [
+            {
+              "node": "5A. Evaluate Model 1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "5A. Evaluate Model 1": {
+        "main": [
+          [
+            {
+              "node": "Check Model 1 Usable?",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Check Model 1 Usable?": {
+        "main": [
+          [
+            {
+              "node": "6. Format Final Response",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "4B. Model 2: Gemini 3.5 Flash Lite",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "4B. Model 2: Gemini 3.5 Flash Lite": {
+        "main": [
+          [
+            {
+              "node": "5B. Evaluate Model 2",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "5B. Evaluate Model 2": {
+        "main": [
+          [
+            {
+              "node": "Check Model 2 Usable?",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Check Model 2 Usable?": {
+        "main": [
+          [
+            {
+              "node": "6. Format Final Response",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "4C. Model 3: Gemini 2.5 Pro",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "4C. Model 3: Gemini 2.5 Pro": {
+        "main": [
+          [
+            {
+              "node": "5C. Evaluate Model 3",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "5C. Evaluate Model 3": {
+        "main": [
+          [
+            {
+              "node": "Check Model 3 Usable?",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Check Model 3 Usable?": {
+        "main": [
+          [
+            {
+              "node": "6. Format Final Response",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Controlled Error JSON",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "6. Format Final Response": {
+        "main": [
+          [
+            {
+              "node": "7. Respond to Frontend (200 OK)",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Controlled Error JSON": {
+        "main": [
+          [
+            {
+              "node": "7. Respond to Frontend (200 OK)",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Error Response (400 Bad Request)": {
+        "main": [
+          [
+            {
+              "node": "7. Respond to Frontend (200 OK)",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "nodeGroups": [],
+    "authors": "PRATHICK RAJ",
+    "name": null,
+    "description": null,
+    "autosaved": false,
+    "createdAt": "2026-09-11T12:51:31.985Z",
+    "updatedAt": "2026-09-11T12:51:31.985Z",
+    "workflowPublishHistory": [
+      {
+        "id": 9,
+        "workflowId": "Hr2DwMRfJZpqSYDQ",
+        "versionId": "c1d3da22-4740-41c8-a745-e6bdb1f3ab18",
+        "event": "activated",
+        "userId": "bb5f1b45-689b-4667-b63a-a0072b72bfa0",
+        "createdAt": "2026-09-11T12:51:32.096Z"
+      }
+    ]
+  }
+}

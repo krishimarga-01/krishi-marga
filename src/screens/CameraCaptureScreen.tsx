@@ -6,9 +6,10 @@ import * as Location from 'expo-location';
 import NetInfo from '@react-native-community/netinfo';
 import { Colors } from '../theme';
 import { useI18n } from '../services/i18n';
-import { DiagnosisApi } from '../services/diagnosisApi';
+import { DiagnosisApi, DiagnosisApiError } from '../services/diagnosisApi';
 import { OnnxEngine } from '../offline/onnxEngine';
 import { CaseStorage } from '../storage/caseStorage';
+import { ImageQualityService } from '../services/imageQualityService';
 
 export const CameraCaptureScreen = ({ route, navigation }: any) => {
   const { crop, cropDisplayName } = route.params;
@@ -19,49 +20,63 @@ export const CameraCaptureScreen = ({ route, navigation }: any) => {
   const [locationCoords, setLocationCoords] = useState<{ latitude: number; longitude: number } | null>(null);
   const [isLocating, setIsLocating] = useState(false);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [lowQualityNotice, setLowQualityNotice] = useState<string | null>(null);
 
   const handleTakePhoto = async () => {
     if (images.length >= 10) {
-      Alert.alert(t('captureTitle'), 'Maximum 10 photos allowed per crop.');
+      Alert.alert(t('captureTitle'), t('maxPhotosAlert'));
       return;
     }
     const permission = await ImagePicker.requestCameraPermissionsAsync();
     if (!permission.granted) {
-      Alert.alert('Camera Permission', 'Camera access is required to take crop photos.');
+      Alert.alert(t('cameraPermissionTitle'), t('cameraPermissionDesc'));
       return;
     }
     const result = await ImagePicker.launchCameraAsync({
-      quality: 0.85,
+      quality: 0.65,
       allowsEditing: false,
     });
     if (!result.canceled && result.assets && result.assets[0]) {
-      setImages([...images, result.assets[0].uri]);
+      const updated = [...images, result.assets[0].uri];
+      setImages(updated);
+      const quality = await ImageQualityService.inspectBatch(updated);
+      setLowQualityNotice(quality.hasLowQualityWarning ? t('photoQualityLowWarning') : null);
     }
   };
 
   const handleChooseGallery = async () => {
     if (images.length >= 10) {
-      Alert.alert(t('captureTitle'), 'Maximum 10 photos allowed.');
+      Alert.alert(t('captureTitle'), t('maxPhotosAlert'));
       return;
     }
     const permission = await ImagePicker.requestMediaLibraryPermissionsAsync();
     if (!permission.granted) {
-      Alert.alert('Gallery Permission', 'Gallery access is required to choose photos.');
+      Alert.alert(t('galleryPermissionTitle'), t('galleryPermissionDesc'));
       return;
     }
     const result = await ImagePicker.launchImageLibraryAsync({
       allowsMultipleSelection: true,
       selectionLimit: 10 - images.length,
-      quality: 0.85,
+      quality: 0.65,
     });
     if (!result.canceled && result.assets) {
       const newUris = result.assets.map((a) => a.uri);
-      setImages([...images, ...newUris].slice(0, 10));
+      const updated = [...images, ...newUris].slice(0, 10);
+      setImages(updated);
+      const quality = await ImageQualityService.inspectBatch(updated);
+      setLowQualityNotice(quality.hasLowQualityWarning ? t('photoQualityLowWarning') : null);
     }
   };
 
-  const handleRemoveImage = (index: number) => {
-    setImages(images.filter((_, i) => i !== index));
+  const handleRemoveImage = async (index: number) => {
+    const updated = images.filter((_, i) => i !== index);
+    setImages(updated);
+    if (updated.length > 0) {
+      const quality = await ImageQualityService.inspectBatch(updated);
+      setLowQualityNotice(quality.hasLowQualityWarning ? t('photoQualityLowWarning') : null);
+    } else {
+      setLowQualityNotice(null);
+    }
   };
 
   const handleToggleLocation = async () => {
@@ -73,7 +88,7 @@ export const CameraCaptureScreen = ({ route, navigation }: any) => {
     try {
       const { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== 'granted') {
-        Alert.alert('Location Permission', 'Farm location is optional. Diagnosis continues normally.');
+        Alert.alert(t('locationOptionalTitle'), t('locationDisabled'));
         setIsLocating(false);
         return;
       }
@@ -88,9 +103,24 @@ export const CameraCaptureScreen = ({ route, navigation }: any) => {
 
   const handleStartDiagnosis = async () => {
     if (images.length === 0) {
-      Alert.alert(t('captureTitle'), 'Please add at least 1 photo of ' + cropDisplayName + ' leaf/plant.');
+      Alert.alert(t('captureTitle'), `${t('atLeastOnePhotoAlert')} (${cropDisplayName})`);
       return;
     }
+
+    // 1. Image Quality Sanity Check before upload
+    const qualityAssessment = await ImageQualityService.inspectBatch(images);
+    
+    // Reject ONLY truly unusable photos (<120px or <4KB)
+    if (!qualityAssessment.allUsable) {
+      Alert.alert(t('photoUnusableTitle'), t('photoUnusableError'));
+      return;
+    }
+
+    // If usable but low-quality (240p/360p, WhatsApp compressed, poor lighting), set farmer advisory
+    if (qualityAssessment.hasLowQualityWarning) {
+      setLowQualityNotice(t('photoQualityLowWarning'));
+    }
+
     setIsAnalyzing(true);
     try {
       const net = await NetInfo.fetch();
@@ -110,7 +140,7 @@ export const CameraCaptureScreen = ({ route, navigation }: any) => {
         } catch (apiError) {
           console.log('Online diagnosis failed, trying offline engine:', apiError);
           if (OnnxEngine.isModelAvailable()) {
-            finalResult = await OnnxEngine.runInference(crop, images);
+            finalResult = await OnnxEngine.runInference(crop, images, language);
           } else {
             throw apiError;
           }
@@ -124,7 +154,7 @@ export const CameraCaptureScreen = ({ route, navigation }: any) => {
           setIsAnalyzing(false);
           return;
         }
-        finalResult = await OnnxEngine.runInference(crop, images);
+        finalResult = await OnnxEngine.runInference(crop, images, language);
       }
 
       const caseRecord = {
@@ -150,10 +180,38 @@ export const CameraCaptureScreen = ({ route, navigation }: any) => {
       });
     } catch (err: any) {
       setIsAnalyzing(false);
-      Alert.alert(
-        t('serverUnavailable'),
-        'Could not complete online analysis. Please verify your n8n server is active or try again.'
-      );
+      const errMsg = err?.message || '';
+      let title = t('serverUnavailable');
+      let detail = t('serverUnavailable');
+
+      if (err instanceof DiagnosisApiError) {
+        if (err.caseType === 'NETWORK_ERROR') {
+          // CASE A: Genuine network error
+          title = t('networkErrorTitle');
+          detail = t('networkErrorDetail');
+        } else if (err.caseType === 'EMPTY_RESPONSE') {
+          // CASE B: Server returned HTTP 200 with empty body
+          title = t('serverErrorTitle');
+          detail = t('emptyResponseError');
+        } else if (err.caseType === 'SERVER_ERROR') {
+          // CASE C: HTTP 4xx/5xx or server-controlled error
+          title = t('serverUnavailable');
+          detail = t('onlineDiagnosisFailed');
+        } else {
+          title = t('serverErrorTitle');
+          detail = `${t('serverErrorDetail')}\n\n${errMsg}`;
+        }
+      } else if (errMsg.includes('Network request failed') || errMsg.includes('Network failed connecting')) {
+        title = t('networkErrorTitle');
+        detail = t('networkErrorDetail');
+      } else if (errMsg.includes('empty response body') || errMsg.includes('empty response')) {
+        title = t('serverErrorTitle');
+        detail = t('emptyResponseError');
+      } else if (errMsg) {
+        detail = `${detail}\n\nDetails: ${errMsg}`;
+      }
+
+      Alert.alert(title, detail);
     }
   };
 
@@ -165,26 +223,26 @@ export const CameraCaptureScreen = ({ route, navigation }: any) => {
             <Text style={styles.pulseEmoji}>🌿</Text>
           </View>
           <ActivityIndicator size='large' color={Colors.primary} style={styles.spinner} />
-          <Text style={styles.analyzingTitle}>Analyzing your crop...</Text>
-          <Text style={styles.analyzingSubtitle}>Examining leaf surface, discoloration, and spots</Text>
+          <Text style={styles.analyzingTitle}>{t('analyzingTitle')}</Text>
+          <Text style={styles.analyzingSubtitle}>{t('analyzingSubtitle')}</Text>
         </View>
       ) : (
         <ScrollView contentContainerStyle={styles.container}>
           {/* Header Banner */}
           <View style={styles.cropBanner}>
-            <Text style={styles.cropBannerTitle}>Selected Crop: <Text style={styles.cropHighlight}>{cropDisplayName}</Text></Text>
-            <Text style={styles.cropBannerDesc}>Rule: All images must be of this same crop.</Text>
+            <Text style={styles.cropBannerTitle}>{t('selectedCropLabel')}: <Text style={styles.cropHighlight}>{cropDisplayName}</Text></Text>
+            <Text style={styles.cropBannerDesc}>{t('cropRuleNotice')}</Text>
           </View>
 
           {/* Helpful Photo Tips */}
           <View style={styles.tipsCard}>
-            <Text style={styles.tipsTitle}>💡 Helpful Photo Angles</Text>
+            <Text style={styles.tipsTitle}>💡 {t('helpfulPhotoAngles')}</Text>
             <View style={styles.tipsRow}>
-              <Text style={styles.tipPill}>🌱 Whole plant</Text>
-              <Text style={styles.tipPill}>🍃 Leaf front</Text>
-              <Text style={styles.tipPill}>🍂 Leaf back</Text>
-              <Text style={styles.tipPill}>🎋 Stem</Text>
-              <Text style={styles.tipPill}>🍎 Fruit</Text>
+              <Text style={styles.tipPill}>🌱 {t('angleWholePlant')}</Text>
+              <Text style={styles.tipPill}>🍃 {t('angleLeafFront')}</Text>
+              <Text style={styles.tipPill}>🍂 {t('angleLeafBack')}</Text>
+              <Text style={styles.tipPill}>🎋 {t('angleStem')}</Text>
+              <Text style={styles.tipPill}>🍎 {t('angleFruit')}</Text>
             </View>
           </View>
 
@@ -202,8 +260,8 @@ export const CameraCaptureScreen = ({ route, navigation }: any) => {
 
           {/* Image Counter */}
           <View style={styles.counterRow}>
-            <Text style={styles.counterText}>Photos Added: <Text style={styles.counterBold}>({images.length}/10)</Text></Text>
-            <Text style={styles.counterNotice}>1 minimum, 10 maximum</Text>
+            <Text style={styles.counterText}>{t('photosAdded')}: <Text style={styles.counterBold}>({images.length}/10)</Text></Text>
+            <Text style={styles.counterNotice}>{t('photoRangeNotice')}</Text>
           </View>
 
           {/* Thumbnail Gallery with Individual Remove */}
@@ -242,8 +300,16 @@ export const CameraCaptureScreen = ({ route, navigation }: any) => {
               <Text style={styles.locTitle}>{t('optionalLocationTitle')}</Text>
               <Text style={styles.locSubtitle}>{locationCoords ? t('locationEnabled') : t('locationDisabled')}</Text>
             </View>
-            <Text style={styles.locStatusBtn}>{locationCoords ? 'Attached ✓' : 'Attach GPS'}</Text>
+            <Text style={styles.locStatusBtn}>{locationCoords ? t('locationAttached') : t('attachGps')}</Text>
           </TouchableOpacity>
+
+          {/* Low Quality Farmer Advisory Banner */}
+          {lowQualityNotice && (
+            <View style={styles.advisoryBanner}>
+              <Text style={styles.advisoryEmoji}>⚠️</Text>
+              <Text style={styles.advisoryText}>{lowQualityNotice}</Text>
+            </View>
+          )}
 
           {/* Analyze Button */}
           <TouchableOpacity
@@ -251,7 +317,7 @@ export const CameraCaptureScreen = ({ route, navigation }: any) => {
             disabled={images.length === 0}
             onPress={handleStartDiagnosis}
           >
-            <Text style={styles.analyzeBtnText}>Analyze Crop ({images.length})</Text>
+            <Text style={styles.analyzeBtnText}>{t('startDiagnosis')} ({images.length})</Text>
           </TouchableOpacity>
         </ScrollView>
       )}
@@ -295,6 +361,18 @@ const styles = StyleSheet.create({
   locTitle: { fontSize: 15, fontWeight: '600', color: Colors.textPrimary },
   locSubtitle: { fontSize: 12, color: Colors.textMuted, marginTop: 2 },
   locStatusBtn: { fontSize: 13, fontWeight: '700', color: Colors.primary },
+  advisoryBanner: {
+    backgroundColor: '#FEF3C7',
+    borderWidth: 1,
+    borderColor: '#F59E0B',
+    borderRadius: 12,
+    padding: 12,
+    marginBottom: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  advisoryEmoji: { fontSize: 20, marginRight: 10 },
+  advisoryText: { fontSize: 13, color: '#92400E', fontWeight: '600', flex: 1, lineHeight: 18 },
   analyzeBtn: { backgroundColor: Colors.primary, paddingVertical: 16, borderRadius: 16, alignItems: 'center', elevation: 3 },
   disabledBtn: { backgroundColor: Colors.cardBorder },
   analyzeBtnText: { color: '#FFFFFF', fontSize: 18, fontWeight: '700' },

@@ -58,11 +58,11 @@ export const HomeScreen = ({ navigation }: any) => {
             </View>
 
             <View style={[styles.networkBadge, isOnline ? styles.onlineBadge : styles.offlineBadge]}>
-              <Text style={styles.networkBadgeText}>{isOnline ? 'Online' : 'Offline'}</Text>
+              <Text style={styles.networkBadgeText}>{isOnline ? t('online') : t('offline')}</Text>
             </View>
           </View>
 
-          <Text style={styles.greeting}>नमस्ते / ನಮಸ್ಕಾರ, Farmer Friend</Text>
+          <Text style={styles.greeting}>{t('farmerGreeting')}</Text>
         </View>
 
         {/* Primary Action Button 1: Detect Disease */}
@@ -75,7 +75,7 @@ export const HomeScreen = ({ navigation }: any) => {
             <Text style={styles.detectIcon}>📷</Text>
           </View>
           <View style={styles.actionTextContainer}>
-            <Text style={styles.primaryActionTitle}>Detect Disease</Text>
+            <Text style={styles.primaryActionTitle}>{t('detectDisease')}</Text>
             <Text style={styles.primaryActionSubtitle}>{t('checkCropSubtitle')}</Text>
           </View>
           <Text style={styles.arrowText}>➔</Text>
@@ -88,7 +88,7 @@ export const HomeScreen = ({ navigation }: any) => {
             activeOpacity={0.8}
             onPress={() => navigation.navigate('Settings')}
           >
-            <Text style={styles.guestText}>🌱 Guest Mode active. <Text style={styles.loginLink}>Login to sync history</Text></Text>
+            <Text style={styles.guestText}>{t('guestModeActive')} <Text style={styles.loginLink}>{t('loginToSync')}</Text></Text>
           </TouchableOpacity>
         )}
 
@@ -98,26 +98,26 @@ export const HomeScreen = ({ navigation }: any) => {
           <TouchableOpacity
             style={styles.gridCard}
             activeOpacity={0.85}
-            onPress={() => navigation.navigate('History')}
+            onPress={() => navigation.navigate('My Cases')}
           >
             <View style={styles.cardIconCircle}>
               <Text style={styles.cardEmoji}>📋</Text>
             </View>
-            <Text style={styles.cardTitle}>My History</Text>
-            <Text style={styles.cardSubtitle}>{recentCases.length} records saved</Text>
+            <Text style={styles.cardTitle}>{t('myHistory')}</Text>
+            <Text style={styles.cardSubtitle}>{recentCases.length} {t('recordsSaved')}</Text>
           </TouchableOpacity>
 
           {/* Button 3: Nearby Help */}
           <TouchableOpacity
             style={styles.gridCard}
             activeOpacity={0.85}
-            onPress={() => navigation.navigate('Help')}
+            onPress={() => navigation.navigate('Nearby Help')}
           >
             <View style={styles.cardIconCircle}>
               <Text style={styles.cardEmoji}>📞</Text>
             </View>
-            <Text style={styles.cardTitle}>Nearby Help</Text>
-            <Text style={styles.cardSubtitle}>KVKs & Experts</Text>
+            <Text style={styles.cardTitle}>{t('nearbyHelp')}</Text>
+            <Text style={styles.cardSubtitle}>{t('cropDoctorsAndExperts')}</Text>
           </TouchableOpacity>
         </View>
 
@@ -131,8 +131,8 @@ export const HomeScreen = ({ navigation }: any) => {
             <Text style={styles.cardEmoji}>📡</Text>
           </View>
           <View style={styles.offlineTextWrap}>
-            <Text style={styles.offlineTitle}>Offline Mode Available</Text>
-            <Text style={styles.offlineSubtitle}>Check crop diseases in the field even without internet signal.</Text>
+            <Text style={styles.offlineTitle}>{t('offlineModeAvailable')}</Text>
+            <Text style={styles.offlineSubtitle}>{t('offlineModeDesc')}</Text>
           </View>
         </TouchableOpacity>
 
@@ -141,8 +141,8 @@ export const HomeScreen = ({ navigation }: any) => {
           <View style={styles.recentSection}>
             <View style={styles.sectionHeaderRow}>
               <Text style={styles.sectionHeader}>{t('myCases')}</Text>
-              <TouchableOpacity onPress={() => navigation.navigate('History')}>
-                <Text style={styles.seeAllText}>View All</Text>
+              <TouchableOpacity onPress={() => navigation.navigate('My Cases')}>
+                <Text style={styles.seeAllText}>{t('viewAll')}</Text>
               </TouchableOpacity>
             </View>
             {recentCases.map((c) => (
@@ -158,7 +158,7 @@ export const HomeScreen = ({ navigation }: any) => {
                   <Text style={styles.recentDate}>{new Date(c.timestamp).toLocaleDateString()}</Text>
                 </View>
                 <View style={[styles.recentBadge, c.result.analysis_source === 'online' ? styles.onlineBadge : styles.offlineBadge]}>
-                  <Text style={styles.recentBadgeText}>{c.result.analysis_source === 'online' ? 'Online' : 'Offline'}</Text>
+                  <Text style={styles.recentBadgeText}>{c.result.analysis_source === 'online' ? t('online') : t('offline')}</Text>
                 </View>
               </TouchableOpacity>
             ))}

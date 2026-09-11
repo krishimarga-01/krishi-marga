@@ -1,0 +1,56 @@
+crop,disease_or_pest,disease_type,alternate_names,scientific_name_if_verified,datasets_containing_it,image_count_if_known,healthy_class_available,South_India_relevance,source_references,confidence_in_mapping
+Coffee,Coffee Leaf Rust,fungal,"Roya, Orange rust",Hemileia vastatrix,"DS_COFFEE_01, DS_COFFEE_02, DS_COFFEE_03",~2200,Yes,HIGH,"Central Coffee Research Institute (CCRI), Balehonnur, Karnataka",VERY_HIGH
+Coffee,Brown Eye Spot / Cercospora,fungal,"Cercospora leaf spot, Berry blotch",Cercospora coffeicola,DS_COFFEE_02,450,Yes,HIGH,CCRI Karnataka; Coffee Board of India,HIGH
+Coffee,Coffee Leaf Miner,insect pest,Serpentine miner,Leucoptera coffeella,DS_COFFEE_02,380,Yes,MEDIUM,Indian coffee leaf miner is primarily Leucoptera clerckella / permixta,MEDIUM
+Coffee,Red Spider Mite,mite,Coffee spider mite,Oligonychus ilicis,DS_COFFEE_01,420,Yes,HIGH,Major dry-weather pest in Wayanad and Kodagu,HIGH
+Coffee,Phoma Leaf Spot,fungal,South American leaf spot,Phoma costaricensis,DS_COFFEE_03,950,Yes,MEDIUM,High-altitude plantations under monsoon chill,HIGH
+Tea,Grey Blight,fungal,Pestalotiopsis leaf spot,Pestalotiopsis theae,DS_TEA_01,890,Yes,HIGH,"UPASI Tea Research Foundation, Valparai, Tamil Nadu",VERY_HIGH
+Tea,Brown Blight,fungal,Colletotrichum blight,Colletotrichum camelliae,DS_TEA_01,850,Yes,HIGH,UPASI TRF Valparai,VERY_HIGH
+Tea,Algal Leaf Spot / Red Rust,algal / fungal complex,Cephaleuros virescens spot,Cephaleuros virescens,DS_TEA_01,820,Yes,HIGH,Common on shaded tea bushes in Nilgiris,HIGH
+Tea,Tea Mosquito Bug / Helopeltis,insect pest,Helopeltis puncture spots,Helopeltis theivora,"DS_TEA_01, DS_TEA_02",1200,Yes,HIGH,Top insect pest in South Indian tea plantations (UPASI bulletins),VERY_HIGH
+Tea,Red Spider Mite,mite,Tea spider mite,Oligonychus coffeae,"DS_TEA_01, DS_TEA_02",950,Yes,HIGH,UPASI TRF bulletins,HIGH
+Rubber,Abnormal Leaf Fall,oomycete,Phytophthora leaf fall,Phytophthora meadii,DS_RUBBER_01,520,Yes,HIGH,"Rubber Research Institute of India (RRII), Kottayam, Kerala",VERY_HIGH
+Rubber,Powdery Mildew,fungal,Oidium leaf disease,Oidium heveae,DS_RUBBER_01,610,Yes,HIGH,RRII Kottayam; major during refoliation (Jan-March),VERY_HIGH
+Rubber,Anthracnose,fungal,Colletotrichum leaf fall,Colletotrichum gloeosporioides,DS_RUBBER_01,580,Yes,HIGH,RRII Kottayam bulletins,HIGH
+Sugarcane,Red Rot,fungal,"Colletotrichum rot, canker",Colletotrichum falcatum,"DS_SUGAR_01, DS_SUGAR_02",1800,Yes,HIGH,"ICAR-Sugarcane Breeding Institute (SBI), Coimbatore, Tamil Nadu",VERY_HIGH
+Sugarcane,Sugarcane Rust,fungal,Brown rust,Puccinia melanocephala,"DS_SUGAR_01, DS_SUGAR_02",1200,Yes,HIGH,ICAR-SBI Coimbatore,VERY_HIGH
+Sugarcane,Yellow Leaf Disease (SCYLV),viral,Sugarcane yellow leaf virus,Sugarcane yellow leaf virus,"DS_SUGAR_01, DS_SUGAR_02",950,Yes,HIGH,SBI Coimbatore advisory reports,HIGH
+Sugarcane,Sugarcane Smut,fungal,Whip smut,Sporisorium scitamineum,DS_SUGAR_01,480,Yes,HIGH,SBI Coimbatore,HIGH
+Sugarcane,Grassy Shoot Disease,phytoplasma,GSD,Candidatus Phytoplasma,DS_SUGAR_01,380,Yes,HIGH,SBI Coimbatore,HIGH
+Cotton,Bacterial Blight / Angular Leaf Spot,bacterial,Black arm,Xanthomonas citri pv. malvacearum,"DS_COTTON_01, DS_COTTON_02",1100,Yes,HIGH,"Central Institute for Cotton Research (CICR) Regional Station, Coimbatore",VERY_HIGH
+Cotton,Cotton Leaf Curl Virus (CLCuV),viral,Whitefly transmitted leaf curl,Cotton leaf curl virus,DS_COTTON_01,490,Yes,HIGH,CICR bulletins,HIGH
+Cotton,Target Spot,fungal,Corynespora leaf spot,Corynespora cassiicola,"DS_COTTON_01, DS_COTTON_02",550,Yes,HIGH,CICR Coimbatore / UAS Dharwad,HIGH
+Cotton,Cotton Aphids,insect pest,Sucking pest,Aphis gossypii,DS_COTTON_02,420,Yes,HIGH,PJTSAU Telangana pest surveillance,HIGH
+Tobacco,Brown Spot,fungal,Alternaria leaf spot,Alternaria alternata,DS_TOBACCO_01,420,Yes,HIGH,"ICAR-Central Tobacco Research Institute (CTRI), Rajahmundry, AP",HIGH
+Tobacco,Tobacco Mosaic Virus (TMV),viral,Mosaic disease,Tobacco mosaic virus,DS_TOBACCO_01,380,Yes,HIGH,ICAR-CTRI Rajahmundry,HIGH
+Black Pepper,Quick Wilt / Foot Rot,oomycete,Phytophthora foot rot,Phytophthora capsici,DS_PEPPER_01,540,Yes,HIGH,"ICAR-Indian Institute of Spices Research (IISR), Kozhikode, Kerala",VERY_HIGH
+Black Pepper,Yellow Mottle Virus (PYMV),viral,Piper yellow mottle badnavirus,Piper yellow mottle virus,DS_PEPPER_01,380,Yes,HIGH,ICAR-IISR Kozhikode,HIGH
+Black Pepper,Anthracnose / Pollu Disease,fungal,Fungal pollu,Colletotrichum gloeosporioides,DS_PEPPER_02,210,Yes,HIGH,ICAR-IISR Kozhikode,HIGH
+Cardamom,Azhukal / Capsule Rot,oomycete,Damping off of capsules,Phytophthora meadii,DS_CARDAMOM_01,480,Yes,HIGH,"ICAR-IISR Regional Station, Appangala, Kodagu, Karnataka",VERY_HIGH
+Cardamom,Katte / Mosaic Disease,viral,Marble disease,Cardamom mosaic virus (CdMV),DS_CARDAMOM_01,420,Yes,HIGH,Spices Board India / ICAR-IISR,VERY_HIGH
+Cardamom,Colletotrichum Blight,fungal,Leaf blight,Colletotrichum gloeosporioides,"DS_CARDAMOM_01, DS_CARDAMOM_02",650,Yes,HIGH,ICAR-IISR Appangala,HIGH
+Chilli,Anthracnose / Fruit Rot / Dieback,fungal,"Ripe fruit rot, pod blight",Colletotrichum capsici,DS_CHILLI_02,420,Yes,HIGH,IIHR Bengaluru / ANGRAU Lam Guntur,VERY_HIGH
+Chilli,Chilli Leaf Curl Virus (ChiLCV),viral,Murda disease (thrips/whitefly complex),Chilli leaf curl virus,"DS_CHILLI_01, DS_CHILLI_02",1650,Yes,HIGH,ANGRAU Guntur chilli bulletins,VERY_HIGH
+Chilli,Bacterial Spot,bacterial,Bacterial leaf spot,Xanthomonas campestris pv. vesicatoria,DS_CHILLI_01,1420,Yes,HIGH,IIHR Bengaluru,VERY_HIGH
+Chilli,Cercospora Leaf Spot,fungal,Frog eye spot,Cercospora capsici,"DS_CHILLI_01, DS_CHILLI_02",1580,Yes,HIGH,IIHR Bengaluru,HIGH
+Chilli,Powdery Mildew,fungal,White powdery growth,Leveillula taurica,DS_CHILLI_01,1350,Yes,HIGH,ANGRAU / TNAU Agritech,HIGH
+Turmeric,Leaf Blotch,fungal,Taphrina blotch,Taphrina maculans,"DS_TURMERIC_01, DS_TURMERIC_02",1200,Yes,HIGH,ICAR-IISR Kozhikode; TNAU Erode,VERY_HIGH
+Turmeric,Leaf Spot,fungal,Colletotrichum spot,Colletotrichum curcumae,DS_TURMERIC_01,950,Yes,HIGH,ICAR-IISR Kozhikode,VERY_HIGH
+Turmeric,Rhizome Rot,oomycete / fungal,Soft rot,Pythium aphanidermatum,DS_TURMERIC_02,820,Yes,HIGH,Top turmeric disease in Nizamabad & Erode (IISR),VERY_HIGH
+Coconut,Bud Rot,oomycete,Heart rot,Phytophthora palmivora,DS_COCONUT_01,1150,Yes,HIGH,"ICAR-Central Plantation Crops Research Institute (CPCRI), Kasaragod, Kerala",VERY_HIGH
+Coconut,Grey Leaf Spot / Blight,fungal,Pestalotiopsis leaf blight,Pestalotiopsis palmarum,"DS_COCONUT_01, DS_COCONUT_02",1650,Yes,HIGH,ICAR-CPCRI Kasaragod,VERY_HIGH
+Coconut,Stem Bleeding,fungal,Ceratocystis bleeding disease,Ceratocystis paradoxa,DS_COCONUT_01,1050,Yes,HIGH,ICAR-CPCRI Kasaragod,HIGH
+Coconut,Root (Wilt) Disease / Yellowing,phytoplasma,"Kerala root wilt, flaccidity",Candidatus Phytoplasma,DS_COCONUT_02,680,Yes,HIGH,Endemic in southern Kerala (CPCRI Kayangulam),HIGH
+Arecanut,Koleroga / Mahali / Fruit Rot,oomycete,Mahali roga,Phytophthora meadii,DS_ARECA_01,520,Yes,HIGH,"CPCRI Regional Station Vittal, Karnataka; CAMPCO",VERY_HIGH
+Arecanut,Yellow Leaf Disease (YLD),phytoplasma,Hole roga,Candidatus Phytoplasma,DS_ARECA_01,480,Yes,HIGH,"Severe in Sringeri, Koppa, Thirthahalli (Karnataka)",VERY_HIGH
+Arecanut,Stem Bleeding / Cracking,fungal / physiological,Thielaviopsis stem bleeding,Thielaviopsis paradoxa,DS_ARECA_01,450,Yes,HIGH,CPCRI Vittal,HIGH
+Arecanut,Bud Borer Damage,insect pest,Inflorescence caterpillar,UNKNOWN,DS_ARECA_01,390,Yes,HIGH,Flagged for verification; associated with Tirathaba mundella,MEDIUM
+Cashew,Anthracnose,fungal,"Dieback, shoot blight",Colletotrichum gloeosporioides,DS_CASHEW_01,650,Yes,HIGH,"Directorate of Cashew Research (DCR), Puttur, Karnataka",VERY_HIGH
+Cashew,Gummosis,fungal,Lasiodiplodia gummosis,Lasiodiplodia theobromae,DS_CASHEW_01,580,Yes,HIGH,DCR Puttur,HIGH
+Cashew,Leaf Miner,insect pest,Cashew leaf miner blister,Acrocercops syngramma,DS_CASHEW_01,620,Yes,HIGH,DCR Puttur bulletins,HIGH
+Cashew,Red Rust,algal,Algal leaf spot,Cephaleuros virescens,DS_CASHEW_01,590,Yes,HIGH,DCR Puttur,HIGH
+Paddy / Rice,Bacterial Leaf Blight,bacterial,"BLB, Kresek",Xanthomonas oryzae pv. oryzae,DS_RICE_01,1150,Yes,HIGH,"ICAR-Indian Institute of Rice Research (IIRR), Hyderabad",VERY_HIGH
+Paddy / Rice,Leaf Blast,fungal,Pyricularia blast,Magnaporthe oryzae,DS_RICE_01,1300,Yes,HIGH,IIRR Hyderabad,VERY_HIGH
+Paddy / Rice,Brown Spot,fungal,Helminthosporium spot,Bipolaris oryzae,DS_RICE_01,1250,Yes,HIGH,IIRR Hyderabad,VERY_HIGH
+Paddy / Rice,Tungro Disease,viral complex,Rice tungro virus,Rice tungro bacilliform virus (RTBV) + RTSV,DS_RICE_01,950,Yes,HIGH,IIRR Hyderabad,VERY_HIGH
+Paddy / Rice,Rice Hispa Damage,insect pest,Spiny beetle scrape,Dicladispa armigera,DS_RICE_01,890,Yes,HIGH,TNAU Agritech,HIGH

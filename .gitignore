@@ -1,6 +1,48 @@
-﻿.expo/
+# Dependencies
 node_modules/
+package-lock.json.bak
+
+# Expo and Metro Cache
+.expo/
 dist/
+web-build/
+.metro/
+
+# Environment Variables and Local Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Raw and Processed Image Datasets (>100MB / Gigabytes of training images)
+data/raw/
+data/processed/
+data/intermediate/
+dataset_research/KRISHI_MARGA_DATASETS/
+
+# Test / Scratch artifacts
+test_leaf*.jpg
+expo_qr.png
+
+# Python Bytecode and Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+venv/
+.venv/
+env/
+
+# Logs and Debugging
 npm-debug.*
 yarn-debug.*
 yarn-error.*
+*.log
+
+# System Files
+.DS_Store
+Thumbs.db

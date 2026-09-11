@@ -1,0 +1,654 @@
+dataset_id,crop,class,file_path,width,height,format,file_size,readable,blur_score_if_available,brightness_score_if_available,quality_flag,reason
+DS_SUGAR_02,Sugarcane,Bacterial Blight,test\images\S_BLB-20-_JPG.rf.ec961aead5c6b9fac8432c12840a928e.jpg,640,640,JPEG,39372,True,579.96,101.58,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,test\images\S_BLB-21-_JPG.rf.c49703dd00ba61f81dc74e7e7786dcd1.jpg,640,640,JPEG,37128,True,429.92,98.31,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,test\images\S_BLB-22-_JPG.rf.f1f578b3884294e23fd0c2dec14c7d6d.jpg,640,640,JPEG,64857,True,3076.13,96.98,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,test\images\S_BLB-23-_JPG.rf.516ced4394a1f1742cd77fb20e8885aa.jpg,640,640,JPEG,52011,True,1913.25,107.28,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,test\images\S_BLB-24-_JPG.rf.d6f783f7cb13fc3c27105577933bc024.jpg,640,640,JPEG,52065,True,2207.3,101.5,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,test\images\S_BLB-30-_JPG.rf.2b25904a11c1df1a0ad20408f10d872b.jpg,640,640,JPEG,54096,True,1672.7,107.79,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,test\images\S_BLB-33-_JPG.rf.05f18c9c3a5938133b1594cd5079c758.jpg,640,640,JPEG,57944,True,1404.34,126.43,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,test\images\S_BLB-39-_JPG.rf.6553b1a168b4872b53295f8274d6311b.jpg,640,640,JPEG,52670,True,1543.65,107.08,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,test\images\S_BLB-49-_JPG.rf.7452d8698340bea773fad0f72263b9a1.jpg,640,640,JPEG,45894,True,1294.44,99.06,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,test\images\S_BLB-70-_JPG.rf.5cfabb80842935dd39330d8b613f6043.jpg,640,640,JPEG,53348,True,1908.68,113.63,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-1-_jpg.rf.d9010f699490fd0b0e37fc050d99d9fd.jpg,640,640,JPEG,46744,True,1132.13,136.3,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-15-_jpg.rf.9fb3c8e45de5f6afc1831c9db567e3c8.jpg,640,640,JPEG,40607,True,951.6,139.53,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-20-_jpg.rf.3818cf438f106d137b3e68d53cf3f988.jpg,640,640,JPEG,57014,True,1567.02,136.7,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-21-_jpg.rf.e3a88202e82aeb81e27ea853db2980b9.jpg,640,640,JPEG,54924,True,1364.12,136.04,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-41-_jpg.rf.cb0045747a4692b2179e34dac9f39440.jpg,640,640,JPEG,49321,True,951.41,134.68,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-46-_jpg.rf.6e42a11afc35684f64c0091d10713950.jpg,640,640,JPEG,91901,True,1599.37,139.75,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-47-_jpg.rf.b03d8a183adb0867be3919b2bb4881ad.jpg,640,640,JPEG,40547,True,482.67,137.63,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-51-_JPG.rf.d2470fc1d879fdd5c7fb8e03bad74ab1.jpg,640,640,JPEG,49151,True,1269.11,141.94,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-53-_JPG.rf.a42a37f1186bc9c0f6978c4f0c62ad12.jpg,640,640,JPEG,33532,True,354.72,136.74,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-56-_JPG.rf.abddec778da171e43b918257e5240470.jpg,640,640,JPEG,40105,True,584.34,95.51,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-57-_JPG.rf.69874c3c29a72f9ac7cd7bc105bc8841.jpg,640,640,JPEG,44694,True,1146.28,81.82,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-58-_JPG.rf.e3c192c1506d12e18c05a13f2fca3397.jpg,640,640,JPEG,57187,True,2451.08,105.66,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-59-_JPG.rf.ea0629cb752b029c2dacf1ae7a5bc7ab.jpg,640,640,JPEG,40287,True,467.48,141.48,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-62-_JPG.rf.cc8dccf2f20a6e83c68936b9bc8b60f8.jpg,640,640,JPEG,36490,True,243.34,99.37,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-70-_JPG.rf.ed4f06aec051a9cd2e7db43f003c2b21.jpg,640,640,JPEG,47344,True,1089.27,122.63,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-71-_JPG.rf.ffd3276ac3d7c3344ec72adc44d273cc.jpg,640,640,JPEG,57792,True,1894.14,116.81,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-73-_JPG.rf.690cfb2d0dd7256687c68ec3c3d0448c.jpg,640,640,JPEG,55572,True,2200.55,149.44,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-74-_JPG.rf.ead72d5409a22076e06fc1b832236f78.jpg,640,640,JPEG,51451,True,1660.77,150.08,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-76-_JPG.rf.30f1495ca1c4f116e00e82a7969c77b0.jpg,640,640,JPEG,40410,True,866.28,153.53,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-77-_JPG.rf.80c0f4bb7feefa7f5cab7504872f9a37.jpg,640,640,JPEG,51216,True,1498.21,146.44,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-80-_JPG.rf.317a7711a02a3f3b4207114e6ba65e8f.jpg,640,640,JPEG,33328,True,407.58,184.33,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-82-_JPG.rf.4f4dcda30c1a05ef21c54c1da15004a4.jpg,640,640,JPEG,44308,True,1531.56,171.12,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-83-_JPG.rf.7685b68e1dd6576df2e86a9c00ce8951.jpg,640,640,JPEG,33599,True,551.08,165.62,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-91-_JPG.rf.0c3d93d4d8598178423c570f44c4a261.jpg,640,640,JPEG,49897,True,1167.31,172.52,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,test\images\S_H-96-_JPG.rf.a5bbf6b382dfe8be2f7aa153d3720571.jpg,640,640,JPEG,37620,True,688.43,126.47,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-1-_jpg.rf.ac62c73e2ec23006ba09a1b6c72722e1.jpg,640,640,JPEG,46199,True,516.94,130.2,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-22-_JPG.rf.9184efd4b66418b313bbc0fdd4534e02.jpg,640,640,JPEG,29267,True,216.26,113.68,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-33-_JPG.rf.32d9a39c7061d0402d128d878f3ea5ac.jpg,640,640,JPEG,52711,True,2314.82,146.99,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-35-_JPG.rf.9e182fe213c4cddf46959b73fb7a2f03.jpg,640,640,JPEG,71250,True,4283.25,133.12,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-41-_JPG.rf.e771d01f03e5cb9ab6008c788fbfa2d7.jpg,640,640,JPEG,38774,True,836.68,155.0,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-42-_JPG.rf.626423943305407c5e226dbc031c745e.jpg,640,640,JPEG,38715,True,443.08,176.7,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-48-_JPG.rf.65caa6f9b59ee859b7753738c103ec7e.jpg,640,640,JPEG,29474,True,265.98,121.16,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-49-_JPG.rf.19b32b921ea0d2291fb1e850925ab131.jpg,640,640,JPEG,33486,True,411.21,79.09,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-5-_JPG.rf.4184cc7af557b7e9d8f11f8d4a2d6dc5.jpg,640,640,JPEG,55758,True,3725.83,99.18,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-62-_JPG.rf.5c7942fb4f2115217e56780d805746f5.jpg,640,640,JPEG,53197,True,2113.86,110.13,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-68-_JPG.rf.1d1e8c1aaf91d02381a5251c9df1cb2d.jpg,640,640,JPEG,70419,True,2775.77,108.09,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-69-_JPG.rf.4da649bc6d94eb71766b9caad51e895a.jpg,640,640,JPEG,57968,True,2286.77,108.68,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-72-_jpg.rf.99e4c82aa47c32adfff108a82a948d60.jpg,640,640,JPEG,62742,True,474.84,162.11,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-74-_JPG.rf.44f845ce72294596bb21a5765cda0785.jpg,640,640,JPEG,54809,True,1834.25,104.97,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-77-_JPG.rf.a1a8bff926a3bd0c33389ceb25c4ddb9.jpg,640,640,JPEG,77674,True,3630.09,106.33,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-8-_JPG.rf.5af31a717f071df790317588fd071e24.jpg,640,640,JPEG,38569,True,875.54,169.23,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-81-_JPG.rf.78afa40a7fee63703a83b6c94c6397fa.jpg,640,640,JPEG,47534,True,1357.65,96.15,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-82-_JPG.rf.62c9f5221da05387788d2adae2c616d5.jpg,640,640,JPEG,65387,True,2168.53,129.06,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-84-_JPG.rf.8fbeef74a02e2d6a90d7549e2904f425.jpg,640,640,JPEG,43022,True,1262.46,97.93,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-87-_JPG.rf.3dc0f0936fc2b0bd7cb667083e74350a.jpg,640,640,JPEG,41667,True,1078.59,105.4,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-89-_JPG.rf.bd60f0e526da79b87304385aba25e2c3.jpg,640,640,JPEG,38495,True,563.37,95.77,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-91-_JPG.rf.498e31d3abc85a6c811d296f3d9e52fa.jpg,640,640,JPEG,64026,True,2700.15,114.4,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-94-_JPG.rf.5ada4a8c16672407c863fae7c2a4a623.jpg,640,640,JPEG,76942,True,3012.02,112.39,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-95-_JPG.rf.35ae3154581f6e451fc66950afed11d8.jpg,640,640,JPEG,81590,True,3999.4,114.94,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,test\images\S_RR-99-_JPG.rf.bff73053141c77495dff870fdc24c5df.jpg,640,640,JPEG,69124,True,3151.73,114.38,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-1-_JPG.rf.990f10b3973a353e2ade44bd3ac9a863.jpg,640,640,JPEG,32923,True,464.81,90.78,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-11-_JPG.rf.b7bb41ea8d10e4adef07aa7661e67885.jpg,640,640,JPEG,36312,True,612.83,96.27,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-14-_JPG.rf.9ced19cc1053d231bd51668555260ffd.jpg,640,640,JPEG,36610,True,768.93,84.31,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-15-_JPG.rf.378b8f21ae39b46b3953d80a1b15e802.jpg,640,640,JPEG,38968,True,484.7,101.36,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-16-_JPG.rf.250c9fd7477dad5105d5629431414175.jpg,640,640,JPEG,37251,True,485.1,99.93,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-17-_JPG.rf.070be3b56cbd0dc01caa77634bdf02d4.jpg,640,640,JPEG,38622,True,705.12,104.28,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-18-_JPG.rf.8cadddd8b4d99e65f715c5351bd5a3de.jpg,640,640,JPEG,42810,True,1097.3,90.76,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-19-_JPG.rf.fb6ea2e33455a4721f2bf4ca1825c4c4.jpg,640,640,JPEG,39465,True,790.6,95.27,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-2-_JPG.rf.ecc29f5f0f37bbcf3671a9fd30715b96.jpg,640,640,JPEG,36501,True,335.65,113.72,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-26-_JPG.rf.2faa086097ec0cd2a399130e2dc5611f.jpg,640,640,JPEG,47064,True,1329.47,102.71,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-28-_JPG.rf.f10eb3d3c65acf336b2dd5669e295588.jpg,640,640,JPEG,33231,True,434.0,100.7,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-29-_JPG.rf.5d35697eab1619452976c834f006a525.jpg,640,640,JPEG,32029,True,281.45,116.78,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-31-_JPG.rf.34d957f6ac6d4c09cdeefe5f1318a530.jpg,640,640,JPEG,48172,True,1714.9,114.87,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-32-_JPG.rf.b9b21dedf45d68cbaa694a46391364e9.jpg,640,640,JPEG,54100,True,1751.53,127.59,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-34-_JPG.rf.da6f53c2c7e263933e39923a840712d4.jpg,640,640,JPEG,56788,True,1245.49,114.09,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-35-_JPG.rf.2fa7350e78fc2092ec6d4a201999190a.jpg,640,640,JPEG,57277,True,1273.63,118.24,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-37-_JPG.rf.c7828be89f957d83ed3ae57ef86a238b.jpg,640,640,JPEG,49055,True,1427.75,92.03,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-4-_JPG.rf.cc275fd776d7098a8fa26e09bf8be187.jpg,640,640,JPEG,34246,True,592.03,103.44,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-40-_JPG.rf.725c8561d1fa1313bf1cfe45b5190f0a.jpg,640,640,JPEG,47631,True,1237.73,106.29,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-41-_JPG.rf.698603949e883d462c8bc9d72c113528.jpg,640,640,JPEG,51151,True,1336.96,108.18,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-42-_JPG.rf.48bb02aaac628b668b4b0abe9707003f.jpg,640,640,JPEG,51805,True,1606.76,106.69,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-44-_JPG.rf.9d149b7bc49d9364c3de7a996a429850.jpg,640,640,JPEG,59011,True,2306.89,105.98,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-45-_JPG.rf.2f409d31699d44616a4efb3fd56b9dc2.jpg,640,640,JPEG,53330,True,1510.28,114.48,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-46-_JPG.rf.736af0e647c8d6cbcc39c184984b06ed.jpg,640,640,JPEG,49389,True,1347.14,97.77,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-47-_JPG.rf.fc68917670b87ef7c45ba8cbb6eae6e5.jpg,640,640,JPEG,51112,True,1449.14,98.46,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-48-_JPG.rf.8a1baac86a0ef528e97aa665b6668494.jpg,640,640,JPEG,47458,True,1340.54,99.71,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-5-_JPG.rf.84864d740ebfeb3c3fb446cf1d11666b.jpg,640,640,JPEG,38868,True,495.67,101.15,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-50-_JPG.rf.1a7c6c325c75fe844fb79ca32b9d648f.jpg,640,640,JPEG,42085,True,1094.74,104.36,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-51-_JPG.rf.01488bf12af7bc2a98f53d81f3510056.jpg,640,640,JPEG,113644,True,4368.98,126.05,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-53-_JPG.rf.41118612942167695410dca16f492ab1.jpg,640,640,JPEG,118363,True,3283.34,123.32,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-54-_JPG.rf.96c058a390e16cedba0e3ee8a77efa67.jpg,640,640,JPEG,98454,True,3598.26,115.83,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-55-_JPG.rf.348aec72e3f4c39d3c7af886f0d1b26e.jpg,640,640,JPEG,72948,True,3314.86,118.52,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-56-_JPG.rf.9307d2ac04f27e1ef21ee4a579a620c9.jpg,640,640,JPEG,55302,True,2960.79,115.7,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-57-_JPG.rf.5fbf1e3ae5964d83721c8724c95f8180.jpg,640,640,JPEG,44920,True,1630.39,111.82,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-58-_JPG.rf.7c8ad2778f490542cd698d463a45d8ab.jpg,640,640,JPEG,54070,True,1746.5,108.44,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-59-_JPG.rf.6cc14e34d8bea9768f6d39d65e3c5d62.jpg,640,640,JPEG,76053,True,3052.18,119.89,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-60-_JPG.rf.81f84f1977c7f4f51cd3780acc30fba8.jpg,640,640,JPEG,48830,True,1635.27,112.56,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-61-_JPG.rf.ad07c9f63368fc16a13dd536310b47ac.jpg,640,640,JPEG,46959,True,1210.69,128.51,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-62-_JPG.rf.051271ec52f5cd1fe7867f33bc0e8f83.jpg,640,640,JPEG,54020,True,1832.93,122.34,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-65-_JPG.rf.005ee9afe28dde73b1b4a35a0459ef18.jpg,640,640,JPEG,51551,True,1923.74,114.83,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-66-_JPG.rf.9dc9b9cdbf70c4f6db059cc5944308ef.jpg,640,640,JPEG,64423,True,2709.12,118.77,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-68-_JPG.rf.fb52671eeec90cfe59e0892e479a37bf.jpg,640,640,JPEG,55348,True,1830.39,118.27,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-69-_JPG.rf.ae22aaf81c9d32be41ca619277a5a7e7.jpg,640,640,JPEG,59317,True,2953.36,109.21,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-7-_JPG.rf.3476138f10bfebae26139aa5a8669214.jpg,640,640,JPEG,42458,True,953.28,103.22,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-71-_JPG.rf.5ef22ed099828709ee945981d81f26d4.jpg,640,640,JPEG,53511,True,1858.18,115.76,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-72-_JPG.rf.2fdf0b4818fa499de6a544edb8653d20.jpg,640,640,JPEG,52886,True,2113.25,85.15,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-73-_JPG.rf.c3232f1dcd6d6993bafce9b80693cc9e.jpg,640,640,JPEG,54123,True,2006.45,99.69,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-74-_JPG.rf.f42ceb03118c6cd25ef1c91954cfcb19.jpg,640,640,JPEG,56645,True,2313.01,107.26,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-75-_JPG.rf.0e25de7932814a6b881fb8f92baba468.jpg,640,640,JPEG,87157,True,3595.03,115.51,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-76-_JPG.rf.57b3289263240948515abb63c2ce65f8.jpg,640,640,JPEG,51377,True,2287.3,109.34,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-77-_JPG.rf.d36bee26ac2ee21b52001647f1c99c42.jpg,640,640,JPEG,47859,True,1408.62,105.47,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-78-_JPG.rf.3d88f1a14507197d22bea39bfeeda833.jpg,640,640,JPEG,55326,True,2010.17,104.54,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-79-_JPG.rf.d0c02f4015bc85d2ff3de2f668e056ce.jpg,640,640,JPEG,61764,True,2287.43,97.19,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-8-_JPG.rf.6e3d78053249debf402bf4f63e86b360.jpg,640,640,JPEG,38885,True,433.8,102.89,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-80-_JPG.rf.44d8dc3671e72d2ab60ff9a4e171b2c4.jpg,640,640,JPEG,62521,True,3613.78,108.71,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-81-_JPG.rf.c2bcf498e56053511fe7081a07bb7cc6.jpg,640,640,JPEG,83559,True,3356.75,116.48,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-83-_JPG.rf.cc47bbe1508c576cead3841512999d2a.jpg,640,640,JPEG,59805,True,4775.53,121.29,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-86-_JPG.rf.6791e6f34e4a33b580b62a052498d2a6.jpg,640,640,JPEG,46423,True,1129.57,117.58,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-87-_JPG.rf.f65a328c042555434c15d0eee773c32b.jpg,640,640,JPEG,44382,True,1093.24,129.31,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-88-_JPG.rf.5ea8f7d86b358bdcbf4a73417e5a802f.jpg,640,640,JPEG,34682,True,365.68,105.86,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-89-_JPG.rf.f82a57cf6c0af443c6db80969afdddcc.jpg,640,640,JPEG,33955,True,245.13,108.25,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-90-_JPG.rf.8d64cb53a6be8a17b847189cb7450c99.jpg,640,640,JPEG,38558,True,502.8,99.36,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-91-_JPG.rf.db5a7ea4dbe568a6031948ce10082a46.jpg,640,640,JPEG,69294,True,2177.51,114.4,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-92-_JPG.rf.7ba6d87eb9c324a32322b53db96450cf.jpg,640,640,JPEG,60181,True,2106.0,112.18,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-93-_JPG.rf.35e3312d715d8198b124eff38b55e804.jpg,640,640,JPEG,98236,True,5048.87,106.09,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-94-_JPG.rf.a7fb28d6876074f46c09c0cad1cdd85d.jpg,640,640,JPEG,67423,True,3161.41,128.32,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-95-_JPG.rf.31f8e2bdb19f8f352b3b5c322b5e3b84.jpg,640,640,JPEG,65086,True,2543.55,126.84,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-96-_JPG.rf.149657903e689cc38528b8054e56ee37.jpg,640,640,JPEG,42363,True,1009.2,106.9,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-97-_JPG.rf.495d8729cb57ca6f9a111dc11b05110c.jpg,640,640,JPEG,33557,True,549.85,88.48,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,train\images\S_BLB-98-_JPG.rf.69900593ab85680af15d047dabdebd23.jpg,640,640,JPEG,41966,True,1260.53,95.85,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-10-_jpg.rf.583b357e5c549d8e84bdcac1c2265cdf.jpg,640,640,JPEG,55080,True,1185.88,129.07,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-100-_JPG.rf.ab751018766e3850f8d2fd7936ba0b9e.jpg,640,640,JPEG,63956,True,2326.43,158.83,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-11-_jpg.rf.103c8abb61f8b9e86ea5cd7d8f043dc6.jpg,640,640,JPEG,82041,True,1426.83,129.35,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-12-_jpg.rf.eabfe8173147dbb650d295d8ffba63c7.jpg,640,640,JPEG,61963,True,1367.52,139.84,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-13-_jpg.rf.38f7407b5fa8e40cb42f5722d3117bfb.jpg,640,640,JPEG,82888,True,1970.28,138.36,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-14-_jpg.rf.9847d4032fdf94c1276c814855b90e65.jpg,640,640,JPEG,90165,True,2102.27,133.87,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-16-_jpg.rf.a6af6cf1d670922d4020c639752975d5.jpg,640,640,JPEG,83324,True,1282.11,137.49,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-17-_jpg.rf.d3a70165a9d39902bca279ad59684c70.jpg,640,640,JPEG,59667,True,1733.62,135.34,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-18-_jpg.rf.5955649066c543a52384d569b6cf1049.jpg,640,640,JPEG,82277,True,1658.14,130.2,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-19-_jpg.rf.ce136e0cd7d8c23e08104b77d4bc055e.jpg,640,640,JPEG,47998,True,1192.05,116.81,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-2-_jpg.rf.913b2abac0de444c1029740fd9131d9b.jpg,640,640,JPEG,34879,True,418.15,126.43,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-22-_jpg.rf.0998049aa0cc6560b4ab8f9255d04392.jpg,640,640,JPEG,44215,True,955.99,129.76,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-23-_jpg.rf.311363678a70c337de5505c25e4900c7.jpg,640,640,JPEG,31626,True,474.77,131.73,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-24-_jpg.rf.6357fb2888cd2efd7804a4fce3d7a742.jpg,640,640,JPEG,50034,True,1319.17,131.01,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-25-_jpg.rf.a5784baaaa1f61b8c364c79afdc0b9e3.jpg,640,640,JPEG,90124,True,1410.83,140.09,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-26-_jpg.rf.e4a140ed8c79336012f9fd8305d22fb9.jpg,640,640,JPEG,51535,True,990.62,138.32,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-27-_jpg.rf.b835a785a4ee336b79e8b7ae9a27445f.jpg,640,640,JPEG,54047,True,1075.71,140.93,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-28-_jpg.rf.c75a09eb8309e56f29fbcd72de21b3a4.jpg,640,640,JPEG,57045,True,929.67,121.08,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-29-_jpg.rf.59a48f7060f1369d7cb39a3bf045ecb6.jpg,640,640,JPEG,28093,True,210.29,137.82,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-3-_jpg.rf.e7b97170effc9e607e1dd489cb686ef5.jpg,640,640,JPEG,30730,True,426.7,120.29,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-31-_jpg.rf.20bf4faac53c24b02c53e29be7b8b460.jpg,640,640,JPEG,44079,True,728.33,135.28,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-32-_jpg.rf.ae26a204e4ec6466b8a0e22ae7be8a67.jpg,640,640,JPEG,38389,True,353.95,148.28,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-33-_jpg.rf.d68622bd56566a1b4681d14df266632f.jpg,640,640,JPEG,47747,True,975.14,137.4,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-34-_jpg.rf.aefd3e450b0914dd837ebba39dd2fb37.jpg,640,640,JPEG,85455,True,1535.11,135.26,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-35-_jpg.rf.29b591fe6dc7e9e8e048a0f9aa6f4245.jpg,640,640,JPEG,94246,True,1969.31,132.71,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-36-_jpg.rf.bbf70e7718ae75ec64789f5e41660276.jpg,640,640,JPEG,46285,True,795.46,128.31,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-37-_jpg.rf.f5f0c9853892f84c93ec1269c3449eab.jpg,640,640,JPEG,64247,True,1562.66,124.79,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-38-_jpg.rf.2af1084e72911ff3b0b8d131f16b6a53.jpg,640,640,JPEG,40304,True,567.2,138.75,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-39-_jpg.rf.7841053fd044207aa00da57b4ed07f27.jpg,640,640,JPEG,46038,True,716.52,133.54,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-40-_jpg.rf.f0706f786c98825a0afef651a00c81ad.jpg,640,640,JPEG,85289,True,1884.49,131.74,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-42-_jpg.rf.e9d5e7b001631c7af5f133fb291b20d3.jpg,640,640,JPEG,51792,True,988.94,130.06,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-43-_jpg.rf.7b4e83b9d34fad493807b025e2e2533e.jpg,640,640,JPEG,51128,True,640.85,140.85,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-45-_jpg.rf.fad584122872ae61c5391b904e29e39c.jpg,640,640,JPEG,109211,True,2098.83,138.91,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-48-_jpg.rf.bacae9bb297817222b63188d5cb4aca8.jpg,640,640,JPEG,66425,True,1293.77,137.0,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-49-_jpg.rf.02325bc23aff4c35ae1d3860b2807a7b.jpg,640,640,JPEG,54521,True,1059.93,136.93,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-5-_jpg.rf.c384d880502b4ccbfb434c6961978d4e.jpg,640,640,JPEG,51978,True,1304.79,130.07,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-50-_jpg.rf.5e5153785447766efdc6494e3971dcc9.jpg,640,640,JPEG,97875,True,1741.27,136.76,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-52-_JPG.rf.43fbaf35d1b3295a8621121cd7ea4d4d.jpg,640,640,JPEG,45661,True,915.05,148.99,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-54-_JPG.rf.eba966c6ad5600c06442e837dfc92fde.jpg,640,640,JPEG,37819,True,442.15,129.3,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-55-_JPG.rf.9b63a00eb37f40d22c0b16b9a43541a5.jpg,640,640,JPEG,35033,True,328.04,117.25,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-6-_jpg.rf.4ffc21af5d1ec6f5722aee0106469d62.jpg,640,640,JPEG,33140,True,336.82,133.37,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-60-_JPG.rf.535e734e8d513daa4bcc1bbd552c7cfe.jpg,640,640,JPEG,45866,True,1000.58,122.12,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-61-_JPG.rf.1e3e0fcebabe749f6e0fbe9f2d66bb99.jpg,640,640,JPEG,36496,True,391.83,137.18,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-64-_JPG.rf.582f5412f41bfca250956d8e89b556cb.jpg,640,640,JPEG,29836,True,334.49,101.69,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-65-_JPG.rf.b5a1db3854a4dbed6e8a9b8ae1a8f66e.jpg,640,640,JPEG,37409,True,814.31,149.29,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-66-_JPG.rf.4c8d647772255570073bacc586f98531.jpg,640,640,JPEG,38656,True,833.42,144.04,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-67-_JPG.rf.d582a5ee9b384f0a4917519490e57796.jpg,640,640,JPEG,43050,True,930.21,147.91,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-68-_JPG.rf.1b131cb780127f720be97325a2f51e55.jpg,640,640,JPEG,34216,True,569.8,151.09,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-69-_JPG.rf.fa6f24bfe0d9f55dc43a244cdae5195b.jpg,640,640,JPEG,32064,True,383.55,132.1,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-7-_jpg.rf.239a1d9e75723360d7a4294ef21e3c5c.jpg,640,640,JPEG,81459,True,1433.25,141.07,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-75-_JPG.rf.2d286fe1d7519304d1c9bfa726fff025.jpg,640,640,JPEG,47147,True,1421.17,153.3,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-78-_JPG.rf.7807ba73b1d51b13b0173470f59619fc.jpg,640,640,JPEG,42531,True,980.04,177.14,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-79-_JPG.rf.652c248ecfdf8cd3df72fd12078dd647.jpg,640,640,JPEG,52653,True,1364.14,191.85,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-8-_jpg.rf.ae2db3c8403731306a2251686696d437.jpg,640,640,JPEG,67388,True,1003.32,134.56,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-81-_JPG.rf.3a195a1d9a3f43886183c7ddd0cd8ee1.jpg,640,640,JPEG,44223,True,1260.42,155.17,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-84-_JPG.rf.ef30151cb6ae900cdc9cef9a5d036955.jpg,640,640,JPEG,46355,True,1120.5,181.83,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-85-_JPG.rf.1362d5c5020f2d8554a280c23f912a1b.jpg,640,640,JPEG,97519,True,2905.56,166.67,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-86-_JPG.rf.66d14b519ada9c03d8050537c90abe15.jpg,640,640,JPEG,41413,True,979.69,178.09,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-87-_JPG.rf.69599d53015c02978e2af5179d4458c2.jpg,640,640,JPEG,56792,True,2278.59,190.88,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-88-_JPG.rf.7759c9dd3aaff2a8a21d02259bc8a8e4.jpg,640,640,JPEG,43719,True,1237.91,140.06,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-89-_JPG.rf.9ab257b151d884301eea7ed92d90bdd4.jpg,640,640,JPEG,88954,True,2833.96,127.14,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-9-_jpg.rf.74251232e5f37228b5f55f5afc605185.jpg,640,640,JPEG,81463,True,1253.28,122.42,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-90-_JPG.rf.76a015d40d854e0535d2a4c30123deb8.jpg,640,640,JPEG,48122,True,1581.08,179.16,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-92-_JPG.rf.ae988c84f83f94ce2b7b328f8d88fdae.jpg,640,640,JPEG,30131,True,249.09,205.1,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-93-_JPG.rf.19c2978b2cdfc940d610d14e1350bd6e.jpg,640,640,JPEG,45344,True,1867.21,151.73,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-94-_JPG.rf.02b3ecc5b60701c2d4d3d6e1017f7a29.jpg,640,640,JPEG,36342,True,475.6,157.62,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-95-_JPG.rf.aab31364ad77856836645503767493d3.jpg,640,640,JPEG,33106,True,267.44,147.06,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-97-_JPG.rf.192454f892ff24972cd4855a82c0cfb2.jpg,640,640,JPEG,35069,True,576.61,171.41,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-98-_JPG.rf.272bd173bd0223af6dc347dbdc7ec733.jpg,640,640,JPEG,46628,True,1283.56,140.12,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,train\images\S_H-99-_JPG.rf.f4c4ed00696283d3302a1b1e39aaad86.jpg,640,640,JPEG,34417,True,328.69,162.28,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-10-_JPG.rf.525fc02ce4642fd46f8f2b7401e1b60f.jpg,640,640,JPEG,48478,True,1201.86,59.97,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-100-_JPG.rf.07cb88b144d1b5fc8a1b55f4ce219717.jpg,640,640,JPEG,60983,True,3128.3,94.14,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-11-_JPG.rf.d6955c2afd09c6881e56343f909fc027.jpg,640,640,JPEG,60275,True,1017.61,43.02,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-12-_JPG.rf.fd289c20fc52c352fa80db81f851db37.jpg,640,640,JPEG,54528,True,1253.93,46.9,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-13-_JPG.rf.9478c87509c8f3576318c9817ed28b70.jpg,640,640,JPEG,46309,True,1017.76,56.78,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-14-_JPG.rf.7a26af305509c89007d339c3477d2f29.jpg,640,640,JPEG,45113,True,1163.1,83.64,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-15-_JPG.rf.d2a95b88121eb3d1b70c430e87085703.jpg,640,640,JPEG,64155,True,2069.24,81.33,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-16-_JPG.rf.2b3ff555a1ec4d565c56df4b05c604ef.jpg,640,640,JPEG,72806,True,3025.35,87.11,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-17-_JPG.rf.c6dab6adea7e101b3ecf71a954cb8d8d.jpg,640,640,JPEG,90589,True,2802.2,86.22,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-18-_JPG.rf.020b3e3a6110a08ee61fb8b393c4f5b3.jpg,640,640,JPEG,77564,True,3110.87,116.45,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-19-_JPG.rf.e938a8eb91c9e9ec0c03355733a1981d.jpg,640,640,JPEG,75159,True,3357.19,123.87,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-2-_jpg.rf.648ec1465cdcbd1fa23209a00aa8dadf.jpg,640,640,JPEG,47760,True,364.03,132.97,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-20-_JPG.rf.1a3ca5a8ddba519472f77d6415134507.jpg,640,640,JPEG,35998,True,549.51,115.91,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-21-_JPG.rf.5912ea7c2f04ed3da6775fbaa89c8925.jpg,640,640,JPEG,37486,True,282.96,113.32,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-23-_JPG.rf.83d930a1018ad600336edae274142f91.jpg,640,640,JPEG,55244,True,2559.67,117.44,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-25-_JPG.rf.ff3c77e1661e0db9271eaf6b49c9eab1.jpg,640,640,JPEG,63587,True,2138.15,134.46,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-26-_JPG.rf.95179375be6727f1482f0e92080f2947.jpg,640,640,JPEG,53608,True,1534.72,94.9,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-27-_JPG.rf.d888f54217cf29c0954c48ed436f41b2.jpg,640,640,JPEG,38732,True,2259.99,181.78,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-28-_JPG.rf.632323ef19d90c0ce4cafce4fc4ab9f6.jpg,640,640,JPEG,47201,True,1649.74,157.0,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-29-_JPG.rf.70d79c3359fb11252d9036dbaf1f5763.jpg,640,640,JPEG,55533,True,2636.77,121.55,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-3-_jpg.rf.47fc17505b42693d63a3be9dc2fae376.jpg,640,640,JPEG,49410,True,1360.84,132.01,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-30-_JPG.rf.98e74d42b3081f18ac2ebb86f99e6896.jpg,640,640,JPEG,44853,True,1253.79,150.3,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-31-_JPG.rf.5cf04f2c845f967cbdc23ed573cc6684.jpg,640,640,JPEG,31771,True,301.0,178.28,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-32-_JPG.rf.5dc9bb476216e6ded70d410f852170fb.jpg,640,640,JPEG,36539,True,618.45,158.25,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-34-_JPG.rf.3aaf5fdbeff2daee217d8670ac90996c.jpg,640,640,JPEG,49480,True,2097.2,157.85,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-36-_JPG.rf.3d50019696530a319ebe7602bbed044a.jpg,640,640,JPEG,55065,True,2823.19,160.44,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-37-_JPG.rf.13faf467ee4290c17064c4edd57f381b.jpg,640,640,JPEG,53076,True,2162.02,117.89,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-38-_JPG.rf.985484a69a404d8db669a0ff55773779.jpg,640,640,JPEG,46711,True,586.68,114.48,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-39-_JPG.rf.0ea06163a455c12a4c0263c3f89684bb.jpg,640,640,JPEG,35744,True,634.76,143.78,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-4-_JPG.rf.1e0ed1944525a2640d3bf95143991216.jpg,640,640,JPEG,46646,True,2004.6,82.77,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-40-_JPG.rf.43cb5e65a715ed7f70ea45f9eee6b87a.jpg,640,640,JPEG,49945,True,1227.04,114.11,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-43-_JPG.rf.088780f315b8ad51f74491574bf5226f.jpg,640,640,JPEG,24355,True,399.85,126.53,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-44-_JPG.rf.44fd9e8897318b19d74af12b27c6f8c3.jpg,640,640,JPEG,61310,True,2223.9,95.31,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-45-_JPG.rf.a81b18e94300acad0f9f923dde7c3a4b.jpg,640,640,JPEG,38353,True,872.29,101.14,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-46-_JPG.rf.391d5d9f60edc995515174f44bec8186.jpg,640,640,JPEG,30960,True,192.41,86.61,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-47-_JPG.rf.a330b56fe63c69a9997146b16595828c.jpg,640,640,JPEG,34755,True,410.82,77.96,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-50-_JPG.rf.5ab84f81cb5c8752a945b49f8c8b0348.jpg,640,640,JPEG,44013,True,1019.12,85.42,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-51-_JPG.rf.7d5c5079d73d4b156527dcf535e9c490.jpg,640,640,JPEG,39474,True,732.07,89.06,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-52-_JPG.rf.1bdcc4a5f7568a6beb1fcedfcad426c6.jpg,640,640,JPEG,42652,True,915.69,89.38,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-53-_JPG.rf.aef8c851a5831c79d48e76ceb4826087.jpg,640,640,JPEG,40150,True,1220.58,83.73,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-54-_JPG.rf.d423a519945a2daf2c7f4356dfdcc6c8.jpg,640,640,JPEG,54771,True,2035.6,75.19,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-56-_JPG.rf.e75780bdba7342dacb517f87d4bad2f5.jpg,640,640,JPEG,38915,True,846.24,105.1,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-57-_JPG.rf.e8599cf4ef71d58fe2aa9bd5c93ae5c1.jpg,640,640,JPEG,40154,True,874.84,106.52,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-59-_JPG.rf.6e83e6b9692e256992b9b75c3816cb95.jpg,640,640,JPEG,35655,True,472.73,102.31,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-60-_JPG.rf.41c6753c93bfa0295d5e0082dd8c7d1a.jpg,640,640,JPEG,71190,True,2997.11,107.53,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-61-_JPG.rf.6eac176b80a01a5394e1d26d7fdf7af9.jpg,640,640,JPEG,68262,True,2526.71,108.11,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-63-_JPG.rf.4694526a57494d7f5bf1bd5af4f2dcfb.jpg,640,640,JPEG,46587,True,1262.47,104.43,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-64-_JPG.rf.90999dfbcd5b3835a99f6dac3fa3dfb0.jpg,640,640,JPEG,58743,True,2349.05,113.04,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-65-_JPG.rf.90243be61799c79bf65c8ab7a14da530.jpg,640,640,JPEG,48501,True,1335.36,100.73,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-66-_JPG.rf.e0ae6cd68233d875f134119bfd42f265.jpg,640,640,JPEG,56856,True,2589.64,84.44,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-67-_JPG.rf.3b468352bea5c66e72ef3581de2818d0.jpg,640,640,JPEG,51976,True,2228.95,86.51,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-7-_JPG.rf.629850dc2b9716683c57d59c2da96b53.jpg,640,640,JPEG,49588,True,1930.06,158.74,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-70-_JPG.rf.4c34d485de9414f27fad38469a8deecc.jpg,640,640,JPEG,55300,True,1998.92,97.51,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-71-_JPG.rf.2fbfe6fd60b0427ffec4977708bfce9e.jpg,640,640,JPEG,54751,True,333.35,154.89,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-73-_JPG.rf.b415b5632e148e7731a1608b650f95f8.jpg,640,640,JPEG,49838,True,296.01,133.32,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-75-_JPG.rf.c8f2a3d85eeb2246b84db3a4fd1dcbc6.jpg,640,640,JPEG,35975,True,683.06,102.83,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-76-_JPG.rf.6e02a10b542ed75dbfa0046f1334140a.jpg,640,640,JPEG,71854,True,3319.15,127.46,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-78-_JPG.rf.a80e2ee13f66d180c390cbfdc38fcf16.jpg,640,640,JPEG,71613,True,3544.99,110.42,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-79-_JPG.rf.57cad455adc5e898c2b853ddf16746f1.jpg,640,640,JPEG,64394,True,3133.28,97.07,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-83-_JPG.rf.296e639204686d755b66a264fb5b6f08.jpg,640,640,JPEG,48545,True,1769.13,102.44,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-85-_JPG.rf.74a04438edcf4ee58ca3af0f7d714433.jpg,640,640,JPEG,51671,True,1964.34,114.55,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-86-_JPG.rf.1871acfad15e7b9cafe4f5d9dd98a34c.jpg,640,640,JPEG,43474,True,1146.7,97.32,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-88-_JPG.rf.f27b59010ab46ee7bfd3c9a0da4cbfd4.jpg,640,640,JPEG,46245,True,959.22,101.32,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-9-_JPG.rf.7b35d4e89daaedf6bcb738a3c433d60f.jpg,640,640,JPEG,50225,True,1411.37,65.37,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-90-_JPG.rf.ae49041e17458cd66678b5830348d62e.jpg,640,640,JPEG,67728,True,3011.74,101.22,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-92-_JPG.rf.1ade77ee0cc6e1b50f0c1fa7dc26e98b.jpg,640,640,JPEG,71614,True,2754.41,120.26,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-93-_JPG.rf.77e5742f059d8b5b4d4f449045ad0779.jpg,640,640,JPEG,66352,True,2860.91,103.64,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-96-_JPG.rf.2995b56baf1e1d4e598c350358ad3a68.jpg,640,640,JPEG,61623,True,3019.06,99.37,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-97-_JPG.rf.ccd4ed4bae03f62152c33926291730a1.jpg,640,640,JPEG,80909,True,3740.88,104.26,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,train\images\S_RR-98-_JPG.rf.4d425ccc0dacf988b107c201be34fcf1.jpg,640,640,JPEG,54553,True,2662.35,121.84,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,valid\images\S_BLB-10-_JPG.rf.643d85d034d1ca3ff06c4066b6c22019.jpg,640,640,JPEG,41681,True,1102.23,98.0,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,valid\images\S_BLB-100-_JPG.rf.f140ffda9fd46dcad28f058995c410dc.jpg,640,640,JPEG,39431,True,647.11,103.82,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,valid\images\S_BLB-12-_JPG.rf.e27904153e28c9e2b35179e06af1c221.jpg,640,640,JPEG,38745,True,728.04,98.97,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,valid\images\S_BLB-13-_JPG.rf.35c318064344aa90f7af7a4505a160eb.jpg,640,640,JPEG,37784,True,591.64,99.99,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,valid\images\S_BLB-25-_JPG.rf.61075fc4f45f916518ad44228dbbd319.jpg,640,640,JPEG,43352,True,930.15,116.45,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,valid\images\S_BLB-27-_JPG.rf.94bca54ca2d82acf92260257fc38d5bc.jpg,640,640,JPEG,55045,True,419.17,137.11,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,valid\images\S_BLB-3-_JPG.rf.2cae7f7dce558124a791df52cbc6a029.jpg,640,640,JPEG,32524,True,223.57,110.84,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,valid\images\S_BLB-36-_JPG.rf.7d4062c257d81d02ae497e5401b571a7.jpg,640,640,JPEG,42387,True,1074.32,111.87,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,valid\images\S_BLB-38-_JPG.rf.8f029ffb1556bbf5b463590c0f4c69df.jpg,640,640,JPEG,49952,True,1566.18,101.1,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,valid\images\S_BLB-43-_JPG.rf.b1589dca6d7452efde00e4bc3d3e08b0.jpg,640,640,JPEG,50628,True,1494.15,104.35,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,valid\images\S_BLB-52-_JPG.rf.1c9514317466a95e8138000fc4804cfc.jpg,640,640,JPEG,48836,True,1490.58,113.04,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,valid\images\S_BLB-6-_JPG.rf.32154d5163af1c6bc9bb8fe78822fe4a.jpg,640,640,JPEG,40106,True,510.98,106.6,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,valid\images\S_BLB-63-_JPG.rf.a1cbb598066eb27a90d48080011fe92c.jpg,640,640,JPEG,59110,True,2538.44,113.08,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,valid\images\S_BLB-64-_JPG.rf.4c031d8b5137475140a190d86667fff6.jpg,640,640,JPEG,52933,True,2261.71,116.53,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,valid\images\S_BLB-67-_JPG.rf.4bb7b0a523599e04e3f67a5f6ae46974.jpg,640,640,JPEG,57796,True,2350.1,99.36,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,valid\images\S_BLB-82-_JPG.rf.063d116e23b1a4f44aa9ee8995530c73.jpg,640,640,JPEG,58593,True,2768.13,111.58,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,valid\images\S_BLB-84-_JPG.rf.d6aba30465a56ec05a3d4209398fde9b.jpg,640,640,JPEG,54011,True,6161.55,131.21,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,valid\images\S_BLB-85-_JPG.rf.5e6c013d810f3dc0f1bcfad8e69f9f4e.jpg,640,640,JPEG,48530,True,1110.91,106.65,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,valid\images\S_BLB-9-_JPG.rf.154eaa384d80ad89a7da90583d873b71.jpg,640,640,JPEG,47377,True,1846.49,105.56,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Bacterial Blight,valid\images\S_BLB-99-_JPG.rf.cc3e34909fccb78758a4cf53e46ffd19.jpg,640,640,JPEG,36771,True,538.07,108.71,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,valid\images\S_H-30-_jpg.rf.e99cea5d87d5b2dbd4b76ed17fce939c.jpg,640,640,JPEG,75475,True,2699.71,128.88,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,valid\images\S_H-4-_jpg.rf.70caaf20e686d9857c38127968e74ae0.jpg,640,640,JPEG,26569,True,327.03,136.82,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,valid\images\S_H-44-_jpg.rf.8409434b2e038122c9c96d4f74d493e5.jpg,640,640,JPEG,39042,True,614.66,131.84,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,valid\images\S_H-63-_JPG.rf.f73253dfd6069bf1a751e2ade8f6bbb6.jpg,640,640,JPEG,36436,True,413.42,118.89,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Healthy,valid\images\S_H-72-_JPG.rf.ca1b470ad6859e7c9bdd15e26fd4d293.jpg,640,640,JPEG,35555,True,718.73,137.15,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,valid\images\S_RR-24-_JPG.rf.eb0617d269ad0f1b8f53e138b884245d.jpg,640,640,JPEG,78825,True,4074.23,104.62,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,valid\images\S_RR-55-_JPG.rf.2adcb7a24c0aa404d9ce6dbea507b776.jpg,640,640,JPEG,51823,True,2124.41,102.4,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,valid\images\S_RR-58-_JPG.rf.c1197eb8b1c0a527d2b7c448ff0876e1.jpg,640,640,JPEG,42822,True,876.19,113.25,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,valid\images\S_RR-6-_JPG.rf.a6b244596ae2d0ba33efe41a6109778c.jpg,640,640,JPEG,37778,True,965.87,113.23,CLEAN,Passes technical checks
+DS_SUGAR_02,Sugarcane,Red Rot,valid\images\S_RR-80-_JPG.rf.c57531e9bde822690862cad7ba73d799.jpg,640,640,JPEG,52715,True,1916.7,99.98,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_044.jpg,300,300,JPEG,8518,True,172.73,125.91,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_045.jpg,300,300,JPEG,21108,True,2553.56,117.8,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_046.jpg,300,300,JPEG,22733,True,4161.6,111.02,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_047.jpg,300,300,JPEG,16055,True,1558.05,112.85,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_048.jpg,300,300,JPEG,20437,True,3286.06,105.62,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_049.jpg,300,300,JPEG,16136,True,2339.12,81.3,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_050.jpg,300,300,JPEG,23255,True,4872.31,109.43,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_051.jpg,300,300,JPEG,15399,True,1932.97,106.48,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_052.jpg,300,300,JPEG,16242,True,2037.02,133.93,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_053.jpg,300,300,JPEG,19187,True,3238.97,112.2,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_054.jpg,300,300,JPEG,13533,True,1092.58,88.54,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_055.jpg,300,300,JPEG,15511,True,1904.54,127.16,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_056.jpg,300,300,JPEG,23033,True,3725.59,162.47,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_057.jpg,300,300,JPEG,18649,True,2976.19,104.74,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_058.jpg,300,300,JPEG,12319,True,967.28,112.1,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_059.jpg,300,300,JPEG,13406,True,1093.09,128.14,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_060.JPG,300,300,JPEG,23424,True,4677.69,124.59,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_061.JPG,300,300,JPEG,25135,True,6046.25,120.43,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_062.JPG,300,300,JPEG,16657,True,2248.47,116.34,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_063.JPG,300,300,JPEG,18054,True,2985.12,85.54,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_064.JPG,300,300,JPEG,14987,True,1536.62,126.32,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_065.JPG,300,300,JPEG,13905,True,1189.67,96.37,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_066.JPG,300,300,JPEG,14762,True,1370.12,118.0,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_067.JPG,300,300,JPEG,14070,True,1863.81,110.9,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_068.JPG,300,300,JPEG,13961,True,1148.06,114.27,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_069.JPG,300,300,JPEG,14199,True,1246.2,107.37,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_070.JPG,300,300,JPEG,14509,True,1580.28,90.68,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_071.JPG,300,300,JPEG,14284,True,1031.45,115.37,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_072.JPG,300,300,JPEG,14331,True,1544.86,100.89,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_073.JPG,300,300,JPEG,16247,True,1433.72,148.54,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_074.JPG,300,300,JPEG,16028,True,1710.77,135.75,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_075.JPG,300,300,JPEG,16682,True,1728.5,136.95,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_076.jpg,300,300,JPEG,10534,True,386.3,165.94,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_077.jpg,300,300,JPEG,10336,True,244.59,132.22,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_078.jpg,300,300,JPEG,13280,True,469.89,125.3,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_079.jpg,300,300,JPEG,9688,True,296.21,93.92,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_080.jpg,300,300,JPEG,19469,True,2098.5,138.41,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_081.jpg,300,300,JPEG,8805,True,189.69,147.34,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_082.jpg,300,300,JPEG,8518,True,172.73,125.91,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_083.jpg,300,300,JPEG,21224,True,2556.29,117.78,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_084.jpg,300,300,JPEG,22733,True,4161.6,111.02,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_085.jpg,300,300,JPEG,16055,True,1558.05,112.85,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_086.jpg,300,300,JPEG,20437,True,3286.06,105.62,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_087.jpg,300,300,JPEG,16136,True,2339.12,81.3,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_088.jpg,300,300,JPEG,23255,True,4872.31,109.43,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_089.jpg,300,300,JPEG,15398,True,1928.0,106.51,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_090.jpg,300,300,JPEG,16242,True,2037.02,133.93,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_091.jpg,300,300,JPEG,13533,True,1092.58,88.54,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_092.jpg,300,300,JPEG,15511,True,1904.54,127.16,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_093.jpg,300,300,JPEG,13364,True,1206.56,85.6,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_094.jpg,300,300,JPEG,16637,True,2191.37,126.08,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_095.jpg,300,300,JPEG,23033,True,3725.59,162.47,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\bacterial_leaf_blight\blight_rotated_096.jpg,300,300,JPEG,12319,True,967.28,112.1,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_025.jpg,300,300,JPEG,11774,True,616.18,98.54,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_026.png,300,300,PNG,117259,True,507.51,93.3,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_027.jpg,300,300,JPEG,7627,True,449.76,36.52,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_028.png,300,300,PNG,119380,True,1043.29,125.29,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_029.JPG,300,300,JPEG,16326,True,1458.08,123.42,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_030.png,300,300,PNG,126400,True,413.96,146.79,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_031.JPG,300,300,JPEG,10533,True,513.06,115.89,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_032.png,300,300,PNG,84878,True,40.85,130.97,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_033.JPG,300,300,JPEG,10741,True,605.27,112.16,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_034.png,300,300,PNG,134750,True,342.32,151.8,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_035.JPG,300,300,JPEG,12863,True,872.06,111.18,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_036.png,300,300,PNG,154710,True,876.33,101.26,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_037.JPG,300,300,JPEG,13080,True,924.31,116.62,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_038.png,300,300,PNG,107715,True,230.06,133.58,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_039.JPG,300,300,JPEG,11757,True,845.2,141.76,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_040.png,300,300,PNG,126649,True,388.32,139.47,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_041.JPG,300,300,JPEG,10567,True,698.64,123.0,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_042.png,300,300,PNG,102221,True,163.55,141.2,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_043.JPG,300,300,JPEG,15066,True,1119.06,90.51,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_044.png,300,300,PNG,100896,True,210.5,110.96,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_045.jpg,300,300,JPEG,14011,True,1002.18,70.7,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_046.png,300,300,PNG,100647,True,128.43,124.27,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_047.JPG,300,300,JPEG,15002,True,841.45,120.92,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_048.JPG,300,300,JPEG,14305,True,696.82,116.42,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\blast\blast_rotated_049.JPG,300,300,JPEG,16178,True,910.33,110.74,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_018.jpg,300,300,JPEG,11385,True,343.37,132.44,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_019.jpg,300,300,JPEG,11002,True,154.75,153.37,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_020.jpg,300,300,JPEG,7634,True,50.21,142.04,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_021.jpg,300,300,JPEG,7895,True,233.13,131.72,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_022.jpg,300,300,JPEG,10713,True,165.3,108.69,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_023.jpg,300,300,JPEG,13264,True,499.83,125.04,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_024.jpg,300,300,JPEG,7276,True,37.25,137.27,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_025.jpg,300,300,JPEG,9832,True,221.04,135.91,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_026.jpg,300,300,JPEG,7663,True,50.12,138.53,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_027.jpg,300,300,JPEG,7203,True,42.77,123.24,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_028.jpg,300,300,JPEG,12459,True,318.57,133.78,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_029.jpg,300,300,JPEG,11275,True,217.87,138.95,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_030.jpg,300,300,JPEG,8112,True,75.74,133.05,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_031.jpg,300,300,JPEG,10265,True,209.82,143.79,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_032.jpg,300,300,JPEG,15290,True,571.61,134.9,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_033.jpg,300,300,JPEG,10749,True,525.45,98.45,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_034.jpg,300,300,JPEG,10482,True,163.51,121.34,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_035.jpg,300,300,JPEG,14315,True,197.5,138.28,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_036.jpg,300,300,JPEG,8707,True,82.95,161.44,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_037.jpg,300,300,JPEG,7192,True,42.49,131.66,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_038.jpg,300,300,JPEG,7917,True,65.66,138.94,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_039.jpg,300,300,JPEG,10817,True,246.53,138.75,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_040.jpg,300,300,JPEG,9046,True,77.35,131.98,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_041.jpg,300,300,JPEG,10586,True,139.77,132.42,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_042.jpg,300,300,JPEG,13033,True,575.85,142.09,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_043.jpg,300,300,JPEG,11486,True,271.81,164.42,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_044.jpg,300,300,JPEG,9877,True,168.88,134.17,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_045.jpg,300,300,JPEG,10460,True,216.54,128.64,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_046.jpg,300,300,JPEG,7647,True,73.88,108.33,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_047.jpg,300,300,JPEG,9874,True,105.72,113.74,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_048.jpg,300,300,JPEG,6648,True,30.51,144.51,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_049.jpg,300,300,JPEG,10409,True,142.9,152.36,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_050.jpg,300,300,JPEG,9683,True,106.0,137.91,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_051.jpg,300,300,JPEG,8650,True,217.73,125.95,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_052.jpg,300,300,JPEG,9389,True,279.46,126.83,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_053.jpg,300,300,JPEG,13024,True,207.38,137.42,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_054.jpg,300,300,JPEG,11843,True,355.23,101.93,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_055.jpg,300,300,JPEG,6468,True,25.24,121.78,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_056.jpg,300,300,JPEG,18461,True,1459.46,124.49,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_057.jpg,300,300,JPEG,14043,True,583.95,118.3,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_058.jpg,300,300,JPEG,12327,True,351.36,135.16,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_059.jpg,300,300,JPEG,7669,True,44.64,131.38,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_060.jpg,300,300,JPEG,7376,True,37.73,158.75,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_061.jpg,300,300,JPEG,11760,True,285.12,129.31,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_062.jpg,300,300,JPEG,9123,True,98.93,134.73,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_063.jpg,300,300,JPEG,13104,True,650.64,135.47,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_064.jpg,300,300,JPEG,13988,True,517.05,140.37,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_065.jpg,300,300,JPEG,7450,True,84.59,134.43,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_066.jpg,300,300,JPEG,6640,True,91.95,143.31,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_067.jpg,300,300,JPEG,12397,True,280.6,137.55,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_068.jpg,300,300,JPEG,9423,True,225.46,123.9,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_069.jpg,300,300,JPEG,8405,True,62.51,126.23,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_070.jpg,300,300,JPEG,8016,True,59.42,146.21,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_071.jpg,300,300,JPEG,6746,True,32.96,143.27,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_072.jpg,300,300,JPEG,10512,True,369.6,129.87,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_073.jpg,300,300,JPEG,6188,True,24.04,106.87,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_074.jpg,300,300,JPEG,12322,True,254.32,131.56,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_075.jpg,300,300,JPEG,6636,True,25.76,149.47,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_076.jpg,300,300,JPEG,7763,True,52.61,132.16,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_077.jpg,300,300,JPEG,9018,True,103.02,133.51,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_078.jpg,300,300,JPEG,6701,True,32.56,133.38,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_079.jpg,300,300,JPEG,7778,True,70.42,128.95,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_080.jpg,300,300,JPEG,9216,True,107.95,134.81,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_081.jpg,300,300,JPEG,12613,True,420.39,140.38,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_082.jpg,300,300,JPEG,8506,True,122.1,109.9,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_083.jpg,300,300,JPEG,13607,True,453.44,131.03,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_084.jpg,300,300,JPEG,10634,True,147.85,132.35,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_085.jpg,300,300,JPEG,9047,True,113.11,128.99,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_086.jpg,300,300,JPEG,13050,True,415.77,131.05,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_087.jpg,300,300,JPEG,6677,True,29.64,133.34,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_088.jpg,300,300,JPEG,9646,True,292.58,125.01,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_089.jpg,300,300,JPEG,10400,True,221.88,139.97,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_090.jpg,300,300,JPEG,10671,True,427.24,115.34,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_091.jpg,300,300,JPEG,18228,True,660.3,150.76,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_092.jpg,300,300,JPEG,7477,True,44.09,138.43,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_093.jpg,300,300,JPEG,6053,True,15.68,156.58,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_094.jpg,300,300,JPEG,13472,True,409.24,130.61,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_095.jpg,300,300,JPEG,11012,True,469.13,141.32,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\train\brownspot\brownspot_rotated_096.jpg,300,300,JPEG,8654,True,154.79,126.44,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_001.jpg,300,300,JPEG,12209,True,1137.45,103.78,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_002.png,300,300,PNG,155558,True,4104.34,143.06,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_003.jpg,300,300,JPEG,7298,True,73.99,112.77,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_004.PNG,300,300,PNG,134508,True,605.76,167.44,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_005.jpg,300,300,JPEG,22237,True,3995.29,128.44,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_006.PNG,300,300,PNG,127532,True,369.79,131.9,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_007.jpg,300,300,JPEG,17287,True,2204.22,143.93,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_008.PNG,300,300,PNG,147105,True,1323.57,100.81,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_009.JPG,300,300,JPEG,18039,True,2275.73,98.07,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_010.PNG,300,300,PNG,149732,True,918.95,96.07,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_011.JPG,300,300,JPEG,16447,True,1806.6,96.23,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_012.png,300,300,PNG,155558,True,4104.34,143.06,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_013.jpg,300,300,JPEG,12209,True,1137.45,103.78,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_014.png,300,300,PNG,155558,True,4104.34,143.06,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_015.jpg,300,300,JPEG,7298,True,73.99,112.77,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_016.png,300,300,PNG,155558,True,4104.34,143.06,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_017.jpg,300,300,JPEG,22158,True,3988.34,128.45,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_018.png,300,300,PNG,155558,True,4104.34,143.06,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_019.jpg,300,300,JPEG,17287,True,2204.22,143.93,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_020.PNG,300,300,PNG,129648,True,350.32,115.15,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_021.jpg,300,300,JPEG,13341,True,1402.86,111.64,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_022.PNG,300,300,PNG,145036,True,1112.86,117.58,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_023.jpg,300,300,JPEG,7344,True,308.56,121.32,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_024.PNG,300,300,PNG,131280,True,309.58,104.76,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_025.jpg,300,300,JPEG,12160,True,1045.36,128.2,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_026.PNG,300,300,PNG,148670,True,689.89,115.71,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_027.jpg,300,300,JPEG,15444,True,694.77,136.06,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_028.PNG,300,300,PNG,120017,True,371.09,118.0,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_029.jpg,300,300,JPEG,17127,True,1586.3,124.56,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_030.jpg,300,300,JPEG,10496,True,741.49,148.48,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_031.jpg,300,300,JPEG,13330,True,1022.66,142.89,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_032.jpg,300,300,JPEG,21009,True,2726.69,106.6,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_033.jpg,300,300,JPEG,14171,True,916.3,98.59,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_034.jpg,300,300,JPEG,15425,True,2269.33,89.01,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_035.JPG,300,300,JPEG,14977,True,1726.51,109.6,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_036.JPG,300,300,JPEG,12263,True,616.0,116.01,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_037.JPG,300,300,JPEG,12100,True,373.59,110.79,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_038.JPG,300,300,JPEG,15154,True,1485.65,113.74,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_039.jpg,300,300,JPEG,18743,True,2497.03,109.13,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_040.jpg,300,300,JPEG,9416,True,191.21,146.86,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_041.jpg,300,300,JPEG,11623,True,1159.46,158.36,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_042.jpg,300,300,JPEG,10176,True,327.63,134.94,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\bacterial_leaf_blight\blight_rotated_043.jpg,300,300,JPEG,8805,True,189.69,147.34,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_001.jpg,300,300,JPEG,8097,True,77.61,120.07,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_002.png,300,300,PNG,122934,True,956.98,120.2,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_003.jpg,300,300,JPEG,8064,True,79.15,144.59,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_004.png,300,300,PNG,120803,True,714.86,125.39,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_005.jpg,300,300,JPEG,6630,True,216.34,147.72,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_006.png,300,300,PNG,103680,True,257.57,94.51,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_007.jpg,300,300,JPEG,6828,True,36.18,115.04,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_008.png,300,300,PNG,132201,True,957.94,116.4,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_009.jpg,300,300,JPEG,8023,True,85.11,129.95,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_010.png,300,300,PNG,101654,True,346.89,104.37,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_011.jpg,300,300,JPEG,8081,True,409.55,130.02,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_012.png,300,300,PNG,127963,True,990.58,97.41,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_013.jpg,300,300,JPEG,15282,True,1178.94,136.72,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_014.png,300,300,PNG,115870,True,404.33,47.53,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_015.jpg,300,300,JPEG,12369,True,632.05,141.54,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_016.png,300,300,PNG,107086,True,502.86,116.41,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_017.jpg,300,300,JPEG,6150,True,27.63,133.55,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_018.png,300,300,PNG,126791,True,1189.02,117.62,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_019.jpg,300,300,JPEG,6360,True,24.54,129.36,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_020.png,300,300,PNG,97317,True,412.75,75.65,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_021.jpg,300,300,JPEG,10242,True,353.18,98.39,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_022.png,300,300,PNG,120478,True,1335.93,97.41,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_023.jpg,300,300,JPEG,9659,True,346.6,137.14,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\blast\blast_rotated_024.png,300,300,PNG,111794,True,851.18,109.33,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\brownspot\brownspot_rotated_001.jpg,300,300,JPEG,18497,True,1829.46,154.47,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\brownspot\brownspot_rotated_002.png,300,300,PNG,153969,True,1016.65,126.29,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\brownspot\brownspot_rotated_003.jpg,300,300,JPEG,11158,True,454.09,153.13,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\brownspot\brownspot_rotated_004.png,300,300,PNG,120147,True,640.9,143.09,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\brownspot\brownspot_rotated_005.jpg,300,300,JPEG,15646,True,1386.83,132.24,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\brownspot\brownspot_rotated_006.png,300,300,PNG,118574,True,367.39,167.14,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\brownspot\brownspot_rotated_007.jpg,300,300,JPEG,13092,True,1591.17,92.12,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\brownspot\brownspot_rotated_008.png,300,300,PNG,148053,True,1614.06,130.91,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\brownspot\brownspot_rotated_009.jpg,300,300,JPEG,16448,True,2161.19,105.49,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\brownspot\brownspot_rotated_010.jpg,300,300,JPEG,18969,True,2960.78,114.02,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\brownspot\brownspot_rotated_011.jpg,300,300,JPEG,10370,True,503.84,116.59,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\brownspot\brownspot_rotated_012.jpg,300,300,JPEG,16220,True,1562.4,119.57,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\brownspot\brownspot_rotated_013.jpg,300,300,JPEG,15901,True,1946.99,123.87,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\brownspot\brownspot_rotated_014.jpg,300,300,JPEG,16900,True,1840.35,126.74,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\brownspot\brownspot_rotated_015.jpg,300,300,JPEG,8845,True,151.42,103.67,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\brownspot\brownspot_rotated_016.jpg,300,300,JPEG,11252,True,415.41,120.8,CLEAN,Passes technical checks
+DS_RICE_02,Paddy_Rice,Rice,rice\validation\brownspot\brownspot_rotated_017.jpg,300,300,JPEG,8293,True,73.43,133.63,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\static\uploads\dd (513).jpg,3088,3088,JPEG,4136846,True,1015.05,128.59,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\static\uploads\dd_328.jpg,3088,3088,JPEG,4602287,True,1125.53,119.62,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\static\uploads\dis_leaf (1)_iaip.jpg,694,694,JPEG,46211,True,979.46,168.5,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\static\uploads\dis_leaf_1_iaip.jpg,694,694,JPEG,46211,True,979.46,168.5,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\static\uploads\dis_leaf_324_iaip.jpg,691,691,JPEG,58789,True,2961.42,131.67,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\static\uploads\dis_leaf_328_iaip.jpg,691,691,JPEG,56637,True,2973.45,133.61,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\static\uploads\download_1.jpg,100,100,JPEG,1130,True,265.22,213.15,SUSPICIOUS_LOW_RES,Extremely low resolution (100x100)
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\static\uploads\dsd (1)_iaip.jpg,617,617,JPEG,41994,True,1009.51,130.76,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\static\uploads\dsd (149)_iaip.jpg,694,694,JPEG,47265,True,1029.51,149.92,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\static\uploads\dsd (173)_iaip.jpg,617,617,JPEG,43014,True,1003.43,124.87,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\static\uploads\dsd_149_iaip.jpg,694,694,JPEG,47265,True,1029.51,149.92,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\static\uploads\dsd_173_iaip.jpg,617,617,JPEG,43014,True,1003.43,124.87,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\static\uploads\dsd_1_iaip.jpg,617,617,JPEG,41994,True,1009.51,130.76,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\static\uploads\dsd_222_iaip.jpg,617,617,JPEG,38926,True,702.0,130.63,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\Utils\accur.png,378,252,PNG,18852,True,3139.13,245.45,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\Utils\cotton.jpg,638,479,JPEG,85331,True,2877.08,189.0,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\Utils\download.png,378,248,PNG,16296,True,3608.36,245.52,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\Utils\DSC_1119.jpg,2048,1371,JPEG,499779,True,954.79,119.39,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\Utils\Flask.png,980,408,PNG,47747,True,4617.38,62.01,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\Utils\InceptionV3.png,378,248,PNG,14491,True,3269.07,246.21,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\Utils\resnet50.png,372,248,PNG,20484,True,3179.19,245.77,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\Utils\resnetacc.png,384,248,PNG,16676,True,3767.92,244.46,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\Utils\resnetv2.png,372,248,PNG,17647,True,3522.16,245.71,CLEAN,Passes technical checks
+DS_COTTON_03,Cotton,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-main\Utils\streamlit.png,4722,1528,PNG,48791,True,5265.16,238.96,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\icon.png,1024,1024,PNG,98268,True,824.54,43.01,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\splash.png,2732,2732,PNG,70498,True,138.93,253.73,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\android\icon\drawable-hdpi-icon.png,72,72,PNG,4777,True,9168.82,51.65,SUSPICIOUS_LOW_RES,Extremely low resolution (72x72)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\android\icon\drawable-ldpi-icon.png,36,36,PNG,1992,True,13967.98,57.6,SUSPICIOUS_LOW_RES,Extremely low resolution (36x36)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\android\icon\drawable-mdpi-icon.png,48,48,PNG,2937,True,14413.77,55.14,SUSPICIOUS_LOW_RES,Extremely low resolution (48x48)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\android\icon\drawable-xhdpi-icon.png,96,96,PNG,6839,True,7579.37,49.58,SUSPICIOUS_LOW_RES,Extremely low resolution (96x96)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\android\icon\drawable-xxhdpi-icon.png,144,144,PNG,10928,True,1386.94,47.43,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\android\icon\drawable-xxxhdpi-icon.png,192,192,PNG,15492,True,1028.64,46.32,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\android\splash\drawable-land-hdpi-screen.png,800,480,PNG,36472,True,195.36,252.9,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\android\splash\drawable-land-ldpi-screen.png,320,240,PNG,11509,True,164.66,253.3,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\android\splash\drawable-land-mdpi-screen.png,480,320,PNG,19511,True,179.03,253.1,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\android\splash\drawable-land-xhdpi-screen.png,1280,720,PNG,61789,True,206.12,252.82,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\android\splash\drawable-land-xxhdpi-screen.png,1600,960,PNG,96617,True,188.19,252.92,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\android\splash\drawable-land-xxxhdpi-screen.png,1920,1280,PNG,130281,True,183.43,253.13,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\android\splash\drawable-port-hdpi-screen.png,480,800,PNG,35103,True,253.11,252.89,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\android\splash\drawable-port-ldpi-screen.png,240,320,PNG,11179,True,182.55,253.3,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\android\splash\drawable-port-mdpi-screen.png,320,480,PNG,18840,True,207.49,253.09,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\android\splash\drawable-port-xhdpi-screen.png,720,1280,PNG,61245,True,292.99,252.82,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\android\splash\drawable-port-xxhdpi-screen.png,960,1600,PNG,85479,True,256.92,252.92,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\android\splash\drawable-port-xxxhdpi-screen.png,1280,1920,PNG,117323,True,211.77,253.13,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-1024.png,1024,1024,PNG,119192,True,824.54,43.01,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-20.png,20,20,PNG,935,True,21350.39,63.79,SUSPICIOUS_LOW_RES,Extremely low resolution (20x20)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-20@2x.png,40,40,PNG,2286,True,13252.85,56.46,SUSPICIOUS_LOW_RES,Extremely low resolution (40x40)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-20@3x.png,60,60,PNG,3845,True,10861.52,53.68,SUSPICIOUS_LOW_RES,Extremely low resolution (60x60)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-24@2x.png,48,48,PNG,2937,True,14413.77,55.14,SUSPICIOUS_LOW_RES,Extremely low resolution (48x48)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-27.5@2x.png,55,55,PNG,3474,True,12256.22,54.02,SUSPICIOUS_LOW_RES,Extremely low resolution (55x55)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-29.png,29,29,PNG,1514,True,14842.33,58.85,SUSPICIOUS_LOW_RES,Extremely low resolution (29x29)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-29@2x.png,58,58,PNG,3701,True,10985.48,53.84,SUSPICIOUS_LOW_RES,Extremely low resolution (58x58)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-29@3x.png,87,87,PNG,5942,True,7883.25,50.34,SUSPICIOUS_LOW_RES,Extremely low resolution (87x87)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-40.png,40,40,PNG,2286,True,13252.85,56.46,SUSPICIOUS_LOW_RES,Extremely low resolution (40x40)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-40@2x.png,80,80,PNG,5495,True,8679.32,51.24,SUSPICIOUS_LOW_RES,Extremely low resolution (80x80)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-40@3x.png,120,120,PNG,8797,True,2069.13,48.5,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-44@2x.png,88,88,PNG,6141,True,7970.15,50.49,SUSPICIOUS_LOW_RES,Extremely low resolution (88x88)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-50.png,50,50,PNG,3085,True,12503.12,54.76,SUSPICIOUS_LOW_RES,Extremely low resolution (50x50)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-50@2x.png,100,100,PNG,7112,True,7434.79,49.31,SUSPICIOUS_LOW_RES,Extremely low resolution (100x100)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-60.png,60,60,PNG,3845,True,10861.52,53.68,SUSPICIOUS_LOW_RES,Extremely low resolution (60x60)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-60@2x.png,120,120,PNG,8797,True,2069.13,48.5,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-60@3x.png,180,180,PNG,14290,True,1104.15,46.66,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-72.png,72,72,PNG,4777,True,9168.82,51.65,SUSPICIOUS_LOW_RES,Extremely low resolution (72x72)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-72@2x.png,144,144,PNG,10928,True,1386.94,47.43,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-76.png,76,76,PNG,5140,True,8781.07,51.6,SUSPICIOUS_LOW_RES,Extremely low resolution (76x76)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-76@2x.png,152,152,PNG,11684,True,1345.19,47.25,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-83.5@2x.png,167,167,PNG,13090,True,1132.69,46.76,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-86@2x.png,172,172,PNG,13472,True,1157.25,46.91,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-98@2x.png,196,196,PNG,15796,True,1036.12,46.31,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-small.png,29,29,PNG,1514,True,14842.33,58.85,SUSPICIOUS_LOW_RES,Extremely low resolution (29x29)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-small@2x.png,58,58,PNG,3701,True,10985.48,53.84,SUSPICIOUS_LOW_RES,Extremely low resolution (58x58)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon-small@3x.png,87,87,PNG,5942,True,7883.25,50.34,SUSPICIOUS_LOW_RES,Extremely low resolution (87x87)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon.png,57,57,PNG,3662,True,11423.91,54.04,SUSPICIOUS_LOW_RES,Extremely low resolution (57x57)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\icon\icon@2x.png,114,114,PNG,8293,True,2524.86,48.75,SUSPICIOUS_LOW_RES,Extremely low resolution (114x114)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\splash\Default-2436h.png,1125,2436,PNG,124637,True,390.22,252.4,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\splash\Default-568h@2x~iphone.png,640,1136,PNG,51877,True,285.66,252.82,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\splash\Default-667h.png,750,1334,PNG,64764,True,295.93,252.82,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\splash\Default-736h.png,1242,2208,PNG,125598,True,290.69,252.84,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\splash\Default-Landscape-2436h.png,2436,1125,PNG,134791,True,280.38,252.41,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\splash\Default-Landscape-736h.png,2208,1242,PNG,137691,True,204.47,252.84,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\splash\Default-Landscape@2x~ipad.png,2048,1536,PNG,153370,True,169.8,253.32,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\splash\Default-Landscape@~ipadpro.png,2732,2048,PNG,95066,True,168.95,253.35,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\splash\Default-Landscape~ipad.png,1024,768,PNG,55540,True,171.3,253.31,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\splash\Default-Portrait@2x~ipad.png,1536,2048,PNG,165967,True,191.03,253.32,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\splash\Default-Portrait@~ipadpro.png,2048,2732,PNG,101403,True,188.35,253.35,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\splash\Default-Portrait~ipad.png,768,1024,PNG,55283,True,188.81,253.3,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\splash\Default@2x~iphone.png,640,960,PNG,46588,True,210.94,253.1,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\splash\Default@2x~universal~anyany.png,2732,2732,PNG,122910,True,138.93,253.73,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\resources\ios\splash\Default~iphone.png,320,480,PNG,18840,True,207.49,253.09,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\src\assets\icon\favicon.png,64,64,PNG,3202,True,1659.95,53.77,SUSPICIOUS_LOW_RES,Extremely low resolution (64x64)
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\src\assets\imagens\alvaro.png,400,400,PNG,145989,True,1255.81,167.94,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\src\assets\imagens\brito.jpg,960,1280,JPEG,215228,True,523.47,112.97,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\src\assets\imagens\contorno_cafe.png,299,552,PNG,26761,True,5053.59,246.93,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\src\assets\imagens\leaf-recognition-share.jpg,1088,562,JPEG,391906,True,826.47,158.83,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\src\assets\imagens\leaf-recognition.png,1280,640,PNG,703491,True,918.84,175.01,CLEAN,Passes technical checks
+DS_COFFEE_04,Coffee,Coffee_Recognize-Master,Coffee_Recognize-master\src\assets\imagens\operation.png,693,283,PNG,62680,True,5801.31,235.18,CLEAN,Passes technical checks
+DS_TEA_03,Tea,Tea-Leaf-Disease-Detection-Main,Tea-Leaf-Disease-Detection-main\documentation\assets\images\compare_page.png,810,684,PNG,43773,True,781.35,206.76,CLEAN,Passes technical checks
+DS_TEA_03,Tea,Tea-Leaf-Disease-Detection-Main,Tea-Leaf-Disease-Detection-main\documentation\assets\images\home_page.png,1002,927,PNG,26279,True,512.97,201.01,CLEAN,Passes technical checks
+DS_TEA_03,Tea,Tea-Leaf-Disease-Detection-Main,Tea-Leaf-Disease-Detection-main\documentation\assets\images\predict_page.png,955,360,PNG,17104,True,1162.25,207.89,CLEAN,Passes technical checks
+DS_TEA_03,Tea,Tea-Leaf-Disease-Detection-Main,Tea-Leaf-Disease-Detection-main\documentation\assets\images\results_page.png,841,744,PNG,221626,True,1288.37,207.55,CLEAN,Passes technical checks
+DS_TEA_03,Tea,Tea-Leaf-Disease-Detection-Main,Tea-Leaf-Disease-Detection-main\web_application\static\bg.jpg,1500,800,JPEG,216973,True,3838.25,105.29,CLEAN,Passes technical checks
+DS_TEA_03,Tea,Tea-Leaf-Disease-Detection-Main,Tea-Leaf-Disease-Detection-main\web_application\static\comparison_graph.png,640,480,PNG,32133,True,1102.16,249.03,CLEAN,Passes technical checks
+DS_TEA_03,Tea,Tea-Leaf-Disease-Detection-Main,Tea-Leaf-Disease-Detection-main\web_application\static\temp\UNADJUSTEDNONRAW_thumb_1d.jpg,768,1024,JPEG,97807,True,149.67,189.88,CLEAN,Passes technical checks
+DS_TEA_03,Tea,Tea-Leaf-Disease-Detection-Main,Tea-Leaf-Disease-Detection-main\web_application\templates\bg.jpg,1500,800,JPEG,216973,True,3838.25,105.29,CLEAN,Passes technical checks
+DS_TOMATO_03,Tomato,Tomato-Leaf-Disease-Detection-Main,Tomato-Leaf-Disease-Detection-main\Images\acc.png,386,278,PNG,19072,True,1667.15,248.38,CLEAN,Passes technical checks
+DS_TOMATO_03,Tomato,Tomato-Leaf-Disease-Detection-Main,Tomato-Leaf-Disease-Detection-main\Images\CM.png,534,505,PNG,29212,True,3005.37,218.6,CLEAN,Passes technical checks
+DS_TOMATO_03,Tomato,Tomato-Leaf-Disease-Detection-Main,Tomato-Leaf-Disease-Detection-main\Images\CM_small.PNG,364,349,PNG,48709,True,3021.26,218.33,CLEAN,Passes technical checks
+DS_TOMATO_03,Tomato,Tomato-Leaf-Disease-Detection-Main,Tomato-Leaf-Disease-Detection-main\Images\loss.png,392,278,PNG,19241,True,1632.29,248.19,CLEAN,Passes technical checks
+DS_TOMATO_03,Tomato,Tomato-Leaf-Disease-Detection-Main,Tomato-Leaf-Disease-Detection-main\Images\model.PNG,496,527,PNG,23541,True,2650.1,239.07,CLEAN,Passes technical checks
+DS_TOMATO_03,Tomato,Tomato-Leaf-Disease-Detection-Main,Tomato-Leaf-Disease-Detection-main\Images\ROC.png,386,278,PNG,29562,True,4016.31,240.33,CLEAN,Passes technical checks
+DS_TOMATO_03,Tomato,Tomato-Leaf-Disease-Detection-Main,Tomato-Leaf-Disease-Detection-main\Images\test_count.png,403,345,PNG,26553,True,3608.59,201.61,CLEAN,Passes technical checks
+DS_TOMATO_03,Tomato,Tomato-Leaf-Disease-Detection-Main,Tomato-Leaf-Disease-Detection-main\Images\train_count.png,403,345,PNG,28180,True,3659.19,201.28,CLEAN,Passes technical checks

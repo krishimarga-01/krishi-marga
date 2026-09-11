@@ -39,10 +39,10 @@ export const HistoryScreen = ({ navigation }: any) => {
   });
 
   const handleDelete = (caseId: string) => {
-    Alert.alert('Delete Record', 'Remove this diagnosis from local records?', [
-      { text: 'Cancel', style: 'cancel' },
+    Alert.alert(t('deleteRecordTitle'), t('deleteRecordConfirm'), [
+      { text: t('cancel'), style: 'cancel' },
       {
-        text: 'Delete',
+        text: t('deleteButton'),
         style: 'destructive',
         onPress: async () => {
           await CaseStorage.deleteCase(caseId);
@@ -55,8 +55,8 @@ export const HistoryScreen = ({ navigation }: any) => {
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
-        <Text style={styles.title}>Diagnosis History</Text>
-        <Text style={styles.subtitle}>Previous crop inspections stored locally on this phone</Text>
+        <Text style={styles.title}>{t('diagnosisHistory')}</Text>
+        <Text style={styles.subtitle}>{t('diagnosisHistorySubtitle')}</Text>
 
         {/* Guest Sync Callout */}
         {!isLoggedIn && (
@@ -67,8 +67,8 @@ export const HistoryScreen = ({ navigation }: any) => {
           >
             <Text style={styles.guestSyncIcon}>☁️</Text>
             <View style={styles.guestSyncTextWrap}>
-              <Text style={styles.guestSyncTitle}>Login to sync your diagnosis history across devices.</Text>
-              <Text style={styles.guestSyncSub}>Tap to connect Google or Phone</Text>
+              <Text style={styles.guestSyncTitle}>{t('guestSyncTitle')}</Text>
+              <Text style={styles.guestSyncSub}>{t('guestSyncSub')}</Text>
             </View>
           </TouchableOpacity>
         )}
@@ -76,7 +76,7 @@ export const HistoryScreen = ({ navigation }: any) => {
         {/* Search Input */}
         <TextInput
           style={styles.searchBar}
-          placeholder='Search by crop or disease...'
+          placeholder={t('searchHistoryPlaceholder')}
           placeholderTextColor={Colors.textMuted}
           value={search}
           onChangeText={setSearch}
@@ -89,7 +89,7 @@ export const HistoryScreen = ({ navigation }: any) => {
               style={[styles.filterPill, selectedCropFilter === null && styles.activeFilterPill]}
               onPress={() => setSelectedCropFilter(null)}
             >
-              <Text style={[styles.filterPillText, selectedCropFilter === null && styles.activeFilterPillText]}>All Crops</Text>
+              <Text style={[styles.filterPillText, selectedCropFilter === null && styles.activeFilterPillText]}>{t('filterAllCrops')}</Text>
             </TouchableOpacity>
             {crops.map((cr) => (
               <TouchableOpacity
@@ -107,7 +107,7 @@ export const HistoryScreen = ({ navigation }: any) => {
         {filtered.length === 0 ? (
           <View style={styles.emptyWrap}>
             <Text style={styles.emptyEmoji}>📋</Text>
-            <Text style={styles.emptyText}>No crop diagnosis records found.</Text>
+            <Text style={styles.emptyText}>{t('noRecordsFound')}</Text>
           </View>
         ) : (
           <FlatList
@@ -128,14 +128,14 @@ export const HistoryScreen = ({ navigation }: any) => {
                   <Text style={styles.cropTitle}>{item.crop}</Text>
                   <View style={[styles.sourceBadge, item.result.analysis_source === 'online' ? styles.onlineBadge : styles.offlineBadge]}>
                     <Text style={styles.sourceText}>
-                      {item.result.analysis_source === 'online' ? 'Online' : 'Offline'}
+                      {item.result.analysis_source === 'online' ? t('online') : t('offline')}
                     </Text>
                   </View>
                 </View>
                 <Text style={styles.diseaseName}>{item.result.disease}</Text>
                 <View style={styles.metaRow}>
                   <Text style={styles.metaText}>{new Date(item.timestamp).toLocaleDateString()}</Text>
-                  <Text style={styles.metaConfidence}>Confidence: {(item.result.confidence * 100).toFixed(0)}%</Text>
+                  <Text style={styles.metaConfidence}>{t('confidence')}: {(item.result.confidence * 100).toFixed(0)}%</Text>
                 </View>
               </TouchableOpacity>
             )}

@@ -1,0 +1,77 @@
+crop,onnx_exported,onnx_file_path,onnx_size_mb,opset_version,input_shape,cpu_inference_latency_ms,onnxruntime_verified,mobile_ready
+Paddy,YES,models/onnx/paddy_disease.onnx,5.81,18,"[1, 3, 224, 224]",1.13ms,PASS,YES (Pending native onnxruntime module)
+Maize,YES,models/onnx/maize_disease.onnx,5.81,18,"[1, 3, 224, 224]",1.25ms,PASS,YES (Pending native onnxruntime module)
+Ragi,NO,models/onnx/ragi_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Sorghum,NO,models/onnx/sorghum_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Pearl Millet,NO,models/onnx/pearl_millet_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Foxtail Millet,NO,models/onnx/foxtail_millet_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Little Millet,NO,models/onnx/little_millet_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Kodo Millet,NO,models/onnx/kodo_millet_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Barnyard Millet,NO,models/onnx/barnyard_millet_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Proso Millet,NO,models/onnx/proso_millet_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Wheat,NO,models/onnx/wheat_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Red Gram,NO,models/onnx/red_gram_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Black Gram,NO,models/onnx/black_gram_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Green Gram,NO,models/onnx/green_gram_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Bengal Gram,NO,models/onnx/bengal_gram_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Cowpea,NO,models/onnx/cowpea_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Field Bean,NO,models/onnx/field_bean_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Groundnut,NO,models/onnx/groundnut_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Sesame,NO,models/onnx/sesame_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Sunflower,NO,models/onnx/sunflower_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Castor,NO,models/onnx/castor_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Safflower,NO,models/onnx/safflower_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Soybean,NO,models/onnx/soybean_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Cotton,YES,models/onnx/cotton_disease.onnx,5.82,14,"[1, 3, 224, 224]",1.06ms,PASS,YES (Pending native onnxruntime module)
+Sugarcane,YES,models/onnx/sugarcane_disease.onnx,5.81,18,"[1, 3, 224, 224]",1.16ms,PASS,YES (Pending native onnxruntime module)
+Tobacco,NO,models/onnx/tobacco_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Tomato,YES,models/onnx/tomato_disease.onnx,5.81,18,"[1, 3, 224, 224]",1.25ms,PASS,YES (Pending native onnxruntime module)
+Chilli,YES,models/onnx/chilli_disease.onnx,5.81,18,"[1, 3, 224, 224]",1.34ms,PASS,YES (Pending native onnxruntime module)
+Brinjal,NO,models/onnx/brinjal_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Onion,NO,models/onnx/onion_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Okra,NO,models/onnx/okra_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Potato,YES,models/onnx/potato_disease.onnx,5.81,18,"[1, 3, 224, 224]",0.98ms,PASS,YES (Pending native onnxruntime module)
+Tapioca,NO,models/onnx/tapioca_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Sweet Potato,NO,models/onnx/sweet_potato_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Drumstick,NO,models/onnx/drumstick_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Cucumber,NO,models/onnx/cucumber_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Pumpkin,NO,models/onnx/pumpkin_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Bitter Gourd,NO,models/onnx/bitter_gourd_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Bottle Gourd,NO,models/onnx/bottle_gourd_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Ridge Gourd,NO,models/onnx/ridge_gourd_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Beans,NO,models/onnx/beans_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Cabbage,NO,models/onnx/cabbage_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Cauliflower,NO,models/onnx/cauliflower_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Carrot,NO,models/onnx/carrot_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Beetroot,NO,models/onnx/beetroot_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Banana,YES,models/onnx/banana_disease.onnx,5.81,18,"[1, 3, 224, 224]",1.02ms,PASS,YES (Pending native onnxruntime module)
+Mango,NO,models/onnx/mango_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Papaya,NO,models/onnx/papaya_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Pomegranate,NO,models/onnx/pomegranate_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Guava,NO,models/onnx/guava_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Sapota,NO,models/onnx/sapota_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Pineapple,NO,models/onnx/pineapple_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Grapes,NO,models/onnx/grapes_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Jackfruit,NO,models/onnx/jackfruit_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Watermelon,NO,models/onnx/watermelon_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Muskmelon,NO,models/onnx/muskmelon_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Acid Lime,NO,models/onnx/acid_lime_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Coconut,NO,models/onnx/coconut_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Arecanut,NO,models/onnx/arecanut_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Cashew,NO,models/onnx/cashew_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Coffee,NO,models/onnx/coffee_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Tea,NO,models/onnx/tea_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Rubber,NO,models/onnx/rubber_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Cocoa,NO,models/onnx/cocoa_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Oil Palm,NO,models/onnx/oil_palm_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Palmyrah,NO,models/onnx/palmyrah_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Black Pepper,NO,models/onnx/black_pepper_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Cardamom,NO,models/onnx/cardamom_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Turmeric,NO,models/onnx/turmeric_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Ginger,NO,models/onnx/ginger_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Clove,NO,models/onnx/clove_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Coriander,NO,models/onnx/coriander_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Cumin,NO,models/onnx/cumin_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Fenugreek,NO,models/onnx/fenugreek_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Betel Vine,NO,models/onnx/betel_vine_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO
+Tamarind,NO,models/onnx/tamarind_disease.onnx (Not built),0.0,N/A,"[1, 3, 224, 224]",N/A,PENDING_MODEL_TRAINING,NO

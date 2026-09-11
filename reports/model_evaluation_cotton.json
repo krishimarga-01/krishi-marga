@@ -1,0 +1,69 @@
+{
+  "crop": "Cotton",
+  "architecture": "MobileNetV3-Small",
+  "training_epochs": 3,
+  "test_metrics": {
+    "accuracy": 0.9803921568627451,
+    "macro_precision": 0.9813289780395044,
+    "macro_recall": 0.979435038645565,
+    "macro_f1": 0.9802910791567779
+  },
+  "per_class_metrics": {
+    "bacterial_blight": {
+      "precision": 0.9772727272727273,
+      "recall": 1.0,
+      "f1_score": 0.9885057471264368,
+      "support": 43
+    },
+    "curl_virus": {
+      "precision": 1.0,
+      "recall": 0.9696969696969697,
+      "f1_score": 0.9846153846153847,
+      "support": 33
+    },
+    "fussarium_wilt": {
+      "precision": 0.9736842105263158,
+      "recall": 0.9736842105263158,
+      "f1_score": 0.9736842105263158,
+      "support": 38
+    },
+    "healthy": {
+      "precision": 0.9743589743589743,
+      "recall": 0.9743589743589743,
+      "f1_score": 0.9743589743589743,
+      "support": 39
+    }
+  },
+  "confusion_matrix": [
+    [
+      43,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      32,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      37,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      38
+    ]
+  ],
+  "classes": [
+    "bacterial_blight",
+    "curl_virus",
+    "fussarium_wilt",
+    "healthy"
+  ]
+}

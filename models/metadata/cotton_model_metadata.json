@@ -1,0 +1,56 @@
+{
+  "crop": "Cotton",
+  "model_architecture": "MobileNetV3-Small",
+  "input_tensor": {
+    "name": "input_image",
+    "shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "dtype": "float32",
+    "layout": "NCHW",
+    "normalization": {
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    }
+  },
+  "output_tensor": {
+    "name": "probabilities",
+    "shape": [
+      1,
+      4
+    ],
+    "dtype": "float32",
+    "activation": "Softmax"
+  },
+  "classes": [
+    "bacterial_blight",
+    "curl_virus",
+    "fussarium_wilt",
+    "healthy"
+  ],
+  "label_mapping": {
+    "0": "bacterial_blight",
+    "1": "curl_virus",
+    "2": "fussarium_wilt",
+    "3": "healthy"
+  },
+  "file_size_bytes": 6098519,
+  "metrics": {
+    "test_accuracy": 0.9803921568627451,
+    "macro_f1": 0.9802910791567779,
+    "macro_precision": 0.9813289780395044,
+    "macro_recall": 0.979435038645565,
+    "onnx_mean_latency_ms": 2.505401996895671
+  }
+}

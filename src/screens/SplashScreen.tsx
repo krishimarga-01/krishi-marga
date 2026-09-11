@@ -1,45 +1,52 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { StyleSheet, View, Text, StatusBar, TouchableOpacity } from 'react-native';
-import { Video, ResizeMode, AVPlaybackStatus } from 'expo-av';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, View, StatusBar } from 'react-native';
+import { useVideoPlayer, VideoView } from 'expo-video';
 
 interface SplashScreenProps {
   onFinish: () => void;
 }
 
 export const SplashScreen: React.FC<SplashScreenProps> = ({ onFinish }) => {
-  const videoRef = useRef<Video>(null);
   const [hasFinished, setHasFinished] = useState(false);
 
-  const handlePlaybackUpdate = (status: AVPlaybackStatus) => {
-    if (status.isLoaded && status.didJustFinish && !hasFinished) {
+  const finishOnce = () => {
+    if (!hasFinished) {
       setHasFinished(true);
       onFinish();
     }
   };
 
-  // Fallback safety timeout (6.5s) to guarantee transition even if video player encounters codec issue
+  const player = useVideoPlayer(require('../../assets/splash/opn.mp4'), (p) => {
+    p.loop = false;
+    p.muted = false;
+    p.play();
+  });
+
+  useEffect(() => {
+    const subscription = player.addListener('playToEnd', () => {
+      finishOnce();
+    });
+    return () => {
+      subscription.remove();
+    };
+  }, [player]);
+
+  // Fallback safety timeout (6.5s) to guarantee transition for the 6.0s video
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (!hasFinished) {
-        setHasFinished(true);
-        onFinish();
-      }
+      finishOnce();
     }, 6500);
     return () => clearTimeout(timer);
-  }, [hasFinished, onFinish]);
+  }, []);
 
   return (
     <View style={styles.container}>
       <StatusBar hidden={true} />
-      <Video
-        ref={videoRef}
-        source={require('../../assets/splash/opn.mp4')}
+      <VideoView
+        player={player}
         style={styles.video}
-        resizeMode={ResizeMode.COVER}
-        shouldPlay={true}
-        isLooping={false}
-        isMuted={false}
-        onPlaybackStatusUpdate={handlePlaybackUpdate}
+        contentFit='cover'
+        nativeControls={false}
       />
     </View>
   );

@@ -5,8 +5,9 @@ import kn from '../locales/kn.json';
 import ta from '../locales/ta.json';
 import ml from '../locales/ml.json';
 import hi from '../locales/hi.json';
+import te from '../locales/te.json';
 
-export type SupportedLanguage = 'en' | 'kn' | 'ta' | 'ml' | 'hi';
+export type SupportedLanguage = 'en' | 'kn' | 'ta' | 'ml' | 'hi' | 'te';
 
 const translations: Record<SupportedLanguage, Record<string, string>> = {
   en,
@@ -14,6 +15,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
   ta,
   ml,
   hi,
+  te,
 };
 
 interface I18nContextType {
@@ -33,7 +35,7 @@ export const I18nProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   useEffect(() => {
     AsyncStorage.getItem('app_language').then((saved) => {
-      if (saved && ['en', 'kn', 'ta', 'ml', 'hi'].includes(saved)) {
+      if (saved && ['en', 'kn', 'ta', 'ml', 'hi', 'te'].includes(saved)) {
         setLanguageState(saved as SupportedLanguage);
       }
     });
@@ -46,7 +48,13 @@ export const I18nProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const t = (key: string): string => {
     const current = translations[language];
-    return (current && current[key]) || translations.en[key] || key;
+    if (current && current[key]) {
+      return current[key];
+    }
+    if (__DEV__) {
+      console.warn(`[i18n] Missing translation key "${key}" for language "${language}"`);
+    }
+    return (translations.en && translations.en[key]) || key;
   };
 
   return (

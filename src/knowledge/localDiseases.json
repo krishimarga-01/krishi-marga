@@ -30,7 +30,110 @@
           "Spray diluted sour buttermilk (1:10 with water) on foliage"
         ],
         "regional_advice": "Common in warm, humid weather and during monsoon transitions in South & Central India.",
-        "farmer_message": "Act early when you see concentric spots on lower leaves to prevent spread to developing fruits."
+        "farmer_message": "Act early when you see concentric spots on lower leaves to prevent spread to developing fruits.",
+        "translations": {
+          "kn": {
+            "disease": "ಮುಂಚಿನ ಅಂಗಮಾರಿ ರೋಗ (Early Blight)",
+            "symptoms": [
+              "ಹಳೆಯ ಎಲೆಗಳ ಮೇಲೆ ಕೇಂದ್ರೀಕೃತ ವೃತ್ತಾಕಾರದ ಕಂದು-ಕಪ್ಪು ಚುಕ್ಕೆಗಳು",
+              "ಎಲೆಗಳ ಮೇಲೆ ಟಾರ್ಗೆಟ್ ಬೋರ್ಡ್ ಮಾದರಿಯ ಕಲೆಗಳು",
+              "ಕಲೆಗಳ ಸುತ್ತ ಹಳದಿ ಬಣ್ಣಕ್ಕೆ ತಿರುಗಿ ಉದುರುವ ಕೆಳಗಿನ ಎಲೆಗಳು"
+            ],
+            "recommendations": [
+              "ರೋಗಬಾಧಿತ ಕೆಳಗಿನ ಎಲೆಗಳನ್ನು ತೆಗೆದು ಸುರಕ್ಷಿತವಾಗಿ ನಾಶಪಡಿಸಿ",
+              "ಹನಿ ನೀರಾವರಿ ಬಳಸಿ ಗಿಡದ ಬುಡಕ್ಕೆ ನೀರುಣಿಸಿ, ಎಲೆಗಳನ್ನು ಒಣಗಿಸಿಡಿ",
+              "ಉತ್ತಮ ಗಾಳಿಯಾಡುವಿಕೆಗಾಗಿ ಗಿಡಗಳ ನಡುವೆ ಸಾಕಷ್ಟು ಅಂತರ ಕಾಯ್ದುಕೊಳ್ಳಿ",
+              "ಬೆಳಗಿನ ಜಾವದಲ್ಲಿ ತಾಮ್ರ ಆಧಾರಿತ ಅಥವಾ ಮ್ಯಾಂಕೋಜೆಬ್ ಶಿಲೀಂಧ್ರನಾಶಕ ಸಿಂಪಡಿಸಿ"
+            ],
+            "prevention": [
+              "2 ರಿಂದ 3 ವರ್ಷಗಳ ಕಾಲ ಬೆಳೆ ಪರಿವರ್ತನೆ ಮಾಡಿ",
+              "ಎಲೆಗಳ ಮೇಲೆ ಮಣ್ಣು ಸಿಡಿಯದಂತೆ ಗಿಡಗಳ ಬುಡಕ್ಕೆ ಮಲ್ಚಿಂಗ್ ಮಾಡಿ",
+              "ದೃಢೀಕೃತ ರೋಗಮುಕ್ತ ಬೀಜ ಮತ್ತು ಸಸಿಗಳನ್ನು ಬಳಸಿ"
+            ],
+            "regional_advice": "ದಕ್ಷಿಣ ಭಾರತದಲ್ಲಿ ಬೆಚ್ಚಗಿನ, ತೇವಾಂಶವುಳ್ಳ ಹವಾಮಾನದಲ್ಲಿ ಈ ರೋಗ ಸಾಮಾನ್ಯವಾಗಿ ಕಂಡುಬರುತ್ತದೆ.",
+            "farmer_message": "ಹಣ್ಣುಗಳಿಗೆ ಹರಡುವುದನ್ನು ತಡೆಯಲು ಕೆಳಗಿನ ಎಲೆಗಳ ಮೇಲೆ ಕಲೆಗಳು ಕಂಡ ತಕ್ಷಣ ಕ್ರಮ ಕೈಗೊಳ್ಳಿ."
+          },
+          "ta": {
+            "disease": "முன் பருவ கருகல் நோய் (Early Blight)",
+            "symptoms": [
+              "பழைய இலைகளில் செறிவான வட்ட வடிவ பழுப்பு-கருப்பு புள்ளிகள்",
+              "இலைகளில் இலக்கு பலகை போன்ற வட்ட வளையங்கள்",
+              "கீழ் இலைகள் மஞ்சள் நிறமாக மாறி முன்கூட்டியே உதிர்தல்"
+            ],
+            "recommendations": [
+              "பாதிக்கப்பட்ட கீழ் இலைகளை அகற்றி அழிக்கவும்",
+              "சொட்டு நீர் பாசனம் மூலம் வேருக்கு மட்டும் நீர் பாய்ச்சவும்",
+              "காற்றோட்டத்திற்கு செடிகளுக்கு இடையே சரியான இடைவெளி விடவும்",
+              "காலை வேளையில் மேங்கோசெப் பூஞ்சாணக்கொல்லி தெளிக்கவும்"
+            ],
+            "prevention": [
+              "2 முதல் 3 ஆண்டுகளுக்கு பயிர் சுழற்சி மேற்கொள்ளவும்",
+              "மண் தெறிக்காமல் இருக்க மூடாக்கு இடவும்",
+              "சான்றளிக்கப்பட்ட நோய் இல்லாத விதைகளைப் பயன்படுத்தவும்"
+            ],
+            "regional_advice": "வெப்பமான மற்றும் ஈரப்பதமான காலநிலையில் இந்நோய் அதிகம் பரவும்.",
+            "farmer_message": "கீழ் இலைகளில் புள்ளிகள் தோன்றிய உடனே கட்டுப்படுத்த நடவடிக்கை எடுக்கவும்."
+          },
+          "te": {
+            "disease": "ముందస్తు ఆకుమచ్చ తెగులు (Early Blight)",
+            "symptoms": [
+              "పాత ఆకులపై వలయాకారపు గోధుమ లేదా నలుపు మచ్చలు",
+              "ఆకులపై టార్గెట్ బోర్డు వంటి గుర్తులు",
+              "మచ్చల చుట్టూ పసుపు రంగులోకి మారి రాలిపోయే కింది ఆకులు"
+            ],
+            "recommendations": [
+              "తెగులు సోకిన కింది ఆకులను తుంచి నాశనం చేయండి",
+              "డ్రిప్ ద్వారా మొక్క మొదట్లో మాత్రమే నీరు పెట్టండి",
+              "మొక్కల మధ్య సరైన గాలి వెలుతురు ఉండేలా చూసుకోండి",
+              "ఉదయాన్నే మాంకోజెబ్ లేదా కాపర్ శిలీంద్ర సంహారిణి పిచికారీ చేయండి"
+            ],
+            "prevention": [
+              "2 నుండి 3 సంవత్సరాలు పంట మార్పిడి చేయండి",
+              "మట్టి ఆకులపై పడకుండా మల్చింగ్ వాడండి",
+              "ధృవీకరించిన విత్తనాలను మాత్రమే వాడండి"
+            ],
+            "regional_advice": "దక్షిణ భారతదేశంలో తేమతో కూడిన వాతావరణంలో ఈ తెగులు ఎక్కువగా వస్తుంది.",
+            "farmer_message": "పండ్లకు వ్యాపించకుండా కింది ఆకులపై మచ్చలు కనిపించగానే నివారణ చర్యలు చేపట్టండి."
+          },
+          "ml": {
+            "disease": "ഏർലി ബ്ലൈറ്റ് (Early Blight)",
+            "symptoms": [
+              "പഴയ ഇലകളിൽ തവിട്ടുനിറത്തിലുള്ള വളയങ്ങളോട് കൂടിയ പുള്ളികൾ",
+              "ഇലകളിൽ ടാർഗെറ്റ് ബോർഡ് മാതൃകയിലുള്ള പാടുകൾ",
+              "താഴത്തെ ഇലകൾ മഞ്ഞനിറമായി കൊഴിഞ്ഞുപോകുന്നു"
+            ],
+            "recommendations": [
+              "രോഗബാധയുള്ള ഇലകൾ പറിച്ച് നശിപ്പിക്കുക",
+              "തുള്ളിനന വഴി ചെടിയുടെ ചുവട്ടിൽ മാത്രം വെള്ളമൊഴിക്കുക",
+              "മാങ്കോസെബ് കുമിൾനാശിനി രാവിലെ തളിക്കുക"
+            ],
+            "prevention": [
+              "വിളപരിക്രമണം നടത്തുക",
+              "രോഗമില്ലാത്ത വിത്തുകൾ തിരഞ്ഞെടുക്കുക"
+            ],
+            "regional_advice": "ഈർപ്പമുള്ള കാലാവസ്ഥയിൽ രോഗം വേഗത്തിൽ പടരാൻ സാധ്യതയുണ്ട്.",
+            "farmer_message": "ലക്ഷണങ്ങൾ കണ്ടയുടൻ കുമിൾനാശിനി തളിക്കുക."
+          },
+          "hi": {
+            "disease": "अगेती झुलसा (Early Blight)",
+            "symptoms": [
+              "पुरानी पत्तियों पर छल्लेदार भूरे-काले धब्बे",
+              "पत्तियों पर गोल चक्राकार धब्बे",
+              "निचली पत्तियां पीली होकर समय से पहले गिरना"
+            ],
+            "recommendations": [
+              "संक्रमित निचली पत्तियों को तोड़कर नष्ट करें",
+              "ड्रिप सिंचाई का उपयोग करें, पत्तियों को सूखा रखें",
+              "सुबह के समय मैंकोजेब कवकनाशी का छिड़काव करें"
+            ],
+            "prevention": [
+              "2 से 3 साल तक फसल चक्र अपनाएं",
+              "प्रमाणित रोगमुक्त बीजों का ही उपयोग करें"
+            ],
+            "regional_advice": "गर्म और आर्द्र मौसम में यह रोग तेजी से फैलता है।",
+            "farmer_message": "निचली पत्तियों पर धब्बे दिखते ही तुरंत उपचार करें।"
+          }
+        }
       },
       {
         "id": "tomato_late_blight",
@@ -57,7 +160,100 @@
           "Neem oil foliar spray (3-5 ml per liter of water)"
         ],
         "regional_advice": "Highly destructive during cloudy, cool winter mornings in hilly and plateau regions.",
-        "farmer_message": "Late blight spreads rapidly in cool moist weather. Immediate field sanitation is essential."
+        "farmer_message": "Late blight spreads rapidly in cool moist weather. Immediate field sanitation is essential.",
+        "translations": {
+          "kn": {
+            "disease": "ತಡವಾದ ಅಂಗಮಾರಿ ರೋಗ (Late Blight)",
+            "symptoms": [
+              "ಎಲೆಗಳು ಮತ್ತು ಕಾಂಡಗಳ ಮೇಲೆ ನೀರಿನಿಂದ ನೆನೆದ ಕಡು ಕಂದು ಬಣ್ಣದ ಕಲೆಗಳು",
+              "ತಂಪಾದ, ತೇವಾಂಶವುಳ್ಳ ಮುಂಜಾನೆ ಎಲೆಗಳ ಕೆಳಭಾಗದಲ್ಲಿ ಬಿಳಿ ಬಣ್ಣದ ಶಿಲೀಂಧ್ರ",
+              "ಎಲೆಗಳು ಬೇಗನೆ ಬಾಡುವುದು ಮತ್ತು ಕೊಳೆಯುವುದು"
+            ],
+            "recommendations": [
+              "ತೀವ್ರವಾಗಿ ಬಾಧಿತವಾದ ಗಿಡಗಳನ್ನು ತಕ್ಷಣವೇ ಕಿತ್ತು ನಾಶಮಾಡಿ",
+              "ಮೇಲಿನಿಂದ ತುಂತುರು ನೀರಾವರಿ ಮಾಡುವುದನ್ನು ತಪ್ಪಿಸಿ",
+              "ಸ್ಥಳೀಯ ಕೃಷಿ ಕೇಂದ್ರ ಶಿಫಾರಸು ಮಾಡಿದ ಶಿಲೀಂಧ್ರನಾಶಕವನ್ನು ತಕ್ಷಣವೇ ಸಿಂಪಡಿಸಿ"
+            ],
+            "prevention": [
+              "ಆಲೂಗಡ್ಡೆ ಹೊಲಗಳ ಸಮೀಪದಲ್ಲಿ ಟೊಮೆಟೊ ಬೆಳೆಯುವುದನ್ನು ತಪ್ಪಿಸಿ",
+              "ಉತ್ತಮ ಒಳಚರಂಡಿ ಹೊಂದಿರುವ ದಿಬ್ಬ ಸಾಲುಗಳಲ್ಲಿ ಬೆಳೆಯಿರಿ",
+              "ಮೋಡ ಕವಿದ ತಂಪಾದ ದಿನಗಳಲ್ಲಿ ಬೆಳೆಗಳನ್ನು ಸೂಕ್ಷ್ಮವಾಗಿ ಗಮನಿಸಿ"
+            ],
+            "regional_advice": "ಗುಡ್ಡಗಾಡು ಮತ್ತು ಬಯಲು ಪ್ರದೇಶಗಳಲ್ಲಿ ಚಳಿಗಾಲ ಮತ್ತು ಮಳೆಗಾಲದ ಮೋಡ ಕವಿದ ದಿನಗಳಲ್ಲಿ ಹೆಚ್ಚು ಹಾನಿಕಾರಕ.",
+            "farmer_message": "ತಡವಾದ ಅಂಗಮಾರಿ ತಂಪಾದ ತೇವಾಂಶವಿರುವ ವಾತಾವರಣದಲ್ಲಿ ವೇಗವಾಗಿ ಹರಡುತ್ತದೆ. ಹೊಲದ ಸ್ವಚ್ಛತೆ ಅತಿ ಮುಖ್ಯ."
+          },
+          "ta": {
+            "disease": "பின் பருவ கருகல் நோய் (Late Blight)",
+            "symptoms": [
+              "இலைகள் மற்றும் தண்டுகளில் நீர் கசிந்த கருப்பு-பழுப்பு புள்ளிகள்",
+              "குளிர்ந்த காலை வேளையில் இலைகளின் அடிப்பகுதியில் வெள்ளை நிற பூஞ்சை",
+              "இலைகள் விரைவாக வாடி வதங்குதல்"
+            ],
+            "recommendations": [
+              "பாதிக்கப்பட்ட செடிகளை உடனே பிடுங்கி எரிக்கவும்",
+              "மேலிருந்து தெளிக்கும் பாசனத்தை தவிர்க்கவும்",
+              "பரிந்துரைக்கப்பட்ட பூஞ்சாணக்கொல்லியை உடனடியாக தெளிக்கவும்"
+            ],
+            "prevention": [
+              "உருளைக்கிழங்கு வயல்களுக்கு அருகில் நடவு செய்ய வேண்டாம்",
+              "மேட்டுப்பாத்திகளில் பயிரிடவும்"
+            ],
+            "regional_advice": "குளிர்ந்த பனி மூட்டமான காலை வேளையில் இந்நோய் வேகமாக பரவும்.",
+            "farmer_message": "பயிர் பாதுகாப்பு நடவடிக்கைகள் உடனடியாக எடுக்கப்பட வேண்டும்."
+          },
+          "te": {
+            "disease": "లేట్ బ్లైట్ తెగులు (Late Blight)",
+            "symptoms": [
+              "ఆకులు మరియు కొమ్మలపై నల్లటి నీటి మచ్చలు",
+              "చల్లని ఉదయాల్లో ఆకుల కింద తెల్లటి బూజు",
+              "ఆకులు త్వరగా ఎండిపోయి రాలిపోవడం"
+            ],
+            "recommendations": [
+              "తీవ్రంగా దెబ్బతిన్న మొక్కలను పీకి నాశనం చేయండి",
+              "సిఫార్సు చేసిన శిలీంద్రనాశినిని వెంటనే పిచికారీ చేయండి"
+            ],
+            "prevention": [
+              "బంగాళాదుంప పొలాలకు దూరంగా నాటండి",
+              "మంచి నీటి పారుదల సౌకర్యం కల్పించండి"
+            ],
+            "regional_advice": "మబ్బులు పట్టిన చల్లని వాతావరణంలో ఈ తెగులు తీవ్రంగా ఉంటుంది.",
+            "farmer_message": "ఆలస్యం చేయకుండా వెంటనే సరైన మందులు పిచಿಕారీ చేయండి."
+          },
+          "ml": {
+            "disease": "ലേറ്റ് ബ്ലൈറ്റ് (Late Blight)",
+            "symptoms": [
+              "ഇലകളിലും തണ്ടിലും ഇരുണ്ട പാടുകൾ",
+              "തണുപ്പുള്ള പ്രഭാതങ്ങളിൽ ഇലയുടെ അടിയിൽ വെളുത്ത പൂപ്പൽ"
+            ],
+            "recommendations": [
+              "രോഗം ബാധിച്ച ചെടികൾ നശിപ്പിക്കുക",
+              "ഉചിതമായ കുമിൾനാശിനി തളിക്കുക"
+            ],
+            "prevention": [
+              "നല്ല നീർവാർച്ചയുള്ള മണ്ണിൽ കൃഷി ചെയ്യുക"
+            ],
+            "regional_advice": "തണുത്ത അന്തരീക്ഷത്തിൽ രോഗസാധ്യത കൂടുതലാണ്.",
+            "farmer_message": "ഉടൻതന്നെ പ്രതിരോധ നടപടികൾ സ്വീകരിക്കുക."
+          },
+          "hi": {
+            "disease": "पछेती झुलसा (Late Blight)",
+            "symptoms": [
+              "पत्तियों और तनों पर गहरे भूरे पानीदार धब्बे",
+              "ठंडी सुबह में पत्तियों के नीचे सफेद फफूंद",
+              "पत्तियों का तेजी से मुरझाना"
+            ],
+            "recommendations": [
+              "गंभीर रूप से प्रभावित पौधों को उखाड़कर नष्ट करें",
+              "अनुशंसित कवकनाशी का तुरंत छिड़काव करें"
+            ],
+            "prevention": [
+              "आलू के खेतों के पास टमाटर न लगाएं",
+              "अच्छे जल निकास वाले खेतों का चयन करें"
+            ],
+            "regional_advice": "कोहरे और ठंड के मौसम में यह रोग बहुत नुकसान पहुंचाता है।",
+            "farmer_message": "मौसम ठंडा और नम होने पर विशेष निगरानी रखें।"
+          }
+        }
       },
       {
         "id": "tomato_leaf_curl",
@@ -109,6 +305,179 @@
         ],
         "regional_advice": "Continue standard agronomic practices for your region.",
         "farmer_message": "Your crop appears healthy! Keep up regular monitoring and soil health management."
+      }
+    ],
+    "Cotton": [
+      {
+        "id": "cotton_bacterial_blight",
+        "disease": "Bacterial Blight (Xanthomonas citri pv. malvacearum)",
+        "health_status": "Diseased",
+        "severity": "Severe",
+        "symptoms": [
+          "Angular water-soaked lesions on leaves delimited by veins",
+          "Lesions turn dark brown to black over time",
+          "Blackarm symptoms on stems and petiole wilting"
+        ],
+        "recommendations": [
+          "Spray copper oxychloride (50 WP) @ 2.5 g/L plus Streptocycline @ 0.1 g/L",
+          "Remove and destroy heavily infested crop residues",
+          "Avoid excessive nitrogen fertilization"
+        ],
+        "prevention": [
+          "Delint and treat seeds with Carbendazim or carboxin prior to sowing",
+          "Adopt resistant or tolerant cotton cultivars",
+          "Follow crop rotation with non-host crops like cereals"
+        ],
+        "translations": {
+          "kn": {
+            "disease": "ಹತ್ತಿ ಬ್ಯಾಕ್ಟೀರಿಯಲ್ ರೋಗ (Bacterial Blight)",
+            "farmer_message": "ಎಲೆಗಳ ಮೇಲಿನ ಕೋನೀಯ ಕಪ್ಪು ಕಲೆಗಳನ್ನು ಗಮನಿಸಿ ಶಿಲೀಂಧ್ರನಾಶಕ ಸಿಂಪಡಿಸಿ."
+          },
+          "ta": {
+            "disease": "பருத்தி பாக்டீரியா இலைக்கருகல்",
+            "farmer_message": "இலை நரம்புகளுக்கு இடைப்பட்ட கோணப் புள்ளிகளைக் கவனித்து மருந்து தெளிக்கவும்."
+          },
+          "te": {
+            "disease": "ప్రత్తి బ్యాక్టీరియా తెగులు",
+            "farmer_message": "ఆకులపై కోణీయ మచ్చలు కనిపించిన వెంటనే నివారణ చర్యలు చేపట్టండి."
+          },
+          "ml": {
+            "disease": "പരുത്തി ബാക്ടീരിയൽ രോഗം",
+            "farmer_message": "ഇലകളിൽ വെള്ളം നനഞ്ഞ കറുത്ത പാടുകൾ കാണുമ്പോൾ തന്നെ നിയന്ത്രിക്കുക."
+          },
+          "hi": {
+            "disease": "कपास का जीवाणु झुलसा",
+            "farmer_message": "पत्तियों पर कोणीय काले धब्बे दिखने पर तुरंत कॉपर युक्त दवा का छिड़काव करें।"
+          }
+        }
+      },
+      {
+        "id": "cotton_curl_virus",
+        "disease": "Cotton Leaf Curl Virus (CLCuV)",
+        "health_status": "Diseased",
+        "severity": "Severe",
+        "symptoms": [
+          "Upward or downward curling of leaf margins",
+          "Thickening and enation (leaf-like outgrowths) on leaf undersides",
+          "Severe plant stunting and reduced boll production"
+        ],
+        "recommendations": [
+          "Manage whitefly vector with systemic insecticides (Diafenthiuron or Acetamiprid)",
+          "Uproot and bury severely infected stunted plants",
+          "Eradicate alternate weed hosts in and around fields"
+        ],
+        "prevention": [
+          "Sow CLCuD resistant hybrid varieties",
+          "Install yellow sticky traps (10-15 per acre) to monitor and control whiteflies",
+          "Avoid sowing near tobacco or ladyfinger fields"
+        ],
+        "translations": {
+          "kn": {
+            "disease": "ಹತ್ತಿ ಎಲೆ ಮುದುರು ರೋಗ (Leaf Curl Virus)",
+            "farmer_message": "ಬಿಳಿ ನೊಣಗಳನ್ನು ನಿಯಂತ್ರಿಸಲು ಹಳದಿ ಬಲೆಗಳನ್ನು ಬಳಸಿ."
+          },
+          "ta": {
+            "disease": "பருத்தி இலை சுருள் நச்சுயிரி",
+            "farmer_message": "வெள்ளை ஈக்களைக் கட்டுப்படுத்த மஞ்சள் ஒட்டும் பொறிகளைப் பயன்படுத்தவும்."
+          },
+          "te": {
+            "disease": "ప్రత్తి ఆకు ముడుత వైరస్",
+            "farmer_message": "తెల్లదోమ నివారణకు పసుపు రంగు జిగురు அட்டలను అమర్చండి."
+          },
+          "ml": {
+            "disease": "പരുത്തി ഇല ചുരുളൽ വൈറസ്",
+            "farmer_message": "വെള്ളീച്ചകളെ നിയന്ത്രിക്കാൻ മഞ്ഞ കെണികൾ ഉപയോഗിക്കുക."
+          },
+          "hi": {
+            "disease": "कपास का पत्ता मरोड़ रोग",
+            "farmer_message": "सफेद मक्खी की रोकथाम के लिए पीले चिपचिपे कार्ड लगाएं।"
+          }
+        }
+      },
+      {
+        "id": "cotton_fussarium_wilt",
+        "disease": "Fusarium Wilt (Fusarium oxysporum f. sp. vasinfectum)",
+        "health_status": "Diseased",
+        "severity": "Critical",
+        "symptoms": [
+          "Yellowing and wilting of leaves starting from the bottom upward",
+          "Dark brown to black vascular discoloration inside the taproot and stem",
+          "Stunting and premature death of plants"
+        ],
+        "recommendations": [
+          "Drench root zone with Carbendazim (1 g/L) or Trichoderma viride formulation",
+          "Avoid waterlogging in clay soils",
+          "Apply balanced potash nutrition to boost disease resistance"
+        ],
+        "prevention": [
+          "Soil solarization during hot summer months",
+          "Seed treatment with Trichoderma viride @ 4-6 g/kg seed",
+          "Practice minimum 3-year crop rotation with non-susceptible crops"
+        ],
+        "translations": {
+          "kn": {
+            "disease": "ಹತ್ತಿ ಸೊರಗು ರೋಗ (Fusarium Wilt)",
+            "farmer_message": "ಗಿಡಗಳ ಬುಡಕ್ಕೆ ಟ್ರೈಕೋಡರ್ಮಾ ದ್ರಾವಣವನ್ನು ಸುರಿಯಿರಿ."
+          },
+          "ta": {
+            "disease": "பருத்தி வாடல் நோய் (Fusarium Wilt)",
+            "farmer_message": "வேர்ப்பகுதியில் ட்ரைக்கோடெர்மா உயிர் உரத்தை இடவும்."
+          },
+          "te": {
+            "disease": "ప్రత్తి ఎండు తెగులు",
+            "farmer_message": "మొక్కల మొదళ్ల వద్ద శిలీంధ్రనాಶಿನಿ ද୍ରಾವಣాన్ని పోయండి."
+          },
+          "ml": {
+            "disease": "പരുത്തി വാട്ടം രോഗം",
+            "farmer_message": "വേരുഭാഗത്ത് ട്രൈക്കോഡെർമ പ്രയോഗിക്കുക."
+          },
+          "hi": {
+            "disease": "कपास का उकठा रोग",
+            "farmer_message": "जड़ों के पास ट्राइकोडर्मा का घोल डालें।"
+          }
+        }
+      },
+      {
+        "id": "cotton_healthy",
+        "disease": "Healthy Plant",
+        "health_status": "Healthy",
+        "severity": "None",
+        "symptoms": [
+          "Uniform vibrant green foliage",
+          "No spots, curling, or lesions",
+          "Vigorous vegetative and reproductive growth"
+        ],
+        "recommendations": [
+          "Maintain regular irrigation schedule without water stagnation",
+          "Apply recommended NPK and micronutrient dosage as per soil test",
+          "Monitor weekly for pest scouts (bollworms, aphids, thrips)"
+        ],
+        "prevention": [
+          "Continue balanced soil and plant health management",
+          "Ensure adequate border vegetation for beneficial predator insects"
+        ],
+        "translations": {
+          "kn": {
+            "disease": "ಆರೋಗ್ಯಕರ ಗಿಡ (Healthy)",
+            "farmer_message": "ನಿಮ್ಮ ಹತ್ತಿ ಬೆಳೆ ಅತ್ಯಂತ ಆರೋಗ್ಯಕರವಾಗಿದೆ. ನಿಯಮಿತ ಪೋಷಕಾಂಶ ನಿರ್ವಹಣೆ ಮುಂದುವರಿಸಿ."
+          },
+          "ta": {
+            "disease": "ஆரோக்கியமான பயிர்",
+            "farmer_message": "உங்கள் பருத்தி பயிர் ஆரோக்கியமாக உள்ளது. சீரான நீர்ப்பாசனம் அளிக்கவும்."
+          },
+          "te": {
+            "disease": "ఆరోగ్యకరమైన మొక్క",
+            "farmer_message": "మీ ప్రత్తి పంట ఆరోగ్యంగా ఉంది. క్రమం తప్పకుండా పోషణ అందించండి."
+          },
+          "ml": {
+            "disease": "ആരോഗ്യമുള്ള വിള",
+            "farmer_message": "നിങ്ങളുടെ പരുത്തിച്ചെടി ആരോഗ്യകരമാണ്."
+          },
+          "hi": {
+            "disease": "स्वस्थ पौधा",
+            "farmer_message": "आपकी कपास की फसल स्वस्थ है। नियमित पोषण प्रबंधन जारी रखें।"
+          }
+        }
       }
     ]
   }

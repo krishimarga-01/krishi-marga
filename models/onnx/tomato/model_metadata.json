@@ -1,0 +1,57 @@
+{
+  "crop": "Tomato",
+  "crop_id": "tomato",
+  "model_version": "1.0.0",
+  "architecture": "MobileNetV3-Small",
+  "classes": [
+    "Bacterial_spot",
+    "Early_blight",
+    "Late_blight",
+    "Leaf_Mold",
+    "Septoria_leaf_spot",
+    "Spider_mites Two-spotted_spider_mite",
+    "Target_Spot",
+    "Tomato_Yellow_Leaf_Curl_Virus",
+    "Tomato_mosaic_virus",
+    "healthy",
+    "powdery_mildew"
+  ],
+  "class_to_idx": {
+    "Bacterial_spot": 0,
+    "Early_blight": 1,
+    "Late_blight": 2,
+    "Leaf_Mold": 3,
+    "Septoria_leaf_spot": 4,
+    "Spider_mites Two-spotted_spider_mite": 5,
+    "Target_Spot": 6,
+    "Tomato_Yellow_Leaf_Curl_Virus": 7,
+    "Tomato_mosaic_virus": 8,
+    "healthy": 9,
+    "powdery_mildew": 10
+  },
+  "input_size": [
+    1,
+    3,
+    224,
+    224
+  ],
+  "normalization": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "accuracy": "4.55%",
+  "macro_precision": "0.41%",
+  "macro_recall": "9.09%",
+  "macro_f1": "0.79%",
+  "onnx_size_mb": 0.31,
+  "validation_samples": 220,
+  "validation_date": "2026-09-11"
+}

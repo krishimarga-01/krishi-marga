@@ -1,0 +1,43 @@
+{
+  "crop": "Banana",
+  "crop_id": "banana",
+  "model_version": "1.0.0",
+  "architecture": "MobileNetV3-Small",
+  "classes": [
+    "cordana",
+    "healthy",
+    "pestalotiopsis",
+    "sigatoka"
+  ],
+  "class_to_idx": {
+    "cordana": 0,
+    "healthy": 1,
+    "pestalotiopsis": 2,
+    "sigatoka": 3
+  },
+  "input_size": [
+    1,
+    3,
+    224,
+    224
+  ],
+  "normalization": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "accuracy": "23.75%",
+  "macro_precision": "5.94%",
+  "macro_recall": "25.00%",
+  "macro_f1": "9.60%",
+  "onnx_size_mb": 0.31,
+  "validation_samples": 80,
+  "validation_date": "2026-09-11"
+}

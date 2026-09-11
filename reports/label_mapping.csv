@@ -1,0 +1,10 @@
+crop,class_id,class_name,clean_display_name,health_status
+Cotton,0,bacterial_blight,Bacterial Blight,Diseased
+Cotton,1,curl_virus,Curl Virus,Diseased
+Cotton,2,fussarium_wilt,Fussarium Wilt,Diseased
+Cotton,3,healthy,Healthy,Healthy
+Coconut,0,Bud_Root_Dropping,Bud Root Dropping,Diseased
+Coconut,1,Bud_Rot,Bud Rot,Diseased
+Coconut,2,Gray_Leaf_Spot,Gray Leaf Spot,Diseased
+Coconut,3,Leaf_Rot,Leaf Rot,Diseased
+Coconut,4,Stem_Bleeding,Stem Bleeding,Diseased

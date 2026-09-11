@@ -25,24 +25,24 @@ export const SettingsScreen = () => {
   const handleGoogleLogin = async () => {
     const u = await AuthService.loginWithGoogle('Farmer (Google)', 'farmer@example.com');
     setUser(u);
-    Alert.alert('Logged In', 'Connected via Google. History will sync across your devices.');
+    Alert.alert(t('loginSuccessTitle'), t('googleLoginSuccessDesc'));
   };
 
   const handlePhoneLogin = async () => {
     if (!phoneInput || phoneInput.length < 10) {
-      Alert.alert('Invalid Phone', 'Please enter a valid 10-digit mobile number.');
+      Alert.alert(t('invalidPhoneTitle'), t('invalidPhoneDesc'));
       return;
     }
     const u = await AuthService.loginWithPhone(phoneInput);
     setUser(u);
     setShowPhoneLogin(false);
-    Alert.alert('Logged In', 'Connected via Mobile OTP. History sync enabled.');
+    Alert.alert(t('loginSuccessTitle'), t('phoneLoginSuccessDesc'));
   };
 
   const handleLogout = async () => {
     await AuthService.logout();
     setUser({ isLoggedIn: false });
-    Alert.alert('Guest Mode', 'Switched back to Guest Mode.');
+    Alert.alert(t('guestMode'), t('guestModeSwitchedDesc'));
   };
 
   const languages: { code: SupportedLanguage; label: string; native: string }[] = [
@@ -51,6 +51,7 @@ export const SettingsScreen = () => {
     { code: 'ta', label: 'Tamil', native: 'தமிழ்' },
     { code: 'ml', label: 'Malayalam', native: 'മലയാളം' },
     { code: 'hi', label: 'Hindi', native: 'हिन्दी' },
+    { code: 'te', label: 'Telugu', native: 'తెలుగు' },
   ];
 
   return (
@@ -61,28 +62,28 @@ export const SettingsScreen = () => {
 
         {/* Account / Authentication Status Card */}
         <View style={styles.card}>
-          <Text style={styles.sectionHeader}>👤 Account & Backup</Text>
+          <Text style={styles.sectionHeader}>👤 {t('accountBackup')}</Text>
           {user.isLoggedIn ? (
             <View>
-              <Text style={styles.userStatus}>Status: <Text style={styles.loggedText}>Logged in ({user.name})</Text></Text>
-              <Text style={styles.userInfo}>Identifier: {user.phoneOrEmail}</Text>
-              <Text style={styles.syncStatus}>✓ Cloud synchronization active</Text>
+              <Text style={styles.userStatus}>{t('statusLabel')}: <Text style={styles.loggedText}>{t('loggedInAs')} ({user.name})</Text></Text>
+              <Text style={styles.userInfo}>{t('identifier')}: {user.phoneOrEmail}</Text>
+              <Text style={styles.syncStatus}>✓ {t('cloudSyncActive')}</Text>
               <TouchableOpacity style={styles.logoutBtn} onPress={handleLogout}>
-                <Text style={styles.logoutBtnText}>Switch to Guest Mode</Text>
+                <Text style={styles.logoutBtnText}>{t('switchToGuest')}</Text>
               </TouchableOpacity>
             </View>
           ) : (
             <View>
-              <Text style={styles.userStatus}>Status: <Text style={styles.guestStatus}>Guest Mode</Text></Text>
-              <Text style={styles.guestNotice}>Diagnosis works completely without login. Connect to backup records:</Text>
+              <Text style={styles.userStatus}>{t('statusLabel')}: <Text style={styles.guestStatus}>{t('guestMode')}</Text></Text>
+              <Text style={styles.guestNotice}>{t('guestNotice')}</Text>
 
               <View style={styles.authRow}>
                 <TouchableOpacity style={styles.googleBtn} activeOpacity={0.85} onPress={handleGoogleLogin}>
-                  <Text style={styles.authBtnText}>Google Login</Text>
+                  <Text style={styles.authBtnText}>{t('googleLogin')}</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.phoneBtn} activeOpacity={0.85} onPress={() => setShowPhoneLogin(!showPhoneLogin)}>
-                  <Text style={styles.authBtnText}>Phone Login</Text>
+                  <Text style={styles.authBtnText}>{t('phoneLogin')}</Text>
                 </TouchableOpacity>
               </View>
 
@@ -90,7 +91,7 @@ export const SettingsScreen = () => {
                 <View style={styles.phoneInputWrap}>
                   <TextInput
                     style={styles.phoneInput}
-                    placeholder='Enter 10-digit mobile number'
+                    placeholder={t('enterPhonePlaceholder')}
                     placeholderTextColor={Colors.textMuted}
                     keyboardType='phone-pad'
                     maxLength={10}
@@ -98,7 +99,7 @@ export const SettingsScreen = () => {
                     onChangeText={setPhoneInput}
                   />
                   <TouchableOpacity style={styles.submitPhoneBtn} onPress={handlePhoneLogin}>
-                    <Text style={styles.submitPhoneText}>Verify OTP & Login</Text>
+                    <Text style={styles.submitPhoneText}>{t('verifyOtpLogin')}</Text>
                   </TouchableOpacity>
                 </View>
               )}
@@ -108,7 +109,7 @@ export const SettingsScreen = () => {
 
         {/* Language Selection Card */}
         <View style={styles.card}>
-          <Text style={styles.sectionHeader}>🌐 Language / ಭಾಷೆ / மொழி / ഭാഷ / भाषा</Text>
+          <Text style={styles.sectionHeader}>🌐 {t('languageSectionTitle')}</Text>
           {languages.map((l) => {
             const isSelected = language === l.code;
             return (
@@ -128,25 +129,25 @@ export const SettingsScreen = () => {
 
         {/* Offline Engine Status Card */}
         <View style={styles.card}>
-          <Text style={styles.sectionHeader}>📡 Offline Model Status</Text>
+          <Text style={styles.sectionHeader}>📡 {t('offlineModelStatus')}</Text>
           <View style={styles.statusBadgeRow}>
             <View style={styles.offlineStatusPill}>
-              <Text style={styles.offlineStatusText}>{OnnxEngine.isModelAvailable() ? 'Ready' : 'Awaiting ONNX Model Asset'}</Text>
+              <Text style={styles.offlineStatusText}>{OnnxEngine.isModelAvailable() ? t('modelReady') : t('modelAwaiting')}</Text>
             </View>
           </View>
           <Text style={styles.infoDesc}>
-            Local disease knowledge database is bundled for offline emergency lookup. Full ONNX mobile tensor inference activates upon package compilation.
+            {t('offlineEngineDesc')}
           </Text>
         </View>
 
         {/* About App */}
         <View style={styles.card}>
-          <Text style={styles.sectionHeader}>ℹ️ About KRISHI MARGA</Text>
-          <Text style={styles.infoText}>Krishi Marga — Smart India Hackathon Edition</Text>
+          <Text style={styles.sectionHeader}>ℹ️ {t('aboutKrishiMarga')}</Text>
+          <Text style={styles.infoText}>{t('appEdition')}</Text>
           <Text style={styles.infoDesc}>
-            Designed to empower Indian farmers with rapid crop disease inspection, verified agronomic treatments, and agricultural expert support.
+            {t('appMission')}
           </Text>
-          <Text style={styles.privacyLink}>Privacy Policy & Terms: Local-first data protection.</Text>
+          <Text style={styles.privacyLink}>{t('privacyTerms')}</Text>
         </View>
       </ScrollView>
     </SafeAreaView>

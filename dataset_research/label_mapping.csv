@@ -1,0 +1,9 @@
+crop,original_label,canonical_label,disease_type,scientific_name_if_verified,source_dataset,mapping_reason,verified
+Sugarcane,Red Rot,Red Rot,Fungal,Colletotrichum falcatum,DS_SUGAR_02,Primary lethal vascular pathogen in South Indian sugarcane command areas,True
+Sugarcane,Bacterial Blight,Bacterial Blight,Bacterial,Xanthomonas albilineans,DS_SUGAR_02,Leaf scald and systemic vascular blight,True
+Sugarcane,Healthy,Healthy,Healthy,None (Healthy plant),DS_SUGAR_02,Uninfected green cane leaves,True
+Paddy_Rice,rice_leaf_diseases,Rice Leaf Disease Complex (Blight/Blast/Brown Spot),Fungal / Bacterial,Magnaporthe oryzae / Bipolaris oryzae / Xanthomonas oryzae,DS_RICE_02,Verified multi-class paddy foliar lesions,True
+Cotton,cotton_leaf_diseases,Cotton Leaf Disease Complex (Bacterial Blight/Curl/Wilt),Bacterial / Viral,Xanthomonas citri pv. malvacearum / CLCuV,DS_COTTON_03,Foliar black arm and curl symptoms,True
+Coffee,coffee_leaf_diseases,Coffee Leaf Rust & Stress Complex,Fungal / Pest,Hemileia vastatrix / Leucoptera coffeella,DS_COFFEE_04,Verified orange urediniospores and leaf miner galleries,True
+Tea,tea_leaf_diseases,Tea Foliar Blight & Algal Spot Complex,Fungal / Algal,Pestalotiopsis theae / Cephaleuros parasiticus,DS_TEA_03,High-altitude plantation foliar necrosis,True
+Tomato,tomato_leaf_diseases,Tomato Early & Late Blight Complex,Fungal / Oomycete,Alternaria solani / Phytophthora infestans,DS_TOMATO_03,Concentric target spots and water-soaked foliar lesions,True

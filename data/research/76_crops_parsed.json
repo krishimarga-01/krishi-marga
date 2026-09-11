@@ -1,0 +1,1055 @@
+[
+  {
+    "id": "paddy",
+    "rawName": "Paddy",
+    "category": "cereal",
+    "searchKeywords": [
+      "paddy",
+      "rice",
+      "oryza",
+      "dhan",
+      "chawal",
+      "nel",
+      "arisi",
+      "bhatta",
+      "akki",
+      "vari",
+      "vadlu",
+      "nellu"
+    ]
+  },
+  {
+    "id": "maize",
+    "rawName": "Maize",
+    "category": "cereal",
+    "searchKeywords": [
+      "maize",
+      "corn",
+      "zea mays",
+      "makka",
+      "bhutta",
+      "makkacholam",
+      "mekkejola",
+      "musukinajola",
+      "mokkajonna"
+    ]
+  },
+  {
+    "id": "ragi",
+    "rawName": "Ragi",
+    "category": "cereal",
+    "searchKeywords": [
+      "ragi",
+      "finger millet",
+      "eleusine coracana",
+      "kezhvaragu",
+      "keppai",
+      "ragulu",
+      "mandia"
+    ]
+  },
+  {
+    "id": "sorghum",
+    "rawName": "Sorghum",
+    "category": "cereal",
+    "searchKeywords": [
+      "sorghum",
+      "jowar",
+      "sorghum bicolor",
+      "cholam",
+      "jola",
+      "bili jola",
+      "jonna"
+    ]
+  },
+  {
+    "id": "pearl_millet",
+    "rawName": "Pearl Millet",
+    "category": "cereal",
+    "searchKeywords": [
+      "pearl millet",
+      "bajra",
+      "pennisetum glaucum",
+      "kambu",
+      "sajje",
+      "sajjalu"
+    ]
+  },
+  {
+    "id": "foxtail_millet",
+    "rawName": "Foxtail Millet",
+    "category": "cereal",
+    "searchKeywords": [
+      "foxtail millet",
+      "setaria italica",
+      "navane",
+      "tenai",
+      "korra",
+      "kangni",
+      "thina"
+    ]
+  },
+  {
+    "id": "little_millet",
+    "rawName": "Little Millet",
+    "category": "cereal",
+    "searchKeywords": [
+      "little millet",
+      "panicum sumatrense",
+      "same",
+      "samai",
+      "sama",
+      "samalu",
+      "kutki"
+    ]
+  },
+  {
+    "id": "kodo_millet",
+    "rawName": "Kodo Millet",
+    "category": "cereal",
+    "searchKeywords": [
+      "kodo millet",
+      "paspalum scrobiculatum",
+      "harka",
+      "varagu",
+      "arikelu",
+      "kodra"
+    ]
+  },
+  {
+    "id": "barnyard_millet",
+    "rawName": "Barnyard Millet",
+    "category": "cereal",
+    "searchKeywords": [
+      "barnyard millet",
+      "echinochloa frumentacea",
+      "oodalu",
+      "kuthiraivali",
+      "udhalu",
+      "oodalu",
+      "sanwa"
+    ]
+  },
+  {
+    "id": "proso_millet",
+    "rawName": "Proso Millet",
+    "category": "cereal",
+    "searchKeywords": [
+      "proso millet",
+      "panicum miliaceum",
+      "baragu",
+      "panivaragu",
+      "variga",
+      "chena"
+    ]
+  },
+  {
+    "id": "wheat",
+    "rawName": "Wheat",
+    "category": "cereal",
+    "searchKeywords": [
+      "wheat",
+      "triticum",
+      "gehun",
+      "godhi",
+      "godhumai",
+      "godhuma",
+      "gothambu"
+    ]
+  },
+  {
+    "id": "red_gram",
+    "rawName": "Red Gram",
+    "category": "pulse",
+    "searchKeywords": [
+      "red gram",
+      "pigeon pea",
+      "tur",
+      "arhar",
+      "cajanus cajan",
+      "togari",
+      "thuvaram",
+      "kandi"
+    ]
+  },
+  {
+    "id": "black_gram",
+    "rawName": "Black Gram",
+    "category": "pulse",
+    "searchKeywords": [
+      "black gram",
+      "urad",
+      "vigna mungo",
+      "uddu",
+      "ulundu",
+      "minumulu",
+      "uzhunnu"
+    ]
+  },
+  {
+    "id": "green_gram",
+    "rawName": "Green Gram",
+    "category": "pulse",
+    "searchKeywords": [
+      "green gram",
+      "moong",
+      "vigna radiata",
+      "hesaru",
+      "paasi payaru",
+      "pesalu",
+      "cherupayar"
+    ]
+  },
+  {
+    "id": "bengal_gram",
+    "rawName": "Bengal Gram",
+    "category": "pulse",
+    "searchKeywords": [
+      "bengal gram",
+      "chickpea",
+      "chana",
+      "cicer arietinum",
+      "kadale",
+      "konda kadalai",
+      "senagalu",
+      "kadala"
+    ]
+  },
+  {
+    "id": "cowpea",
+    "rawName": "Cowpea",
+    "category": "pulse",
+    "searchKeywords": [
+      "cowpea",
+      "lobia",
+      "vigna unguiculata",
+      "alasande",
+      "karamani",
+      "thatta payaru",
+      "alasandalu",
+      "payar"
+    ]
+  },
+  {
+    "id": "field_bean",
+    "rawName": "Field Bean",
+    "category": "pulse",
+    "searchKeywords": [
+      "field bean",
+      "hyacinth bean",
+      "avarekalu",
+      "lablab purpureus",
+      "mochai",
+      "chikkudu",
+      "amara"
+    ]
+  },
+  {
+    "id": "groundnut",
+    "rawName": "Groundnut",
+    "category": "oilseed",
+    "searchKeywords": [
+      "groundnut",
+      "peanut",
+      "arachis hypogaea",
+      "mungphali",
+      "shenga",
+      "kadalakkai",
+      "verukadalai",
+      "verusenaga"
+    ]
+  },
+  {
+    "id": "sesame",
+    "rawName": "Sesame",
+    "category": "oilseed",
+    "searchKeywords": [
+      "sesame",
+      "gingelly",
+      "til",
+      "sesamum indicum",
+      "ellu",
+      "nuvvulu"
+    ]
+  },
+  {
+    "id": "sunflower",
+    "rawName": "Sunflower",
+    "category": "oilseed",
+    "searchKeywords": [
+      "sunflower",
+      "helianthus annuus",
+      "surajmukhi",
+      "suryakanti",
+      "sooriyaganthi",
+      "proddutirugudu"
+    ]
+  },
+  {
+    "id": "castor",
+    "rawName": "Castor",
+    "category": "oilseed",
+    "searchKeywords": [
+      "castor",
+      "ricinus communis",
+      "arandi",
+      "haralu",
+      "aamanakku",
+      "aamudamu",
+      "aavanakku"
+    ]
+  },
+  {
+    "id": "safflower",
+    "rawName": "Safflower",
+    "category": "oilseed",
+    "searchKeywords": [
+      "safflower",
+      "carthamus tinctorius",
+      "kusube",
+      "kardi",
+      "kusum",
+      "sendurakam",
+      "kusumalu"
+    ]
+  },
+  {
+    "id": "soybean",
+    "rawName": "Soybean",
+    "category": "oilseed",
+    "searchKeywords": [
+      "soybean",
+      "soya",
+      "glycine max",
+      "soyachikkudu",
+      "soya bean"
+    ]
+  },
+  {
+    "id": "cotton",
+    "rawName": "Cotton",
+    "category": "commercial",
+    "searchKeywords": [
+      "cotton",
+      "kapas",
+      "gossypium",
+      "hatti",
+      "paruthi",
+      "pratti",
+      "panji"
+    ]
+  },
+  {
+    "id": "sugarcane",
+    "rawName": "Sugarcane",
+    "category": "commercial",
+    "searchKeywords": [
+      "sugarcane",
+      "saccharum",
+      "ganna",
+      "kabbu",
+      "karumbu",
+      "cheraku",
+      "karimbu"
+    ]
+  },
+  {
+    "id": "tobacco",
+    "rawName": "Tobacco",
+    "category": "commercial",
+    "searchKeywords": [
+      "tobacco",
+      "nicotiana",
+      "tambaku",
+      "hogesoppu",
+      "pugaielai",
+      "pogaku",
+      "pukayila"
+    ]
+  },
+  {
+    "id": "tomato",
+    "rawName": "Tomato",
+    "category": "vegetable",
+    "searchKeywords": [
+      "tomato",
+      "tamatar",
+      "solanum lycopersicum",
+      "thakkali",
+      "tometo",
+      "tamata"
+    ]
+  },
+  {
+    "id": "chilli",
+    "rawName": "Chilli",
+    "category": "vegetable",
+    "searchKeywords": [
+      "chilli",
+      "chili",
+      "capsicum",
+      "mirch",
+      "menasinakayi",
+      "milagai",
+      "mirapakaya",
+      "mulaku"
+    ]
+  },
+  {
+    "id": "brinjal",
+    "rawName": "Brinjal",
+    "category": "vegetable",
+    "searchKeywords": [
+      "brinjal",
+      "eggplant",
+      "aubergine",
+      "solanum melongena",
+      "baingan",
+      "badanekayi",
+      "kathirikai",
+      "vankaya",
+      "vazhuthananga"
+    ]
+  },
+  {
+    "id": "onion",
+    "rawName": "Onion",
+    "category": "vegetable",
+    "searchKeywords": [
+      "onion",
+      "allium cepa",
+      "pyaz",
+      "eerulli",
+      "vengayam",
+      "ullipayalu",
+      "ulli",
+      "savala"
+    ]
+  },
+  {
+    "id": "okra",
+    "rawName": "Okra",
+    "category": "vegetable",
+    "searchKeywords": [
+      "okra",
+      "bhindi",
+      "bhendi",
+      "lady finger",
+      "abelmoschus esculentus",
+      "bende",
+      "vendakkai",
+      "bhendakaya"
+    ]
+  },
+  {
+    "id": "potato",
+    "rawName": "Potato",
+    "category": "vegetable",
+    "searchKeywords": [
+      "potato",
+      "solanum tuberosum",
+      "aaloo",
+      "aloo",
+      "alugadde",
+      "urulaikizhangu",
+      "bangaladumpa",
+      "urulakizhangu"
+    ]
+  },
+  {
+    "id": "tapioca",
+    "rawName": "Tapioca",
+    "category": "vegetable",
+    "searchKeywords": [
+      "tapioca",
+      "cassava",
+      "manihot esculenta",
+      "maravalli kizhangu",
+      "maragenasu",
+      "karra pendalam",
+      "kappa"
+    ]
+  },
+  {
+    "id": "sweet_potato",
+    "rawName": "Sweet Potato",
+    "category": "vegetable",
+    "searchKeywords": [
+      "sweet potato",
+      "ipomoea batatas",
+      "shakarkand",
+      "sihi genasu",
+      "sakkaravalli kizhangu",
+      "chilagada dumpa",
+      "madhurakkizhangu"
+    ]
+  },
+  {
+    "id": "drumstick",
+    "rawName": "Drumstick",
+    "category": "vegetable",
+    "searchKeywords": [
+      "drumstick",
+      "moringa",
+      "moringa oleifera",
+      "sehjan",
+      "nuggekayi",
+      "murungakkai",
+      "mulakkada",
+      "muringakka"
+    ]
+  },
+  {
+    "id": "cucumber",
+    "rawName": "Cucumber",
+    "category": "vegetable",
+    "searchKeywords": [
+      "cucumber",
+      "cucumis sativus",
+      "kheera",
+      "southekayi",
+      "vellarikkai",
+      "dosakaya",
+      "vellarikka"
+    ]
+  },
+  {
+    "id": "pumpkin",
+    "rawName": "Pumpkin",
+    "category": "vegetable",
+    "searchKeywords": [
+      "pumpkin",
+      "cucurbita moschata",
+      "kaddu",
+      "kumbalakayi",
+      "parangikkai",
+      "gummadikaya",
+      "matthan"
+    ]
+  },
+  {
+    "id": "bitter_gourd",
+    "rawName": "Bitter Gourd",
+    "category": "vegetable",
+    "searchKeywords": [
+      "bitter gourd",
+      "momordica charantia",
+      "karela",
+      "hagalakayi",
+      "paavakkai",
+      "kakarakaya",
+      "pavakka"
+    ]
+  },
+  {
+    "id": "bottle_gourd",
+    "rawName": "Bottle Gourd",
+    "category": "vegetable",
+    "searchKeywords": [
+      "bottle gourd",
+      "lagenaria siceraria",
+      "lauki",
+      "sorekayi",
+      "suraikkai",
+      "sorakaya",
+      "churakka"
+    ]
+  },
+  {
+    "id": "ridge_gourd",
+    "rawName": "Ridge Gourd",
+    "category": "vegetable",
+    "searchKeywords": [
+      "ridge gourd",
+      "luffa acutangula",
+      "turai",
+      "hirekayi",
+      "peerkangai",
+      "beerakaya",
+      "peechinga"
+    ]
+  },
+  {
+    "id": "beans",
+    "rawName": "Beans",
+    "category": "vegetable",
+    "searchKeywords": [
+      "beans",
+      "french beans",
+      "phaseolus vulgaris",
+      "huralikayi",
+      "beans",
+      "chikkudukai"
+    ]
+  },
+  {
+    "id": "cabbage",
+    "rawName": "Cabbage",
+    "category": "vegetable",
+    "searchKeywords": [
+      "cabbage",
+      "brassica oleracea",
+      "patta gobhi",
+      "kosu",
+      "muttaikose",
+      "cabbage",
+      "muttakose"
+    ]
+  },
+  {
+    "id": "cauliflower",
+    "rawName": "Cauliflower",
+    "category": "vegetable",
+    "searchKeywords": [
+      "cauliflower",
+      "brassica oleracea var botrytis",
+      "phool gobhi",
+      "hookosu",
+      "kaaliflavar",
+      "gobi"
+    ]
+  },
+  {
+    "id": "carrot",
+    "rawName": "Carrot",
+    "category": "vegetable",
+    "searchKeywords": [
+      "carrot",
+      "daucus carota",
+      "gajar",
+      "gaajare",
+      "kerat",
+      "carrot"
+    ]
+  },
+  {
+    "id": "beetroot",
+    "rawName": "Beetroot",
+    "category": "vegetable",
+    "searchKeywords": [
+      "beetroot",
+      "beta vulgaris",
+      "chukandar",
+      "beetroot"
+    ]
+  },
+  {
+    "id": "banana",
+    "rawName": "Banana",
+    "category": "fruit",
+    "searchKeywords": [
+      "banana",
+      "plantain",
+      "musa",
+      "kela",
+      "baale",
+      "vazhai",
+      "arati",
+      "vazha"
+    ]
+  },
+  {
+    "id": "mango",
+    "rawName": "Mango",
+    "category": "fruit",
+    "searchKeywords": [
+      "mango",
+      "mangifera indica",
+      "aam",
+      "maavu",
+      "maanga",
+      "maamidikaya"
+    ]
+  },
+  {
+    "id": "papaya",
+    "rawName": "Papaya",
+    "category": "fruit",
+    "searchKeywords": [
+      "papaya",
+      "carica papaya",
+      "papita",
+      "parangi",
+      "pappali",
+      "boppayi",
+      "omakkaya"
+    ]
+  },
+  {
+    "id": "pomegranate",
+    "rawName": "Pomegranate",
+    "category": "fruit",
+    "searchKeywords": [
+      "pomegranate",
+      "punica granatum",
+      "anaar",
+      "dalimbe",
+      "madhulai",
+      "danimma",
+      "mathalam"
+    ]
+  },
+  {
+    "id": "guava",
+    "rawName": "Guava",
+    "category": "fruit",
+    "searchKeywords": [
+      "guava",
+      "psidium guajava",
+      "amrood",
+      "seebe",
+      "koyya",
+      "jama",
+      "pera"
+    ]
+  },
+  {
+    "id": "sapota",
+    "rawName": "Sapota",
+    "category": "fruit",
+    "searchKeywords": [
+      "sapota",
+      "chikoo",
+      "manilkara zapota",
+      "chiku",
+      "sapota"
+    ]
+  },
+  {
+    "id": "pineapple",
+    "rawName": "Pineapple",
+    "category": "fruit",
+    "searchKeywords": [
+      "pineapple",
+      "ananas comosus",
+      "ananas",
+      "parangi",
+      "annasi",
+      "kaithachakka"
+    ]
+  },
+  {
+    "id": "grapes",
+    "rawName": "Grapes",
+    "category": "fruit",
+    "searchKeywords": [
+      "grapes",
+      "vitis vinifera",
+      "angoor",
+      "drakshi",
+      "thiratchai",
+      "draksha",
+      "muntiringa"
+    ]
+  },
+  {
+    "id": "jackfruit",
+    "rawName": "Jackfruit",
+    "category": "fruit",
+    "searchKeywords": [
+      "jackfruit",
+      "artocarpus heterophyllus",
+      "kathal",
+      "halasu",
+      "pala",
+      "panasa",
+      "chakka"
+    ]
+  },
+  {
+    "id": "watermelon",
+    "rawName": "Watermelon",
+    "category": "fruit",
+    "searchKeywords": [
+      "watermelon",
+      "citrullus lanatus",
+      "tarbooz",
+      "kallangadi",
+      "tharpoosani",
+      "puchakaya",
+      "thannimathan"
+    ]
+  },
+  {
+    "id": "muskmelon",
+    "rawName": "Muskmelon",
+    "category": "fruit",
+    "searchKeywords": [
+      "muskmelon",
+      "cantaloupe",
+      "cucumis melo",
+      "kharbooja",
+      "kirni",
+      "kekkarikke"
+    ]
+  },
+  {
+    "id": "citrus_lime",
+    "rawName": "Acid Lime",
+    "category": "fruit",
+    "searchKeywords": [
+      "citrus",
+      "lime",
+      "lemon",
+      "citrus aurantifolia",
+      "nimbu",
+      "nimbe",
+      "elumichai",
+      "nimmakaya",
+      "cherunaranga"
+    ]
+  },
+  {
+    "id": "coconut",
+    "rawName": "Coconut",
+    "category": "plantation",
+    "searchKeywords": [
+      "coconut",
+      "cocos nucifera",
+      "nariyal",
+      "tengu",
+      "thennai",
+      "kobbari",
+      "thengu"
+    ]
+  },
+  {
+    "id": "arecanut",
+    "rawName": "Arecanut",
+    "category": "plantation",
+    "searchKeywords": [
+      "arecanut",
+      "betel nut",
+      "areca catechu",
+      "supari",
+      "adike",
+      "pakku",
+      "vakka",
+      "adakka"
+    ]
+  },
+  {
+    "id": "cashew",
+    "rawName": "Cashew",
+    "category": "plantation",
+    "searchKeywords": [
+      "cashew",
+      "anacardium occidentale",
+      "kaju",
+      "geru",
+      "munthiri",
+      "jeedipappu",
+      "kasu"
+    ]
+  },
+  {
+    "id": "coffee",
+    "rawName": "Coffee",
+    "category": "plantation",
+    "searchKeywords": [
+      "coffee",
+      "coffea arabica",
+      "coffea canephora",
+      "kaapi",
+      "coffee"
+    ]
+  },
+  {
+    "id": "tea",
+    "rawName": "Tea",
+    "category": "plantation",
+    "searchKeywords": [
+      "tea",
+      "camellia sinensis",
+      "chai",
+      "theila",
+      "chaha"
+    ]
+  },
+  {
+    "id": "rubber",
+    "rawName": "Rubber",
+    "category": "plantation",
+    "searchKeywords": [
+      "rubber",
+      "hevea brasiliensis",
+      "rubber",
+      "latex"
+    ]
+  },
+  {
+    "id": "cocoa",
+    "rawName": "Cocoa",
+    "category": "plantation",
+    "searchKeywords": [
+      "cocoa",
+      "theobroma cacao",
+      "cacao",
+      "cocoa"
+    ]
+  },
+  {
+    "id": "oil_palm",
+    "rawName": "Oil Palm",
+    "category": "plantation",
+    "searchKeywords": [
+      "oil palm",
+      "elaeis guineensis",
+      "palm oil",
+      "thalamaram"
+    ]
+  },
+  {
+    "id": "palmyrah",
+    "rawName": "Palmyrah",
+    "category": "plantation",
+    "searchKeywords": [
+      "palmyrah",
+      "borassus flabellifer",
+      "tale",
+      "panai",
+      "thati",
+      "pana"
+    ]
+  },
+  {
+    "id": "black_pepper",
+    "rawName": "Black Pepper",
+    "category": "spice",
+    "searchKeywords": [
+      "black pepper",
+      "piper nigrum",
+      "kalimirch",
+      "menasu",
+      "karumilagu",
+      "miriyalu",
+      "kurumulaku"
+    ]
+  },
+  {
+    "id": "cardamom",
+    "rawName": "Cardamom",
+    "category": "spice",
+    "searchKeywords": [
+      "cardamom",
+      "elettaria cardamomum",
+      "elaichi",
+      "yelakki",
+      "elakkai",
+      "elakulu",
+      "elakka"
+    ]
+  },
+  {
+    "id": "turmeric",
+    "rawName": "Turmeric",
+    "category": "spice",
+    "searchKeywords": [
+      "turmeric",
+      "curcuma longa",
+      "haldi",
+      "arishina",
+      "manjal",
+      "pasupu",
+      "manjal"
+    ]
+  },
+  {
+    "id": "ginger",
+    "rawName": "Ginger",
+    "category": "spice",
+    "searchKeywords": [
+      "ginger",
+      "zingiber officinale",
+      "adrak",
+      "shunti",
+      "inji",
+      "allam",
+      "inji"
+    ]
+  },
+  {
+    "id": "clove",
+    "rawName": "Clove",
+    "category": "spice",
+    "searchKeywords": [
+      "clove",
+      "syzygium aromaticum",
+      "laung",
+      "lavanga",
+      "krambu",
+      "lavangalu",
+      "karambu"
+    ]
+  },
+  {
+    "id": "coriander",
+    "rawName": "Coriander",
+    "category": "spice",
+    "searchKeywords": [
+      "coriander",
+      "coriandrum sativum",
+      "dhaniya",
+      "kothambari",
+      "kothamalli",
+      "dhaniyalu",
+      "malli"
+    ]
+  },
+  {
+    "id": "cumin",
+    "rawName": "Cumin",
+    "category": "spice",
+    "searchKeywords": [
+      "cumin",
+      "cuminum cyminum",
+      "jeera",
+      "jeerige",
+      "seeragam",
+      "jeelakarra",
+      "jeerakam"
+    ]
+  },
+  {
+    "id": "fenugreek",
+    "rawName": "Fenugreek",
+    "category": "spice",
+    "searchKeywords": [
+      "fenugreek",
+      "trigonella foenum-graecum",
+      "methi",
+      "menthya",
+      "vendhayam",
+      "menthulu",
+      "uluva"
+    ]
+  },
+  {
+    "id": "betel_vine",
+    "rawName": "Betel Vine",
+    "category": "other",
+    "searchKeywords": [
+      "betel vine",
+      "piper betle",
+      "paan",
+      "veelyada yele",
+      "vetrilai",
+      "tamalapaaku",
+      "vettila"
+    ]
+  },
+  {
+    "id": "tamarind",
+    "rawName": "Tamarind",
+    "category": "other",
+    "searchKeywords": [
+      "tamarind",
+      "tamarindus indica",
+      "imli",
+      "hunase",
+      "puli",
+      "chintha",
+      "vaalanpuli"
+    ]
+  }
+]

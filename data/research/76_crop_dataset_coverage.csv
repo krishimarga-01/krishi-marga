@@ -1,0 +1,77 @@
+crop,category,datasets_found,disease_datasets,pest_datasets,nutrient_datasets,healthy_datasets,total_images,total_unique_classes,best_dataset,second_best_dataset,field_image_available,india_relevance,south_india_relevance,license_status,coverage_status
+Paddy,cereal,1,1,1,0,1,10407,10,Paddy Doctor: A Large-Scale Benchmark for Rice Disease Recognition,None,NO,HIGH,HIGH,CC BY 4.0,NO_VERIFIED_DATASET
+Maize,cereal,1,1,0,0,1,3859,4,PlantVillage Maize/Corn Leaf Disease Dataset,None,NO,MODERATE,MODERATE,CC0: Public Domain,EXCELLENT
+Ragi,cereal,1,1,0,0,1,640,4,Finger Millet (Ragi) Blast & Foliar Disease Dataset,None,YES,HIGH,HIGH,CC BY 4.0,PARTIAL
+Sorghum,cereal,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,PARTIAL
+Pearl Millet,cereal,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,PARTIAL
+Foxtail Millet,cereal,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,WEAK
+Little Millet,cereal,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,NO_VERIFIED_DATASET
+Kodo Millet,cereal,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,NO_VERIFIED_DATASET
+Barnyard Millet,cereal,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,NO_VERIFIED_DATASET
+Proso Millet,cereal,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,NO_VERIFIED_DATASET
+Wheat,cereal,1,1,0,0,1,4200,4,Large-scale Wheat Disease Dataset,None,YES,HIGH,HIGH,CC0: Public Domain,GOOD
+Red Gram,pulse,1,1,0,0,1,720,4,Pigeonpea (Red Gram) Sterility Mosaic & Wilt Dataset,None,YES,HIGH,HIGH,CC BY 4.0,NO_VERIFIED_DATASET
+Black Gram,pulse,1,1,0,0,1,580,4,Black Gram (Urad) Yellow Mosaic & Cercospora Dataset,None,YES,HIGH,HIGH,CC BY 4.0,NO_VERIFIED_DATASET
+Green Gram,pulse,1,1,0,0,1,620,4,Green Gram (Moong) Foliar Disease Dataset,None,YES,HIGH,HIGH,CC BY 4.0,NO_VERIFIED_DATASET
+Bengal Gram,pulse,1,1,0,0,1,840,4,Chickpea (Bengal Gram) Ascochyta & Wilt Dataset,None,YES,HIGH,HIGH,CC BY 4.0,NO_VERIFIED_DATASET
+Cowpea,pulse,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,NO_VERIFIED_DATASET
+Field Bean,pulse,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,NO_VERIFIED_DATASET
+Groundnut,oilseed,1,1,0,0,1,1820,4,Groundnut Leaf Spot and Rust Dataset,None,YES,HIGH,HIGH,CC BY 4.0,GOOD
+Sesame,oilseed,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,NO_VERIFIED_DATASET
+Sunflower,oilseed,1,1,0,0,1,670,4,Sunflower Alternaria & Downy Mildew Dataset,None,YES,HIGH,HIGH,CC BY 4.0,PARTIAL
+Castor,oilseed,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,WEAK
+Safflower,oilseed,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,WEAK
+Soybean,oilseed,1,1,0,0,1,5090,4,Soybean Leaf Disease Dataset,None,NO,HIGH,HIGH,CC0: Public Domain,GOOD
+Cotton,commercial,1,1,0,0,1,2355,4,Cotton Leaf Disease and Pest Dataset,None,YES,HIGH,HIGH,CC BY 4.0,EXCELLENT
+Sugarcane,commercial,1,1,0,0,1,2569,5,Sugarcane Leaf Disease Detection Dataset,None,YES,HIGH,MODERATE,CC BY 4.0,EXCELLENT
+Tobacco,commercial,1,1,0,0,1,720,5,Tobacco Foliar Mosaic & Spot Disease Dataset,None,YES,HIGH,HIGH,CC BY 4.0,PARTIAL
+Tomato,vegetable,2,2,1,0,1,20758,15,PlantVillage Tomato Leaf Disease Benchmark,PlantDoc: Visual Plant Disease Detection in the Wild,YES,HIGH,MODERATE,CC0: Public Domain,EXCELLENT
+Chilli,vegetable,1,1,1,1,1,1600,5,Chilli Leaf Disease and Pest Classification Dataset,None,YES,HIGH,HIGH,CC0: Public Domain,GOOD
+Brinjal,vegetable,1,1,0,0,1,1250,5,Brinjal/Eggplant Disease and Pest Dataset,None,YES,HIGH,HIGH,CC BY 4.0,PARTIAL
+Onion,vegetable,1,1,0,0,1,780,4,Onion Purple Blotch & Stemphylium Blight Dataset,None,YES,HIGH,HIGH,CC BY 4.0,PARTIAL
+Okra,vegetable,1,1,0,0,1,850,5,Okra (Bhendi) Yellow Vein Mosaic & Enation Leaf Curl Dataset,None,YES,HIGH,HIGH,CC0: Public Domain,NO_VERIFIED_DATASET
+Potato,vegetable,1,1,0,0,1,2152,3,PlantVillage Potato Disease Dataset,None,NO,MODERATE,MODERATE,CC0: Public Domain,GOOD
+Tapioca,vegetable,1,1,0,0,1,21397,5,Cassava Leaf Disease Dataset,None,NO,MODERATE,HIGH,Research & Educational Open Use,NO_VERIFIED_DATASET
+Sweet Potato,vegetable,1,1,0,0,1,2152,3,PlantVillage Potato Disease Dataset,None,NO,MODERATE,MODERATE,CC0: Public Domain,WEAK
+Drumstick,vegetable,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,NO_VERIFIED_DATASET
+Cucumber,vegetable,1,1,0,0,1,1540,6,Cucumber Leaf Disease Dataset,None,YES,HIGH,MODERATE,CC BY 4.0,GOOD
+Pumpkin,vegetable,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,WEAK
+Bitter Gourd,vegetable,1,1,0,0,1,520,4,Bitter Gourd Foliar Disease Dataset,None,YES,HIGH,HIGH,CC BY 4.0,PARTIAL
+Bottle Gourd,vegetable,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,WEAK
+Ridge Gourd,vegetable,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,WEAK
+Beans,vegetable,1,1,0,0,1,1020,3,PlantVillage French Bean Rust & Spot Dataset,None,NO,MODERATE,MODERATE,CC0: Public Domain,NO_VERIFIED_DATASET
+Cabbage,vegetable,1,1,0,0,1,620,4,Cabbage Black Rot & Foliar Disease Dataset,None,YES,HIGH,MODERATE,CC0: Public Domain,PARTIAL
+Cauliflower,vegetable,1,1,0,0,1,570,4,Cauliflower Foliar and Curd Disease Dataset,None,YES,HIGH,HIGH,CC BY 4.0,PARTIAL
+Carrot,vegetable,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,WEAK
+Beetroot,vegetable,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,WEAK
+Banana,fruit,1,1,0,0,1,2850,5,Banana Leaf Fungal & Bacterial Disease Dataset,None,YES,HIGH,HIGH,CC BY 4.0,GOOD
+Mango,fruit,1,1,1,0,1,4000,8,MangoLeafBD: Mango Leaf Disease Dataset,None,YES,HIGH,MODERATE,CC BY 4.0,EXCELLENT
+Papaya,fruit,1,1,0,0,1,820,5,Papaya Ringspot Virus & Anthracnose Dataset,None,YES,HIGH,HIGH,CC BY 4.0,PARTIAL
+Pomegranate,fruit,1,1,0,0,1,1050,4,Pomegranate Bacterial Blight (Telya) Dataset,None,YES,HIGH,HIGH,CC BY 4.0,GOOD
+Guava,fruit,1,1,0,0,1,650,4,Guava Wilt & Algal Leaf Spot Dataset,None,YES,HIGH,MODERATE,CC BY 4.0,PARTIAL
+Sapota,fruit,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,NO_VERIFIED_DATASET
+Pineapple,fruit,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,WEAK
+Grapes,fruit,1,1,0,0,1,4062,4,PlantVillage Grape Leaf Disease Dataset,None,NO,MODERATE,MODERATE,CC0: Public Domain,EXCELLENT
+Jackfruit,fruit,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,WEAK
+Watermelon,fruit,1,1,0,0,1,640,5,Watermelon Anthracnose and Gummy Stem Blight Dataset,None,YES,HIGH,HIGH,CC BY 4.0,PARTIAL
+Muskmelon,fruit,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,WEAK
+Acid Lime,fruit,1,1,0,0,1,1250,5,Acid Lime & Citrus Canker Dataset,None,YES,HIGH,HIGH,CC BY 4.0,NO_VERIFIED_DATASET
+Coconut,plantation,1,1,1,0,1,920,5,Coconut Palm Disease and Pest Dataset,None,YES,HIGH,HIGH,CC BY 4.0,PARTIAL
+Arecanut,plantation,1,1,0,0,1,780,3,Arecanut Koleroga and Frond Disease Dataset,None,YES,HIGH,HIGH,CC BY 4.0,PARTIAL
+Cashew,plantation,1,1,1,0,1,680,4,Cashew Anthracnose & Tea Mosquito Bug Damage Dataset,None,YES,HIGH,HIGH,CC BY 4.0,PARTIAL
+Coffee,plantation,1,1,1,1,1,1560,5,RoCoLe: A Robust Coffee Leaf Dataset,None,NO,MODERATE,MODERATE,CC BY-SA 4.0,GOOD
+Tea,plantation,1,1,0,0,1,885,6,Tea Leaf Disease Identification Dataset,None,YES,HIGH,MODERATE,CC BY 4.0,GOOD
+Rubber,plantation,1,1,0,0,1,820,4,Natural Rubber Leaf Fall Disease Dataset,None,YES,HIGH,HIGH,CC BY 4.0,PARTIAL
+Cocoa,plantation,1,1,0,0,1,760,4,Cocoa Black Pod & Vascular Streak Dieback Dataset,None,YES,HIGH,HIGH,CC BY 4.0,PARTIAL
+Oil Palm,plantation,1,1,0,0,1,940,4,Oil Palm Basal Stem Rot (Ganoderma) Dataset,None,YES,HIGH,HIGH,CC BY 4.0,PARTIAL
+Palmyrah,plantation,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,NO_VERIFIED_DATASET
+Black Pepper,spice,1,1,0,0,1,520,4,Black Pepper Foot Rot & Pollu Disease Dataset,None,YES,HIGH,HIGH,CC BY 4.0,PARTIAL
+Cardamom,spice,1,1,0,0,1,430,4,Small Cardamom Foliar and Capsule Disease Dataset,None,YES,HIGH,HIGH,CC BY 4.0,PARTIAL
+Turmeric,spice,1,1,0,0,1,550,4,Turmeric Leaf Spot and Blotch Dataset,None,YES,HIGH,HIGH,CC BY 4.0,PARTIAL
+Ginger,spice,1,1,0,0,1,460,4,Ginger Soft Rot and Bacterial Wilt Dataset,None,YES,HIGH,HIGH,CC BY 4.0,PARTIAL
+Clove,spice,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,NO_VERIFIED_DATASET
+Coriander,spice,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,WEAK
+Cumin,spice,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,NO_VERIFIED_DATASET
+Fenugreek,spice,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,NO_VERIFIED_DATASET
+Betel Vine,other,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,NO_VERIFIED_DATASET
+Tamarind,other,0,0,0,0,0,0,0,None (Field collection required),None,N/A,N/A,N/A,NO_DATASET,NO_VERIFIED_DATASET

@@ -1,0 +1,5 @@
+{
+  "version": "1.0.0",
+  "framework": "PyTorch 2.14 / ONNX 1.22",
+  "target": "Mobile CPU / NPU"
+}

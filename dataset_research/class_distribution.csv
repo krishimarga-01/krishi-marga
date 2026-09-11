@@ -1,0 +1,9 @@
+crop,class,image_count,percentage_of_crop_dataset,healthy_count,minority_class,majority_class,imbalance_ratio
+Coffee,Coffee_Recognize-Master,62,100.0%,0,Coffee_Recognize-Master,Coffee_Recognize-Master,1.0
+Cotton,Cotton-Leaf-Disease-Detection-Main,20,100.0%,0,Cotton-Leaf-Disease-Detection-Main,Cotton-Leaf-Disease-Detection-Main,1.0
+Paddy_Rice,Rice,222,100.0%,0,Rice,Rice,1.0
+Sugarcane,Bacterial Blight,100,33.33%,100,Bacterial Blight,Bacterial Blight,1.0
+Sugarcane,Healthy,100,33.33%,100,Bacterial Blight,Bacterial Blight,1.0
+Sugarcane,Red Rot,100,33.33%,100,Bacterial Blight,Bacterial Blight,1.0
+Tea,Tea-Leaf-Disease-Detection-Main,7,100.0%,0,Tea-Leaf-Disease-Detection-Main,Tea-Leaf-Disease-Detection-Main,1.0
+Tomato,Tomato-Leaf-Disease-Detection-Main,8,100.0%,0,Tomato-Leaf-Disease-Detection-Main,Tomato-Leaf-Disease-Detection-Main,1.0

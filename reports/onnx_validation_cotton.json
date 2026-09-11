@@ -1,0 +1,19 @@
+{
+  "onnx_model_path": "models/onnx/cotton_disease.onnx",
+  "file_size_bytes": 6098519,
+  "input_name": "input_image",
+  "output_name": "probabilities",
+  "numerical_equivalence": {
+    "max_absolute_difference": 4.76837158203125e-07,
+    "allclose_passed": true,
+    "has_nan_or_inf": false,
+    "softmax_sum": 1.0
+  },
+  "latency_benchmark_ms": {
+    "iterations": 50,
+    "mean": 2.505401996895671,
+    "p95": 3.597524992073885,
+    "p99": 4.243808027822523
+  },
+  "validation_status": "PASS"
+}

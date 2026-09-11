@@ -6,21 +6,70 @@ import { Colors } from '../theme';
 import { useI18n } from '../services/i18n';
 import { ExpertService } from '../services/expertService';
 
+const cropNameKeyMap: Record<string, string> = {
+  tomato: 'crop.tomato',
+  paddy: 'crop.paddy',
+  chilli: 'crop.chilli',
+  cotton: 'crop.cotton',
+  sugarcane: 'crop.sugarcane',
+  coconut: 'crop.coconut',
+  maize: 'crop.maize',
+  wheat: 'crop.wheat',
+  coffee: 'crop.coffee',
+  tea: 'crop.tea',
+  rubber: 'crop.rubber',
+  tobacco: 'crop.tobacco',
+  black_pepper: 'crop.blackPepper',
+  'black pepper': 'crop.blackPepper',
+  cardamom: 'crop.cardamom',
+  turmeric: 'crop.turmeric',
+  arecanut: 'crop.arecanut',
+  'betel nut': 'crop.arecanut',
+  cashew: 'crop.cashew',
+};
+
+
 export const ResultScreen = ({ route, navigation }: any) => {
   const { result, crop, imageUris } = route.params as { result: NormalizedResult; crop: string; imageUris: string[] };
   const { t } = useI18n();
 
-  const isHealthy = result.health_status === 'Healthy';
+  const isHealthy = (result.health_status || '').toLowerCase() === 'healthy';
   const isLowConfidence = result.confidence < 0.5;
 
+  const getLocalizedCrop = (rawCrop: string) => {
+    if (!rawCrop) return '';
+    const key = cropNameKeyMap[rawCrop.toLowerCase().trim()];
+    return key ? t(key) : rawCrop;
+  };
+
   const getSeverityStyle = (sev: string) => {
-    if (sev === 'High') return styles.sevHigh;
-    if (sev === 'Moderate') return styles.sevModerate;
+    const s = (sev || '').toLowerCase();
+    if (s === 'high' || s === 'severe') return styles.sevHigh;
+    if (s === 'moderate' || s === 'medium') return styles.sevModerate;
     return styles.sevLow;
   };
 
+  const getLocalizedSeverity = (sev: string) => {
+    const s = (sev || '').toLowerCase();
+    if (s === 'severe' || s === 'high') return t('severitySevere');
+    if (s === 'moderate' || s === 'medium') return t('severityModerate');
+    if (s === 'mild' || s === 'low') return t('severityMild');
+    if (s === 'none') return t('severityNone');
+    return sev;
+  };
+
+  const getLocalizedConfidence = (lvl: string) => {
+    const l = (lvl || '').toLowerCase();
+    if (l === 'high') return t('confidenceHigh');
+    if (l === 'medium' || l === 'moderate') return t('confidenceMedium');
+    if (l === 'low') return t('confidenceLow');
+    return lvl;
+  };
+
+  const displayCrop = getLocalizedCrop(crop) || getLocalizedCrop(result.crop);
+
   const handleSharePdf = () => {
-    Alert.alert('Share PDF', 'Agronomic PDF summary export prepared for ' + crop + ' diagnosis.');
+    Alert.alert(t('sharePdf'), `${t('pdfExportNotice')} (${displayCrop})`);
   };
 
   return (
@@ -29,11 +78,11 @@ export const ResultScreen = ({ route, navigation }: any) => {
         {/* Top Header Row */}
         <View style={styles.topRow}>
           <View style={styles.cropBadge}>
-            <Text style={styles.cropBadgeText}>{crop}</Text>
+            <Text style={styles.cropBadgeText}>{displayCrop}</Text>
           </View>
           <View style={[styles.sourceBadge, result.analysis_source === 'online' ? styles.sourceOnline : styles.sourceOffline]}>
             <Text style={styles.sourceText}>
-              {result.analysis_source === 'online' ? 'Online Analysis' : 'Offline Analysis'}
+              {result.analysis_source === 'online' ? t('sourceOnline') : t('sourceOffline')}
             </Text>
           </View>
         </View>
@@ -41,10 +90,10 @@ export const ResultScreen = ({ route, navigation }: any) => {
         {/* Main Disease Card */}
         <View style={[styles.mainCard, isHealthy ? styles.healthyCard : styles.diseasedCard]}>
           <View style={styles.statusRow}>
-            <Text style={styles.statusLabel}>{isHealthy ? 'Crop Health: Good' : 'Possible Disease Detected'}</Text>
+            <Text style={styles.statusLabel}>{isHealthy ? t('healthGood') : t('possibleDisease')}</Text>
             {!isHealthy && (
               <View style={[styles.sevBadge, getSeverityStyle(result.severity)]}>
-                <Text style={styles.sevBadgeText}>{result.severity} Severity</Text>
+                <Text style={styles.sevBadgeText}>{getLocalizedSeverity(result.severity)} {t('severity')}</Text>
               </View>
             )}
           </View>
@@ -53,14 +102,14 @@ export const ResultScreen = ({ route, navigation }: any) => {
 
           <View style={styles.metaRow}>
             <View style={styles.metaItem}>
-              <Text style={styles.metaLabel}>Confidence</Text>
+              <Text style={styles.metaLabel}>{t('confidence')}</Text>
               <Text style={[styles.metaVal, isLowConfidence ? styles.valLow : styles.valHigh]}>
-                {result.confidence_level} ({(result.confidence * 100).toFixed(0)}%)
+                {getLocalizedConfidence(result.confidence_level)} ({(result.confidence * 100).toFixed(0)}%)
               </Text>
             </View>
             <View style={styles.metaItem}>
-              <Text style={styles.metaLabel}>Photos Analyzed</Text>
-              <Text style={styles.metaVal}>{imageUris.length} photos</Text>
+              <Text style={styles.metaLabel}>{t('photosAnalyzed')}</Text>
+              <Text style={styles.metaVal}>{imageUris.length} {t('photosCount')}</Text>
             </View>
           </View>
         </View>
@@ -68,14 +117,14 @@ export const ResultScreen = ({ route, navigation }: any) => {
         {/* Low Confidence Uncertainty Notice */}
         {isLowConfidence && (
           <View style={styles.warningBox}>
-            <Text style={styles.warningTitle}>⚠️ We are not fully sure. Try taking clearer photos in daylight or contact an agriculture expert.</Text>
+            <Text style={styles.warningTitle}>⚠️ {t('lowConfidenceWarning')}</Text>
           </View>
         )}
 
         {/* Symptoms */}
         {result.symptoms && result.symptoms.length > 0 && (
           <View style={styles.sectionCard}>
-            <Text style={styles.sectionTitle}>🔍 Symptoms Observed</Text>
+            <Text style={styles.sectionTitle}>🔍 {t('symptomsObserved')}</Text>
             {result.symptoms.map((s, idx) => (
               <Text key={idx} style={styles.listItem}>• {s}</Text>
             ))}
@@ -85,7 +134,7 @@ export const ResultScreen = ({ route, navigation }: any) => {
         {/* Immediate Actions */}
         {result.recommendations && result.recommendations.length > 0 && (
           <View style={styles.sectionCard}>
-            <Text style={styles.sectionTitle}>🛠️ Immediate Actions (What to do)</Text>
+            <Text style={styles.sectionTitle}>🛠️ {t('recommendations')}</Text>
             {result.recommendations.map((r, idx) => (
               <Text key={idx} style={styles.listItem}>• {r}</Text>
             ))}
@@ -95,7 +144,7 @@ export const ResultScreen = ({ route, navigation }: any) => {
         {/* Prevention */}
         {result.prevention && result.prevention.length > 0 && (
           <View style={styles.sectionCard}>
-            <Text style={styles.sectionTitle}>🛡️ Prevention Guidance</Text>
+            <Text style={styles.sectionTitle}>🛡️ {t('prevention')}</Text>
             {result.prevention.map((p, idx) => (
               <Text key={idx} style={styles.listItem}>• {p}</Text>
             ))}
@@ -105,28 +154,54 @@ export const ResultScreen = ({ route, navigation }: any) => {
         {/* Regional Advice */}
         {result.regional_advice && (
           <View style={styles.infoBox}>
-            <Text style={styles.infoBoxTitle}>🌾 Regional Advice</Text>
+            <Text style={styles.infoBoxTitle}>🌾 {t('regionalAdvice')}</Text>
             <Text style={styles.infoBoxText}>{result.regional_advice}</Text>
+          </View>
+        )}
+
+        {/* Farmer Advisory Message */}
+        {result.user_message && (
+          <View style={styles.infoBox}>
+            <Text style={styles.infoBoxTitle}>📢 {t('tagline')}</Text>
+            <Text style={styles.infoBoxText}>{result.user_message}</Text>
           </View>
         )}
 
         {/* 4 Bottom Action Buttons */}
         <View style={styles.actionGrid}>
-          <TouchableOpacity style={styles.saveBtn} onPress={() => Alert.alert('Saved', 'Inspection already recorded in My History.')}>
-            <Text style={styles.saveBtnText}>💾 Save</Text>
+          <TouchableOpacity style={styles.saveBtn} onPress={() => Alert.alert(t('savedTitle'), t('savedMessage'))}>
+            <Text style={styles.saveBtnText}>💾 {t('saveCase')}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.pdfBtn} onPress={handleSharePdf}>
-            <Text style={styles.pdfBtnText}>📄 Share PDF</Text>
+            <Text style={styles.pdfBtnText}>📄 {t('sharePdf')}</Text>
           </TouchableOpacity>
         </View>
 
-        <TouchableOpacity style={styles.expertBtn} onPress={() => ExpertService.callExpert('18001801551')}>
-          <Text style={styles.expertBtnText}>📞 Call Agriculture Expert</Text>
+        {/* Primary Action: Find Nearby Crop Doctor for this crop */}
+        <TouchableOpacity
+          style={styles.cropDoctorBtn}
+          activeOpacity={0.85}
+          onPress={() => navigation.navigate('MainTabs', {
+            screen: 'Nearby Help',
+            params: { selectedCrop: crop }
+          })}
+        >
+          <Text style={styles.cropDoctorBtnEmoji}>🩺</Text>
+          <Text style={styles.cropDoctorBtnText}>{t('findDoctorForCrop')} {displayCrop}</Text>
+        </TouchableOpacity>
+
+        {/* Secondary Action: Direct Toll-free Kisan Helpline Call */}
+        <TouchableOpacity
+          style={styles.expertBtn}
+          activeOpacity={0.85}
+          onPress={() => ExpertService.callExpert('18001801551')}
+        >
+          <Text style={styles.expertBtnText}>📞 {t('callKisanHelpline')}</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.homeBtn} onPress={() => navigation.navigate('MainTabs')}>
-          <Text style={styles.homeBtnText}>Back to Home</Text>
+          <Text style={styles.homeBtnText}>{t('backToHome')}</Text>
         </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
@@ -173,8 +248,24 @@ const styles = StyleSheet.create({
   saveBtnText: { color: Colors.primary, fontSize: 15, fontWeight: '700' },
   pdfBtn: { flex: 0.48, backgroundColor: Colors.surface, borderWidth: 1.5, borderColor: Colors.textMuted, paddingVertical: 14, borderRadius: 12, alignItems: 'center' },
   pdfBtnText: { color: Colors.textPrimary, fontSize: 15, fontWeight: '700' },
-  expertBtn: { backgroundColor: Colors.primary, paddingVertical: 15, borderRadius: 14, alignItems: 'center', marginTop: 8 },
-  expertBtnText: { color: '#FFFFFF', fontSize: 16, fontWeight: '700' },
+  cropDoctorBtn: {
+    flexDirection: 'row',
+    backgroundColor: '#047857', // Emerald green
+    paddingVertical: 15,
+    borderRadius: 14,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.12,
+    shadowRadius: 3,
+    elevation: 3,
+  },
+  cropDoctorBtnEmoji: { fontSize: 18, marginRight: 8 },
+  cropDoctorBtnText: { color: '#FFFFFF', fontSize: 16, fontWeight: '800' },
+  expertBtn: { backgroundColor: Colors.surface, borderWidth: 1.5, borderColor: Colors.cardBorder, paddingVertical: 13, borderRadius: 14, alignItems: 'center', marginTop: 8 },
+  expertBtnText: { color: Colors.textPrimary, fontSize: 14, fontWeight: '700' },
   homeBtn: { paddingVertical: 14, alignItems: 'center', marginTop: 4 },
   homeBtnText: { color: Colors.textSecondary, fontSize: 15, fontWeight: '600' },
 });

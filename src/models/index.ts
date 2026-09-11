@@ -17,6 +17,8 @@ export interface NormalizedResult {
   user_message?: string;
   analysis_source: AnalysisSource;
   timestamp: string;
+  requestId?: string;
+  latency_ms?: number;
 }
 
 export interface DiagnosisCase {
@@ -33,14 +35,25 @@ export interface DiagnosisCase {
   syncStatus: 'synced' | 'pending';
 }
 
+export type ExpertCategory = 'crop_doctor' | 'agricultural_specialist' | 'kvk_support';
+
 export interface ExpertContact {
   id: string;
   name: string;
-  type: string;
+  category: ExpertCategory;
+  roleTitle: string;
+  institution: string;
+  specialization?: string;
+  crops?: string[];
   phone?: string;
-  address: string;
-  hours: string;
-  isMockData: boolean;
+  address?: string;
+  latitude?: number;
+  longitude?: number;
+  distanceKm?: number;
+  hours?: string;
+  isVerified: boolean;
+  verifiedSource?: string;
+  isCached?: boolean;
 }
 export interface UserProfile {
   isLoggedIn: boolean;
@@ -48,3 +61,5 @@ export interface UserProfile {
   name?: string;
   phoneOrEmail?: string;
 }
+
+export * from '../config/crops';

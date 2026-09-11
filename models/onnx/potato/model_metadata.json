@@ -1,0 +1,41 @@
+{
+  "crop": "Potato",
+  "crop_id": "potato",
+  "model_version": "1.0.0",
+  "architecture": "MobileNetV3-Small",
+  "classes": [
+    "early_blight",
+    "healthy",
+    "late_blight"
+  ],
+  "class_to_idx": {
+    "early_blight": 0,
+    "healthy": 1,
+    "late_blight": 2
+  },
+  "input_size": [
+    1,
+    3,
+    224,
+    224
+  ],
+  "normalization": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "accuracy": "40.00%",
+  "macro_precision": "13.33%",
+  "macro_recall": "33.33%",
+  "macro_f1": "19.05%",
+  "onnx_size_mb": 0.31,
+  "validation_samples": 30,
+  "validation_date": "2026-09-11"
+}

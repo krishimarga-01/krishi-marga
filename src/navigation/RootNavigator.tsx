@@ -39,10 +39,10 @@ const MainTabs = () => {
         },
       })}
     >
-      <Tab.Screen name='Home' component={HomeScreen} />
-      <Tab.Screen name='My Cases' component={HistoryScreen} />
-      <Tab.Screen name='Nearby Help' component={NearbyHelpScreen} />
-      <Tab.Screen name='Settings' component={SettingsScreen} />
+      <Tab.Screen name='Home' component={HomeScreen} options={{ tabBarLabel: t('home') }} />
+      <Tab.Screen name='My Cases' component={HistoryScreen} options={{ tabBarLabel: t('myCases') }} />
+      <Tab.Screen name='Nearby Help' component={NearbyHelpScreen} options={{ tabBarLabel: t('nearbyHelp') }} />
+      <Tab.Screen name='Settings' component={SettingsScreen} options={{ tabBarLabel: t('settings') }} />
     </Tab.Navigator>
   );
 };

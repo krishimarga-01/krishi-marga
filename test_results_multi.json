@@ -1,0 +1,634 @@
+{
+  "multi": [
+    [
+      1,
+      2.781062602996826,
+      200,
+      {
+        "requestId": "KRISHI-20260911-BHIQ",
+        "success": true,
+        "timestamp": "2026-09-11T12:55:32.580Z",
+        "crop_selected": "Chilli",
+        "images_analyzed": 1,
+        "model_provider": "Gemini 3.5 Flash Lite",
+        "latency_ms": 2733,
+        "result": {
+          "crop": "Chilli",
+          "health_status": "Diseased",
+          "disease": "Anthracnose (Fruit Rot / Dieback)",
+          "confidence": 0.92,
+          "confidence_level": "High",
+          "severity": "Severe",
+          "symptoms": [
+            "Sunken necrotic lesions on chilli fruits",
+            "Concentric rings of fungal acervuli within the lesions",
+            "Mummified, withered, and straw-colored rotten fruits",
+            "Dieback of tender twigs and branches"
+          ],
+          "recommendations": [
+            "Immediately collect and destroy all severely infected fruits and dried twigs by burning or deep burial to reduce inoculum.",
+            "Spray Difenconazole 25% EC @ 1 ml per liter of water or Azoxystrobin + Difenconazole @ 1 ml per liter of water.",
+            "Alternatively, apply Copper Oxychloride 50% WP @ 2.5 g per liter of water during early symptom onset."
+          ],
+          "prevention": [
+            "Use disease-free, certified seeds treated with Thiram or Captan @ 2 g/kg of seed before sowing.",
+            "Ensure proper spacing between chilli plants to allow good air circulation and reduce canopy humidity.",
+            "Avoid overhead sprinkler irrigation; instead, use drip irrigation to keep the foliage and developing fruits dry."
+          ],
+          "regional_advice": "In South India, chilli anthracnose (locally known as 'pacha kombu kuppal' or fruit rot) spreads rapidly during the northeast and southwest monsoon seasons due to high humidity and frequent rainfall. Ensure proper drainage in the field to prevent water stagnation and apply prophylactic fungicide sprays before continuous wet spells.",
+          "user_message": "Namaste farmer. The chilli fruits in your field show clear symptoms of Anthracnose fruit rot, characterized by sunken lesions and concentric rings. This disease can cause heavy yield losses if left unmanaged during humid weather. Please follow the recommended fungicide sprays and remove infected fruits immediately.",
+          "location_context": {
+            "state": "South India",
+            "latitude": null,
+            "longitude": null
+          }
+        }
+      }
+    ],
+    [
+      2,
+      3.023139715194702,
+      200,
+      {
+        "requestId": "KRISHI-20260911-MS0K",
+        "success": true,
+        "timestamp": "2026-09-11T12:55:35.601Z",
+        "crop_selected": "Chilli",
+        "images_analyzed": 2,
+        "model_provider": "Gemini 3.5 Flash Lite",
+        "latency_ms": 2962,
+        "result": {
+          "crop": "Chilli",
+          "health_status": "Diseased",
+          "disease": "Anthracnose (Fruit Rot / Dieback)",
+          "confidence": 0.92,
+          "confidence_level": "High",
+          "severity": "Severe",
+          "symptoms": [
+            "Sunken necrotic lesions on ripening chilli fruits",
+            "Concentric rings or patterns of acervuli (fungal fruiting bodies) within lesions",
+            "Shriveling, drying, and straw-colored bleaching of infected pods",
+            "Dieback of twigs and branches accompanying fruit infection"
+          ],
+          "recommendations": [
+            "Prune and destroy severely infected fruits and dried twigs immediately to halt disease spread.",
+            "Spray protective and systemic fungicides such as Difenoconazole @ 1 ml/L or Azoxystrobin @ 1 ml/L.",
+            "Alternate with copper oxychloride @ 3 g/L if wet weather persists.",
+            "Avoid overhead sprinkler irrigation to keep the fruit surface dry."
+          ],
+          "prevention": [
+            "Use disease-free certified seeds and treat seeds with Carbendazim (2 g/kg) before sowing.",
+            "Practice crop rotation with non-solanaceous crops for at least 2-3 years.",
+            "Maintain adequate plant spacing to ensure good air circulation and rapid drying of foliage after rains.",
+            "Clear out and burn all crop residue after harvest."
+          ],
+          "regional_advice": "In South India, chilli anthracnose (locally known as 'koyivu rogu' or fruit rot) flares up severely during the monsoon and post-monsoon humid periods. Ensure proper field drainage to prevent water stagnation and apply prophylactic sprays ahead of continuous rainy spells.",
+          "user_message": "Namaste farmer. Your chilli crop is suffering from a severe attack of Anthracnose fruit rot, clearly visible as sunken lesions and concentric rings on the pods. Please follow the fungicide application and field sanitation steps immediately to protect your remaining yield.",
+          "location_context": {
+            "state": "South India",
+            "latitude": null,
+            "longitude": null
+          }
+        }
+      }
+    ],
+    [
+      5,
+      3.1831655502319336,
+      200,
+      {
+        "requestId": "KRISHI-20260911-DTQV",
+        "success": true,
+        "timestamp": "2026-09-11T12:55:38.786Z",
+        "crop_selected": "Chilli",
+        "images_analyzed": 5,
+        "model_provider": "Gemini 3.5 Flash Lite",
+        "latency_ms": 3093,
+        "result": {
+          "crop": "Chilli",
+          "health_status": "Diseased",
+          "disease": "Anthracnose (Fruit Rot / Dieback)",
+          "confidence": 0.92,
+          "confidence_level": "High",
+          "severity": "Severe",
+          "symptoms": [
+            "Sunken necrotic lesions with concentric rings on chilli fruits",
+            "Fruit discoloration turning straw-colored to dark brown/black",
+            "Dieback of twigs and branches",
+            "Shriveling and mummification of infected chilli pods"
+          ],
+          "recommendations": [
+            "Remove and destroy all severely infected fruits and dried twigs by burning or deep burial to reduce inoculum.",
+            "Spray Mancozeb 75% WP at 2.5 g/L or Azoxystrobin + Difenoconazole at 1 mL/L of water.",
+            "Ensure proper spacing between plants to improve airflow and reduce humidity in the canopy."
+          ],
+          "prevention": [
+            "Use disease-free, certified seeds treated with Trichoderma viride (4g/kg) or Carbendazim (2g/kg) before sowing.",
+            "Avoid overhead sprinkler irrigation to keep fruit surfaces dry and minimize fungal spore germination.",
+            "Practice a 3-year crop rotation with non-solanaceous crops."
+          ],
+          "regional_advice": "In South Indian growing regions, high humidity and frequent rains during the monsoon or North-East monsoon favor Anthracnose outbreaks. Ensure good field drainage to prevent water stagnation and schedule protective fungicide sprays before anticipated rainy spells.",
+          "user_message": "Namaste farmer. Your chilli crop is heavily affected by Anthracnose (fruit rot and dieback). Please remove the affected fruits immediately, clear out dried twigs, and apply the recommended fungicide spray during clear weather to save the remaining yield.",
+          "location_context": {
+            "state": "South India",
+            "latitude": null,
+            "longitude": null
+          }
+        }
+      }
+    ],
+    [
+      10,
+      3.651710271835327,
+      200,
+      {
+        "requestId": "KRISHI-20260911-MVON",
+        "success": true,
+        "timestamp": "2026-09-11T12:55:42.437Z",
+        "crop_selected": "Chilli",
+        "images_analyzed": 10,
+        "model_provider": "Gemini 3.5 Flash Lite",
+        "latency_ms": 3476,
+        "result": {
+          "crop": "Chilli",
+          "health_status": "Diseased",
+          "disease": "Fruit rot and Dieback (Anthracnose)",
+          "confidence": 0.91,
+          "confidence_level": "High",
+          "severity": "Severe",
+          "symptoms": [
+            "Fruit rot with characteristic concentric circular patterns on the chilli pods",
+            "Mummification and drying of ripening and mature chilli fruits",
+            "Dieback symptoms observed on twigs and branches showing necrotic browning",
+            "Lesions with dark margins and sunken centers on infected pods"
+          ],
+          "recommendations": [
+            "Prune and destroy infected twigs, branches, and rotten fruits immediately to reduce the fungal spore load.",
+            "Spray fungicides such as Propiconazole (0.1%) or Difenoconazole (0.05%) at the onset of symptoms and repeat at 10-15 day intervals.",
+            "Ensure proper spacing between chilli plants to improve air circulation and reduce canopy humidity."
+          ],
+          "prevention": [
+            "Use disease-free, certified seeds and treat seeds with Carbendazim (2g/kg) before sowing.",
+            "Practice crop rotation with non-host crops to break the pathogen lifecycle in the soil.",
+            "Avoid overhead sprinkler irrigation; instead, use drip irrigation to keep the foliage and fruits dry."
+          ],
+          "regional_advice": "In South India, chilli anthracnose (Colletotrichum capsici) becomes severe during the monsoon and post-monsoon humid periods. Ensure good field drainage to prevent water stagnation and schedule preventive fungicide sprays before expected heavy rains.",
+          "user_message": "Namaskaram farmer friend. Your chilli crop is severely affected by Fruit Rot and Dieback (Anthracnose). Please remove and destroy the infected fruits and twigs immediately and follow the recommended fungicide sprays to protect the remaining yield.",
+          "location_context": {
+            "state": "South India",
+            "latitude": null,
+            "longitude": null
+          }
+        }
+      }
+    ]
+  ],
+  "stress": [
+    [
+      2.954179286956787,
+      200,
+      {
+        "requestId": "KRISHI-20260911-SOVD",
+        "success": true,
+        "timestamp": "2026-09-11T12:55:45.391Z",
+        "crop_selected": "Chilli",
+        "images_analyzed": 1,
+        "model_provider": "Gemini 3.5 Flash Lite",
+        "latency_ms": 2764,
+        "result": {
+          "crop": "Chilli",
+          "health_status": "Diseased",
+          "disease": "Anthracnose (Fruit Rot / Dieback)",
+          "confidence": 0.92,
+          "confidence_level": "High",
+          "severity": "Severe",
+          "symptoms": [
+            "Sunken, circular to oval necrotic lesions on developing and ripe chilli fruits",
+            "Dark, concentric rings of acervuli (fungal fruiting bodies) inside the lesions",
+            "Mummified, withered, and straw-colored rotten chilli pods hanging on the plant",
+            "Dieback of tender twigs and branches turning grayish-brown"
+          ],
+          "recommendations": [
+            "Immediately handpick and destroy severely infected fruits and dried twigs to reduce fungal inoculum.",
+            "Spray Difenconazole 25% EC @ 1 ml per liter or Propiconazole 25% EC @ 1 ml per liter of water.",
+            "Alternatively, spray Mancozeb 75% WP @ 2.5 g per liter of water thoroughly covering the fruit clusters.",
+            "Repeat the spray at 10-15 day intervals if humid and rainy weather persists."
+          ],
+          "prevention": [
+            "Use disease-free, certified seeds treated with Thiram or Captan @ 2 g/kg of seed before sowing.",
+            "Practice a 3-year crop rotation with non-solanaceous crops to break the disease cycle in the soil.",
+            "Ensure proper spacing between plants to improve air circulation and reduce canopy humidity.",
+            "Avoid overhead sprinkler irrigation; instead, use drip irrigation to keep the foliage and fruits dry."
+          ],
+          "regional_advice": "In South India, chilli anthracnose (locally known as 'kanni roga' or fruit rot) flares up severely during the South-West and North-East monsoon seasons due to continuous high humidity and rainfall. Ensure timely prophylactic fungicide sprays before continuous wet spells and avoid water stagnation in the field.",
+          "user_message": "Namaste farmer. Your chilli crop is severely affected by Anthracnose (Fruit Rot and Dieback). The sunken lesions and rotting pods will cause major yield loss if not managed quickly. Please follow the fungicide recommendations and remove infected pods immediately.",
+          "location_context": {
+            "state": "South India",
+            "latitude": null,
+            "longitude": null
+          }
+        }
+      }
+    ],
+    [
+      2.9083809852600098,
+      200,
+      {
+        "requestId": "KRISHI-20260911-9N1D",
+        "success": true,
+        "timestamp": "2026-09-11T12:55:48.300Z",
+        "crop_selected": "Chilli",
+        "images_analyzed": 1,
+        "model_provider": "Gemini 3.5 Flash Lite",
+        "latency_ms": 2856,
+        "result": {
+          "crop": "Chilli",
+          "health_status": "Diseased",
+          "disease": "Anthracnose",
+          "confidence": 0.88,
+          "confidence_level": "High",
+          "severity": "Severe",
+          "symptoms": [
+            "Sunken, circular to oval necrotic lesions on developing and ripening chilli fruits",
+            "Dark brown to black concentric rings (acervuli) within the lesions",
+            "Fruit rotting, drying, and shriveling into straw-colored mummies",
+            "Dieback of twigs and branches in advanced stages"
+          ],
+          "recommendations": [
+            "Prune and destroy severely infected fruits, twigs, and plant debris immediately to reduce secondary inoculum sources.",
+            "Spray Azoxystrobin 23% SC at 1 ml per liter or Difenconazole 25% EC at 0.5 ml per liter of water.",
+            "Ensure proper spacing between plants to improve air circulation and reduce canopy moisture retention."
+          ],
+          "prevention": [
+            "Use certified disease-free, resistant chilli seeds treated with Trichoderma viride or Carbendazim before sowing.",
+            "Avoid overhead sprinkler irrigation; instead, adopt drip irrigation to keep fruit surfaces dry.",
+            "Practice a 3-year crop rotation with non-host crops like cereals to break the pathogen lifecycle in the soil."
+          ],
+          "regional_advice": "In South India, chilli anthracnose (Colletotrichum spp.) becomes extremely destructive during prolonged humid weather and continuous monsoon rains. Ensure adequate surface drainage in your field to prevent water stagnation, and apply preventive copper oxychloride sprays if high humidity persists.",
+          "user_message": "Namaste farmer friend, your chilli crop is severely affected by Anthracnose (fruit rot). The sunken dark lesions and dried fruit mummies are characteristic signs. Please remove infected fruits immediately, avoid overhead watering, and apply the recommended fungicide to protect the remaining harvest.",
+          "location_context": {
+            "state": "South India",
+            "latitude": null,
+            "longitude": null
+          }
+        }
+      }
+    ],
+    [
+      2.667673110961914,
+      200,
+      {
+        "requestId": "KRISHI-20260911-Z9GO",
+        "success": true,
+        "timestamp": "2026-09-11T12:55:50.971Z",
+        "crop_selected": "Chilli",
+        "images_analyzed": 1,
+        "model_provider": "Gemini 3.5 Flash Lite",
+        "latency_ms": 2621,
+        "result": {
+          "crop": "Chilli",
+          "health_status": "Diseased",
+          "disease": "Anthracnose (Fruit Rot / Dieback)",
+          "confidence": 0.92,
+          "confidence_level": "High",
+          "severity": "Severe",
+          "symptoms": [
+            "Sunken, circular to oval necrotic lesions on developing and ripe chilli fruits",
+            "Dark concentric rings of fungal fruiting bodies (acervuli) within the lesions",
+            "Shriveling, drying, and premature dropping (mummification) of infected fruits",
+            "Dieback symptoms observed on twigs and branches turning greyish-white"
+          ],
+          "recommendations": [
+            "Immediately handpick and destroy severely infected fruits and dried twigs to reduce secondary inoculum sources.",
+            "Spray fungicides like Azoxystrobin 23% SC @ 1 ml/litre or Carbendazim 50% WP @ 1 g/litre of water upon initial symptom appearance.",
+            "Repeat the fungicide spray at 10 to 15-day intervals if humid weather persists."
+          ],
+          "prevention": [
+            "Use certified disease-free seeds and treat them with Thiram or Carbendazim @ 2 g/kg of seed before sowing.",
+            "Practice strict crop rotation with non-solanaceous crops to break the pathogen's lifecycle in the soil.",
+            "Avoid overhead sprinkler irrigation; instead, adopt furrow or drip irrigation to keep the foliage and fruits dry."
+          ],
+          "regional_advice": "In South Indian states like Andhra Pradesh, Telangana, and Karnataka, high humidity and unexpected late-season rains heavily favor Anthracnose outbreaks. Ensure proper drainage in the field to prevent water stagnation and maintain adequate plant spacing for good aeration.",
+          "user_message": "Namaste farmer friend. Your chilli crop is heavily affected by Anthracnose (fruit rot and dieback). Please remove the infected dried fruits immediately and apply recommended fungicides like Carbendazim or Azoxystrobin during dry weather to save your yield.",
+          "location_context": {
+            "state": "South India",
+            "latitude": null,
+            "longitude": null
+          }
+        }
+      }
+    ],
+    [
+      2.664426803588867,
+      200,
+      {
+        "requestId": "KRISHI-20260911-PWPX",
+        "success": true,
+        "timestamp": "2026-09-11T12:55:53.635Z",
+        "crop_selected": "Chilli",
+        "images_analyzed": 1,
+        "model_provider": "Gemini 3.5 Flash Lite",
+        "latency_ms": 2612,
+        "result": {
+          "crop": "Chilli",
+          "health_status": "Diseased",
+          "disease": "Anthracnose",
+          "confidence": 0.9,
+          "confidence_level": "High",
+          "severity": "Severe",
+          "symptoms": [
+            "Sunken, circular to oval necrotic lesions on maturing chilli fruits",
+            "Dark, concentric rings of fungal acervuli within the lesions",
+            "Mummified, withered, and straw-colored decaying fruits hanging on the plant",
+            "Fruit rot and premature shedding"
+          ],
+          "recommendations": [
+            "Immediately pick and destroy all infected, mummified, and rotted fruits by burying or burning them to reduce the inoculum load.",
+            "Spray protective and systemic fungicides such as Propiconazole (0.1%) or Difenoconazole (0.05%) at 10-15 day intervals.",
+            "Copper oxychloride (0.3%) can also be used as a protective spray during dry weather windows."
+          ],
+          "prevention": [
+            "Use disease-free certified seeds and treat seeds with Carbendazim @ 2g/kg of seed before sowing.",
+            "Practice crop rotation with non-solanaceous crops to break the pathogen lifecycle in the soil.",
+            "Avoid overhead sprinkler irrigation; instead, use drip irrigation to keep the canopy and fruits dry.",
+            "Maintain optimal plant spacing to ensure good air circulation within the crop canopy."
+          ],
+          "regional_advice": "In South Indian growing regions, Anthracnose (often called dieback and fruit rot) flares up severely during prolonged humid weather, pre-monsoon showers, and heavy Northeast or Southwest monsoons. Ensure proper field drainage to prevent water stagnation and apply prophylactic fungicide sprays before continuous wet spells.",
+          "user_message": "Namaste farmer. The chilli fruits in your field show classic symptoms of severe Anthracnose (fruit rot), caused by the fungus Colletotrichum. The sunken dark lesions and mummified fruits require immediate attention to prevent total yield loss. Follow the recommended fungicide sprays and remove infected fruits promptly.",
+          "location_context": {
+            "state": "South India",
+            "latitude": null,
+            "longitude": null
+          }
+        }
+      }
+    ],
+    [
+      3.0613503456115723,
+      200,
+      {
+        "requestId": "KRISHI-20260911-MDJG",
+        "success": true,
+        "timestamp": "2026-09-11T12:55:56.695Z",
+        "crop_selected": "Chilli",
+        "images_analyzed": 1,
+        "model_provider": "Gemini 3.5 Flash Lite",
+        "latency_ms": 2986,
+        "result": {
+          "crop": "Chilli",
+          "health_status": "Diseased",
+          "disease": "Anthracnose",
+          "confidence": 0.9,
+          "confidence_level": "High",
+          "severity": "Severe",
+          "symptoms": [
+            "Sunken, circular to oval necrotic lesions on maturing chilli fruits",
+            "Dark, concentric rings of acervuli inside the lesions",
+            "Fruit shrivelling, straw-colored rotting, and mummification",
+            "Dieback of tender branches and twig blight symptoms"
+          ],
+          "recommendations": [
+            "Remove and destroy all severely infected fruits and plant debris to reduce the pathogen load in the field.",
+            "Spray Difenoconazole 25% EC at 1 ml per liter or Azoxystrobin 23% SC at 1 ml per liter of water.",
+            "Ensure proper spacing between plants to improve air circulation and reduce relative humidity in the crop canopy."
+          ],
+          "prevention": [
+            "Use certified disease-free seeds and treat seeds with Thiram or Captan at 2g/kg before sowing.",
+            "Practice a 3-year crop rotation with non-host crops to break the fungal life cycle.",
+            "Avoid overhead sprinkler irrigation to minimize prolonged moisture on the fruit surface, opting for drip irrigation instead."
+          ],
+          "regional_advice": "In South Indian states like Andhra Pradesh, Telangana, and Karnataka, Chilli Anthracnose (Ripe Rot or Dieback) often flares up during continuous monsoon rains or high humidity periods. Keep a close watch on the crop during cloudy weather and apply preventive fungicide sprays proactively.",
+          "user_message": "Namaste farmer friend, your chilli crop shows clear symptoms of Anthracnose (fruit rot and dieback). Please remove infected fruits immediately and apply the recommended fungicides during clear weather to prevent further spread in your field.",
+          "location_context": {
+            "state": "South India",
+            "latitude": null,
+            "longitude": null
+          }
+        }
+      }
+    ],
+    [
+      2.723834753036499,
+      200,
+      {
+        "requestId": "KRISHI-20260911-1WN4",
+        "success": true,
+        "timestamp": "2026-09-11T12:55:59.419Z",
+        "crop_selected": "Chilli",
+        "images_analyzed": 1,
+        "model_provider": "Gemini 3.5 Flash Lite",
+        "latency_ms": 2683,
+        "result": {
+          "crop": "Chilli",
+          "health_status": "Diseased",
+          "disease": "Anthracnose (Die-back and Fruit Rot)",
+          "confidence": 0.92,
+          "confidence_level": "High",
+          "severity": "Severe",
+          "symptoms": [
+            "Sunken, circular to oval necrotic lesions on developing and ripe chilli fruits",
+            "Dark, concentric rings of acervuli (fungal fruiting bodies) within lesions",
+            "Die-back of twigs and branches starting from the tips downwards",
+            "Shriveling, drying, and premature dropping of infected fruits"
+          ],
+          "recommendations": [
+            "Prune and destroy all infected twigs, branches, and mummified fruits to reduce secondary inoculum sources.",
+            "Spray Mancozeb 75% WP @ 2.5 g/litre of water or Carbendazim 50% WP @ 1 g/litre upon appearance of initial symptoms.",
+            "Ensure proper field drainage to prevent water stagnation around the root zone during heavy rains."
+          ],
+          "prevention": [
+            "Use disease-free certified seeds treated with Thiram or Carbendazim @ 2 g/kg of seed before sowing.",
+            "Practice a 3-year crop rotation with non-solanaceous crops to break the disease cycle.",
+            "Maintain adequate plant spacing to promote good air circulation and reduce canopy humidity."
+          ],
+          "regional_advice": "In South India, chilli anthracnose (locally known as 'Kudi meyyu rogam' or fruit rot) becomes highly prevalent during the North-East and South-West monsoon seasons due to high humidity and frequent rainfall. Avoid overhead irrigation and apply preventive copper-based fungicides before heavy downpours.",
+          "user_message": "Hello farmer, your chilli crop is severely affected by Anthracnose and Fruit Rot, caused by the fungus Colletotrichum. Please remove the infected fruits and twigs immediately and spray the recommended fungicides to save the remaining yield.",
+          "location_context": {
+            "state": "South India",
+            "latitude": null,
+            "longitude": null
+          }
+        }
+      }
+    ],
+    [
+      3.4898746013641357,
+      200,
+      {
+        "requestId": "KRISHI-20260911-RP4M",
+        "success": true,
+        "timestamp": "2026-09-11T12:56:02.911Z",
+        "crop_selected": "Chilli",
+        "images_analyzed": 1,
+        "model_provider": "Gemini 3.5 Flash Lite",
+        "latency_ms": 3440,
+        "result": {
+          "crop": "Chilli",
+          "health_status": "Diseased",
+          "disease": "Anthracnose",
+          "confidence": 0.9,
+          "confidence_level": "High",
+          "severity": "Severe",
+          "symptoms": [
+            "Sunken, circular to oval necrotic lesions on maturing chilli fruits",
+            "Dark, concentric rings of fungal acervuli within the lesions",
+            "Fruit shriveling, drying, and premature dropping",
+            "Dieback of twigs and branches associated with severe infection"
+          ],
+          "recommendations": [
+            "Prune and destroy severely infected fruits and dried twigs immediately to reduce inoculum sources.",
+            "Spray fungicides like Azoxystrobin or Difenconazole at recommended doses.",
+            "Ensure proper field drainage to avoid excess moisture around the root zone."
+          ],
+          "prevention": [
+            "Use disease-free, certified chilli seeds treated with appropriate fungicides before sowing.",
+            "Practice crop rotation with non-solanaceous crops to reduce soil-borne fungal loads.",
+            "Maintain adequate spacing between plants to improve aeration and lower canopy humidity."
+          ],
+          "regional_advice": "In South India, Anthracnose (locally known as fruit rot or dieback) thrives during humid and rainy seasons, especially across major chilli-growing belts in Andhra Pradesh, Telangana, and Karnataka. Avoid overhead sprinkler irrigation during peak fruiting stages, and ensure timely protective fungicide sprays keeping local weather forecasts in mind.",
+          "user_message": "Namaste farmer. Your chilli crop is showing severe symptoms of Anthracnose (fruit rot and dieback). Please remove the affected fruits immediately and apply recommended fungicides to protect your remaining yield.",
+          "location_context": {
+            "state": "South India",
+            "latitude": null,
+            "longitude": null
+          }
+        }
+      }
+    ],
+    [
+      2.4491567611694336,
+      200,
+      {
+        "requestId": "KRISHI-20260911-ALGB",
+        "success": true,
+        "timestamp": "2026-09-11T12:56:05.360Z",
+        "crop_selected": "Chilli",
+        "images_analyzed": 1,
+        "model_provider": "Gemini 3.5 Flash Lite",
+        "latency_ms": 2406,
+        "result": {
+          "crop": "Chilli",
+          "health_status": "Diseased",
+          "disease": "Anthracnose",
+          "confidence": 0.9,
+          "confidence_level": "High",
+          "severity": "Severe",
+          "symptoms": [
+            "Sunken, circular to oval necrotic lesions on maturing chilli fruits",
+            "Dark, concentric rings and orange-pink spore masses (acervuli) within lesions",
+            "Fruit shriveling, drying, and mummification",
+            "Dieback of twigs and branches associated with severe infection"
+          ],
+          "recommendations": [
+            "Immediately handpick and destroy severely infected fruits and dieback twigs to reduce primary inoculum.",
+            "Spray fungicides such as Propiconazole (0.1%) or Difenoconazole at 10-15 day intervals.",
+            "Copper oxychloride (0.25%) can be used as a protective spray during humid weather."
+          ],
+          "prevention": [
+            "Use disease-free, certified seeds treated with Trichoderma viride or Carbendazim before sowing.",
+            "Practice a 3-year crop rotation with non-solanaceous crops to break the disease cycle.",
+            "Avoid overhead irrigation; adopt drip irrigation to minimize fruit wetness duration."
+          ],
+          "regional_advice": "In South India, chilli anthracnose (locally known as 'dieback' or 'fruit rot') flares up during the North-East and South-West monsoon seasons due to high humidity and frequent rainfall. Ensure proper field drainage and maintain wider plant spacing to improve air circulation.",
+          "user_message": "Namaste farmer. Your chilli crop is heavily infected with Anthracnose (fruit rot and dieback). Please remove the affected fruits immediately and apply recommended fungicides during dry weather windows to save the remaining yield.",
+          "location_context": {
+            "state": "South India",
+            "latitude": null,
+            "longitude": null
+          }
+        }
+      }
+    ],
+    [
+      2.662388563156128,
+      200,
+      {
+        "requestId": "KRISHI-20260911-9EHR",
+        "success": true,
+        "timestamp": "2026-09-11T12:56:08.021Z",
+        "crop_selected": "Chilli",
+        "images_analyzed": 1,
+        "model_provider": "Gemini 3.5 Flash Lite",
+        "latency_ms": 2614,
+        "result": {
+          "crop": "Chilli",
+          "health_status": "Diseased",
+          "disease": "Anthracnose (Fruit Rot / Dieback)",
+          "confidence": 0.92,
+          "confidence_level": "High",
+          "severity": "Severe",
+          "symptoms": [
+            "Sunken, circular to oval necrotic lesions on maturing chilli fruits",
+            "Dark, concentric rings of fungal fruiting bodies (acervuli) within the lesions",
+            "Fruit shriveling, drying, and turning straw-colored or brown",
+            "Dieback of twigs and branches starting from the tips",
+            "Premature shedding of infected fruits and blossoms"
+          ],
+          "recommendations": [
+            "Remove and destroy all severely infected fruits, dried pods, and diseased twigs immediately to reduce the inoculum load.",
+            "Spray preventative and curative fungicides such as Azoxystrobin or Difenoconazole following recommended agricultural guidelines.",
+            "Ensure proper spacing between plants to improve air circulation and reduce relative humidity in the canopy.",
+            "Avoid overhead irrigation; use drip irrigation to keep the foliage and developing fruits dry."
+          ],
+          "prevention": [
+            "Use disease-free, certified seeds and treat seeds with Carbendazim or Trichoderma viride before sowing.",
+            "Practice a 2-3 year crop rotation with non-solanaceous crops to break the pathogen's life cycle.",
+            "Maintain clean field sanitation by clearing out crop debris after harvest.",
+            "Grow resistant or tolerant chilli varieties suited for your local agro-climatic zone."
+          ],
+          "regional_advice": "In South India, chilli anthracnose (often called 'dabbi roga') is particularly severe during the northeast and southwest monsoon seasons due to high humidity and frequent rainfall. Ensure good drainage in your fields to prevent waterlogging, and apply protective fungicide sprays before continuous wet spells.",
+          "user_message": "Namaste farmer. Your chilli crop is heavily affected by Anthracnose (Fruit Rot and Dieback). The sunken lesions and rotting pods will significantly reduce your yield if not managed immediately. Please remove infected fruits and apply recommended fungicides during dry weather windows.",
+          "location_context": {
+            "state": "South India",
+            "latitude": null,
+            "longitude": null
+          }
+        }
+      }
+    ],
+    [
+      2.976855993270874,
+      200,
+      {
+        "requestId": "KRISHI-20260911-LQOA",
+        "success": true,
+        "timestamp": "2026-09-11T12:56:11.000Z",
+        "crop_selected": "Chilli",
+        "images_analyzed": 1,
+        "model_provider": "Gemini 3.5 Flash Lite",
+        "latency_ms": 2927,
+        "result": {
+          "crop": "Chilli",
+          "health_status": "Diseased",
+          "disease": "Anthracnose",
+          "confidence": 0.9,
+          "confidence_level": "High",
+          "severity": "Severe",
+          "symptoms": [
+            "Sunken, circular to oval necrotic lesions on maturing chilli fruits",
+            "Dark, water-soaked spots turning black or brown",
+            "Concentric rings of tiny black acervuli within the lesions",
+            "Fruit shriveling, mummification, and drying out prematurely"
+          ],
+          "recommendations": [
+            "Remove and destroy severely infected fruits and plant debris to reduce the pathogen load in the field.",
+            "Spray fungicides such as Propiconazole or Azoxystrobin at recommended doses upon the appearance of initial symptoms.",
+            "Ensure proper spacing between plants to improve air circulation and reduce canopy moisture."
+          ],
+          "prevention": [
+            "Use disease-free, certified seeds and treat seeds with Carbendazim before sowing.",
+            "Practice crop rotation with non-host crops for at least 2 to 3 years.",
+            "Avoid overhead irrigation; use drip irrigation to keep foliage and fruits dry."
+          ],
+          "regional_advice": "In South India, chilli anthracnose (locally known as fruit rot or dieback) spreads rapidly during the monsoon and humid post-monsoon seasons, especially in states like Andhra Pradesh, Telangana, and Karnataka. Ensure proper drainage in fields to prevent water stagnation and apply protective fungicide sprays before heavy rains.",
+          "user_message": "Namaste farmer. Your chilli crop is showing clear symptoms of Anthracnose (fruit rot), which is severely affecting the developing pods. Please remove infected fruits immediately and apply the recommended fungicide to protect the remaining yield.",
+          "location_context": {
+            "state": "South India",
+            "latitude": null,
+            "longitude": null
+          }
+        }
+      }
+    ]
+  ]
+}
