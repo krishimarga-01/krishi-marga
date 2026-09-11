@@ -35,10 +35,23 @@ export const CropSelectScreen = ({ navigation }: any) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [search, setSearch] = useState('');
 
+  // Priority crops for default view matching Reference 4
+  const PRIORITY_FIRST_ORDER = [
+    'banana',
+    'tomato',
+    'chilli',
+    'brinjal',
+    'potato',
+    'paddy',
+    'maize',
+    'cotton',
+    'sugarcane',
+  ];
+
   // Filtered crops based on search query and category
   const filteredCrops = useMemo(() => {
     const q = search.toLowerCase().trim();
-    return CROPS_CONFIG.filter((c) => {
+    let list = CROPS_CONFIG.filter((c) => {
       // Category filter
       if (selectedCategory !== 'all' && c.category !== selectedCategory) {
         return false;
@@ -53,6 +66,30 @@ export const CropSelectScreen = ({ navigation }: any) => {
 
       return localized.includes(q) || raw.includes(q) || matchesKeyword;
     });
+
+    // When viewing All Crops without search query, present the 9 showcase crops first
+    if (selectedCategory === 'all' && !q) {
+      const top9: CropConfig[] = [];
+      const remainder: CropConfig[] = [];
+      const priorityMap = new Map<string, CropConfig>();
+
+      list.forEach((crop) => {
+        if (PRIORITY_FIRST_ORDER.includes(crop.id)) {
+          priorityMap.set(crop.id, crop);
+        } else {
+          remainder.push(crop);
+        }
+      });
+
+      PRIORITY_FIRST_ORDER.forEach((id) => {
+        const c = priorityMap.get(id);
+        if (c) top9.push(c);
+      });
+
+      return [...top9, ...remainder];
+    }
+
+    return list;
   }, [selectedCategory, search, t]);
 
   const handleSelectCrop = (crop: CropConfig) => {

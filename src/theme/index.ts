@@ -29,17 +29,17 @@ export const Colors = {
   tabActiveText: '#1B5E20',
   tabInactive: '#78909C',
 
-  // Pastel Grid Palette for Crop Cards
+  // Pastel Grid Palette for Crop Cards matching Reference 4
   pastelTints: [
-    '#FFF8E1', // Banana / Maize pale gold
-    '#FFEBEE', // Tomato / Chilli pale blush
-    '#E8F5E9', // Mint / Leaf pale green
-    '#F3E5F5', // Brinjal pale lavender
-    '#EFEBE9', // Potato / Root pale beige
-    '#E0F7FA', // Cotton / Ice pale cyan
-    '#FFF3E0', // Grain / Pulse pale peach
-    '#E8EAF6', // Indigo pale blue
-    '#F1F8E9', // Sugarcane pale lime
+    '#FFF8E7', // 0. Banana (warm pale gold)
+    '#FFEBEE', // 1. Tomato (soft pinkish-blush)
+    '#EBF7EE', // 2. Chilli (gentle mint green)
+    '#F5EEF8', // 3. Brinjal (soft pastel lavender)
+    '#FFF8E7', // 4. Potato (warm pale cream)
+    '#FFF8E7', // 5. Paddy (pale golden wheat)
+    '#FFF9E6', // 6. Maize (light buttery yellow)
+    '#E0F7FA', // 7. Cotton (very light cyan-ice)
+    '#EBF7EE', // 8. Sugarcane (soft cane-green)
   ],
 };
 

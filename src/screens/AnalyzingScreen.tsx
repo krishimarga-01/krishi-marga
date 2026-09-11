@@ -76,14 +76,14 @@ export const AnalyzingScreen = ({ route, navigation }: any) => {
           });
         } catch (apiError) {
           console.log('Online diagnosis error, trying offline engine:', apiError);
-          if (OnnxEngine.isModelAvailable()) {
+          if (OnnxEngine.isModelAvailable(crop)) {
             finalResult = await OnnxEngine.runInference(crop, imageUris, language);
           } else {
             throw apiError;
           }
         }
       } else {
-        if (!OnnxEngine.isModelAvailable()) {
+        if (!OnnxEngine.isModelAvailable(crop)) {
           clearInterval(intervalId);
           Alert.alert(
             t('offlineNotice'),
