@@ -1,0 +1,14 @@
+﻿.git/
+node_modules/
+dist/
+build/
+.expo/
+.metro/
+coverage/
+*.csv
+reports/
+training/
+models/onnx/
+krishi-marga-download/
+dataset_research/
+data/
