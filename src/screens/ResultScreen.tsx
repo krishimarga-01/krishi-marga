@@ -61,8 +61,8 @@ export const ResultScreen = ({ route, navigation }: any) => {
   const isMediumConfidence = result.confidence >= 0.5 && result.confidence < 0.75;
 
   const differential =
-    result.differential_assessment ||
-    OnnxEngine.getDifferentialReference(crop || result.crop, result.disease);
+    (result as any).differential_assessment ||
+    (OnnxEngine as any).getDifferentialReference?.(crop || result.crop, result.disease);
   const hasDifferential = differential && differential.status === 'AVAILABLE';
 
   const getLookalikeBadgeStyle = (type: string) => {
@@ -226,7 +226,7 @@ export const ResultScreen = ({ route, navigation }: any) => {
             {differential.lookalikes && differential.lookalikes.length > 0 && (
               <View style={styles.lookalikeSection}>
                 <Text style={styles.subDetailLabel}>{t('lookalikesTitle')}:</Text>
-                {differential.lookalikes.map((item, idx) => {
+                {differential.lookalikes.map((item: any, idx: number) => {
                   const badge = getLookalikeBadgeStyle(item.type);
                   return (
                     <View key={idx} style={styles.lookalikeCard}>
@@ -260,7 +260,7 @@ export const ResultScreen = ({ route, navigation }: any) => {
                 {differential.symptom_crosscheck.expected_present && differential.symptom_crosscheck.expected_present.length > 0 && (
                   <View style={styles.symptomGroup}>
                     <Text style={styles.expectedTitle}>{t('expectedSymptomsLabel')}</Text>
-                    {differential.symptom_crosscheck.expected_present.map((sym, idx) => (
+                    {differential.symptom_crosscheck.expected_present.map((sym: any, idx: number) => (
                       <Text key={idx} style={styles.crosscheckExpectedItem}>✅  {sym}</Text>
                     ))}
                   </View>
@@ -269,7 +269,7 @@ export const ResultScreen = ({ route, navigation }: any) => {
                 {differential.symptom_crosscheck.contradicting_symptoms && differential.symptom_crosscheck.contradicting_symptoms.length > 0 && (
                   <View style={styles.symptomGroup}>
                     <Text style={styles.contradictingTitle}>{t('contradictingSymptomsLabel')}</Text>
-                    {differential.symptom_crosscheck.contradicting_symptoms.map((sym, idx) => (
+                    {differential.symptom_crosscheck.contradicting_symptoms.map((sym: any, idx: number) => (
                       <Text key={idx} style={styles.crosscheckContradictItem}>❌  {sym}</Text>
                     ))}
                   </View>
@@ -287,7 +287,7 @@ export const ResultScreen = ({ route, navigation }: any) => {
         {hasDifferential && differential.farmer_action_checklist && differential.farmer_action_checklist.length > 0 && !isHealthy && (
           <View style={[styles.sectionCard, styles.checklistCard]}>
             <Text style={styles.checklistTitle}>📋 {t('farmerChecklistTitle')}</Text>
-            {differential.farmer_action_checklist.map((action, idx) => (
+            {differential.farmer_action_checklist.map((action: any, idx: number) => (
               <View key={idx} style={styles.checklistItemRow}>
                 <View style={styles.stepNumberBadge}>
                   <Text style={styles.stepNumberText}>{idx + 1}</Text>
