@@ -11,4 +11,5 @@ training/
 models/onnx/
 krishi-marga-download/
 dataset_research/
-data/
+/data/
+!src/**
