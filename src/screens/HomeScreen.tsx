@@ -16,6 +16,7 @@ import { DiagnosisCase } from '../models/index';
 import { GlobalHeader } from '../components/GlobalHeader';
 import { TopLeafDecoration } from '../components/TopLeafDecoration';
 import { LandscapeBanner } from '../components/LandscapeBanner';
+import { CommunityPestAlertBanner } from '../ipdm/components/CommunityPestAlertBanner';
 
 export const HomeScreen = ({ navigation }: any) => {
   const { t } = useI18n();
@@ -45,6 +46,7 @@ export const HomeScreen = ({ navigation }: any) => {
     <SafeAreaView style={styles.safeArea} edges={['top', 'left', 'right']}>
       <TopLeafDecoration />
       <GlobalHeader onNotificationPress={() => navigation.navigate('Settings')} />
+      <CommunityPestAlertBanner />
 
       <ScrollView
         contentContainerStyle={styles.scrollContent}

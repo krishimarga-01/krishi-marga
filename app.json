@@ -56,7 +56,8 @@
       ],
       "expo-splash-screen",
       "expo-status-bar",
-      "expo-video"
+      "expo-video",
+      "expo-sqlite"
     ],
     "extra": {
       "backendUrl": "https://krishimarga01.app.n8n.cloud/webhook/detect-disease",

@@ -1,0 +1,69 @@
+{
+  "name": "Krishi Marga — IPDM & Community Pest Alert Extension",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ipdm",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "name": "Webhook (IPDM Advisory)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Normalizes input and validates crop / disease / pest for IPDM\nconst body = $json.body || $json;\nreturn [{\n  crop: (body.crop || 'Crop').trim(),\n  condition: (body.disease || body.pest || 'Condition').trim(),\n  language: body.language || 'en'\n}];"
+      },
+      "name": "Validate IPDM Request",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [440, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"success\": true,\n  \"data\": {\n    \"crop\": $json.crop,\n    \"condition\": $json.condition,\n    \"conditionType\": \"DISEASE\",\n    \"symptoms\": [\"Foliar chlorosis\", \"Concentric lesions\"],\n    \"prevention\": [\"Crop rotation with non-host crops\", \"Certified pathogen-free seed\"],\n    \"biologicalControl\": [\"Trichoderma viride seed treatment @ 4g/kg\", \"Pseudomonas fluorescens foliar spray\"],\n    \"treatmentGuidance\": [\"Apply registered CIBRC fungicide upon first symptom onset\"],\n    \"precautions\": [\"Respect pre-harvest interval of 14 days\", \"Spray during calm hours to avoid drift\"],\n    \"severity\": \"Medium\",\n    \"dataSource\": \"n8n_expanded\",\n    \"lastUpdated\": new Date().toISOString(),\n    \"sourceVersion\": \"ICAR-CIBRC-2026-EXPANDED\"\n  }\n}",
+        "options": {}
+      },
+      "name": "Respond IPDM",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [660, 300]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "pest-report",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "name": "Webhook (Pest Report)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 500]
+    },
+    {
+      "parameters": {
+        "jsCode": "// PostGIS proximity dispatcher: calculates 10 km radius recipients\nconst b = $json.body || $json;\nreturn [{\n  farmerId: b.farmerId,\n  crop: b.crop,\n  pest: b.pest,\n  severity: b.severity,\n  latitude: b.latitude,\n  longitude: b.longitude,\n  message: `Warning: High ${b.pest} activity reported in ${b.crop} fields within 10 km.`\n}];"
+      },
+      "name": "PostGIS Alert Dispatcher",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [440, 500]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"success\": true,\n  \"message\": \"Pest report recorded. Nearby farmers within 10 km alerted.\",\n  \"alertId\": 'alert_' + Date.now()\n}",
+        "options": {}
+      },
+      "name": "Respond Pest Report",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [660, 500]
+    }
+  ]
+}

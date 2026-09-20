@@ -8,6 +8,7 @@ import { ExpertService } from '../services/expertService';
 import { VoiceReadoutButton } from '../components/VoiceReadoutButton';
 import { VoiceService } from '../services/voiceService';
 import { OnnxEngine } from '../offline/onnxEngine';
+import { IpdmGuidanceCard } from '../ipdm/components/IpdmGuidanceCard';
 
 const cropNameKeyMap: Record<string, string> = {
   tomato: 'crop.tomato',
@@ -425,6 +426,15 @@ export const ResultScreen = ({ route, navigation }: any) => {
               <Text style={styles.npkText}>Standard NPK Guideline: {result.fertilizer_advisory.recommended_npk_ratio}</Text>
             )}
           </View>
+        )}
+
+        {/* 🌿 INTEGRATED PEST & DISEASE MANAGEMENT (IPDM) LAYER 1 */}
+        {!isHealthy && (
+          <IpdmGuidanceCard
+            crop={crop}
+            condition={result.disease}
+            confidence={result.confidence}
+          />
         )}
 
         {/* Immediate Actions */}
