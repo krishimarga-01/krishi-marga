@@ -18,6 +18,7 @@ import NetInfo from '@react-native-community/netinfo';
 import { PesticideService, PesticideScanResult, PesticideScanError } from '../services/pesticideService';
 import { UploadHandle } from '../services/httpClient';
 import { PesticideDatabaseService, PesticideRecord } from '../services/pesticideDatabaseService';
+import { PesticideScannerService } from '../services/pesticideScannerService';
 import { VoiceReadoutButton } from '../components/VoiceReadoutButton';
 import { VoiceService } from '../services/voiceService';
 
@@ -558,7 +559,7 @@ export const PesticideScannerScreen = ({ navigation, route }: any) => {
 
                   {/* 1. Primary Intended Use */}
                   <View style={styles.intendedUseRow}>
-                    <Text style={styles.intendedUseKey}>🎯 Intended Use:</Text>
+                    <Text style={styles.intendedUseKey}>🎯 {t('intendedUseFieldTitle') || 'Intended Use'}:</Text>
                     <Text style={styles.intendedUseVal}>
                       {scanResult.target_pests && scanResult.target_pests.length > 0 && scanResult.suitable_crops && scanResult.suitable_crops.length > 0
                         ? `Used to control ${scanResult.target_pests.join(', ')} in ${scanResult.suitable_crops.join(', ')}.`
@@ -568,7 +569,7 @@ export const PesticideScannerScreen = ({ navigation, route }: any) => {
 
                   {/* 2. Active Ingredient & Concentration */}
                   <View style={styles.intendedUseRow}>
-                    <Text style={styles.intendedUseKey}>🧪 Active Ingredient:</Text>
+                    <Text style={styles.intendedUseKey}>🧪 {t('activeIngredientFieldTitle') || 'Active Ingredient'}:</Text>
                     <Text style={styles.intendedUseVal}>
                       {scanResult.active_ingredient || 'As stated on container'} {scanResult.formulation ? `(${scanResult.formulation})` : ''}
                     </Text>
@@ -576,7 +577,7 @@ export const PesticideScannerScreen = ({ navigation, route }: any) => {
 
                   {/* 3. Application & Dosage */}
                   <View style={styles.intendedUseRow}>
-                    <Text style={styles.intendedUseKey}>⚖️ Application & Dosage:</Text>
+                    <Text style={styles.intendedUseKey}>⚖️ {t('appAndDosageFieldTitle') || 'Application & Dosage'}:</Text>
                     <Text style={styles.intendedUseVal}>
                       {scanResult.localRecord?.dosage_guidance || scanResult.dosage_notice}
                     </Text>
@@ -584,7 +585,7 @@ export const PesticideScannerScreen = ({ navigation, route }: any) => {
 
                   {/* 4. Safety Precautions & Waiting Period (PHI) */}
                   <View style={styles.intendedUseRow}>
-                    <Text style={styles.intendedUseKey}>🛡️ Safety & Waiting Period (PHI):</Text>
+                    <Text style={styles.intendedUseKey}>🛡️ {t('safetyAndPhiFieldTitle') || 'Safety & Waiting Period (PHI)'}:</Text>
                     <Text style={styles.intendedUseVal}>
                       {scanResult.safety_guidance && scanResult.safety_guidance.length > 0
                         ? `${scanResult.safety_guidance.slice(0, 2).join('. ')}. Always observe label pre-harvest waiting interval (PHI) before harvesting.`
@@ -592,6 +593,26 @@ export const PesticideScannerScreen = ({ navigation, route }: any) => {
                     </Text>
                   </View>
                 </View>
+
+                {/* 15-Litre Sprayer Tank Dosage Calculation Card */}
+                {scanResult.localRecord && (
+                  <View style={styles.tankCard}>
+                    <View style={styles.tankHeaderRow}>
+                      <Text style={styles.tankIcon}>🪣</Text>
+                      <Text style={styles.tankTitle}>{t('sprayerTankCalculation') || '15L Knapsack Tank Calculation'}</Text>
+                    </View>
+                    {(() => {
+                      const tank = PesticideScannerService.calculateTankDosage(scanResult.localRecord!);
+                      return (
+                        <View style={styles.tankBody}>
+                          <Text style={styles.tankAmountText}>• {t('sprayerTank15l') || 'Dosage'}: {tank.amountText}</Text>
+                          <Text style={styles.tankWaterText}>• {t('cleanWaterMixInstruction') || 'Water'}: {tank.waterText}</Text>
+                          <Text style={styles.tankSafetyText}>• {t('wearProtectiveGearNotice') || 'Safety'}: {tank.safetyNote}</Text>
+                        </View>
+                      );
+                    })()}
+                  </View>
+                )}
 
                 {/* 2x2 Specs Grid */}
                 <View style={styles.specsGrid}>
@@ -608,7 +629,7 @@ export const PesticideScannerScreen = ({ navigation, route }: any) => {
                     <Text style={styles.specValue}>{scanResult.category || 'Agricultural Chemical'}</Text>
                   </View>
                   <View style={styles.specBox}>
-                    <Text style={styles.specLabel}>Toxicity Triangle</Text>
+                    <Text style={styles.specLabel}>{t('toxicityTriangleLabel') || 'Toxicity Triangle'}</Text>
                     <Text style={styles.specValue}>
                       {scanResult.localRecord?.toxicity_triangle || 'See Label'}
                     </Text>
@@ -1718,5 +1739,46 @@ const styles = StyleSheet.create({
     fontSize: 12.5,
     color: '#1E293B',
     lineHeight: 18,
+  },
+  tankCard: {
+    backgroundColor: '#EFF6FF',
+    borderColor: '#93C5FD',
+    borderWidth: 1.5,
+    borderRadius: 14,
+    padding: 14,
+    marginBottom: 14,
+  },
+  tankHeaderRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  tankIcon: {
+    fontSize: 20,
+    marginRight: 8,
+  },
+  tankTitle: {
+    fontSize: 14.5,
+    fontWeight: '800',
+    color: '#1E40AF',
+  },
+  tankBody: {
+    paddingLeft: 4,
+  },
+  tankAmountText: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: '#1E3A8A',
+    marginBottom: 4,
+  },
+  tankWaterText: {
+    fontSize: 12,
+    color: '#1E40AF',
+    marginBottom: 4,
+  },
+  tankSafetyText: {
+    fontSize: 11.5,
+    color: '#475569',
+    fontStyle: 'italic',
   },
 });

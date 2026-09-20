@@ -470,7 +470,7 @@ export const OnnxEngine = {
 
     return {
       status: 'KNOWLEDGE_AVAILABLE',
-      pest_detected: record.pest,
+      pest_detected: undefined, // Do not falsely claim this pest was detected on the farmer's leaf
       scientific_name: record.scientific_name,
       pest_type: record.pest_type,
       damage_symptoms: record.damage_symptoms ? [record.damage_symptoms] : [],

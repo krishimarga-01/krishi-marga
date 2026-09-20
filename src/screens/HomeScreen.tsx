@@ -17,10 +17,12 @@ import { GlobalHeader } from '../components/GlobalHeader';
 import { TopLeafDecoration } from '../components/TopLeafDecoration';
 import { LandscapeBanner } from '../components/LandscapeBanner';
 import { CommunityPestAlertBanner } from '../ipdm/components/CommunityPestAlertBanner';
+import { WeatherService, WeatherData } from '../services/weatherService';
 
 export const HomeScreen = ({ navigation }: any) => {
   const { t } = useI18n();
   const [recentCases, setRecentCases] = useState<DiagnosisCase[]>([]);
+  const [weather, setWeather] = useState<WeatherData | null>(null);
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
@@ -34,6 +36,12 @@ export const HomeScreen = ({ navigation }: any) => {
   const loadData = async () => {
     const all = await CaseStorage.getCases();
     setRecentCases(all.slice(0, 4));
+    try {
+      const w = await WeatherService.getWeather();
+      setWeather(w);
+    } catch {
+      // Safe fallback
+    }
   };
 
   const onRefresh = async () => {
@@ -167,6 +175,74 @@ export const HomeScreen = ({ navigation }: any) => {
           </TouchableOpacity>
         </View>
 
+        {/* Agricultural Weather & Microclimate Card */}
+        {weather && (
+          <View style={styles.weatherCard}>
+            <View style={styles.weatherHeaderRow}>
+              <View style={styles.weatherTitleWrap}>
+                <Text style={styles.weatherCardEmoji}>🌦️</Text>
+                <View>
+                  <Text style={styles.weatherCardTitle}>
+                    {t('weatherTitle') || 'Agricultural Weather & Microclimate'}
+                  </Text>
+                  <Text style={styles.weatherCardSubtitle}>
+                    {weather.current.condition_text} {weather.is_cached ? t('weatherCachedNotice') || '(Cached)' : ''}
+                  </Text>
+                </View>
+              </View>
+              <View style={[
+                styles.riskBadge,
+                weather.risk.risk_level === 'High' ? styles.riskBadgeHigh :
+                weather.risk.risk_level === 'Moderate' ? styles.riskBadgeMod : styles.riskBadgeLow
+              ]}>
+                <Text style={[
+                  styles.riskBadgeText,
+                  weather.risk.risk_level === 'High' ? styles.riskTextHigh :
+                  weather.risk.risk_level === 'Moderate' ? styles.riskTextMod : styles.riskTextLow
+                ]}>
+                  {weather.risk.risk_level === 'High' ? t('riskHigh') || 'High Risk' :
+                   weather.risk.risk_level === 'Moderate' ? t('riskModerate') || 'Moderate Risk' :
+                   t('riskLow') || 'Low Risk'}
+                </Text>
+              </View>
+            </View>
+
+            {/* Weather Metrics Grid */}
+            <View style={styles.weatherMetricsRow}>
+              <View style={styles.weatherMetricItem}>
+                <Text style={styles.weatherMetricEmoji}>🌡️</Text>
+                <Text style={styles.weatherMetricVal}>{weather.current.temperature}°C</Text>
+                <Text style={styles.weatherMetricLabel}>{t('temperature') || 'Temp'}</Text>
+              </View>
+              <View style={styles.weatherMetricItem}>
+                <Text style={styles.weatherMetricEmoji}>💧</Text>
+                <Text style={styles.weatherMetricVal}>{weather.current.relative_humidity}%</Text>
+                <Text style={styles.weatherMetricLabel}>{t('humidity') || 'Humidity'}</Text>
+              </View>
+              <View style={styles.weatherMetricItem}>
+                <Text style={styles.weatherMetricEmoji}>🌧️</Text>
+                <Text style={styles.weatherMetricVal}>{weather.current.precipitation} mm</Text>
+                <Text style={styles.weatherMetricLabel}>{t('rainfall') || 'Rain'}</Text>
+              </View>
+              <View style={styles.weatherMetricItem}>
+                <Text style={styles.weatherMetricEmoji}>💨</Text>
+                <Text style={styles.weatherMetricVal}>{weather.current.wind_speed} km/h</Text>
+                <Text style={styles.weatherMetricLabel}>{t('windSpeed') || 'Wind'}</Text>
+              </View>
+            </View>
+
+            {/* Microclimate Pathogen Risk Banner */}
+            <View style={styles.weatherRiskBox}>
+              <Text style={styles.weatherRiskTitle}>
+                🛡️ {t('diseaseRisk') || 'Microclimate Pathogen Risk'}
+              </Text>
+              <Text style={styles.weatherRiskText}>
+                {weather.risk.preventive_advisory}
+              </Text>
+            </View>
+          </View>
+        )}
+
         {/* Full-width Field Mode Card */}
         <TouchableOpacity
           style={styles.fieldModeCard}
@@ -203,7 +279,7 @@ export const HomeScreen = ({ navigation }: any) => {
                 <Text style={styles.guideEmoji}>🧪</Text>
               </View>
               <Text style={styles.guideCardTitle} numberOfLines={1}>{t('tabDirectory') || 'Pesticide Guide'}</Text>
-              <Text style={styles.guideCardDesc} numberOfLines={1}>CIBRC dosages</Text>
+              <Text style={styles.guideCardDesc} numberOfLines={1}>{t('cibrcDosages') || 'CIBRC dosages'}</Text>
             </TouchableOpacity>
 
             {/* Guide 2: Pests & Diseases */}
@@ -216,7 +292,7 @@ export const HomeScreen = ({ navigation }: any) => {
                 <Text style={styles.guideEmoji}>🐛</Text>
               </View>
               <Text style={styles.guideCardTitle} numberOfLines={1}>{t('viewPestExplorer') || 'Pests & Disease'}</Text>
-              <Text style={styles.guideCardDesc} numberOfLines={1}>14 verified pests</Text>
+              <Text style={styles.guideCardDesc} numberOfLines={1}>{t('verifiedPestsCount') || 'Verified Pest Records'}</Text>
             </TouchableOpacity>
 
             {/* Guide 3: Nutrient & Fertilizer */}
@@ -229,7 +305,7 @@ export const HomeScreen = ({ navigation }: any) => {
                 <Text style={styles.guideEmoji}>🌾</Text>
               </View>
               <Text style={styles.guideCardTitle} numberOfLines={1}>{t('viewNutrientGuide') || 'Nutrient / Soil'}</Text>
-              <Text style={styles.guideCardDesc} numberOfLines={1}>Deficiency signs</Text>
+              <Text style={styles.guideCardDesc} numberOfLines={1}>{t('deficiencySigns') || 'Deficiency signs'}</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -556,5 +632,111 @@ const styles = StyleSheet.create({
     fontSize: 10,
     color: '#78909C',
     textAlign: 'center',
+  },
+  weatherCard: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 18,
+    padding: 16,
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
+    marginBottom: 16,
+    elevation: 2,
+  },
+  weatherHeaderRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 14,
+  },
+  weatherTitleWrap: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flex: 1,
+  },
+  weatherCardEmoji: {
+    fontSize: 28,
+    marginRight: 10,
+  },
+  weatherCardTitle: {
+    fontSize: 15,
+    fontWeight: '800',
+    color: '#1E293B',
+  },
+  weatherCardSubtitle: {
+    fontSize: 12,
+    color: '#64748B',
+    marginTop: 2,
+  },
+  riskBadge: {
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 12,
+  },
+  riskBadgeLow: {
+    backgroundColor: '#DCFCE7',
+  },
+  riskBadgeMod: {
+    backgroundColor: '#FEF3C7',
+  },
+  riskBadgeHigh: {
+    backgroundColor: '#FEE2E2',
+  },
+  riskBadgeText: {
+    fontSize: 11,
+    fontWeight: '700',
+  },
+  riskTextLow: {
+    color: '#15803D',
+  },
+  riskTextMod: {
+    color: '#B45309',
+  },
+  riskTextHigh: {
+    color: '#B91C1C',
+  },
+  weatherMetricsRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    backgroundColor: '#F8FAFC',
+    borderRadius: 14,
+    paddingVertical: 12,
+    paddingHorizontal: 8,
+    marginBottom: 12,
+  },
+  weatherMetricItem: {
+    alignItems: 'center',
+    flex: 1,
+  },
+  weatherMetricEmoji: {
+    fontSize: 18,
+    marginBottom: 2,
+  },
+  weatherMetricVal: {
+    fontSize: 14,
+    fontWeight: '800',
+    color: '#0F172A',
+  },
+  weatherMetricLabel: {
+    fontSize: 11,
+    color: '#64748B',
+    marginTop: 2,
+  },
+  weatherRiskBox: {
+    backgroundColor: '#F0FDF4',
+    borderWidth: 1,
+    borderColor: '#BBF7D0',
+    borderRadius: 12,
+    padding: 10,
+  },
+  weatherRiskTitle: {
+    fontSize: 12,
+    fontWeight: '800',
+    color: '#166534',
+    marginBottom: 4,
+  },
+  weatherRiskText: {
+    fontSize: 12,
+    color: '#15803D',
+    lineHeight: 16,
   },
 });

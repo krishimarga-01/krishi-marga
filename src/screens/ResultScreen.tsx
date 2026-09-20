@@ -212,7 +212,7 @@ export const ResultScreen = ({ route, navigation }: any) => {
                 <Text style={styles.diffSubtitle}>{t('differentialSubtitle')}</Text>
               </View>
               <View style={[styles.statusTag, styles.tagSuccess]}>
-                <Text style={styles.statusTagText}>ICAR VERIFIED</Text>
+                <Text style={styles.statusTagText}>{t('icarVerified') || 'ICAR VERIFIED'}</Text>
               </View>
             </View>
 
@@ -237,7 +237,7 @@ export const ResultScreen = ({ route, navigation }: any) => {
                         </View>
                       </View>
                       <Text style={styles.overlapText}>
-                        <Text style={styles.boldSubLabel}>Overlapping Signs: </Text>{item.overlap_symptoms}
+                        <Text style={styles.boldSubLabel}>{t('overlappingSignsLabel') || 'Overlapping Signs:'} </Text>{item.overlap_symptoms}
                       </Text>
                       <View style={styles.distinguishBox}>
                         <Text style={styles.distinguishLabel}>⚡ {t('distinguishingFeatureLabel')}</Text>
@@ -325,7 +325,7 @@ export const ResultScreen = ({ route, navigation }: any) => {
 
                 {result.pest_assessment.damage_symptoms && result.pest_assessment.damage_symptoms.length > 0 && (
                   <View style={styles.subDetailBox}>
-                    <Text style={styles.subDetailLabel}>Damage Symptoms:</Text>
+                    <Text style={styles.subDetailLabel}>{t('damageSymptomsLabel') || 'Damage Symptoms:'}</Text>
                     {result.pest_assessment.damage_symptoms.map((dmg, idx) => (
                       <Text key={idx} style={styles.listItem}>• {dmg}</Text>
                     ))}
@@ -334,7 +334,7 @@ export const ResultScreen = ({ route, navigation }: any) => {
 
                 {result.pest_assessment.management && result.pest_assessment.management.length > 0 && (
                   <View style={styles.subDetailBox}>
-                    <Text style={styles.subDetailLabel}>Recommended Pest Management:</Text>
+                    <Text style={styles.subDetailLabel}>{t('recommendedPestMgmtLabel') || 'Recommended Pest Management:'}</Text>
                     {result.pest_assessment.management.map((m, idx) => (
                       <Text key={idx} style={styles.listItem}>• {m}</Text>
                     ))}
@@ -346,7 +346,7 @@ export const ResultScreen = ({ route, navigation }: any) => {
                 {t('noPestDataDesc') || 'No verified pest infestation detected in this inspection.'}
               </Text>
             )}
-            <Text style={styles.sourceCreditText}>Source: {result.pest_assessment.source_verification || 'ICAR-NBAIR / CIBRC'}</Text>
+            <Text style={styles.sourceCreditText}>{t('sourceLabel') || 'Source:'} {result.pest_assessment.source_verification || 'ICAR-NBAIR / CIBRC'}</Text>
           </View>
         )}
 
@@ -370,7 +370,7 @@ export const ResultScreen = ({ route, navigation }: any) => {
 
                 {result.nutrient_assessment.visual_symptoms && result.nutrient_assessment.visual_symptoms.length > 0 && (
                   <View style={styles.subDetailBox}>
-                    <Text style={styles.subDetailLabel}>Visual Foliar Symptoms:</Text>
+                    <Text style={styles.subDetailLabel}>{t('visualFoliarSymptomsLabel') || 'Visual Foliar Symptoms:'}</Text>
                     {result.nutrient_assessment.visual_symptoms.map((sym, idx) => (
                       <Text key={idx} style={styles.listItem}>• {sym}</Text>
                     ))}
@@ -379,14 +379,14 @@ export const ResultScreen = ({ route, navigation }: any) => {
 
                 {result.nutrient_assessment.soil_relationship && (
                   <View style={styles.soilBox}>
-                    <Text style={styles.subDetailLabel}>Soil & Cause Relationship:</Text>
+                    <Text style={styles.subDetailLabel}>{t('soilRelationshipLabel') || 'Soil & Cause Relationship:'}</Text>
                     <Text style={styles.soilText}>{result.nutrient_assessment.soil_relationship}</Text>
                   </View>
                 )}
 
                 {result.nutrient_assessment.management && result.nutrient_assessment.management.length > 0 && (
                   <View style={styles.subDetailBox}>
-                    <Text style={styles.subDetailLabel}>Soil & Foliar Correction:</Text>
+                    <Text style={styles.subDetailLabel}>{t('soilCorrectionLabel') || 'Soil & Foliar Correction:'}</Text>
                     {result.nutrient_assessment.management.map((m, idx) => (
                       <Text key={idx} style={styles.listItem}>• {m}</Text>
                     ))}
@@ -398,7 +398,7 @@ export const ResultScreen = ({ route, navigation }: any) => {
                 {t('noNutrientDataDesc') || 'No major nutrient deficiency observed on sampled foliage.'}
               </Text>
             )}
-            <Text style={styles.sourceCreditText}>Source: {result.nutrient_assessment.source_verification || 'ICAR-IISS / TNAU Agri Portal'}</Text>
+            <Text style={styles.sourceCreditText}>{t('sourceLabel') || 'Source:'} {result.nutrient_assessment.source_verification || 'ICAR-IISS / TNAU Agri Portal'}</Text>
           </View>
         )}
 
@@ -406,7 +406,7 @@ export const ResultScreen = ({ route, navigation }: any) => {
         {result.crop_protection && result.crop_protection.active_ingredients && result.crop_protection.active_ingredients.length > 0 && (
           <View style={styles.sectionCard}>
             <Text style={styles.sectionTitle}>💊 {t('cropProtectionTitle') || 'Crop Protection & CIBRC Guidance'}</Text>
-            <Text style={styles.subDetailLabel}>Verified Active Ingredients:</Text>
+            <Text style={styles.subDetailLabel}>{t('verifiedActiveIngredientsLabel') || 'Verified Active Ingredients:'}</Text>
             {result.crop_protection.active_ingredients.map((ing, idx) => (
               <Text key={idx} style={styles.listItem}>• {ing}</Text>
             ))}
@@ -420,7 +420,7 @@ export const ResultScreen = ({ route, navigation }: any) => {
         {result.fertilizer_advisory && (
           <View style={styles.sectionCard}>
             <Text style={styles.sectionTitle}>🧪 {t('fertilizerAdvisoryTitle') || 'Fertilizer & Soil Advisory'}</Text>
-            <Text style={styles.subDetailLabel}>Soil Advisory:</Text>
+            <Text style={styles.subDetailLabel}>{t('soilAdvisoryLabel') || 'Soil Advisory:'}</Text>
             <Text style={styles.soilText}>{result.fertilizer_advisory.soil_link}</Text>
             {result.fertilizer_advisory.recommended_npk_ratio && (
               <Text style={styles.npkText}>Standard NPK Guideline: {result.fertilizer_advisory.recommended_npk_ratio}</Text>

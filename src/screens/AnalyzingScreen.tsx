@@ -17,6 +17,7 @@ import { UploadHandle } from '../services/httpClient';
 import { OnnxEngine } from '../offline/onnxEngine';
 import { CaseStorage } from '../storage/caseStorage';
 import { NetworkBudget } from '../services/config';
+import { IPDMCommunityService } from '../services/ipdmCommunityService';
 
 const { width, height } = Dimensions.get('window');
 
@@ -139,6 +140,26 @@ export const AnalyzingScreen = ({ route, navigation }: any) => {
         await CaseStorage.saveCase(caseRecord);
       } catch (e) {
         console.warn('[Analyzing] Case could not be saved locally:', e);
+      }
+
+      // Record real community observation for local epidemiology clustering (anonymized location)
+      try {
+        if (finalResult && finalResult.health_status === 'Diseased') {
+          const isPest = finalResult.problem_type === 'PEST' || !!finalResult.pest_assessment?.pest_detected;
+          const targetName = finalResult.pest_assessment?.pest_detected || finalResult.disease;
+          if (targetName && targetName !== 'Unable to identify pest') {
+            await IPDMCommunityService.recordObservation({
+              crop: cropDisplayName || crop,
+              pestOrDisease: targetName,
+              type: isPest ? 'pest' : 'disease',
+              severity: finalResult.severity || 'Moderate',
+              latitude: latitude || undefined,
+              longitude: longitude || undefined,
+            });
+          }
+        }
+      } catch (e) {
+        console.warn('[Analyzing] Community observation record skipped:', e);
       }
 
       navTimerRef.current = setTimeout(() => {

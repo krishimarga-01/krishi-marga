@@ -69,12 +69,12 @@ export const IpdmGuidanceCard: React.FC<IpdmGuidanceCardProps> = ({
   const getSourceBadge = () => {
     switch (guidance.dataSource) {
       case 'n8n_expanded':
-        return { label: 'Expanded IPDM', bg: '#DCFCE7', text: '#15803D' };
+        return { label: t('onlineAdvisoryBadge') || 'Online IPDM Advisory', bg: '#DCFCE7', text: '#15803D' };
       case 'sqlite_fallback':
-        return { label: 'Using Offline Guidance', bg: '#FEF3C7', text: '#B45309' };
+        return { label: t('offlineGuidanceBadge') || 'Offline Guidance', bg: '#FEF3C7', text: '#B45309' };
       case 'sqlite_baseline':
       default:
-        return { label: 'Offline IPDM Guidance', bg: '#F3F4F6', text: '#4B5563' };
+        return { label: t('offlineGuidanceBadge') || 'Offline Guidance', bg: '#F3F4F6', text: '#4B5563' };
     }
   };
 
@@ -89,12 +89,12 @@ export const IpdmGuidanceCard: React.FC<IpdmGuidanceCardProps> = ({
           <View style={styles.titleWrapper}>
             <Text style={styles.cardEmoji}>🌿</Text>
             <View>
-              <Text style={styles.cardTitle}>IPDM Advisory</Text>
-              <Text style={styles.cardSubtitle}>Integrated Pest & Disease Management</Text>
+              <Text style={styles.cardTitle}>{t('ipdmAdvisoryTitle') || 'IPDM Advisory'}</Text>
+              <Text style={styles.cardSubtitle}>{t('ipdmAdvisorySubtitle') || 'Integrated Pest & Disease Management'}</Text>
             </View>
           </View>
           <View style={[styles.sourceBadge, { backgroundColor: '#F3F4F6' }]}>
-            <Text style={[styles.sourceBadgeText, { color: '#6B7280' }]}>OFFLINE</Text>
+            <Text style={[styles.sourceBadgeText, { color: '#6B7280' }]}>{t('offlineGuidanceBadge') || 'OFFLINE'}</Text>
           </View>
         </View>
         <View style={styles.unavailableBox}>
@@ -114,8 +114,8 @@ export const IpdmGuidanceCard: React.FC<IpdmGuidanceCardProps> = ({
         <View style={styles.titleWrapper}>
           <Text style={styles.cardEmoji}>🌿</Text>
           <View>
-            <Text style={styles.cardTitle}>IPDM Advisory</Text>
-            <Text style={styles.cardSubtitle}>Integrated Pest & Disease Management</Text>
+            <Text style={styles.cardTitle}>{t('ipdmAdvisoryTitle') || 'IPDM Advisory'}</Text>
+            <Text style={styles.cardSubtitle}>{t('ipdmAdvisorySubtitle') || 'Integrated Pest & Disease Management'}</Text>
           </View>
         </View>
         <View style={[styles.sourceBadge, { backgroundColor: badge.bg }]}>
@@ -129,25 +129,25 @@ export const IpdmGuidanceCard: React.FC<IpdmGuidanceCardProps> = ({
           style={[styles.tabItem, activeTab === 'bio' && styles.tabItemActive]}
           onPress={() => setActiveTab('bio')}
         >
-          <Text style={[styles.tabText, activeTab === 'bio' && styles.tabTextActive]}>Biological</Text>
+          <Text style={[styles.tabText, activeTab === 'bio' && styles.tabTextActive]}>{t('ipdmBioTab') || 'Biological'}</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.tabItem, activeTab === 'treatment' && styles.tabItemActive]}
           onPress={() => setActiveTab('treatment')}
         >
-          <Text style={[styles.tabText, activeTab === 'treatment' && styles.tabTextActive]}>Treatment</Text>
+          <Text style={[styles.tabText, activeTab === 'treatment' && styles.tabTextActive]}>{t('ipdmTreatmentTab') || 'Treatment'}</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.tabItem, activeTab === 'prevention' && styles.tabItemActive]}
           onPress={() => setActiveTab('prevention')}
         >
-          <Text style={[styles.tabText, activeTab === 'prevention' && styles.tabTextActive]}>Prevention</Text>
+          <Text style={[styles.tabText, activeTab === 'prevention' && styles.tabTextActive]}>{t('ipdmPreventionTab') || 'Prevention'}</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.tabItem, activeTab === 'precautions' && styles.tabItemActive]}
           onPress={() => setActiveTab('precautions')}
         >
-          <Text style={[styles.tabText, activeTab === 'precautions' && styles.tabTextActive]}>Safety</Text>
+          <Text style={[styles.tabText, activeTab === 'precautions' && styles.tabTextActive]}>{t('ipdmSafetyTab') || 'Safety'}</Text>
         </TouchableOpacity>
       </View>
 
@@ -155,7 +155,7 @@ export const IpdmGuidanceCard: React.FC<IpdmGuidanceCardProps> = ({
       <View style={styles.contentContainer}>
         {activeTab === 'bio' && (
           <View>
-            <Text style={styles.sectionHeading}>🌱 Biological & Organic Control</Text>
+            <Text style={styles.sectionHeading}>🌱 {t('ipdmBioSectionTitle') || 'Biological & Organic Control'}</Text>
             {guidance.biologicalControl.length > 0 ? (
               guidance.biologicalControl.map((item, idx) => (
                 <Text key={idx} style={styles.bulletItem}>• {item}</Text>
@@ -168,7 +168,7 @@ export const IpdmGuidanceCard: React.FC<IpdmGuidanceCardProps> = ({
 
         {activeTab === 'treatment' && (
           <View>
-            <Text style={styles.sectionHeading}>💊 Chemical & Curative Guidance</Text>
+            <Text style={styles.sectionHeading}>💊 {t('ipdmChemSectionTitle') || 'Chemical & Curative Guidance'}</Text>
             {guidance.treatmentGuidance.length > 0 ? (
               guidance.treatmentGuidance.map((item, idx) => (
                 <Text key={idx} style={styles.bulletItem}>• {item}</Text>
@@ -181,7 +181,7 @@ export const IpdmGuidanceCard: React.FC<IpdmGuidanceCardProps> = ({
 
         {activeTab === 'prevention' && (
           <View>
-            <Text style={styles.sectionHeading}>🛡️ Prophylactic & Cultural Prevention</Text>
+            <Text style={styles.sectionHeading}>🛡️ {t('ipdmPrevSectionTitle') || 'Prophylactic & Cultural Prevention'}</Text>
             {guidance.prevention.length > 0 ? (
               guidance.prevention.map((item, idx) => (
                 <Text key={idx} style={styles.bulletItem}>• {item}</Text>
@@ -194,7 +194,7 @@ export const IpdmGuidanceCard: React.FC<IpdmGuidanceCardProps> = ({
 
         {activeTab === 'precautions' && (
           <View>
-            <Text style={styles.sectionHeading}>⚠️ Agronomic Precautions & CIBRC Compliance</Text>
+            <Text style={styles.sectionHeading}>⚠️ {t('ipdmSafetySectionTitle') || 'Safety & Pre-Harvest Intervals (PHI)'}</Text>
             {guidance.precautions.length > 0 ? (
               guidance.precautions.map((item, idx) => (
                 <Text key={idx} style={styles.bulletItem}>• {item}</Text>
