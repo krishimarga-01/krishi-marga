@@ -1,0 +1,49 @@
+{
+  "crop": "Red Gram",
+  "crop_id": "red_gram",
+  "category": "pulse",
+  "diseases": [
+    {
+      "disease_name": "Leaf Spot",
+      "scientific_name": "Colletotrichum curcumae",
+      "symptoms": [
+        "Elliptical to oblong brown spots with greyish-white centers and dark brown borders; yellow halo around spots; spots coalesce causing extensive drying of foliage."
+      ],
+      "severity": "Moderate to Severe",
+      "management": [
+        "Consult local agricultural university / KVK package of practices for registered treatment."
+      ],
+      "prevention": [
+        "Practice crop rotation, field hygiene, and use certified seeds."
+      ]
+    }
+  ],
+  "pests": [
+    {
+      "pest_name": "Shoot Borer",
+      "scientific_name": "Conogethes punctiferalis",
+      "symptoms": [],
+      "management": [
+        "Install pheromone traps and apply bio-control agents."
+      ]
+    }
+  ],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Dark green trifoliate leaves with robust branching",
+    "Abundant pink active Rhizobium root nodules upon sectioning",
+    "Profuse flowering and well-set pods without necrosis or pod-borer entry holes",
+    "Erect stem with no vascular wilting"
+  ],
+  "management": [
+    "Remove and safely destroy severely infected plants to prevent field-wide spread",
+    "Spray neem oil (3000 ppm @ 3ml/L) or approved target-specific bio-pesticides",
+    "Ensure proper soil aeration through light intercultivation"
+  ],
+  "prevention": [
+    "Treat seeds with Rhizobium culture and Trichoderma viride prior to sowing",
+    "Avoid water stagnation through raised-bed planting or broad-bed furrow system",
+    "Practice 2-3 year crop rotation with cereals like sorghum or maize",
+    "Install yellow sticky traps and pheromone traps early in the season"
+  ]
+}

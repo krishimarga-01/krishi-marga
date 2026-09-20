@@ -1,0 +1,8 @@
+PREPROCESSING SPECIFICATION FOR CASSAVA
+Model Architecture: MobileNetV3-Small (Edge / Mobile Optimized)
+Input Tensor: [batch_size, 3, 224, 224] (RGB)
+Pixel Normalization:
+  Mean: [0.485, 0.456, 0.406]
+  Std:  [0.229, 0.224, 0.225]
+Softmax Activation: Apply softmax over output logits to compute disease probabilities.
+Classes (5): bacterial_blight, brown_streak_disease, green_mottle, healthy, mosaic_disease

@@ -1,0 +1,49 @@
+{
+  "crop": "Turmeric",
+  "crop_id": "turmeric",
+  "category": "spice",
+  "diseases": [
+    {
+      "disease_name": "Leaf Spot",
+      "scientific_name": "Colletotrichum curcumae",
+      "symptoms": [
+        "Elliptical to oblong brown spots with greyish-white centers and dark brown borders; yellow halo around spots; spots coalesce causing extensive drying of foliage."
+      ],
+      "severity": "Moderate to Severe",
+      "management": [
+        "Consult local agricultural university / KVK package of practices for registered treatment."
+      ],
+      "prevention": [
+        "Practice crop rotation, field hygiene, and use certified seeds."
+      ]
+    }
+  ],
+  "pests": [
+    {
+      "pest_name": "Shoot Borer",
+      "scientific_name": "Conogethes punctiferalis",
+      "symptoms": [],
+      "management": [
+        "Install pheromone traps and apply bio-control agents."
+      ]
+    }
+  ],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Crisp, aromatic foliage free from leaf spot lesions or marginal blight",
+    "Vigorous rhizome/vine growth with vibrant green shoots",
+    "Clean floral spikes/umbels with high fruit set",
+    "Basal root collar completely firm without water-soaked decay"
+  ],
+  "management": [
+    "Prune and remove infected runners or lateral branches early in the day",
+    "Spray 1% Bordeaux mixture on foliar canopy and drench root basin with bio-fungicide",
+    "Regulate canopy shade to reduce damp microclimate"
+  ],
+  "prevention": [
+    "Use shade regulation (50-60% filtered sunlight) during monsoon to prevent high humidity buildup",
+    "Drench plant basins with Copper Oxychloride or Trichoderma-enriched compost",
+    "Ensure zero waterlogging in hill slopes through contour trench drainage",
+    "Collect and destroy fallen infected leaves, spikes, and diseased capsules"
+  ]
+}

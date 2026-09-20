@@ -1,0 +1,147 @@
+{
+  "crop": "Tea",
+  "crop_id": "tea",
+  "category": "plantation",
+  "diseases": [
+    {
+      "disease_name": "Blister Blight",
+      "scientific_name": "Exobasidium vexans",
+      "symptoms": [
+        "Circular pale yellow translucent spots on tender leaf blades; lesion bulges into concave blister on upper surface with corresponding white powdery convex velvet on lower surface; tender stem breakage."
+      ],
+      "severity": "Critical",
+      "management": [
+        "Consult local agricultural university / KVK package of practices for registered treatment."
+      ],
+      "prevention": [
+        "Practice crop rotation, field hygiene, and use certified seeds."
+      ]
+    },
+    {
+      "disease_name": "Algal Leaf",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Algal Leaf."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Anthracnose",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Anthracnose."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Bird Eye Spot",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Bird Eye Spot."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Brown Blight",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Brown Blight."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Gray Blight",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Gray Blight."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Red Leaf Spot",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Red Leaf Spot."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "White Spot",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with White Spot."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    }
+  ],
+  "pests": [
+    {
+      "pest_name": "Tea Mosquito Bug",
+      "scientific_name": "Helopeltis theivora",
+      "symptoms": [],
+      "management": [
+        "Install pheromone traps and apply bio-control agents."
+      ]
+    }
+  ],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Large, deep green fronds/leaves arranged symmetrically in crown/canopy",
+    "Robust trunk/stem free from bleeding patches or fungal conks",
+    "Heavy bunches/berries with uniform maturity and no premature shedding",
+    "Active feeder roots in organic mulch basin"
+  ],
+  "management": [
+    "Clean decaying tissues from infected crowns/trunks and apply protective healing paste",
+    "Drench palm basins with Trichoderma viride culture mixed with neem cake",
+    "Improve basin drainage to lower water table during monsoon peaks"
+  ],
+  "prevention": [
+    "Clean palm crowns/canopies before South-West and North-East monsoon rains",
+    "Apply Bordeaux mixture (1%) spray to bunches and crowns prophylactically",
+    "Grow cover crops (e.g. Mucuna bracteata, Calopogonium) in basins for moisture conservation",
+    "Avoid mechanical injuries to stems and root zones during weeding"
+  ]
+}

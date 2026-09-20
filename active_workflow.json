@@ -1,0 +1,881 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "detect-disease",
+        "responseMode": "responseNode",
+        "options": {
+          "rawBody": false
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -640,
+        736
+      ],
+      "id": "7db29347-efa3-408b-b59b-250c03999389",
+      "name": "1. Webhook (Farmer API)",
+      "webhookId": "5b2e6809-9965-4976-b663-cfe20844e66b"
+    },
+    {
+      "parameters": {
+        "jsCode": "const binaryKeys = Object.keys($binary || {});\n\n// Generate Unique Correlation Request ID: KRISHI-YYYYMMDD-XXXX\nconst now = new Date();\nconst dateStr = now.toISOString().slice(0,10).replace(/-/g, '');\nconst randStr = Math.random().toString(36).substring(2, 6).toUpperCase();\nconst requestId = `KRISHI-${dateStr}-${randStr}`;\n\n// Canonical 75 Target Crops from KRISHI MARGA Master Catalogue\nconst TARGET_75_CROPS = [\n  'paddy', 'maize', 'ragi', 'sorghum', 'pearl_millet', 'foxtail_millet', 'little_millet',\n  'kodo_millet', 'barnyard_millet', 'proso_millet', 'wheat', 'red_gram', 'black_gram',\n  'green_gram', 'bengal_gram', 'cowpea', 'field_bean', 'groundnut', 'sesame', 'sunflower',\n  'castor', 'safflower', 'soybean', 'cotton', 'sugarcane', 'tobacco', 'tomato', 'chilli',\n  'brinjal', 'onion', 'okra', 'potato', 'tapioca', 'sweet_potato', 'drumstick', 'cucumber',\n  'pumpkin', 'bitter_gourd', 'bottle_gourd', 'ridge_gourd', 'beans', 'cabbage', 'cauliflower',\n  'carrot', 'beetroot', 'banana', 'mango', 'papaya', 'pomegranate', 'guava', 'sapota',\n  'pineapple', 'grapes', 'jackfruit', 'watermelon', 'muskmelon', 'citrus_lime', 'coconut',\n  'arecanut', 'cashew', 'coffee', 'tea', 'rubber', 'cocoa', 'oil_palm', 'palmyrah',\n  'black_pepper', 'cardamom', 'turmeric', 'ginger', 'clove', 'coriander', 'cumin',\n  'fenugreek', 'betel_vine'\n];\n\nconst CROP_ALIASES = {\n  'rice': 'paddy',\n  'dhan': 'paddy',\n  'corn': 'maize',\n  'chili': 'chilli',\n  'pepper_bell': 'chilli',\n  'capsicum': 'chilli',\n  'acid_lime': 'citrus_lime',\n  'lemon': 'citrus_lime',\n  'lime': 'citrus_lime',\n  'cassava': 'tapioca',\n  'betel_nut': 'arecanut',\n  'betel_leaf': 'betel_vine',\n  'pigeon_pea': 'red_gram',\n  'arhar': 'red_gram',\n  'tur': 'red_gram',\n  'mung_bean': 'green_gram',\n  'moong': 'green_gram',\n  'urad': 'black_gram',\n  'chickpea': 'bengal_gram',\n  'chana': 'bengal_gram',\n  'grape': 'grapes',\n  'black pepper': 'black_pepper',\n  'pearl millet': 'pearl_millet',\n  'foxtail millet': 'foxtail_millet',\n  'little millet': 'little_millet',\n  'kodo millet': 'kodo_millet',\n  'barnyard millet': 'barnyard_millet',\n  'proso millet': 'proso_millet',\n  'red gram': 'red_gram',\n  'black gram': 'black_gram',\n  'green gram': 'green_gram',\n  'bengal gram': 'bengal_gram',\n  'field bean': 'field_bean',\n  'sweet potato': 'sweet_potato',\n  'bitter gourd': 'bitter_gourd',\n  'bottle gourd': 'bottle_gourd',\n  'ridge gourd': 'ridge_gourd',\n  'oil palm': 'oil_palm',\n  'betel vine': 'betel_vine'\n};\n\n// 1. Validate Image Count (1 to 10)\nif (binaryKeys.length === 0) {\n  return [{\n    json: {\n      requestId: requestId,\n      isValid: false,\n      errorCode: 'NO_IMAGES_UPLOADED',\n      errorMessage: 'Please upload at least 1 image (up to 10 images supported).'\n    }\n  }];\n}\n\nif (binaryKeys.length > 10) {\n  return [{\n    json: {\n      requestId: requestId,\n      isValid: false,\n      errorCode: 'TOO_MANY_IMAGES',\n      errorMessage: 'Maximum 10 images allowed per diagnosis request. Please select between 1 and 10 photos.'\n    }\n  }];\n}\n\n// 2. Validate Selected Crop\nconst rawCrop = $json.body?.crop || $json.query?.crop || null;\n\nif (!rawCrop || typeof rawCrop !== 'string' || rawCrop.trim() === '') {\n  return [{\n    json: {\n      requestId: requestId,\n      isValid: false,\n      errorCode: 'INVALID_CROP',\n      errorMessage: 'Please select exactly one target crop for this diagnosis case.'\n    }\n  }];\n}\n\nconst cropTrimmed = rawCrop.trim();\nif (cropTrimmed.includes(',') || cropTrimmed.includes(';') || Array.isArray(rawCrop)) {\n  return [{\n    json: {\n      requestId: requestId,\n      isValid: false,\n      errorCode: 'MULTIPLE_CROPS_NOT_SUPPORTED',\n      errorMessage: 'Only one crop can be diagnosed per request. Please submit separate requests for different crops.'\n    }\n  }];\n}\n\nconst normInput = cropTrimmed.toLowerCase().replace(/[\\s\\-_]+/g, '_');\nconst matchedCropId = TARGET_75_CROPS.find(c => c === normInput)\n  || CROP_ALIASES[cropTrimmed.toLowerCase()]\n  || CROP_ALIASES[normInput]\n  || TARGET_75_CROPS.find(c => normInput.includes(c) || c.includes(normInput));\n\nif (!matchedCropId) {\n  return [{\n    json: {\n      requestId: requestId,\n      isValid: false,\n      errorCode: 'UNSUPPORTED_CROP',\n      errorMessage: `Crop '${cropTrimmed}' is not in the 75 target crop catalogue. Please choose a valid target crop.`\n    }\n  }];\n}\n\n\n// Per-image size guard. Base64 expands a payload by ~33%, so a single very\n// large photo can exhaust the workflow's memory. The mobile app already\n// downsizes images; this is the server-side backstop.\nconst MAX_IMAGE_BYTES = 4 * 1024 * 1024;\nlet totalBytes = 0;\n\n// 3. Validate and Extract Binary Images\nconst imagesList = [];\nfor (let i = 0; i < binaryKeys.length; i++) {\n  const key = binaryKeys[i];\n  const bin = $binary[key];\n  const mimeType = bin.mimeType || 'image/jpeg';\n  \n  if (!mimeType.startsWith('image/')) {\n    return [{\n      json: {\n        requestId: requestId,\n        isValid: false,\n        errorCode: 'INVALID_FILE_TYPE',\n        errorMessage: `File '${bin.fileName || key}' is not a supported image format (JPEG, PNG, WEBP).`\n      }\n    }];\n  }\n  \n  let base64Data = '';\n  try {\n    const buffer = await this.helpers.getBinaryDataBuffer(0, key);\n    base64Data = buffer.toString('base64');\n  } catch (e) {\n    base64Data = bin.data || '';\n  }\n  \n  if (!base64Data) {\n    return [{\n      json: {\n        requestId: requestId,\n        isValid: false,\n        errorCode: 'UNREADABLE_IMAGE',\n        errorMessage: `Image '${bin.fileName || key}' could not be read. Please retake the photo.`\n      }\n    }];\n  }\n\n  const approxBytes = Math.floor(base64Data.length * 0.75);\n  if (approxBytes > MAX_IMAGE_BYTES) {\n    return [{\n      json: {\n        requestId: requestId,\n        isValid: false,\n        errorCode: 'IMAGE_TOO_LARGE',\n        errorMessage: 'One of the photos is too large. Please retake it at a lower resolution.'\n      }\n    }];\n  }\n  totalBytes += approxBytes;\n\n  if (totalBytes > 12 * 1024 * 1024) {\n    return [{\n      json: {\n        requestId: requestId,\n        isValid: false,\n        errorCode: 'PAYLOAD_TOO_LARGE',\n        errorMessage: 'The combined photo size is too large. Please send fewer photos.'\n      }\n    }];\n  }\n\n  imagesList.push({\n    mimeType: mimeType,\n    data: base64Data,\n    fileName: bin.fileName || `image_${i+1}.jpg`\n  });\n}\n\n// 4. Extract and Map Language\nconst langMap = {\n  'en': 'English',\n  'kn': 'Kannada',\n  'ta': 'Tamil',\n  'te': 'Telugu',\n  'ml': 'Malayalam',\n  'hi': 'Hindi'\n};\nconst rawLang = String($json.body?.language || $json.query?.language || 'en').toLowerCase().trim();\nconst languageCode = langMap[rawLang] ? rawLang : (Object.keys(langMap).find(k => langMap[k].toLowerCase() === rawLang) || 'en');\nconst requestedLanguage = langMap[languageCode] || 'English';\n\nconst symptoms = $json.body?.symptoms || $json.body?.farmer_notes || $json.query?.symptoms || null;\nconst latitude = $json.body?.latitude || $json.query?.latitude || null;\nconst longitude = $json.body?.longitude || $json.query?.longitude || null;\nconst state = $json.body?.state || 'South India';\n\n// 5. Pre-build Dynamic Crop-Specific Gemini Multimodal Payload\nconst promptText = `Expert Plant Pathologist and Agronomist AI for Indian agriculture.\nYou are diagnosing a ${cropTrimmed.toUpperCase()} plant.\nAnalyze only the uploaded ${cropTrimmed} plant images.\nConsider diseases, pests and visible nutrient-related symptoms relevant to ${cropTrimmed}.\nDo not diagnose a disease belonging to another crop.\n\nCASE CONTEXT:\n- Selected Crop: \"${cropTrimmed}\"\n- Images Provided: ${imagesList.length}\n${symptoms ? `- Farmer Stated Symptoms: \"${symptoms}\"\\n` : ''}- Target Response Language: ${requestedLanguage} (Language Code: ${languageCode})\n\nCRITICAL DIAGNOSIS RULES:\n1. WRONG CROP PROTECTION (MANDATORY):\n- Carefully verify if the uploaded plant image actually matches ${cropTrimmed}.\n- If the image clearly depicts a DIFFERENT crop (for example, tomato when coffee was selected, or chilli when banana was selected, or non-plant objects):\n  * Do NOT diagnose another crop's disease on ${cropTrimmed}!\n  * Set: health_status = \"Uncertain\", disease = \"Unknown\", confidence = 0.20, problem_type = \"UNKNOWN\"\n  * In user_message (${requestedLanguage}): State clearly: \"The image does not appear to match the selected crop (${cropTrimmed}). Please upload a clear ${cropTrimmed} plant image.\"\n\n2. BLURRY / LOW-QUALITY / NON-PLANT / INSUFFICIENT EVIDENCE:\n- If photos are blurry, too dark, out of focus, or lack clear symptoms:\n  * Do NOT fabricate a diagnosis or pretend certainty.\n  * Set: health_status = \"Uncertain\", disease = \"Unknown\", confidence = 0.25, problem_type = \"UNKNOWN\"\n  * In user_message (${requestedLanguage}): Advise the farmer to take a closer, clearer photo in good daylight.\n\n3. HEALTHY PLANTS:\n- If the ${cropTrimmed} foliage and plant parts show normal green color, intact tissue, and no signs of pest or pathogen:\n  * Set: health_status = \"Healthy\", disease = \"None\", confidence = 0.95, severity = \"None\", problem_type = \"HEALTHY\"\n  * In recommendations and user_message (${requestedLanguage}): Provide maintenance care and fertilization advice for healthy ${cropTrimmed}.\n\n4. PROBLEM IDENTIFICATION (DISEASE, PEST, OR NUTRIENT DEFICIENCY):\n- Identify the problem accurately:\n  * problem_type: MUST be one of [\"DISEASE\", \"PEST\", \"NUTRIENT_DEFICIENCY\", \"HEALTHY\", \"UNKNOWN\"]\n  * disease: The specific disease, pest, or nutrient deficiency name in ${requestedLanguage}\n  * confidence: Realistic score between 0.50 and 0.98 based on visible evidence\n  * severity: \"Mild\" | \"Moderate\" | \"Severe\" | \"None\"\n  * symptoms: Array of observed visual symptoms in ${requestedLanguage}\n  * recommendations: Practical actionable agronomic steps in ${requestedLanguage}\n  * prevention: Practical prevention and cultural steps in ${requestedLanguage}\n  * regional_advice: Practical advice for South Indian farmers in ${requestedLanguage}\n  * user_message: Direct message to the farmer in ${requestedLanguage}\n\n5. PESTICIDE & CHEMICAL SAFETY (STRICT):\n- Never invent a disease, pesticide brand, active ingredient, or unverified chemical dosage.\n- If verified chemical dosage is unavailable, advise consulting the local agricultural extension officer or Krishi Vigyan Kendra (KVK).\n- Prioritize integrated pest management (IPM), cultural sanitation, and approved biocontrol methods (Trichoderma, Pseudomonas, Neem).\n\nMANDATORY OUTPUT REQUIREMENT:\nReturn ONLY valid JSON with keys in English and natural language values in ${requestedLanguage}:\n{\n  \"crop\": \"${cropTrimmed}\",\n  \"health_status\": \"Healthy\",\n  \"disease\": \"None\",\n  \"confidence\": 0.95,\n  \"severity\": \"None\",\n  \"problem_type\": \"HEALTHY\",\n  \"symptoms\": [\"...\"],\n  \"recommendations\": [\"...\"],\n  \"prevention\": [\"...\"],\n  \"regional_advice\": \"...\",\n  \"user_message\": \"...\"\n}`;\n\nconst imageParts = imagesList.map(img => ({\n  inlineData: {\n    mimeType: img.mimeType || 'image/jpeg',\n    data: img.data\n  }\n}));\n\nconst geminiPayload = {\n  contents: [\n    {\n      parts: [\n        { text: promptText },\n        ...imageParts\n      ]\n    }\n  ],\n  generationConfig: {\n    responseMimeType: 'application/json',\n    temperature: 0.0,\n    seed: 42\n  }\n};\n\nreturn [{\n  json: {\n    requestId: requestId,\n    isValid: true,\n    crop: cropTrimmed,\n    cropCanonicalId: matchedCropId,\n    imageCount: imagesList.length,\n    symptoms: symptoms,\n    language: languageCode,\n    requestedLanguage: requestedLanguage,\n    latitude: latitude,\n    longitude: longitude,\n    state: state,\n    geminiPayload: geminiPayload,\n    startedAt: Date.now()\n  }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -432,
+        720
+      ],
+      "id": "5f12d649-607f-4978-8c65-10d12e0a7a24",
+      "name": "2. Validate Input & Crop"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c1",
+              "leftValue": "={{ $json.isValid }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -208,
+        720
+      ],
+      "id": "d134d3ba-63bb-4bca-8ece-24c4bfaf5767",
+      "name": "3. Valid Request?"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $('2. Validate Input & Crop').item.json.geminiPayload }}",
+        "options": {
+          "timeout": 15000,
+          "response": {
+            "response": {
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        16,
+        592
+      ],
+      "id": "9f377d1c-9782-4a30-abf0-b656a9bef672",
+      "name": "4A. Model 1: Gemini 3.7 Flash",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "qbu4mlRvjbp9lB87",
+          "name": "Google Gemini API Key"
+        }
+      },
+      "onError": "continueRegularOutput",
+      "alwaysOutputData": true,
+      "retryOnFail": false
+    },
+    {
+      "parameters": {
+        "jsCode": "const res = $json || {};\n\n// The HTTP node is configured to continue on error, so this item may contain\n// an error envelope instead of a Gemini response. Treat that as \"not usable\"\n// and let the failover chain proceed.\nif (res.error || res.errorMessage || res.__isError) {\n  return [{ json: { is_usable: false, error_reason: 'MODEL_CALL_FAILED' } }];\n}\n\ntry {\n  if (res.error || !res.candidates || !res.candidates[0]?.content?.parts?.[0]?.text) {\n    return [{ json: { is_usable: false, error_reason: 'HTTP_OR_EMPTY_RESPONSE' } }];\n  }\n  \n  const rawText = res.candidates[0].content.parts[0].text;\n  const cleaned = rawText.replace(/```json\\n?|\\n?```/g, '').trim();\n  const parsed = JSON.parse(cleaned);\n  \n  if (!parsed.crop || !parsed.health_status || parsed.confidence === undefined) {\n    return [{ json: { is_usable: false, error_reason: 'MISSING_REQUIRED_FIELDS' } }];\n  }\n  \n  // Clamp confidence between 0 and 1\n  let conf = parsed.confidence;\n  if (typeof conf !== 'number') conf = Number(conf) || 0;\n  if (conf < 0) conf = 0;\n  if (conf > 1) conf = 1;\n  parsed.confidence = conf;\n  \n  return [{ json: { is_usable: true, model_used: 'Gemini 3.5 Flash Lite', parsed_data: parsed } }];\n} catch (e) {\n  return [{ json: { is_usable: false, error_reason: 'INVALID_JSON_SYNTAX', details: e.message } }];\n}"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        592
+      ],
+      "id": "ea941811-3121-4d54-8f21-a340c7da1eaf",
+      "name": "5A. Evaluate Model 1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c1",
+              "leftValue": "={{ $json.is_usable }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        448,
+        592
+      ],
+      "id": "022c6861-05d4-4194-be52-f182a0fbb5fe",
+      "name": "Check Model 1 Usable?"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $('2. Validate Input & Crop').item.json.geminiPayload }}",
+        "options": {
+          "timeout": 15000,
+          "response": {
+            "response": {
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        656,
+        720
+      ],
+      "id": "7325a098-3988-42c7-963e-da99106dc945",
+      "name": "4B. Model 2: Gemini 3.5 Flash Lite",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "qbu4mlRvjbp9lB87",
+          "name": "Google Gemini API Key"
+        }
+      },
+      "onError": "continueRegularOutput",
+      "alwaysOutputData": true,
+      "retryOnFail": false
+    },
+    {
+      "parameters": {
+        "jsCode": "const res = $json || {};\n\n// The HTTP node is configured to continue on error, so this item may contain\n// an error envelope instead of a Gemini response. Treat that as \"not usable\"\n// and let the failover chain proceed.\nif (res.error || res.errorMessage || res.__isError) {\n  return [{ json: { is_usable: false, error_reason: 'MODEL_CALL_FAILED' } }];\n}\n\ntry {\n  if (res.error || !res.candidates || !res.candidates[0]?.content?.parts?.[0]?.text) {\n    return [{ json: { is_usable: false, error_reason: 'HTTP_OR_EMPTY_RESPONSE' } }];\n  }\n  \n  const rawText = res.candidates[0].content.parts[0].text;\n  const cleaned = rawText.replace(/```json\\n?|\\n?```/g, '').trim();\n  const parsed = JSON.parse(cleaned);\n  \n  if (!parsed.crop || !parsed.health_status || parsed.confidence === undefined) {\n    return [{ json: { is_usable: false, error_reason: 'MISSING_REQUIRED_FIELDS' } }];\n  }\n  \n  return [{ json: { is_usable: true, model_used: 'Gemini 3.6 Flash', parsed_data: parsed } }];\n} catch (e) {\n  return [{ json: { is_usable: false, error_reason: 'INVALID_JSON_SYNTAX', details: e.message } }];\n}"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        720
+      ],
+      "id": "4f2dec08-4ff8-4757-8b97-da489c9eb4cb",
+      "name": "5B. Evaluate Model 2"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c1",
+              "leftValue": "={{ $json.is_usable }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1088,
+        720
+      ],
+      "id": "914cf105-9119-4ea6-ad3d-7f7b095b50ed",
+      "name": "Check Model 2 Usable?"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $('2. Validate Input & Crop').item.json.geminiPayload }}",
+        "options": {
+          "timeout": 12000,
+          "response": {
+            "response": {
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1296,
+        832
+      ],
+      "id": "2a0c1b52-e047-4c10-bebf-81947133d629",
+      "name": "4C. Model 3: Gemini 2.5 Pro",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "qbu4mlRvjbp9lB87",
+          "name": "Google Gemini API Key"
+        }
+      },
+      "onError": "continueRegularOutput",
+      "alwaysOutputData": true,
+      "retryOnFail": false
+    },
+    {
+      "parameters": {
+        "jsCode": "const res = $json || {};\n\n// The HTTP node is configured to continue on error, so this item may contain\n// an error envelope instead of a Gemini response. Treat that as \"not usable\"\n// and let the failover chain proceed.\nif (res.error || res.errorMessage || res.__isError) {\n  return [{ json: { is_usable: false, error_reason: 'MODEL_CALL_FAILED' } }];\n}\n\ntry {\n  if (res.error || !res.candidates || !res.candidates[0]?.content?.parts?.[0]?.text) {\n    return [{ json: { is_usable: false, error_reason: 'HTTP_OR_EMPTY_RESPONSE' } }];\n  }\n  \n  const rawText = res.candidates[0].content.parts[0].text;\n  const cleaned = rawText.replace(/```json\\n?|\\n?```/g, '').trim();\n  const parsed = JSON.parse(cleaned);\n  \n  if (!parsed.crop || !parsed.health_status || parsed.confidence === undefined) {\n    return [{ json: { is_usable: false, error_reason: 'MISSING_REQUIRED_FIELDS' } }];\n  }\n  \n  return [{ json: { is_usable: true, model_used: 'Gemini 2.5 Pro', parsed_data: parsed } }];\n} catch (e) {\n  return [{ json: { is_usable: false, error_reason: 'INVALID_JSON_SYNTAX', details: e.message } }];\n}"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1520,
+        832
+      ],
+      "id": "518d2185-c52b-4b03-84cc-8c5f2a32bb26",
+      "name": "5C. Evaluate Model 3"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c1",
+              "leftValue": "={{ $json.is_usable }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1728,
+        832
+      ],
+      "id": "139aa2e5-61d4-41c4-8434-5dbac7d4d341",
+      "name": "Check Model 3 Usable?"
+    },
+    {
+      "parameters": {
+        "jsCode": "const data = ($json && $json.parsed_data) ? $json.parsed_data : null;\nlet inputMeta = {};\ntry {\n  inputMeta = $('2. Validate Input & Crop').item.json || {};\n} catch (e) {\n  inputMeta = {};\n}\n\nif (!data) {\n  return [{\n    json: {\n      requestId: inputMeta.requestId || `KRISHI-${Date.now()}`,\n      success: false,\n      errorCode: 'DIAGNOSIS_FAILED',\n      message: 'Online diagnosis could not be completed.'\n    }\n  }];\n}\n\nlet confidenceLevel = 'High';\nlet healthStatus = data.health_status || 'Uncertain';\n\nconst confNum = typeof data.confidence === 'number' ? data.confidence : Number(data.confidence || 0);\nif (confNum < 0.50) {\n  confidenceLevel = 'Low';\n  healthStatus = 'Uncertain';\n} else if (confNum < 0.75) {\n  confidenceLevel = 'Medium';\n}\n\nconst problemType = data.problem_type || (\n  healthStatus === 'Healthy' ? 'HEALTHY' :\n  (healthStatus === 'Uncertain' ? 'UNKNOWN' : 'DISEASE')\n);\n\nreturn [{\n  json: {\n    requestId: inputMeta.requestId || `KRISHI-${Date.now()}`,\n    success: true,\n    timestamp: new Date().toISOString(),\n    crop_selected: inputMeta.crop || data.crop || 'Unknown',\n    images_analyzed: inputMeta.imageCount || 1,\n    model_provider: $json.model_used || 'Gemini 3.5 Flash Lite',\n    latency_ms: inputMeta.startedAt ? (Date.now() - inputMeta.startedAt) : undefined,\n    result: {\n      crop: data.crop || inputMeta.crop || 'Unknown',\n      health_status: healthStatus,\n      disease: data.disease || (healthStatus === 'Healthy' ? 'None' : 'Unknown'),\n      confidence: confNum,\n      confidence_level: confidenceLevel,\n      severity: data.severity || 'None',\n      problem_type: problemType,\n      symptoms: Array.isArray(data.symptoms) ? data.symptoms : (data.symptoms ? [data.symptoms] : []),\n      recommendations: Array.isArray(data.recommendations) ? data.recommendations : (data.recommendations ? [data.recommendations] : []),\n      prevention: Array.isArray(data.prevention) ? data.prevention : (data.prevention ? [data.prevention] : []),\n      regional_advice: data.regional_advice || '',\n      user_message: data.user_message || '',\n      location_context: {\n        state: inputMeta.state || 'South India',\n        latitude: inputMeta.latitude || null,\n        longitude: inputMeta.longitude || null\n      }\n    }\n  }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1968,
+        592
+      ],
+      "id": "b1d65faa-71c4-49bf-9927-6e081413078e",
+      "name": "6. Format Final Response"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify($json) }}",
+        "options": {
+          "responseCode": 200,
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "Access-Control-Allow-Origin",
+                "value": "*"
+              }
+            ]
+          }
+        }
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        2176,
+        592
+      ],
+      "id": "7804dbe0-9bf9-458e-8fcd-ccf441bd828d",
+      "name": "7. Respond to Frontend (200 OK)"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "language": "javaScript",
+        "jsCode": "const errCode = $json.errorCode || 'INVALID_REQUEST';\nconst errMsg = $json.errorMessage || 'Invalid request parameters';\nreturn [{ json: { success: false, errorCode: errCode, message: errMsg, requestId: $json.requestId || null } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        16,
+        896
+      ],
+      "id": "f1e98190-9be4-4e39-9c9b-16bf09e5779e",
+      "name": "Error Response (400 Bad Request)"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "language": "javaScript",
+        "jsCode": "return [{ json: { success: false, errorCode: 'DIAGNOSIS_FAILED', message: 'Online diagnosis could not be completed.', requestId: $json.requestId || null } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1968,
+        896
+      ],
+      "id": "b2c641d7-83ac-46cc-a466-5be6d2cebd02",
+      "name": "Controlled Error JSON"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "scan-pesticide",
+        "responseMode": "responseNode",
+        "options": {
+          "rawBody": false
+        }
+      },
+      "id": "km-pest-webhook",
+      "name": "1P. Webhook (Pesticide Label API)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -460,
+        700
+      ],
+      "webhookId": "krishi-marga-scan-pesticide"
+    },
+    {
+      "parameters": {
+        "jsCode": "// PESTICIDE LABEL SCAN — INPUT VALIDATION\n// Mirrors the disease branch, but validates a pesticide label request instead\n// of a crop. Sending a pesticide scan to the crop-disease validator previously\n// failed with INVALID_CROP, which is why label scanning never worked.\n\nconst binaryKeys = Object.keys($binary || {});\n\nconst now = new Date();\nconst dateStr = now.toISOString().slice(0, 10).replace(/-/g, '');\nconst randStr = Math.random().toString(36).substring(2, 6).toUpperCase();\nconst requestId = `KRISHI-PEST-${dateStr}-${randStr}`;\n\nconst MAX_IMAGES = 3;\nconst MAX_IMAGE_BYTES = 5 * 1024 * 1024;\n\nif (binaryKeys.length === 0) {\n  return [{ json: { requestId, isValid: false, errorCode: 'NO_IMAGES_UPLOADED', errorMessage: 'Please upload at least one photo of the pesticide label.' } }];\n}\n\nif (binaryKeys.length > MAX_IMAGES) {\n  return [{ json: { requestId, isValid: false, errorCode: 'TOO_MANY_IMAGES', errorMessage: 'Please send at most 3 label photos (front, back, dosage panel).' } }];\n}\n\nconst langMap = { en: 'English', kn: 'Kannada', ta: 'Tamil', te: 'Telugu', ml: 'Malayalam', hi: 'Hindi' };\nconst rawLang = String($json.body?.language || $json.query?.language || 'en').toLowerCase().trim();\nconst languageCode = langMap[rawLang] ? rawLang : 'en';\nconst requestedLanguage = langMap[languageCode];\n\nconst cropContext = ($json.body?.crop || $json.query?.crop || '').toString().trim();\n\nconst imagesList = [];\nlet totalBytes = 0;\n\nfor (let i = 0; i < binaryKeys.length; i++) {\n  const key = binaryKeys[i];\n  const bin = $binary[key];\n  const mimeType = bin.mimeType || 'image/jpeg';\n\n  if (!mimeType.startsWith('image/')) {\n    return [{ json: { requestId, isValid: false, errorCode: 'INVALID_FILE_TYPE', errorMessage: `File '${bin.fileName || key}' is not a supported image (JPEG, PNG, WEBP).` } }];\n  }\n\n  let base64Data = '';\n  try {\n    const buffer = await this.helpers.getBinaryDataBuffer(0, key);\n    base64Data = buffer.toString('base64');\n  } catch (e) {\n    base64Data = bin.data || '';\n  }\n\n  if (!base64Data) {\n    return [{ json: { requestId, isValid: false, errorCode: 'UNREADABLE_IMAGE', errorMessage: 'A label photo could not be read. Please retake it.' } }];\n  }\n\n  const approxBytes = Math.floor(base64Data.length * 0.75);\n  if (approxBytes > MAX_IMAGE_BYTES) {\n    return [{ json: { requestId, isValid: false, errorCode: 'IMAGE_TOO_LARGE', errorMessage: 'The label photo is too large. Please retake it at a lower resolution.' } }];\n  }\n  totalBytes += approxBytes;\n\n  imagesList.push({ mimeType, data: base64Data, fileName: bin.fileName || `label_${i + 1}.jpg` });\n}\n\nconst promptText = `You are an agricultural input label reader for Indian farmers.\nRead ONLY what is actually printed on the pesticide/agro-chemical label in the photographs.\n\nSTRICT RULES:\n1. Do NOT invent a product name, active ingredient, manufacturer, registration status, dosage, or safety instruction. If something is not legible on the label, leave that field null or an empty array.\n2. Do NOT state a dosage unless the number and unit are clearly printed on the label. Otherwise leave dosage_notice empty and the app will tell the farmer to read the printed label.\n3. If the photo is blurry, cropped, glared, or is not an agro-chemical label, set identified = false and explain why in unidentified_reason.\n4. Safety guidance must be taken from the label text (or standard pictograms shown on it). Never generalise from memory of a similar product.\n5. Report banned status only if the label or the printed CIBRC registration clearly indicates it; otherwise set is_banned to false and cibrc_registered to whether a registration number is visible.\n\n${cropContext ? `The farmer intends to use this on: ${cropContext}. Only comment on suitability if the label lists crops.` : ''}\nWrite natural-language values in ${requestedLanguage}. Keep JSON keys in English.\n\nReturn ONLY valid JSON:\n{\n  \"identified\": true,\n  \"confidence\": 0.0,\n  \"unidentified_reason\": null,\n  \"product_name\": null,\n  \"active_ingredient\": null,\n  \"formulation\": null,\n  \"category\": null,\n  \"manufacturer\": null,\n  \"cibrc_registered\": false,\n  \"is_banned\": false,\n  \"what_it_is\": \"\",\n  \"general_use\": \"\",\n  \"why_farmers_use_it\": \"\",\n  \"target_pests\": [],\n  \"suitable_crops\": [],\n  \"safety_guidance\": [],\n  \"dosage_notice\": \"\",\n  \"user_message\": \"\",\n  \"guidance\": []\n}`;\n\nconst geminiPayload = {\n  contents: [\n    {\n      parts: [\n        { text: promptText },\n        ...imagesList.map((img) => ({ inlineData: { mimeType: img.mimeType, data: img.data } }))\n      ]\n    }\n  ],\n  generationConfig: { responseMimeType: 'application/json', temperature: 0.0, seed: 42 }\n};\n\nreturn [{\n  json: {\n    requestId,\n    isValid: true,\n    scanType: 'pesticide',\n    crop: cropContext || null,\n    imageCount: imagesList.length,\n    language: languageCode,\n    requestedLanguage,\n    geminiPayload,\n    startedAt: Date.now()\n  }\n}];\n"
+      },
+      "id": "km-pest-validate",
+      "name": "2P. Validate Pesticide Request",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -240,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "p1",
+              "leftValue": "={{ $json.isValid }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "km-pest-valid-if",
+      "name": "3P. Valid Label Request?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -20,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $('2P. Validate Pesticide Request').item.json.geminiPayload }}",
+        "options": {
+          "timeout": 20000,
+          "response": {
+            "response": {
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "id": "km-pest-gemini",
+      "name": "4P. Gemini Label Vision",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        200,
+        620
+      ],
+      "onError": "continueRegularOutput",
+      "alwaysOutputData": true,
+      "retryOnFail": false,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "qbu4mlRvjbp9lB87",
+          "name": "Google Gemini API Key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const res = $json || {};\n\nif (res.error || res.errorMessage || res.__isError) {\n  return [{ json: { is_usable: false, error_reason: 'MODEL_CALL_FAILED' } }];\n}\n\ntry {\n  if (!res.candidates || !res.candidates[0]?.content?.parts?.[0]?.text) {\n    return [{ json: { is_usable: false, error_reason: 'HTTP_OR_EMPTY_RESPONSE' } }];\n  }\n\n  const rawText = res.candidates[0].content.parts[0].text;\n  const cleaned = rawText.replace(/```json\\n?|\\n?```/g, '').trim();\n  const parsed = JSON.parse(cleaned);\n\n  if (parsed.identified === undefined) {\n    return [{ json: { is_usable: false, error_reason: 'MISSING_REQUIRED_FIELDS' } }];\n  }\n\n  let conf = typeof parsed.confidence === 'number' ? parsed.confidence : Number(parsed.confidence) || 0;\n  if (conf < 0) conf = 0;\n  if (conf > 1) conf = 1;\n  parsed.confidence = conf;\n\n  return [{ json: { is_usable: true, model_used: 'Gemini Vision (primary)', parsed_data: parsed } }];\n} catch (e) {\n  return [{ json: { is_usable: false, error_reason: 'INVALID_JSON_SYNTAX', details: e.message } }];\n}\n"
+      },
+      "id": "km-pest-eval",
+      "name": "5P. Evaluate Label Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        420,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Shapes the label-reading result into the envelope the mobile app expects.\n// Nothing is substituted or invented here: a field the model could not read\n// stays null/empty and the app falls back to the bundled CIBRC directory.\n\nconst item = $json || {};\nlet inputMeta = {};\ntry {\n  inputMeta = $('2P. Validate Pesticide Request').item.json || {};\n} catch (e) {\n  inputMeta = {};\n}\n\nconst data = item.parsed_data || null;\n\nif (!data) {\n  return [{\n    json: {\n      requestId: inputMeta.requestId || `KRISHI-PEST-${Date.now()}`,\n      success: false,\n      errorCode: 'LABEL_SCAN_FAILED',\n      message: 'The pesticide label could not be analysed. Please retake the photo in good light.'\n    }\n  }];\n}\n\nconst arr = (v) => (Array.isArray(v) ? v.filter((x) => typeof x === 'string' && x.trim()) : []);\n\nreturn [{\n  json: {\n    requestId: inputMeta.requestId || `KRISHI-PEST-${Date.now()}`,\n    success: true,\n    scan_type: 'pesticide',\n    timestamp: new Date().toISOString(),\n    images_analyzed: inputMeta.imageCount || 1,\n    model_provider: item.model_used || 'Gemini Vision',\n    latency_ms: inputMeta.startedAt ? (Date.now() - inputMeta.startedAt) : undefined,\n    result: {\n      identified: Boolean(data.identified),\n      confidence: typeof data.confidence === 'number' ? data.confidence : 0,\n      unidentified_reason: data.unidentified_reason || null,\n      product_name: data.product_name || null,\n      active_ingredient: data.active_ingredient || null,\n      formulation: data.formulation || null,\n      category: data.category || null,\n      manufacturer: data.manufacturer || null,\n      cibrc_registered: Boolean(data.cibrc_registered),\n      is_banned: Boolean(data.is_banned),\n      what_it_is: data.what_it_is || '',\n      general_use: data.general_use || '',\n      why_farmers_use_it: data.why_farmers_use_it || '',\n      target_pests: arr(data.target_pests),\n      suitable_crops: arr(data.suitable_crops),\n      safety_guidance: arr(data.safety_guidance),\n      dosage_notice: data.dosage_notice || '',\n      user_message: data.user_message || '',\n      guidance: arr(data.guidance),\n      crop_context: inputMeta.crop || null\n    }\n  }\n}];\n"
+      },
+      "id": "km-pest-format",
+      "name": "6P. Format Pesticide Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        640,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{\n  json: {\n    success: false,\n    scan_type: 'pesticide',\n    errorCode: $json.errorCode || 'INVALID_REQUEST',\n    message: $json.errorMessage || 'The label scan request was not valid.',\n    requestId: $json.requestId || null\n  }\n}];\n"
+      },
+      "id": "km-pest-error",
+      "name": "Pesticide Error JSON",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        420,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify($json) }}",
+        "options": {
+          "responseCode": 200,
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        }
+      },
+      "id": "km-pest-respond",
+      "name": "7P. Respond to Frontend (Pesticide)",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        880,
+        700
+      ]
+    }
+  ],
+  "connections": {
+    "1. Webhook (Farmer API)": {
+      "main": [
+        [
+          {
+            "node": "2. Validate Input & Crop",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2. Validate Input & Crop": {
+      "main": [
+        [
+          {
+            "node": "3. Valid Request?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3. Valid Request?": {
+      "main": [
+        [
+          {
+            "node": "4A. Model 1: Gemini 3.7 Flash",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Error Response (400 Bad Request)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "4A. Model 1: Gemini 3.7 Flash": {
+      "main": [
+        [
+          {
+            "node": "5A. Evaluate Model 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "5A. Evaluate Model 1": {
+      "main": [
+        [
+          {
+            "node": "Check Model 1 Usable?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Model 1 Usable?": {
+      "main": [
+        [
+          {
+            "node": "6. Format Final Response",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "4B. Model 2: Gemini 3.5 Flash Lite",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "4B. Model 2: Gemini 3.5 Flash Lite": {
+      "main": [
+        [
+          {
+            "node": "5B. Evaluate Model 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "5B. Evaluate Model 2": {
+      "main": [
+        [
+          {
+            "node": "Check Model 2 Usable?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Model 2 Usable?": {
+      "main": [
+        [
+          {
+            "node": "6. Format Final Response",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "4C. Model 3: Gemini 2.5 Pro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "4C. Model 3: Gemini 2.5 Pro": {
+      "main": [
+        [
+          {
+            "node": "5C. Evaluate Model 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "5C. Evaluate Model 3": {
+      "main": [
+        [
+          {
+            "node": "Check Model 3 Usable?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Model 3 Usable?": {
+      "main": [
+        [
+          {
+            "node": "6. Format Final Response",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Controlled Error JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "6. Format Final Response": {
+      "main": [
+        [
+          {
+            "node": "7. Respond to Frontend (200 OK)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Controlled Error JSON": {
+      "main": [
+        [
+          {
+            "node": "7. Respond to Frontend (200 OK)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Error Response (400 Bad Request)": {
+      "main": [
+        [
+          {
+            "node": "7. Respond to Frontend (200 OK)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1P. Webhook (Pesticide Label API)": {
+      "main": [
+        [
+          {
+            "node": "2P. Validate Pesticide Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2P. Validate Pesticide Request": {
+      "main": [
+        [
+          {
+            "node": "3P. Valid Label Request?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3P. Valid Label Request?": {
+      "main": [
+        [
+          {
+            "node": "4P. Gemini Label Vision",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Pesticide Error JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "4P. Gemini Label Vision": {
+      "main": [
+        [
+          {
+            "node": "5P. Evaluate Label Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "5P. Evaluate Label Response": {
+      "main": [
+        [
+          {
+            "node": "6P. Format Pesticide Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "6P. Format Pesticide Response": {
+      "main": [
+        [
+          {
+            "node": "7P. Respond to Frontend (Pesticide)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pesticide Error JSON": {
+      "main": [
+        [
+          {
+            "node": "7P. Respond to Frontend (Pesticide)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "name": "KRISHI MARGA — Crop Diagnosis + Pesticide Label Scan",
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveExecutionProgress": false,
+    "saveDataSuccessExecution": "none",
+    "executionTimeout": 120
+  },
+  "tags": [],
+  "pinData": {}
+}

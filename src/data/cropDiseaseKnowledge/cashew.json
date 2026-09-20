@@ -1,0 +1,49 @@
+{
+  "crop": "Cashew",
+  "crop_id": "cashew",
+  "category": "plantation",
+  "diseases": [
+    {
+      "disease_name": "Anthracnose and Inflorescence Blight",
+      "scientific_name": "Colletotrichum gloeosporioides",
+      "symptoms": [
+        "Brown water-soaked necrotic lesions on floral panicles; drying and blackening of panicles (blight); black scabby lesions on tender cashew apples and developing nuts; gummy exudate on twigs."
+      ],
+      "severity": "Severe",
+      "management": [
+        "Consult local agricultural university / KVK package of practices for registered treatment."
+      ],
+      "prevention": [
+        "Practice crop rotation, field hygiene, and use certified seeds."
+      ]
+    }
+  ],
+  "pests": [
+    {
+      "pest_name": "Tea Mosquito Bug (TMB)",
+      "scientific_name": "Helopeltis antonii",
+      "symptoms": [],
+      "management": [
+        "Install pheromone traps and apply bio-control agents."
+      ]
+    }
+  ],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Large, deep green fronds/leaves arranged symmetrically in crown/canopy",
+    "Robust trunk/stem free from bleeding patches or fungal conks",
+    "Heavy bunches/berries with uniform maturity and no premature shedding",
+    "Active feeder roots in organic mulch basin"
+  ],
+  "management": [
+    "Clean decaying tissues from infected crowns/trunks and apply protective healing paste",
+    "Drench palm basins with Trichoderma viride culture mixed with neem cake",
+    "Improve basin drainage to lower water table during monsoon peaks"
+  ],
+  "prevention": [
+    "Clean palm crowns/canopies before South-West and North-East monsoon rains",
+    "Apply Bordeaux mixture (1%) spray to bunches and crowns prophylactically",
+    "Grow cover crops (e.g. Mucuna bracteata, Calopogonium) in basins for moisture conservation",
+    "Avoid mechanical injuries to stems and root zones during weeding"
+  ]
+}

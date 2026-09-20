@@ -1,0 +1,183 @@
+{
+  "crop": "Chilli",
+  "crop_id": "chilli",
+  "category": "vegetable",
+  "diseases": [
+    {
+      "disease_name": "Anthracnose / Fruit Rot & Dieback",
+      "scientific_name": "Colletotrichum capsici (Colletotrichum truncatum)",
+      "symptoms": [
+        "Sunken, circular to oval lesions with black concentric rings of fungal acervuli on ripe fruits; tips of branches wither, dry and turn ash grey downwards (dieback)."
+      ],
+      "severity": "Severe to Critical",
+      "management": [
+        "Consult local agricultural university / KVK package of practices for registered treatment."
+      ],
+      "prevention": [
+        "Practice crop rotation, field hygiene, and use certified seeds."
+      ]
+    },
+    {
+      "disease_name": "Chilli Leaf Curl Complex",
+      "scientific_name": "Chilli leaf curl virus (ChiLCV) & Thrips/Mite complex",
+      "symptoms": [
+        "Upward curling and canoeing of leaves (thrips/virus) or downward cupping with inverted boat shape (yellow mite); leaves turn leathery, brittle and crinkled."
+      ],
+      "severity": "Severe",
+      "management": [
+        "Consult local agricultural university / KVK package of practices for registered treatment."
+      ],
+      "prevention": [
+        "Practice crop rotation, field hygiene, and use certified seeds."
+      ]
+    },
+    {
+      "disease_name": "Anthracnose",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Anthracnose."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Damping Off",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Damping Off."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Leaf Curl Virus",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Leaf Curl Virus."
+      ],
+      "severity": "Severe",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Leaf Spot",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Leaf Spot."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Veinal Mottle Virus",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Veinal Mottle Virus."
+      ],
+      "severity": "Severe",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Whitefly Damage",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Whitefly Damage."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Yellowish Deficiency",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Yellowish Deficiency."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Bacterial Spot",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Bacterial Spot."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    }
+  ],
+  "pests": [
+    {
+      "pest_name": "Chilli Thrips",
+      "scientific_name": "Scirtothrips dorsalis",
+      "symptoms": [],
+      "management": [
+        "Install pheromone traps and apply bio-control agents."
+      ]
+    }
+  ],
+  "nutrient_deficiencies": [
+    {
+      "deficiency": "Magnesium (Mg)",
+      "symptoms": [],
+      "correction": [
+        "Foliar spray of Magnesium Sulphate @ 5g/L or 10g/L at 15-day intervals."
+      ]
+    }
+  ],
+  "healthy_signs": [
+    "Turgid, deep green leaves with crisp texture and no chlorosis",
+    "Vigorous flowering and uniform fruit set free from blemishes or sunken spots",
+    "Clean root crown without fungal damping-off or collar decay",
+    "Absence of curling, puckering, or mosaic leaf mottling"
+  ],
+  "management": [
+    "Prune lower diseased foliage with sanitized secateurs; dispose of off-field",
+    "Apply targeted bio-fungicides (Bacillus subtilis / Trichoderma) or copper-based sprays",
+    "Control sucking insect vectors promptly using yellow sticky traps and botanical sprays"
+  ],
+  "prevention": [
+    "Adopt raised nursery beds with nylon insect netting to prevent early vector transmission",
+    "Mulch beds with silver-black reflective plastic mulch to deter thrips and aphids",
+    "Water using drip irrigation at the base to keep foliage completely dry",
+    "Regularly rogue out and safely destroy virus-infected or blighted plants"
+  ]
+}

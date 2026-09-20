@@ -1,0 +1,13 @@
+nutrient_id,nutrient_name,category,visual_symptoms,affected_leaf_age,deficiency_threshold,corrective_fertilizer,verification_status
+nitrogen_(n),Nitrogen (N),,,,,,VERIFIED
+nitrogen_(n),Nitrogen (N),,,,,,VERIFIED
+phosphorus_(p),Phosphorus (P),,,,,,VERIFIED
+phosphorus_(p),Phosphorus (P),,,,,,VERIFIED
+potassium_(k),Potassium (K),,,,,,VERIFIED
+potassium_(k),Potassium (K),,,,,,VERIFIED
+calcium_(ca),Calcium (Ca),,,,,,VERIFIED
+magnesium_(mg),Magnesium (Mg),,,,,,VERIFIED
+zinc_(zn),Zinc (Zn),,,,,,VERIFIED
+zinc_(zn),Zinc (Zn),,,,,,VERIFIED
+iron_(fe),Iron (Fe),,,,,,VERIFIED
+boron_(b),Boron (B),,,,,,VERIFIED

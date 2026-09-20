@@ -1,0 +1,41 @@
+{
+  "crop": "Cumin",
+  "crop_id": "cumin",
+  "category": "spice",
+  "diseases": [
+    {
+      "disease_name": "Blight",
+      "scientific_name": "Alternaria burnsii",
+      "symptoms": [
+        "Minute dark brown necrotic spots on leaves and stems; plants turn blackish and shrivel"
+      ],
+      "severity": "Critical",
+      "management": [
+        "Foliar spray of Mancozeb @ 2.5 g/L immediately after rain/dew in flowering stage"
+      ],
+      "prevention": [
+        "Avoid excessive irrigation",
+        "Use certified seeds"
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Crisp, aromatic foliage free from leaf spot lesions or marginal blight",
+    "Vigorous rhizome/vine growth with vibrant green shoots",
+    "Clean floral spikes/umbels with high fruit set",
+    "Basal root collar completely firm without water-soaked decay"
+  ],
+  "management": [
+    "Prune and remove infected runners or lateral branches early in the day",
+    "Spray 1% Bordeaux mixture on foliar canopy and drench root basin with bio-fungicide",
+    "Regulate canopy shade to reduce damp microclimate"
+  ],
+  "prevention": [
+    "Use shade regulation (50-60% filtered sunlight) during monsoon to prevent high humidity buildup",
+    "Drench plant basins with Copper Oxychloride or Trichoderma-enriched compost",
+    "Ensure zero waterlogging in hill slopes through contour trench drainage",
+    "Collect and destroy fallen infected leaves, spikes, and diseased capsules"
+  ]
+}

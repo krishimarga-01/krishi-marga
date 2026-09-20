@@ -1,0 +1,28 @@
+raw_label,canonical_label,crop,disease_type,source_dataset,source_label,mapping_reason,verified
+Tomato___Early_blight,tomato_early_blight,Tomato,Fungal,PlantVillage,Tomato___Early_blight,Exact fungal disease concept Alternaria solani,YES
+Tomato___Late_blight,tomato_late_blight,Tomato,Oomycete,PlantVillage,Tomato___Late_blight,Exact oomycete pathogen Phytophthora infestans,YES
+Tomato___Bacterial_spot,tomato_bacterial_spot,Tomato,Bacterial,PlantVillage,Tomato___Bacterial_spot,Xanthomonas perforans / vesicatoria,YES
+Tomato___Leaf_Mold,tomato_leaf_mold,Tomato,Fungal,PlantVillage,Tomato___Leaf_Mold,Passalora fulva / Cladosporium fulvum,YES
+Tomato___Septoria_leaf_spot,tomato_septoria_leaf_spot,Tomato,Fungal,PlantVillage,Tomato___Septoria_leaf_spot,Septoria lycopersici,YES
+Tomato___Spider_mites_Two_spotted_spider_mite,tomato_spider_mites,Tomato,Pest,PlantVillage,Tomato___Spider_mites_Two_spotted_spider_mite,Tetranychus urticae mite damage,YES
+Tomato___Target_Spot,tomato_target_spot,Tomato,Fungal,PlantVillage,Tomato___Target_Spot,Corynespora cassiicola,YES
+Tomato___Tomato_Yellow_Leaf_Curl_Virus,tomato_yellow_leaf_curl_virus,Tomato,Viral,PlantVillage,Tomato___Tomato_Yellow_Leaf_Curl_Virus,TYLCV transmitted by whiteflies,YES
+Tomato___Tomato_mosaic_virus,tomato_mosaic_virus,Tomato,Viral,PlantVillage,Tomato___Tomato_mosaic_virus,ToMV mechanically transmitted,YES
+Tomato___healthy,tomato_healthy,Tomato,Healthy,PlantVillage,Tomato___healthy,Asymptomatic vigorous foliage,YES
+bacterial_leaf_blight,rice_bacterial_leaf_blight,Paddy / Rice,Bacterial,Paddy Doctor / DS_RICE_02,bacterial_leaf_blight,Xanthomonas oryzae pv. oryzae,YES
+blast,rice_blast,Paddy / Rice,Fungal,Paddy Doctor / DS_RICE_02,blast,Magnaporthe oryzae / Pyricularia oryzae,YES
+brown_spot,rice_brown_spot,Paddy / Rice,Fungal,Paddy Doctor / DS_RICE_02,brownspot,Bipolaris oryzae / Helminthosporium,YES
+tungro,rice_tungro,Paddy / Rice,Viral,Paddy Doctor,tungro,Rice tungro bacilliform virus / GLH vector,YES
+hispa,rice_hispa_pest,Paddy / Rice,Pest,Paddy Doctor,hispa,Dicladispa armigera leaf scraper pest,YES
+normal,rice_healthy,Paddy / Rice,Healthy,Paddy Doctor,normal,Asymptomatic healthy paddy leaves,YES
+bacterial_blight,cotton_bacterial_blight,Cotton,Bacterial,DS_COTTON_01,bacterial_blight,Xanthomonas citri pv. malvacearum angular leaf spot,YES
+curl_virus,cotton_leaf_curl_virus,Cotton,Viral,DS_COTTON_01,curl_virus,Cotton leaf curl begomovirus (CLCuV),YES
+leaf_spot,cotton_alternaria_leaf_spot,Cotton,Fungal,DS_COTTON_01,leaf_spot,Alternaria macrospora / Cercospora,YES
+healthy,cotton_healthy,Cotton,Healthy,DS_COTTON_01,healthy,Asymptomatic clean cotton leaf,YES
+Bacterial_Blight,sugarcane_bacterial_blight,Sugarcane,Bacterial,DS_SUGAR_01,Bacterial_Blight,Acidovorax avenae pv. avenae red stripe,YES
+Red_Rot,sugarcane_red_rot,Sugarcane,Fungal,DS_SUGAR_01,Red_Rot,Colletotrichum falcatum midrib lesion,YES
+Healthy,sugarcane_healthy,Sugarcane,Healthy,DS_SUGAR_01,Healthy,Clean cane lamina,YES
+cercospora_leaf_spot,chilli_cercospora_leaf_spot,Chilli,Fungal,DS_CHILLI_01,cercospora,Cercospora capsici frog-eye spots,YES
+powdery_mildew,chilli_powdery_mildew,Chilli,Fungal,DS_CHILLI_01,powdery_mildew,Leveillula taurica white talcum powdery growth,YES
+murda_complex,chilli_murda_complex_thrips_mites,Chilli,Pest,DS_CHILLI_01,murda_complex_mites_trips,Thrips parvispinus & yellow mite upward/downward curl,YES
+healthy,chilli_healthy,Chilli,Healthy,DS_CHILLI_01,healthy,Clean chilli foliage,YES

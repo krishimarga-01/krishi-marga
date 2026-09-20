@@ -1,0 +1,49 @@
+{
+  "crop": "Rubber",
+  "crop_id": "rubber",
+  "category": "plantation",
+  "diseases": [
+    {
+      "disease_name": "Abnormal Leaf Fall",
+      "scientific_name": "Phytophthora meadii (Phytophthora botryosa)",
+      "symptoms": [
+        "Water-soaked lesion on leaf petiole with a drop of coagulated latex in center; green leaflets shed while still fresh; green fruit capsules rot and shrivel on branches."
+      ],
+      "severity": "Critical",
+      "management": [
+        "Consult local agricultural university / KVK package of practices for registered treatment."
+      ],
+      "prevention": [
+        "Practice crop rotation, field hygiene, and use certified seeds."
+      ]
+    }
+  ],
+  "pests": [
+    {
+      "pest_name": "Scale Insects and Mealybugs",
+      "scientific_name": "Saissetia nigra & Planococcus citri",
+      "symptoms": [],
+      "management": [
+        "Install pheromone traps and apply bio-control agents."
+      ]
+    }
+  ],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Large, deep green fronds/leaves arranged symmetrically in crown/canopy",
+    "Robust trunk/stem free from bleeding patches or fungal conks",
+    "Heavy bunches/berries with uniform maturity and no premature shedding",
+    "Active feeder roots in organic mulch basin"
+  ],
+  "management": [
+    "Clean decaying tissues from infected crowns/trunks and apply protective healing paste",
+    "Drench palm basins with Trichoderma viride culture mixed with neem cake",
+    "Improve basin drainage to lower water table during monsoon peaks"
+  ],
+  "prevention": [
+    "Clean palm crowns/canopies before South-West and North-East monsoon rains",
+    "Apply Bordeaux mixture (1%) spray to bunches and crowns prophylactically",
+    "Grow cover crops (e.g. Mucuna bracteata, Calopogonium) in basins for moisture conservation",
+    "Avoid mechanical injuries to stems and root zones during weeding"
+  ]
+}

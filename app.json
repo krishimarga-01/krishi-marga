@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "KRISHI MARGA",
+    "slug": "krishi-marga",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo/app_logo.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.krishimarga.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Krishi Marga needs camera access to photograph crop leaves for disease diagnosis.",
+        "NSPhotoLibraryUsageDescription": "Krishi Marga needs photo gallery access to select crop leaf images.",
+        "NSLocationWhenInUseUsageDescription": "Krishi Marga uses your location to discover nearby agriculture experts and Krishi Vigyan Kendras."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#1B4332",
+        "foregroundImage": "./assets/logo/app_logo.png"
+      },
+      "package": "com.krishimarga.app",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.INTERNET",
+        "android.permission.CALL_PHONE",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/logo/app_logo.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Krishi Marga requires camera access to capture leaf photos."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Krishi Marga requires photo access to inspect leaf images."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Krishi Marga uses location to identify nearby Agri Kendras."
+        }
+      ],
+      "expo-splash-screen",
+      "expo-status-bar",
+      "expo-video"
+    ],
+    "extra": {
+      "backendUrl": "https://krishimarga01.app.n8n.cloud/webhook/detect-disease",
+      "eas": {
+        "projectId": "25950fab-ad41-41e7-8db1-849694df9c17"
+      }
+    },
+    "owner": "krishimarga01"
+  }
+}

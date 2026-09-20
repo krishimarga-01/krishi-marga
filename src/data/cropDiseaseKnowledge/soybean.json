@@ -1,0 +1,138 @@
+{
+  "crop": "Soybean",
+  "crop_id": "soybean",
+  "category": "oilseed",
+  "diseases": [
+    {
+      "disease_name": "Bacterial Blight",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Bacterial Blight."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Caterpillar Damage",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Caterpillar Damage."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Diabrotica Speciosa",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Diabrotica Speciosa."
+      ],
+      "severity": "Severe",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Downy Mildew",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Downy Mildew."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Mosaic Virus",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Mosaic Virus."
+      ],
+      "severity": "Severe",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Powdery Mildew",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Powdery Mildew."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Rust",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Rust."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Southern Blight",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Southern Blight."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Thick, deep-green foliage with vigorous vegetative spread",
+    "Uniform capitulum/pod development free from sucking pest damage",
+    "Clean stem base without collar rot or gummy exudates",
+    "Bright yellow flower opening with high honeybee activity"
+  ],
+  "management": [
+    "Remove weed hosts from field margins that harbor sucking pests and viral inoculum",
+    "Spray recommended protective fungicides or bio-agents on appearance of initial leaf spots",
+    "Avoid moisture stress during flowering and pod development phases"
+  ],
+  "prevention": [
+    "Sow treated seeds in well-drained loamy soils during recommended planting window",
+    "Maintain optimum field density and destroy crop residues after harvest",
+    "Apply recommended gypsum and sulfur for healthy seed and oil development",
+    "Monitor regularly for early nymph/larval infestation"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "crop": "Tapioca",
+  "crop_id": "tapioca",
+  "category": "vegetable",
+  "diseases": [
+    {
+      "disease_name": "Bacterial Blight",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Bacterial Blight."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Brown Streak Disease",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Brown Streak Disease."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Green Mottle",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Green Mottle."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Mosaic Disease",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Mosaic Disease."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Turgid, deep green leaves with crisp texture and no chlorosis",
+    "Vigorous flowering and uniform fruit set free from blemishes or sunken spots",
+    "Clean root crown without fungal damping-off or collar decay",
+    "Absence of curling, puckering, or mosaic leaf mottling"
+  ],
+  "management": [
+    "Prune lower diseased foliage with sanitized secateurs; dispose of off-field",
+    "Apply targeted bio-fungicides (Bacillus subtilis / Trichoderma) or copper-based sprays",
+    "Control sucking insect vectors promptly using yellow sticky traps and botanical sprays"
+  ],
+  "prevention": [
+    "Adopt raised nursery beds with nylon insect netting to prevent early vector transmission",
+    "Mulch beds with silver-black reflective plastic mulch to deter thrips and aphids",
+    "Water using drip irrigation at the base to keep foliage completely dry",
+    "Regularly rogue out and safely destroy virus-infected or blighted plants"
+  ]
+}

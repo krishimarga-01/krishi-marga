@@ -1,0 +1,41 @@
+{
+  "crop": "Carrot",
+  "crop_id": "carrot",
+  "category": "vegetable",
+  "diseases": [
+    {
+      "disease_name": "Alternaria Leaf Blight",
+      "scientific_name": "Alternaria dauci",
+      "symptoms": [
+        "Small greenish-brown water-soaked spots on leaflets turning dark brown/black with yellow margins"
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Spray Mancozeb @ 2 g/L"
+      ],
+      "prevention": [
+        "3-year crop rotation",
+        "Avoid excessive nitrogen application"
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Turgid, deep green leaves with crisp texture and no chlorosis",
+    "Vigorous flowering and uniform fruit set free from blemishes or sunken spots",
+    "Clean root crown without fungal damping-off or collar decay",
+    "Absence of curling, puckering, or mosaic leaf mottling"
+  ],
+  "management": [
+    "Prune lower diseased foliage with sanitized secateurs; dispose of off-field",
+    "Apply targeted bio-fungicides (Bacillus subtilis / Trichoderma) or copper-based sprays",
+    "Control sucking insect vectors promptly using yellow sticky traps and botanical sprays"
+  ],
+  "prevention": [
+    "Adopt raised nursery beds with nylon insect netting to prevent early vector transmission",
+    "Mulch beds with silver-black reflective plastic mulch to deter thrips and aphids",
+    "Water using drip irrigation at the base to keep foliage completely dry",
+    "Regularly rogue out and safely destroy virus-infected or blighted plants"
+  ]
+}

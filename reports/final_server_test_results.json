@@ -1,0 +1,199 @@
+{
+  "timestamp": "2026-09-11 19:07:10",
+  "multi_image_benchmarks": [
+    {
+      "image_count": 1,
+      "status": 200,
+      "latency_ms": 3497.3385999910533,
+      "success": true,
+      "model_provider": "Gemini 3.5 Flash Lite",
+      "requestId": "KRISHI-20260911-AG33"
+    },
+    {
+      "image_count": 2,
+      "status": 200,
+      "latency_ms": 3004.981999984011,
+      "success": true,
+      "model_provider": "Gemini 3.5 Flash Lite",
+      "requestId": "KRISHI-20260911-YVMU"
+    },
+    {
+      "image_count": 5,
+      "status": 200,
+      "latency_ms": 3702.8503000037745,
+      "success": true,
+      "model_provider": "Gemini 3.5 Flash Lite",
+      "requestId": "KRISHI-20260911-5VAZ"
+    },
+    {
+      "image_count": 10,
+      "status": 200,
+      "latency_ms": 4011.888100008946,
+      "success": true,
+      "model_provider": "Gemini 3.5 Flash Lite",
+      "requestId": "KRISHI-20260911-HIAW"
+    }
+  ],
+  "repeatability_test_10_runs": [
+    {
+      "run": 1,
+      "status": 200,
+      "latency_ms": 2933.2846000324935,
+      "disease": "Anthracnose (Dieback and Fruit Rot)",
+      "confidence": 0.92,
+      "model_provider": "Gemini 3.5 Flash Lite",
+      "requestId": "KRISHI-20260911-QOY7"
+    },
+    {
+      "run": 2,
+      "status": 200,
+      "latency_ms": 2862.1349000022747,
+      "disease": "Anthracnose (Die-back and Fruit Rot)",
+      "confidence": 0.92,
+      "model_provider": "Gemini 3.5 Flash Lite",
+      "requestId": "KRISHI-20260911-R2GT"
+    },
+    {
+      "run": 3,
+      "status": 200,
+      "latency_ms": 2736.3021000055596,
+      "disease": "Anthracnose",
+      "confidence": 0.92,
+      "model_provider": "Gemini 3.5 Flash Lite",
+      "requestId": "KRISHI-20260911-R3WJ"
+    },
+    {
+      "run": 4,
+      "status": 200,
+      "latency_ms": 2635.9554999507964,
+      "disease": "Anthracnose",
+      "confidence": 0.88,
+      "model_provider": "Gemini 3.5 Flash Lite",
+      "requestId": "KRISHI-20260911-JRYS"
+    },
+    {
+      "run": 5,
+      "status": 200,
+      "latency_ms": 2882.6998000149615,
+      "disease": "Anthracnose (Fruit Rot / Dieback)",
+      "confidence": 0.92,
+      "model_provider": "Gemini 3.5 Flash Lite",
+      "requestId": "KRISHI-20260911-0HPM"
+    },
+    {
+      "run": 6,
+      "status": 200,
+      "latency_ms": 2836.2729999935254,
+      "disease": "Anthracnose (Fruit Rot / Dieback)",
+      "confidence": 0.92,
+      "model_provider": "Gemini 3.5 Flash Lite",
+      "requestId": "KRISHI-20260911-8AUC"
+    },
+    {
+      "run": 7,
+      "status": 200,
+      "latency_ms": 3159.1344000189565,
+      "disease": "Anthracnose",
+      "confidence": 0.92,
+      "model_provider": "Gemini 3.5 Flash Lite",
+      "requestId": "KRISHI-20260911-YV37"
+    },
+    {
+      "run": 8,
+      "status": 200,
+      "latency_ms": 2741.445699997712,
+      "disease": "Anthracnose",
+      "confidence": 0.88,
+      "model_provider": "Gemini 3.5 Flash Lite",
+      "requestId": "KRISHI-20260911-WI07"
+    },
+    {
+      "run": 9,
+      "status": 200,
+      "latency_ms": 3067.5773000111803,
+      "disease": "Anthracnose (Fruit Rot / Dieback)",
+      "confidence": 0.92,
+      "model_provider": "Gemini 3.5 Flash Lite",
+      "requestId": "KRISHI-20260911-K7EJ"
+    },
+    {
+      "run": 10,
+      "status": 200,
+      "latency_ms": 2975.8303000126034,
+      "disease": "Anthracnose (Fruit Rot / Dieback)",
+      "confidence": 0.92,
+      "model_provider": "Gemini 3.5 Flash Lite",
+      "requestId": "KRISHI-20260911-TR42"
+    }
+  ],
+  "concurrency_test_5_clients": {
+    "total_clients": 5,
+    "successful_clients": 5,
+    "total_wall_time_ms": 3595.7008000114,
+    "individual_latencies_ms": [
+      2976.1647999985144,
+      3083.0929999938235,
+      3384.503399953246,
+      3498.6969000310637,
+      3583.244899986312
+    ]
+  },
+  "failure_injection_suite": [
+    {
+      "scenario": "No images uploaded",
+      "status": 200,
+      "errorCode": "NO_IMAGES_UPLOADED",
+      "success": false,
+      "test_passed": true
+    },
+    {
+      "scenario": "Unsupported crop",
+      "status": 200,
+      "errorCode": "UNSUPPORTED_CROP",
+      "success": false,
+      "test_passed": true
+    },
+    {
+      "scenario": "Multiple crops requested",
+      "status": 200,
+      "errorCode": "MULTIPLE_CROPS_NOT_SUPPORTED",
+      "success": false,
+      "test_passed": true
+    },
+    {
+      "scenario": "Too many images (>10)",
+      "status": 200,
+      "errorCode": "TOO_MANY_IMAGES",
+      "success": false,
+      "test_passed": true
+    },
+    {
+      "scenario": "Missing crop field",
+      "status": 200,
+      "errorCode": "INVALID_CROP",
+      "success": false,
+      "test_passed": true
+    },
+    {
+      "scenario": "Language Kannada (kn)",
+      "status": 200,
+      "errorCode": null,
+      "success": true,
+      "test_passed": true
+    },
+    {
+      "scenario": "Language Tamil (ta)",
+      "status": 200,
+      "errorCode": null,
+      "success": true,
+      "test_passed": true
+    },
+    {
+      "scenario": "Language Telugu (te)",
+      "status": 200,
+      "errorCode": null,
+      "success": true,
+      "test_passed": true
+    }
+  ]
+}

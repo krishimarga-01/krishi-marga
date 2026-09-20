@@ -1,0 +1,340 @@
+source_path,dataset_name,crop,class,image_count,source_type,license_if_known,selected_for_training
+F:\coconut_final\train\Bud_Root_Dropping,coconut_final,Coconut,Bud_Root_Dropping (train),362,Extracted Folder,Open Access / CC BY 4.0,YES
+F:\coconut_final\train\Bud_Rot,coconut_final,Coconut,Bud_Rot (train),278,Extracted Folder,Open Access / CC BY 4.0,YES
+F:\coconut_final\train\Gray_Leaf_Spot,coconut_final,Coconut,Gray_Leaf_Spot (train),1473,Extracted Folder,Open Access / CC BY 4.0,YES
+F:\coconut_final\train\Leaf_Rot,coconut_final,Coconut,Leaf_Rot (train),1149,Extracted Folder,Open Access / CC BY 4.0,YES
+F:\coconut_final\train\Stem_Bleeding,coconut_final,Coconut,Stem_Bleeding (train),671,Extracted Folder,Open Access / CC BY 4.0,YES
+F:\coconut_final\valid\Bud_Root_Dropping,coconut_final,Coconut,Bud_Root_Dropping (valid),75,Extracted Folder,Open Access / CC BY 4.0,YES
+F:\coconut_final\valid\Bud_Rot,coconut_final,Coconut,Bud_Rot (valid),120,Extracted Folder,Open Access / CC BY 4.0,YES
+F:\coconut_final\valid\Gray_Leaf_Spot,coconut_final,Coconut,Gray_Leaf_Spot (valid),315,Extracted Folder,Open Access / CC BY 4.0,YES
+F:\coconut_final\valid\Leaf_Rot,coconut_final,Coconut,Leaf_Rot (valid),247,Extracted Folder,Open Access / CC BY 4.0,YES
+F:\coconut_final\valid\Stem_Bleeding,coconut_final,Coconut,Stem_Bleeding (valid),182,Extracted Folder,Open Access / CC BY 4.0,YES
+F:\coconut_final\test\Bud_Root_Dropping,coconut_final,Coconut,Bud_Root_Dropping (test),77,Extracted Folder,Open Access / CC BY 4.0,YES
+F:\coconut_final\test\Bud_Rot,coconut_final,Coconut,Bud_Rot (test),72,Extracted Folder,Open Access / CC BY 4.0,YES
+F:\coconut_final\test\Gray_Leaf_Spot,coconut_final,Coconut,Gray_Leaf_Spot (test),315,Extracted Folder,Open Access / CC BY 4.0,YES
+F:\coconut_final\test\Leaf_Rot,coconut_final,Coconut,Leaf_Rot (test),246,Extracted Folder,Open Access / CC BY 4.0,YES
+F:\coconut_final\test\Stem_Bleeding,coconut_final,Coconut,Stem_Bleeding (test),153,Extracted Folder,Open Access / CC BY 4.0,YES
+F:\SIH_DATASET\processed\banana_leaf\train\cordana,SIH_DATASET/processed/banana_leaf,Banana Leaf,cordana (train),449,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\banana_leaf\train\healthy,SIH_DATASET/processed/banana_leaf,Banana Leaf,healthy (train),423,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\banana_leaf\train\pestalotiopsis,SIH_DATASET/processed/banana_leaf,Banana Leaf,pestalotiopsis (train),458,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\banana_leaf\train\sigatoka,SIH_DATASET/processed/banana_leaf,Banana Leaf,sigatoka (train),698,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\banana_leaf\valid\cordana,SIH_DATASET/processed/banana_leaf,Banana Leaf,cordana (valid),56,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\banana_leaf\valid\healthy,SIH_DATASET/processed/banana_leaf,Banana Leaf,healthy (valid),52,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\banana_leaf\valid\pestalotiopsis,SIH_DATASET/processed/banana_leaf,Banana Leaf,pestalotiopsis (valid),57,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\banana_leaf\valid\sigatoka,SIH_DATASET/processed/banana_leaf,Banana Leaf,sigatoka (valid),87,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\banana_leaf\test\cordana,SIH_DATASET/processed/banana_leaf,Banana Leaf,cordana (test),57,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\banana_leaf\test\healthy,SIH_DATASET/processed/banana_leaf,Banana Leaf,healthy (test),54,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\banana_leaf\test\pestalotiopsis,SIH_DATASET/processed/banana_leaf,Banana Leaf,pestalotiopsis (test),58,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\banana_leaf\test\sigatoka,SIH_DATASET/processed/banana_leaf,Banana Leaf,sigatoka (test),88,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\black_pepper\train\Footrot,SIH_DATASET/processed/black_pepper,Black Pepper,Footrot (train),400,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\black_pepper\train\Pollu_Disease,SIH_DATASET/processed/black_pepper,Black Pepper,Pollu_Disease (train),400,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\black_pepper\train\Slow-Decline,SIH_DATASET/processed/black_pepper,Black Pepper,Slow-Decline (train),400,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\black_pepper\valid\Footrot,SIH_DATASET/processed/black_pepper,Black Pepper,Footrot (valid),50,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\black_pepper\valid\Pollu_Disease,SIH_DATASET/processed/black_pepper,Black Pepper,Pollu_Disease (valid),50,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\black_pepper\valid\Slow-Decline,SIH_DATASET/processed/black_pepper,Black Pepper,Slow-Decline (valid),50,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\black_pepper\test\Footrot,SIH_DATASET/processed/black_pepper,Black Pepper,Footrot (test),50,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\black_pepper\test\Pollu_Disease,SIH_DATASET/processed/black_pepper,Black Pepper,Pollu_Disease (test),50,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\black_pepper\test\Slow-Decline,SIH_DATASET/processed/black_pepper,Black Pepper,Slow-Decline (test),50,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\cotton\train\bacterial_blight,SIH_DATASET/processed/cotton,Cotton,bacterial_blight (train),358,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\cotton\train\curl_virus,SIH_DATASET/processed/cotton,Cotton,curl_virus (train),333,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\cotton\train\fussarium_wilt,SIH_DATASET/processed/cotton,Cotton,fussarium_wilt (train),335,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\cotton\train\healthy,SIH_DATASET/processed/cotton,Cotton,healthy (train),340,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\cotton\valid\bacterial_blight,SIH_DATASET/processed/cotton,Cotton,bacterial_blight (valid),44,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\cotton\valid\curl_virus,SIH_DATASET/processed/cotton,Cotton,curl_virus (valid),41,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\cotton\valid\fussarium_wilt,SIH_DATASET/processed/cotton,Cotton,fussarium_wilt (valid),41,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\cotton\valid\healthy,SIH_DATASET/processed/cotton,Cotton,healthy (valid),42,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\cotton\test\bacterial_blight,SIH_DATASET/processed/cotton,Cotton,bacterial_blight (test),46,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\cotton\test\curl_virus,SIH_DATASET/processed/cotton,Cotton,curl_virus (test),43,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\cotton\test\fussarium_wilt,SIH_DATASET/processed/cotton,Cotton,fussarium_wilt (test),43,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\cotton\test\healthy,SIH_DATASET/processed/cotton,Cotton,healthy (test),43,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\ragi\train\Healthy,SIH_DATASET/processed/ragi,Ragi,Healthy (train),1060,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\ragi\train\blast,SIH_DATASET/processed/ragi,Ragi,blast (train),2340,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\ragi\train\rust,SIH_DATASET/processed/ragi,Ragi,rust (train),1647,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\ragi\valid\Healthy,SIH_DATASET/processed/ragi,Ragi,Healthy (valid),132,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\ragi\valid\blast,SIH_DATASET/processed/ragi,Ragi,blast (valid),292,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\ragi\valid\rust,SIH_DATASET/processed/ragi,Ragi,rust (valid),205,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\ragi\test\Healthy,SIH_DATASET/processed/ragi,Ragi,Healthy (test),134,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\ragi\test\blast,SIH_DATASET/processed/ragi,Ragi,blast (test),294,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\ragi\test\rust,SIH_DATASET/processed/ragi,Ragi,rust (test),207,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\train\Anthracnose,SIH_DATASET/processed/tea,Tea,Anthracnose (train),80,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\train\algal_leaf,SIH_DATASET/processed/tea,Tea,algal_leaf (train),90,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\train\bird_eye_spot,SIH_DATASET/processed/tea,Tea,bird_eye_spot (train),80,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\train\brown_blight,SIH_DATASET/processed/tea,Tea,brown_blight (train),90,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\train\gray_light,SIH_DATASET/processed/tea,Tea,gray_light (train),80,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\train\healthy,SIH_DATASET/processed/tea,Tea,healthy (train),59,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\train\red_leaf_spot,SIH_DATASET/processed/tea,Tea,red_leaf_spot (train),114,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\train\white_spot,SIH_DATASET/processed/tea,Tea,white_spot (train),113,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\valid\Anthracnose,SIH_DATASET/processed/tea,Tea,Anthracnose (valid),10,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\valid\algal_leaf,SIH_DATASET/processed/tea,Tea,algal_leaf (valid),11,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\valid\bird_eye_spot,SIH_DATASET/processed/tea,Tea,bird_eye_spot (valid),10,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\valid\brown_blight,SIH_DATASET/processed/tea,Tea,brown_blight (valid),11,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\valid\gray_light,SIH_DATASET/processed/tea,Tea,gray_light (valid),10,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\valid\healthy,SIH_DATASET/processed/tea,Tea,healthy (valid),7,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\valid\red_leaf_spot,SIH_DATASET/processed/tea,Tea,red_leaf_spot (valid),14,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\valid\white_spot,SIH_DATASET/processed/tea,Tea,white_spot (valid),14,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\test\Anthracnose,SIH_DATASET/processed/tea,Tea,Anthracnose (test),10,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\test\algal_leaf,SIH_DATASET/processed/tea,Tea,algal_leaf (test),12,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\test\bird_eye_spot,SIH_DATASET/processed/tea,Tea,bird_eye_spot (test),10,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\test\brown_blight,SIH_DATASET/processed/tea,Tea,brown_blight (test),12,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\test\gray_light,SIH_DATASET/processed/tea,Tea,gray_light (test),10,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\test\healthy,SIH_DATASET/processed/tea,Tea,healthy (test),8,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\test\red_leaf_spot,SIH_DATASET/processed/tea,Tea,red_leaf_spot (test),15,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tea\test\white_spot,SIH_DATASET/processed/tea,Tea,white_spot (test),15,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\train\Bacterial_spot,SIH_DATASET/processed/tomato,Tomato,Bacterial_spot (train),2826,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\train\Early_blight,SIH_DATASET/processed/tomato,Tomato,Early_blight (train),2455,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\train\Late_blight,SIH_DATASET/processed/tomato,Tomato,Late_blight (train),3113,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\train\Leaf_Mold,SIH_DATASET/processed/tomato,Tomato,Leaf_Mold (train),2754,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\train\Septoria_leaf_spot,SIH_DATASET/processed/tomato,Tomato,Septoria_leaf_spot (train),2882,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\train\Spider_mites Two-spotted_spider_mite,SIH_DATASET/processed/tomato,Tomato,Spider_mites Two-spotted_spider_mite (train),1747,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\train\Target_Spot,SIH_DATASET/processed/tomato,Tomato,Target_Spot (train),1827,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\train\Tomato_Yellow_Leaf_Curl_Virus,SIH_DATASET/processed/tomato,Tomato,Tomato_Yellow_Leaf_Curl_Virus (train),2039,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\train\Tomato_mosaic_virus,SIH_DATASET/processed/tomato,Tomato,Tomato_mosaic_virus (train),2153,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\train\healthy,SIH_DATASET/processed/tomato,Tomato,healthy (train),3051,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\train\powdery_mildew,SIH_DATASET/processed/tomato,Tomato,powdery_mildew (train),1004,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\valid\Bacterial_spot,SIH_DATASET/processed/tomato,Tomato,Bacterial_spot (valid),366,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\valid\Early_blight,SIH_DATASET/processed/tomato,Tomato,Early_blight (valid),321,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\valid\Late_blight,SIH_DATASET/processed/tomato,Tomato,Late_blight (valid),396,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\valid\Leaf_Mold,SIH_DATASET/processed/tomato,Tomato,Leaf_Mold (valid),369,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\valid\Septoria_leaf_spot,SIH_DATASET/processed/tomato,Tomato,Septoria_leaf_spot (valid),373,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\valid\Spider_mites Two-spotted_spider_mite,SIH_DATASET/processed/tomato,Tomato,Spider_mites Two-spotted_spider_mite (valid),217,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\valid\Target_Spot,SIH_DATASET/processed/tomato,Tomato,Target_Spot (valid),228,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\valid\Tomato_Yellow_Leaf_Curl_Virus,SIH_DATASET/processed/tomato,Tomato,Tomato_Yellow_Leaf_Curl_Virus (valid),249,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\valid\Tomato_mosaic_virus,SIH_DATASET/processed/tomato,Tomato,Tomato_mosaic_virus (valid),292,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\valid\healthy,SIH_DATASET/processed/tomato,Tomato,healthy (valid),403,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\valid\powdery_mildew,SIH_DATASET/processed/tomato,Tomato,powdery_mildew (valid),126,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\test\Bacterial_spot,SIH_DATASET/processed/tomato,Tomato,Bacterial_spot (test),366,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\test\Early_blight,SIH_DATASET/processed/tomato,Tomato,Early_blight (test),322,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\test\Late_blight,SIH_DATASET/processed/tomato,Tomato,Late_blight (test),396,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\test\Leaf_Mold,SIH_DATASET/processed/tomato,Tomato,Leaf_Mold (test),370,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\test\Septoria_leaf_spot,SIH_DATASET/processed/tomato,Tomato,Septoria_leaf_spot (test),373,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\test\Spider_mites Two-spotted_spider_mite,SIH_DATASET/processed/tomato,Tomato,Spider_mites Two-spotted_spider_mite (test),218,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\test\Target_Spot,SIH_DATASET/processed/tomato,Tomato,Target_Spot (test),229,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\test\Tomato_Yellow_Leaf_Curl_Virus,SIH_DATASET/processed/tomato,Tomato,Tomato_Yellow_Leaf_Curl_Virus (test),249,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\test\Tomato_mosaic_virus,SIH_DATASET/processed/tomato,Tomato,Tomato_mosaic_virus (test),292,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\test\healthy,SIH_DATASET/processed/tomato,Tomato,healthy (test),403,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\SIH_DATASET\processed\tomato\test\powdery_mildew,SIH_DATASET/processed/tomato,Tomato,powdery_mildew (test),126,Extracted Pre-split,CC BY-NC-SA 4.0 / Mendeley Data,YES
+F:\Tomato dataset.zip::Bacterial_spot,Tomato dataset.zip,Tomato,Bacterial_spot,2957,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\Tomato dataset.zip::Early_blight,Tomato dataset.zip,Tomato,Early_blight,2957,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\Tomato dataset.zip::Late_blight,Tomato dataset.zip,Tomato,Late_blight,2957,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\Tomato dataset.zip::Leaf_Mold,Tomato dataset.zip,Tomato,Leaf_Mold,2957,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\Tomato dataset.zip::Septoria_leaf_spot,Tomato dataset.zip,Tomato,Septoria_leaf_spot,2957,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\Tomato dataset.zip::Spider_mites Two-spotted_spider_mite,Tomato dataset.zip,Tomato,Spider_mites Two-spotted_spider_mite,2957,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\Tomato dataset.zip::Target_Spot,Tomato dataset.zip,Tomato,Target_Spot,2957,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\Tomato dataset.zip::Tomato_Yellow_Leaf_Curl_Virus,Tomato dataset.zip,Tomato,Tomato_Yellow_Leaf_Curl_Virus,2957,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\Tomato dataset.zip::Tomato_mosaic_virus,Tomato dataset.zip,Tomato,Tomato_mosaic_virus,2957,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\Tomato dataset.zip::healthy,Tomato dataset.zip,Tomato,healthy,2957,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\Tomato dataset.zip::powdery_mildew,Tomato dataset.zip,Tomato,powdery_mildew,2957,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Apple__black_rot,archive (1).zip,PlantVillage Multi-Crop (23 species),Apple__black_rot,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Apple__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Apple__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Apple__rust,archive (1).zip,PlantVillage Multi-Crop (23 species),Apple__rust,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Apple__scab,archive (1).zip,PlantVillage Multi-Crop (23 species),Apple__scab,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Cassava__bacterial_blight,archive (1).zip,PlantVillage Multi-Crop (23 species),Cassava__bacterial_blight,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Cassava__brown_streak_disease,archive (1).zip,PlantVillage Multi-Crop (23 species),Cassava__brown_streak_disease,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Cassava__green_mottle,archive (1).zip,PlantVillage Multi-Crop (23 species),Cassava__green_mottle,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Cassava__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Cassava__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Cassava__mosaic_disease,archive (1).zip,PlantVillage Multi-Crop (23 species),Cassava__mosaic_disease,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Cherry__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Cherry__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Cherry__powdery_mildew,archive (1).zip,PlantVillage Multi-Crop (23 species),Cherry__powdery_mildew,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Chili__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Chili__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Chili__leaf curl,archive (1).zip,PlantVillage Multi-Crop (23 species),Chili__leaf curl,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Chili__leaf spot,archive (1).zip,PlantVillage Multi-Crop (23 species),Chili__leaf spot,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Chili__whitefly,archive (1).zip,PlantVillage Multi-Crop (23 species),Chili__whitefly,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Chili__yellowish,archive (1).zip,PlantVillage Multi-Crop (23 species),Chili__yellowish,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Coffee__cercospora_leaf_spot,archive (1).zip,PlantVillage Multi-Crop (23 species),Coffee__cercospora_leaf_spot,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Coffee__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Coffee__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Coffee__red_spider_mite,archive (1).zip,PlantVillage Multi-Crop (23 species),Coffee__red_spider_mite,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Coffee__rust,archive (1).zip,PlantVillage Multi-Crop (23 species),Coffee__rust,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Corn__common_rust,archive (1).zip,PlantVillage Multi-Crop (23 species),Corn__common_rust,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Corn__gray_leaf_spot,archive (1).zip,PlantVillage Multi-Crop (23 species),Corn__gray_leaf_spot,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Corn__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Corn__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Corn__northern_leaf_blight,archive (1).zip,PlantVillage Multi-Crop (23 species),Corn__northern_leaf_blight,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Cucumber__diseased,archive (1).zip,PlantVillage Multi-Crop (23 species),Cucumber__diseased,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Cucumber__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Cucumber__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Gauva__diseased,archive (1).zip,PlantVillage Multi-Crop (23 species),Gauva__diseased,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Gauva__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Gauva__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Grape__black_measles,archive (1).zip,PlantVillage Multi-Crop (23 species),Grape__black_measles,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Grape__black_rot,archive (1).zip,PlantVillage Multi-Crop (23 species),Grape__black_rot,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Grape__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Grape__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Grape__leaf_blight_(isariopsis_leaf_spot),archive (1).zip,PlantVillage Multi-Crop (23 species),Grape__leaf_blight_(isariopsis_leaf_spot),898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Jamun__diseased,archive (1).zip,PlantVillage Multi-Crop (23 species),Jamun__diseased,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Jamun__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Jamun__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Lemon__diseased,archive (1).zip,PlantVillage Multi-Crop (23 species),Lemon__diseased,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Lemon__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Lemon__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Mango__diseased,archive (1).zip,PlantVillage Multi-Crop (23 species),Mango__diseased,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Mango__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Mango__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Peach__bacterial_spot,archive (1).zip,PlantVillage Multi-Crop (23 species),Peach__bacterial_spot,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Peach__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Peach__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Pepper_bell__bacterial_spot,archive (1).zip,PlantVillage Multi-Crop (23 species),Pepper_bell__bacterial_spot,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Pepper_bell__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Pepper_bell__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Pomegranate__diseased,archive (1).zip,PlantVillage Multi-Crop (23 species),Pomegranate__diseased,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Pomegranate__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Pomegranate__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Potato__early_blight,archive (1).zip,PlantVillage Multi-Crop (23 species),Potato__early_blight,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Potato__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Potato__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Potato__late_blight,archive (1).zip,PlantVillage Multi-Crop (23 species),Potato__late_blight,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Rice__brown_spot,archive (1).zip,PlantVillage Multi-Crop (23 species),Rice__brown_spot,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Rice__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Rice__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Rice__hispa,archive (1).zip,PlantVillage Multi-Crop (23 species),Rice__hispa,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Rice__leaf_blast,archive (1).zip,PlantVillage Multi-Crop (23 species),Rice__leaf_blast,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Rice__neck_blast,archive (1).zip,PlantVillage Multi-Crop (23 species),Rice__neck_blast,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Soybean__bacterial_blight,archive (1).zip,PlantVillage Multi-Crop (23 species),Soybean__bacterial_blight,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Soybean__caterpillar,archive (1).zip,PlantVillage Multi-Crop (23 species),Soybean__caterpillar,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Soybean__diabrotica_speciosa,archive (1).zip,PlantVillage Multi-Crop (23 species),Soybean__diabrotica_speciosa,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Soybean__downy_mildew,archive (1).zip,PlantVillage Multi-Crop (23 species),Soybean__downy_mildew,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Soybean__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Soybean__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Soybean__mosaic_virus,archive (1).zip,PlantVillage Multi-Crop (23 species),Soybean__mosaic_virus,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Soybean__powdery_mildew,archive (1).zip,PlantVillage Multi-Crop (23 species),Soybean__powdery_mildew,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Soybean__rust,archive (1).zip,PlantVillage Multi-Crop (23 species),Soybean__rust,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Soybean__southern_blight,archive (1).zip,PlantVillage Multi-Crop (23 species),Soybean__southern_blight,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Strawberry___leaf_scorch,archive (1).zip,PlantVillage Multi-Crop (23 species),Strawberry___leaf_scorch,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Strawberry__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Strawberry__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Sugarcane__bacterial_blight,archive (1).zip,PlantVillage Multi-Crop (23 species),Sugarcane__bacterial_blight,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Sugarcane__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Sugarcane__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Sugarcane__red_rot,archive (1).zip,PlantVillage Multi-Crop (23 species),Sugarcane__red_rot,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Sugarcane__red_stripe,archive (1).zip,PlantVillage Multi-Crop (23 species),Sugarcane__red_stripe,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Sugarcane__rust,archive (1).zip,PlantVillage Multi-Crop (23 species),Sugarcane__rust,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Tea__algal_leaf,archive (1).zip,PlantVillage Multi-Crop (23 species),Tea__algal_leaf,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Tea__anthracnose,archive (1).zip,PlantVillage Multi-Crop (23 species),Tea__anthracnose,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Tea__bird_eye_spot,archive (1).zip,PlantVillage Multi-Crop (23 species),Tea__bird_eye_spot,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Tea__brown_blight,archive (1).zip,PlantVillage Multi-Crop (23 species),Tea__brown_blight,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Tea__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Tea__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Tea__red_leaf_spot,archive (1).zip,PlantVillage Multi-Crop (23 species),Tea__red_leaf_spot,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Tomato__bacterial_spot,archive (1).zip,PlantVillage Multi-Crop (23 species),Tomato__bacterial_spot,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Tomato__early_blight,archive (1).zip,PlantVillage Multi-Crop (23 species),Tomato__early_blight,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Tomato__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Tomato__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Tomato__late_blight,archive (1).zip,PlantVillage Multi-Crop (23 species),Tomato__late_blight,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Tomato__leaf_mold,archive (1).zip,PlantVillage Multi-Crop (23 species),Tomato__leaf_mold,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Tomato__mosaic_virus,archive (1).zip,PlantVillage Multi-Crop (23 species),Tomato__mosaic_virus,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Tomato__septoria_leaf_spot,archive (1).zip,PlantVillage Multi-Crop (23 species),Tomato__septoria_leaf_spot,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Tomato__spider_mites_(two_spotted_spider_mite),archive (1).zip,PlantVillage Multi-Crop (23 species),Tomato__spider_mites_(two_spotted_spider_mite),898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Tomato__target_spot,archive (1).zip,PlantVillage Multi-Crop (23 species),Tomato__target_spot,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Tomato__yellow_leaf_curl_virus,archive (1).zip,PlantVillage Multi-Crop (23 species),Tomato__yellow_leaf_curl_virus,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Wheat__brown_rust,archive (1).zip,PlantVillage Multi-Crop (23 species),Wheat__brown_rust,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Wheat__healthy,archive (1).zip,PlantVillage Multi-Crop (23 species),Wheat__healthy,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Wheat__septoria,archive (1).zip,PlantVillage Multi-Crop (23 species),Wheat__septoria,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\archive (1).zip::Wheat__yellow_rust,archive (1).zip,PlantVillage Multi-Crop (23 species),Wheat__yellow_rust,898,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\banana fruit dataset 0.zip::overripe,banana fruit dataset 0.zip,Banana,overripe,3369,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\banana fruit dataset 0.zip::ripe,banana fruit dataset 0.zip,Banana,ripe,3369,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\banana fruit dataset 0.zip::rotten,banana fruit dataset 0.zip,Banana,rotten,3369,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\banana fruit dataset 0.zip::unripe,banana fruit dataset 0.zip,Banana,unripe,3369,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\banana leaf dataset.zip::cordana,banana leaf dataset.zip,Banana,cordana,634,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\banana leaf dataset.zip::healthy,banana leaf dataset.zip,Banana,healthy,634,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\banana leaf dataset.zip::pestalotiopsis,banana leaf dataset.zip,Banana,pestalotiopsis,634,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\banana leaf dataset.zip::sigatoka,banana leaf dataset.zip,Banana,sigatoka,634,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\bittergroud.zip::ashgourd_fresh,bittergroud.zip,Bitter Gourd,ashgourd_fresh,300,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\bittergroud.zip::ashgourd_nitrogen,bittergroud.zip,Bitter Gourd,ashgourd_nitrogen,300,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\bittergroud.zip::ashgourd_potassium,bittergroud.zip,Bitter Gourd,ashgourd_potassium,300,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\bittergroud.zip::bittergourd_fresh,bittergroud.zip,Bitter Gourd,bittergourd_fresh,300,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\bittergroud.zip::bittergourd_nitrogen,bittergroud.zip,Bitter Gourd,bittergourd_nitrogen,300,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\bittergroud.zip::bittergourd_potassium,bittergroud.zip,Bitter Gourd,bittergourd_potassium,300,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\bittergroud.zip::snakegourd_fresh,bittergroud.zip,Bitter Gourd,snakegourd_fresh,300,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\bittergroud.zip::snakegourd_nitrogen,bittergroud.zip,Bitter Gourd,snakegourd_nitrogen,300,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\bittergroud.zip::snakegourd_potassium,bittergroud.zip,Bitter Gourd,snakegourd_potassium,300,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\black pepper.zip::Footrot,black pepper.zip,Black Pepper,Footrot,500,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\black pepper.zip::Pollu_Disease,black pepper.zip,Black Pepper,Pollu_Disease,500,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\black pepper.zip::Slow-Decline,black pepper.zip,Black Pepper,Slow-Decline,500,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\brinjal tomato pepper.zip::Diseased Brinjal Leaf - Cercospora Leaf Spot,brinjal tomato pepper.zip,Brinjal / Tomato / Pepper,Diseased Brinjal Leaf - Cercospora Leaf Spot,1797,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\brinjal tomato pepper.zip::Fresh Brinjal Leaf,brinjal tomato pepper.zip,Brinjal / Tomato / Pepper,Fresh Brinjal Leaf,1797,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\brinjal tomato pepper.zip::Leaf_Mold,brinjal tomato pepper.zip,Brinjal / Tomato / Pepper,Leaf_Mold,1797,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\brinjal tomato pepper.zip::Pepper__bell___Bacterial_spot,brinjal tomato pepper.zip,Brinjal / Tomato / Pepper,Pepper__bell___Bacterial_spot,1797,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\brinjal tomato pepper.zip::Pepper__bell___healthy,brinjal tomato pepper.zip,Brinjal / Tomato / Pepper,Pepper__bell___healthy,1797,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\brinjal tomato pepper.zip::Septoria_leaf_spot,brinjal tomato pepper.zip,Brinjal / Tomato / Pepper,Septoria_leaf_spot,1797,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\brinjal tomato pepper.zip::healthy,brinjal tomato pepper.zip,Brinjal / Tomato / Pepper,healthy,1797,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\brinjal tomato pepper.zip::powdery_mildew,brinjal tomato pepper.zip,Brinjal / Tomato / Pepper,powdery_mildew,1797,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\brinjal.zip::Brinjal Fruit Creaking,brinjal.zip,Brinjal,Brinjal Fruit Creaking,364,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\brinjal.zip::Healty Brinjal,brinjal.zip,Brinjal,Healty Brinjal,364,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\brinjal.zip::Phomopsis Bright,brinjal.zip,Brinjal,Phomopsis Bright,364,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\brinjal.zip::Shoot and Fruit Borer,brinjal.zip,Brinjal,Shoot and Fruit Borer,364,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\brinjal.zip::Wet Rot,brinjal.zip,Brinjal,Wet Rot,364,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\cabbage.zip::Alternaria_Leaf_Spot,cabbage.zip,Cabbage,Alternaria_Leaf_Spot,200,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\cabbage.zip::Bacterial spot rot,cabbage.zip,Cabbage,Bacterial spot rot,200,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\cabbage.zip::Black Rot,cabbage.zip,Cabbage,Black Rot,200,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\cabbage.zip::Cabbage aphid colony,cabbage.zip,Cabbage,Cabbage aphid colony,200,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\cabbage.zip::Downy Mildew,cabbage.zip,Cabbage,Downy Mildew,200,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\cabbage.zip::No disease,cabbage.zip,Cabbage,No disease,200,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\cabbage.zip::club root,cabbage.zip,Cabbage,club root,200,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\cabbage.zip::ring spot,cabbage.zip,Cabbage,ring spot,200,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\chilli disease dataset.zip::healthy,chilli disease dataset.zip,Chilli,healthy,100,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\chilli disease dataset.zip::unhealthy,chilli disease dataset.zip,Chilli,unhealthy,100,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\chilli plantdataset.zip::Chilli __Whitefly,chilli plantdataset.zip,Chilli,Chilli __Whitefly,844,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\chilli plantdataset.zip::Chilli __Yellowish,chilli plantdataset.zip,Chilli,Chilli __Yellowish,844,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\chilli plantdataset.zip::Chilli__Anthracnos,chilli plantdataset.zip,Chilli,Chilli__Anthracnos,844,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\chilli plantdataset.zip::Chilli__Damping_Off,chilli plantdataset.zip,Chilli,Chilli__Damping_Off,844,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\chilli plantdataset.zip::Chilli__Leaf_Curl_Virus,chilli plantdataset.zip,Chilli,Chilli__Leaf_Curl_Virus,844,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\chilli plantdataset.zip::Chilli__Leaf_Spot,chilli plantdataset.zip,Chilli,Chilli__Leaf_Spot,844,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\chilli plantdataset.zip::Chilli__Veinal_Mottle_Virus,chilli plantdataset.zip,Chilli,Chilli__Veinal_Mottle_Virus,844,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\chilli plantdataset.zip::Chilli___healthy,chilli plantdataset.zip,Chilli,Chilli___healthy,844,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\coconut disease dataset2.zip::Healthy,coconut disease dataset2.zip,Coconut,Healthy,6,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,NO (Duplicate/Non-foliar)
+F:\coconut disease dataset2.zip::Leaf_Spot,coconut disease dataset2.zip,Coconut,Leaf_Spot,6,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,NO (Duplicate/Non-foliar)
+F:\coconut disease dataset2.zip::Pest_Damage,coconut disease dataset2.zip,Coconut,Pest_Damage,6,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,NO (Duplicate/Non-foliar)
+F:\coconut disease dataset2.zip::Yellowing,coconut disease dataset2.zip,Coconut,Yellowing,6,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,NO (Duplicate/Non-foliar)
+F:\coconut tree dataset.zip::Bud Root Dropping,coconut tree dataset.zip,Coconut,Bud Root Dropping,1159,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\coconut tree dataset.zip::Bud Rot,coconut tree dataset.zip,Coconut,Bud Rot,1159,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\coconut tree dataset.zip::Gray Leaf Spot,coconut tree dataset.zip,Coconut,Gray Leaf Spot,1159,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\coconut tree dataset.zip::Leaf Rot,coconut tree dataset.zip,Coconut,Leaf Rot,1159,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\coconut tree dataset.zip::Stem Bleeding,coconut tree dataset.zip,Coconut,Stem Bleeding,1159,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\coffee leaf disese dataset.zip::masks,coffee leaf disese dataset.zip,Coffee,masks,3328,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Corn___Common_Rust,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Corn___Common_Rust,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Corn___Gray_Leaf_Spot,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Corn___Gray_Leaf_Spot,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Corn___Healthy,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Corn___Healthy,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Corn___Northern_Leaf_Blight,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Corn___Northern_Leaf_Blight,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Potato___Early_Blight,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Potato___Early_Blight,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Potato___Healthy,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Potato___Healthy,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Potato___Late_Blight,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Potato___Late_Blight,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Rice_BrownSpot,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Rice_BrownSpot,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Rice_Healthy,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Rice_Healthy,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Rice_Hispa,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Rice_Hispa,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Rice_LeafBlast,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Rice_LeafBlast,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Wheat_Aphid,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Wheat_Aphid,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Wheat_BlackRust,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Wheat_BlackRust,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Wheat_Blast,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Wheat_Blast,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Wheat_BrownRust,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Wheat_BrownRust,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Wheat_CommonRootRot,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Wheat_CommonRootRot,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Wheat_FusariumHeadBlight,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Wheat_FusariumHeadBlight,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Wheat_Healthy,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Wheat_Healthy,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Wheat_LeafBlight,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Wheat_LeafBlight,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Wheat_Mildew,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Wheat_Mildew,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Wheat_Mite,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Wheat_Mite,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Wheat_Septoria,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Wheat_Septoria,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Wheat_Smut,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Wheat_Smut,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Wheat_Stemfly,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Wheat_Stemfly,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Wheat_Tanspot,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Wheat_Tanspot,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\corn (4) potato (3) rice(4) wheat (14).zip::Wheat_YellowRust,corn (4) potato (3) rice(4) wheat (14).zip,Corn / Potato / Rice / Wheat,Wheat_YellowRust,49,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\cotton dataset.zip::bacterial_blight,cotton dataset.zip,Cotton,bacterial_blight,427,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\cotton dataset.zip::curl_virus,cotton dataset.zip,Cotton,curl_virus,427,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\cotton dataset.zip::fussarium_wilt,cotton dataset.zip,Cotton,fussarium_wilt,427,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\cotton dataset.zip::healthy,cotton dataset.zip,Cotton,healthy,427,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\ginger plant dataset.zip::Bacterial_Wilt,ginger plant dataset.zip,Ginger,Bacterial_Wilt,1561,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\ginger plant dataset.zip::Bacterial_wilt,ginger plant dataset.zip,Ginger,Bacterial_wilt,1561,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\ginger plant dataset.zip::Healthy,ginger plant dataset.zip,Ginger,Healthy,1561,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\ground nut.zip,ground nut.zip,Groundnut,General / Unpartitioned,166,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\ragi crop 2.zip,ragi crop 2.zip,Ragi,General / Unpartitioned,0,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,NO (Empty/Corrupt)
+F:\ragi dataset.zip::Healthy,ragi dataset.zip,Ragi,Healthy,2103,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\ragi dataset.zip::blast,ragi dataset.zip,Ragi,blast,2103,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\ragi dataset.zip::rust,ragi dataset.zip,Ragi,rust,2103,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\rice image dataset.zip::Arborio,rice image dataset.zip,Rice (Paddy),Arborio,15000,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,NO (Duplicate/Non-foliar)
+F:\rice image dataset.zip::Basmati,rice image dataset.zip,Rice (Paddy),Basmati,15000,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,NO (Duplicate/Non-foliar)
+F:\rice image dataset.zip::Ipsala,rice image dataset.zip,Rice (Paddy),Ipsala,15000,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,NO (Duplicate/Non-foliar)
+F:\rice image dataset.zip::Jasmine,rice image dataset.zip,Rice (Paddy),Jasmine,15000,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,NO (Duplicate/Non-foliar)
+F:\rice image dataset.zip::Karacadag,rice image dataset.zip,Rice (Paddy),Karacadag,15000,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,NO (Duplicate/Non-foliar)
+F:\rice leaf dataset2.zip::Bacterial Leaf Blight,rice leaf dataset2.zip,Rice (Paddy),Bacterial Leaf Blight,235,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\rice leaf dataset2.zip::Brown Spot,rice leaf dataset2.zip,Rice (Paddy),Brown Spot,235,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\rice leaf dataset2.zip::Healthy Rice Leaf,rice leaf dataset2.zip,Rice (Paddy),Healthy Rice Leaf,235,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\rice leaf dataset2.zip::Leaf Blast,rice leaf dataset2.zip,Rice (Paddy),Leaf Blast,235,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\rice leaf dataset2.zip::Leaf scald,rice leaf dataset2.zip,Rice (Paddy),Leaf scald,235,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\rice leaf dataset2.zip::Narrow Brown Leaf Spot,rice leaf dataset2.zip,Rice (Paddy),Narrow Brown Leaf Spot,235,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\rice leaf dataset2.zip::Rice Hispa,rice leaf dataset2.zip,Rice (Paddy),Rice Hispa,235,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\rice leaf dataset2.zip::Sheath Blight,rice leaf dataset2.zip,Rice (Paddy),Sheath Blight,235,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\rice leaf disese dataset.zip::Bacterial leaf blight,rice leaf disese dataset.zip,Rice (Paddy),Bacterial leaf blight,40,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\rice leaf disese dataset.zip::Brown spot,rice leaf disese dataset.zip,Rice (Paddy),Brown spot,40,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\rice leaf disese dataset.zip::Leaf smut,rice leaf disese dataset.zip,Rice (Paddy),Leaf smut,40,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\rice leaf disese.zip::Bacterial leaf blight,rice leaf disese.zip,Rice (Paddy),Bacterial leaf blight,40,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,NO (Duplicate/Non-foliar)
+F:\rice leaf disese.zip::Brown spot,rice leaf disese.zip,Rice (Paddy),Brown spot,40,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,NO (Duplicate/Non-foliar)
+F:\rice leaf disese.zip::Leaf smut,rice leaf disese.zip,Rice (Paddy),Leaf smut,40,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,NO (Duplicate/Non-foliar)
+F:\tea plant leaf dataset.zip::Anthracnose,tea plant leaf dataset.zip,Tea,Anthracnose,110,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\tea plant leaf dataset.zip::algal leaf,tea plant leaf dataset.zip,Tea,algal leaf,110,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\tea plant leaf dataset.zip::bird eye spot,tea plant leaf dataset.zip,Tea,bird eye spot,110,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\tea plant leaf dataset.zip::brown blight,tea plant leaf dataset.zip,Tea,brown blight,110,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\tea plant leaf dataset.zip::gray light,tea plant leaf dataset.zip,Tea,gray light,110,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\tea plant leaf dataset.zip::healthy,tea plant leaf dataset.zip,Tea,healthy,110,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\tea plant leaf dataset.zip::red leaf spot,tea plant leaf dataset.zip,Tea,red leaf spot,110,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES
+F:\tea plant leaf dataset.zip::white spot,tea plant leaf dataset.zip,Tea,white spot,110,ZIP Archive (Central Dir),Kaggle / Mendeley / Open Dataset,YES

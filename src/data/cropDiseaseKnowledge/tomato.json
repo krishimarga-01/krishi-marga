@@ -1,0 +1,185 @@
+{
+  "crop": "Tomato",
+  "crop_id": "tomato",
+  "category": "vegetable",
+  "diseases": [
+    {
+      "disease_name": "Early Blight",
+      "scientific_name": "Alternaria solani",
+      "symptoms": [
+        "Dark brown circular spots with characteristic concentric rings creating a target-board pattern; leaves yellow and drop prematurely."
+      ],
+      "severity": "Moderate to High",
+      "management": [
+        "Consult local agricultural university / KVK package of practices for registered treatment."
+      ],
+      "prevention": [
+        "Practice crop rotation, field hygiene, and use certified seeds."
+      ]
+    },
+    {
+      "disease_name": "Late Blight",
+      "scientific_name": "Phytophthora infestans",
+      "symptoms": [
+        "Water-soaked irregular pale green lesions on leaves rapidly turning dark brown/black; white fungal downy growth on leaf undersides under high humidity; rapid vine collapse."
+      ],
+      "severity": "Critical",
+      "management": [
+        "Consult local agricultural university / KVK package of practices for registered treatment."
+      ],
+      "prevention": [
+        "Practice crop rotation, field hygiene, and use certified seeds."
+      ]
+    },
+    {
+      "disease_name": "Bacterial Wilt",
+      "scientific_name": "Ralstonia solanacearum",
+      "symptoms": [
+        "Rapid complete wilting of green plant without initial yellowing; vascular browning visible upon stem cross-section; bacterial streaming in clear water."
+      ],
+      "severity": "Critical",
+      "management": [
+        "Consult local agricultural university / KVK package of practices for registered treatment."
+      ],
+      "prevention": [
+        "Practice crop rotation, field hygiene, and use certified seeds."
+      ]
+    },
+    {
+      "disease_name": "Tomato Leaf Curl Virus",
+      "scientific_name": "Tomato leaf curl New Delhi virus (ToLCNDV)",
+      "symptoms": [
+        "Upward curling and puckering of leaf margins; reduction in leaflet size; interveinal chlorosis; severe stunting and bushy appearance with flower dropping."
+      ],
+      "severity": "Severe",
+      "management": [
+        "Consult local agricultural university / KVK package of practices for registered treatment."
+      ],
+      "prevention": [
+        "Practice crop rotation, field hygiene, and use certified seeds."
+      ]
+    },
+    {
+      "disease_name": "Early Blight (Alternaria solani)",
+      "scientific_name": "Alternaria solani",
+      "symptoms": [
+        "Brown to black spots with concentric rings on older leaves",
+        "Target-board pattern on leaves",
+        "Lower leaves turning yellow around spots and dropping prematurely"
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Prune and safely destroy heavily infected lower leaves",
+        "Water at the base of the plant using drip irrigation; keep leaves dry",
+        "Ensure adequate spacing between plants for good airflow",
+        "Apply copper-based or approved mancozeb fungicide early in the morning"
+      ],
+      "prevention": [
+        "Practice crop rotation with non-solanaceous crops for 2 to 3 years",
+        "Mulch around the base of plants to prevent soil splash onto foliage",
+        "Use certified disease-free seeds and seedlings"
+      ]
+    },
+    {
+      "disease_name": "Late Blight (Phytophthora infestans)",
+      "scientific_name": "Phytophthora infestans",
+      "symptoms": [
+        "Water-soaked dark brown or purplish lesions on leaves and stems",
+        "White fungal fuzz visible on the underside of leaves in cool, moist mornings",
+        "Rapid wilting and collapse of leaves"
+      ],
+      "severity": "High",
+      "management": [
+        "Immediately destroy severely affected plants to protect the remaining field",
+        "Avoid overhead sprinkler irrigation",
+        "Apply systemic fungicide recommended by your local Krishi Vigyan Kendra immediately"
+      ],
+      "prevention": [
+        "Avoid planting near potato fields",
+        "Choose well-drained raised beds",
+        "Monitor plants closely during foggy, cool, overcast periods"
+      ]
+    },
+    {
+      "disease_name": "Tomato Leaf Curl Virus (ToLCV)",
+      "scientific_name": "ToLCV",
+      "symptoms": [
+        "Upward curling, puckering, and thickening of leaves",
+        "Severe stunting and bushy appearance of the plant",
+        "Flowers dropping off without setting fruit"
+      ],
+      "severity": "High",
+      "management": [
+        "Rogue out and bury infected plants immediately to reduce virus reservoir",
+        "Manage whitefly vector populations",
+        "Install yellow sticky traps (10-12 traps per acre)"
+      ],
+      "prevention": [
+        "Grow barrier crops like maize or sorghum (3-4 border rows)",
+        "Use whitefly-proof nylon nets in nursery beds",
+        "Choose leaf-curl tolerant hybrid varieties"
+      ]
+    },
+    {
+      "disease_name": "Healthy Crop",
+      "scientific_name": "",
+      "symptoms": [
+        "Vibrant green leaves without spots, lesions, or wilting",
+        "Sturdy stems and vigorous flowering/fruiting"
+      ],
+      "severity": "None",
+      "management": [
+        "Maintain balanced nutrition with well-decomposed farmyard manure (FYM)",
+        "Ensure uniform soil moisture; avoid water stress during flowering",
+        "Inspect leaf undersides weekly for early pest signs"
+      ],
+      "prevention": [
+        "Clean farm tools regularly",
+        "Maintain field sanitation and remove weeds from bunds"
+      ]
+    }
+  ],
+  "pests": [
+    {
+      "pest_name": "Tomato Fruit Borer",
+      "scientific_name": "Helicoverpa armigera",
+      "symptoms": [],
+      "management": [
+        "Install pheromone traps and apply bio-control agents."
+      ]
+    }
+  ],
+  "nutrient_deficiencies": [
+    {
+      "deficiency": "Phosphorus (P)",
+      "symptoms": [],
+      "correction": [
+        "Foliar application of 19:19:19 @ 5g/L or 12:61:0 (MAP) @ 3g/L."
+      ]
+    },
+    {
+      "deficiency": "Calcium (Ca)",
+      "symptoms": [],
+      "correction": [
+        "Foliar spray of Calcium Nitrate (18.8% Ca, 15.5% N) @ 5g/L or Chelated Calcium (EDTA-Ca) @ 1.5g/L during early fruit set."
+      ]
+    }
+  ],
+  "healthy_signs": [
+    "Turgid, deep green leaves with crisp texture and no chlorosis",
+    "Vigorous flowering and uniform fruit set free from blemishes or sunken spots",
+    "Clean root crown without fungal damping-off or collar decay",
+    "Absence of curling, puckering, or mosaic leaf mottling"
+  ],
+  "management": [
+    "Prune lower diseased foliage with sanitized secateurs; dispose of off-field",
+    "Apply targeted bio-fungicides (Bacillus subtilis / Trichoderma) or copper-based sprays",
+    "Control sucking insect vectors promptly using yellow sticky traps and botanical sprays"
+  ],
+  "prevention": [
+    "Adopt raised nursery beds with nylon insect netting to prevent early vector transmission",
+    "Mulch beds with silver-black reflective plastic mulch to deter thrips and aphids",
+    "Water using drip irrigation at the base to keep foliage completely dry",
+    "Regularly rogue out and safely destroy virus-infected or blighted plants"
+  ]
+}

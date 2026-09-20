@@ -1,0 +1,275 @@
+{
+  "crop": "Paddy",
+  "crop_id": "paddy",
+  "category": "cereal",
+  "diseases": [
+    {
+      "disease_name": "Blast (Leaf and Neck Blast)",
+      "scientific_name": "Magnaporthe oryzae (Pyricularia oryzae)",
+      "symptoms": [
+        "Spindle-shaped elliptical eye spots with grey/whitish centers and dark brown margins; blackened rotten panicle neck causing chaffy grain heads (neck blast)."
+      ],
+      "severity": "Critical",
+      "management": [
+        "Consult local agricultural university / KVK package of practices for registered treatment."
+      ],
+      "prevention": [
+        "Practice crop rotation, field hygiene, and use certified seeds."
+      ]
+    },
+    {
+      "disease_name": "Bacterial Leaf Blight (BLB)",
+      "scientific_name": "Xanthomonas oryzae pv. oryzae",
+      "symptoms": [
+        "Water-soaked stripes starting at leaf tips and margins undulating downwards; turns straw-yellow to dirty white; bacterial oozes visible as tiny golden beads on dew mornings; kresek phase in seedlings."
+      ],
+      "severity": "Severe",
+      "management": [
+        "Consult local agricultural university / KVK package of practices for registered treatment."
+      ],
+      "prevention": [
+        "Practice crop rotation, field hygiene, and use certified seeds."
+      ]
+    },
+    {
+      "disease_name": "Sheath Blight",
+      "scientific_name": "Rhizoctonia solani",
+      "symptoms": [
+        "Greenish-grey oval or irregular water-soaked spots on leaf sheaths; lesions enlarge with bleached grey centers and dark reddish-brown borders; sclerotial bodies develop on lesions."
+      ],
+      "severity": "Severe",
+      "management": [
+        "Consult local agricultural university / KVK package of practices for registered treatment."
+      ],
+      "prevention": [
+        "Practice crop rotation, field hygiene, and use certified seeds."
+      ]
+    },
+    {
+      "disease_name": "Bacterial Leaf Blight",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Bacterial Leaf Blight."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Brown Spot",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Brown Spot."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Leaf Blast",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Leaf Blast."
+      ],
+      "severity": "Severe",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Leaf Scald",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Leaf Scald."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Narrow Brown Leaf Spot",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Narrow Brown Leaf Spot."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Rice Hispa",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Rice Hispa."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Arborio",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Arborio."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Basmati",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Basmati."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Ipsala",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Ipsala."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Jasmine",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Jasmine."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Karacadag",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Karacadag."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Paddy Nitrogen-Phosphorus-Potassium Yield Advisory",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Paddy Nitrogen-Phosphorus-Potassium Yield Advisory."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    }
+  ],
+  "pests": [
+    {
+      "pest_name": "Brown Plant Hopper (BPH)",
+      "scientific_name": "Nilaparvata lugens",
+      "symptoms": [],
+      "management": [
+        "Install pheromone traps and apply bio-control agents."
+      ]
+    },
+    {
+      "pest_name": "Yellow Stem Borer",
+      "scientific_name": "Scirpophaga incertulas",
+      "symptoms": [],
+      "management": [
+        "Install pheromone traps and apply bio-control agents."
+      ]
+    }
+  ],
+  "nutrient_deficiencies": [
+    {
+      "deficiency": "Nitrogen (N)",
+      "symptoms": [],
+      "correction": [
+        "Top-dress with Urea or apply 1-2% foliar spray of Urea early morning for rapid greening."
+      ]
+    },
+    {
+      "deficiency": "Phosphorus (P)",
+      "symptoms": [],
+      "correction": [
+        "Basal application of phosphatic fertilizer; in standing crop, foliar spray of 1% Diammonium Phosphate (DAP) or 0.5% 13-0-45."
+      ]
+    },
+    {
+      "deficiency": "Zinc (Zn)",
+      "symptoms": [],
+      "correction": [
+        "Emergency foliar spray of Zinc Sulphate @ 5g/L + Lime @ 2.5g/L (or unslaked lime neutralizer) twice at 10-day intervals."
+      ]
+    }
+  ],
+  "healthy_signs": [
+    "Vigorous upright tillering with uniform emerald-green foliage",
+    "Sturdy culms free from lodging or fungal discoloration",
+    "Clean leaf sheaths and fully emerged, well-filled panicles/cobs",
+    "Healthy fibrous root system without rotting or browning"
+  ],
+  "management": [
+    "Drain standing water upon initial detection of root or sheath disease",
+    "Apply university-recommended biocontrol or registered fungicide early in the morning",
+    "Balance fertilizer regime by supplementing muriate of potash to strengthen culms"
+  ],
+  "prevention": [
+    "Use certified disease-free, high-germination seed lots treated with Trichoderma @ 4g/kg",
+    "Maintain optimal plant spacing to allow adequate ventilation and reduce canopy humidity",
+    "Avoid excessive nitrogen application; apply balanced NPK with silicon and zinc",
+    "Practice timely field drainage and weed sanitation around bunds"
+  ]
+}

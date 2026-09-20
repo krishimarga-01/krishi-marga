@@ -1,0 +1,42 @@
+{
+  "crop": "Green Gram",
+  "crop_id": "green_gram",
+  "category": "pulse",
+  "diseases": [
+    {
+      "disease_name": "Powdery Mildew",
+      "scientific_name": "Erysiphe polygoni",
+      "symptoms": [
+        "White flour-like powdery patches on upper leaf surface",
+        "In severe cases leaves turn yellow, curl, and dry prematurely"
+      ],
+      "severity": "Moderate to Severe",
+      "management": [
+        "Foliar spray of Wettable Sulphur 80% WP @ 3 g/L or Hexaconazole 5% EC @ 1 ml/L"
+      ],
+      "prevention": [
+        "Grow resistant cultivars (VBN-2, CO-6)",
+        "Avoid late sowing"
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Dark green trifoliate leaves with robust branching",
+    "Abundant pink active Rhizobium root nodules upon sectioning",
+    "Profuse flowering and well-set pods without necrosis or pod-borer entry holes",
+    "Erect stem with no vascular wilting"
+  ],
+  "management": [
+    "Remove and safely destroy severely infected plants to prevent field-wide spread",
+    "Spray neem oil (3000 ppm @ 3ml/L) or approved target-specific bio-pesticides",
+    "Ensure proper soil aeration through light intercultivation"
+  ],
+  "prevention": [
+    "Treat seeds with Rhizobium culture and Trichoderma viride prior to sowing",
+    "Avoid water stagnation through raised-bed planting or broad-bed furrow system",
+    "Practice 2-3 year crop rotation with cereals like sorghum or maize",
+    "Install yellow sticky traps and pheromone traps early in the season"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "crop": "Little Millet",
+  "crop_id": "little_millet",
+  "category": "cereal",
+  "diseases": [
+    {
+      "disease_name": "Rust",
+      "scientific_name": "Uromyces linearis",
+      "symptoms": [
+        "Minute brown pustules linearly arranged on leaf blades and sheaths"
+      ],
+      "severity": "Mild to Moderate",
+      "management": [
+        "Spray Wettable Sulphur @ 3 g/L"
+      ],
+      "prevention": [
+        "Clean cultivation and early sowing"
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Vigorous upright tillering with uniform emerald-green foliage",
+    "Sturdy culms free from lodging or fungal discoloration",
+    "Clean leaf sheaths and fully emerged, well-filled panicles/cobs",
+    "Healthy fibrous root system without rotting or browning"
+  ],
+  "management": [
+    "Drain standing water upon initial detection of root or sheath disease",
+    "Apply university-recommended biocontrol or registered fungicide early in the morning",
+    "Balance fertilizer regime by supplementing muriate of potash to strengthen culms"
+  ],
+  "prevention": [
+    "Use certified disease-free, high-germination seed lots treated with Trichoderma @ 4g/kg",
+    "Maintain optimal plant spacing to allow adequate ventilation and reduce canopy humidity",
+    "Avoid excessive nitrogen application; apply balanced NPK with silicon and zinc",
+    "Practice timely field drainage and weed sanitation around bunds"
+  ]
+}

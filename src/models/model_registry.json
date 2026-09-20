@@ -1,0 +1,1164 @@
+{
+  "tomato": {
+    "crop_id": "tomato",
+    "model_path": "models/tomato/disease.onnx",
+    "classes": [
+      "Bacterial Spot",
+      "Early Blight",
+      "Healthy",
+      "Late Blight",
+      "Leaf Mold",
+      "Mosaic Virus",
+      "Septoria Leaf Spot",
+      "Spider Mites",
+      "Target Spot",
+      "Yellow Leaf Curl Virus",
+      "Powdery Mildew"
+    ],
+    "num_classes": 11,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "chilli": {
+    "crop_id": "chilli",
+    "model_path": "models/chilli/disease.onnx",
+    "classes": [
+      "Anthracnose",
+      "Damping Off",
+      "Leaf Curl Virus",
+      "Leaf Spot",
+      "Veinal Mottle Virus",
+      "Whitefly Damage",
+      "Yellowish Deficiency",
+      "Healthy"
+    ],
+    "num_classes": 8,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "cabbage": {
+    "crop_id": "cabbage",
+    "model_path": "models/cabbage/disease.onnx",
+    "classes": [
+      "Alternaria Leaf Spot",
+      "Bacterial Spot Rot",
+      "Black Rot",
+      "Cabbage Aphid Colony",
+      "Downy Mildew",
+      "Club Root",
+      "Ring Spot",
+      "Healthy"
+    ],
+    "num_classes": 8,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "potato": {
+    "crop_id": "potato",
+    "model_path": "models/potato/disease.onnx",
+    "classes": [
+      "Early Blight",
+      "Late Blight",
+      "Healthy"
+    ],
+    "num_classes": 3,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "cucumber": {
+    "crop_id": "cucumber",
+    "model_path": "models/cucumber/disease.onnx",
+    "classes": [
+      "Diseased",
+      "Healthy"
+    ],
+    "num_classes": 2,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "cassava": {
+    "crop_id": "cassava",
+    "model_path": "models/cassava/disease.onnx",
+    "classes": [
+      "Bacterial Blight",
+      "Brown Streak Disease",
+      "Green Mottle",
+      "Mosaic Disease",
+      "Healthy"
+    ],
+    "num_classes": 5,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "brinjal": {
+    "crop_id": "brinjal",
+    "model_path": "models/brinjal/disease.onnx",
+    "classes": [
+      "Fruit Cracking",
+      "Shoot and Fruit Borer",
+      "Phomopsis Blight",
+      "Wet Rot",
+      "Healthy"
+    ],
+    "num_classes": 5,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "pepper_bell": {
+    "crop_id": "pepper_bell",
+    "model_path": "models/pepper_bell/disease.onnx",
+    "classes": [
+      "Bacterial Spot",
+      "Healthy"
+    ],
+    "num_classes": 2,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "rice_leaf": {
+    "crop_id": "rice_leaf",
+    "model_path": "models/rice_leaf/disease.onnx",
+    "classes": [
+      "Bacterial Leaf Blight",
+      "Brown Spot",
+      "Leaf Blast",
+      "Leaf Scald",
+      "Narrow Brown Leaf Spot",
+      "Rice Hispa",
+      "Sheath Blight",
+      "Healthy"
+    ],
+    "num_classes": 8,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "ragi": {
+    "crop_id": "ragi",
+    "model_path": "models/ragi/disease.onnx",
+    "classes": [
+      "Blast Disease",
+      "Rust Disease",
+      "Healthy"
+    ],
+    "num_classes": 3,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "wheat": {
+    "crop_id": "wheat",
+    "model_path": "models/wheat/disease.onnx",
+    "classes": [
+      "Brown Rust",
+      "Septoria",
+      "Yellow Rust",
+      "Healthy"
+    ],
+    "num_classes": 4,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "corn": {
+    "crop_id": "corn",
+    "model_path": "models/corn/disease.onnx",
+    "classes": [
+      "Common Rust",
+      "Gray Leaf Spot",
+      "Northern Leaf Blight",
+      "Healthy"
+    ],
+    "num_classes": 4,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "rice_grain": {
+    "crop_id": "rice_grain",
+    "model_path": "models/rice_grain/disease.onnx",
+    "classes": [
+      "Arborio",
+      "Basmati",
+      "Ipsala",
+      "Jasmine",
+      "Karacadag"
+    ],
+    "num_classes": 5,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "cotton": {
+    "crop_id": "cotton",
+    "model_path": "models/cotton/disease.onnx",
+    "classes": [
+      "Bacterial Blight",
+      "Leaf Curl Virus",
+      "Fusarium Wilt",
+      "Healthy"
+    ],
+    "num_classes": 4,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "sugarcane": {
+    "crop_id": "sugarcane",
+    "model_path": "models/sugarcane/disease.onnx",
+    "classes": [
+      "Bacterial Blight",
+      "Red Rot",
+      "Red Stripe",
+      "Rust",
+      "Healthy"
+    ],
+    "num_classes": 5,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "soybean": {
+    "crop_id": "soybean",
+    "model_path": "models/soybean/disease.onnx",
+    "classes": [
+      "Bacterial Blight",
+      "Caterpillar Damage",
+      "Diabrotica Speciosa",
+      "Downy Mildew",
+      "Mosaic Virus",
+      "Powdery Mildew",
+      "Rust",
+      "Southern Blight",
+      "Healthy"
+    ],
+    "num_classes": 9,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "coconut": {
+    "crop_id": "coconut",
+    "model_path": "models/coconut/disease.onnx",
+    "classes": [
+      "Bud Root Dropping",
+      "Bud Rot",
+      "Gray Leaf Spot",
+      "Leaf Rot",
+      "Stem Bleeding"
+    ],
+    "num_classes": 5,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "black_pepper": {
+    "crop_id": "black_pepper",
+    "model_path": "models/black_pepper/disease.onnx",
+    "classes": [
+      "Foot Rot",
+      "Pollu Disease",
+      "Slow Decline"
+    ],
+    "num_classes": 3,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "ginger": {
+    "crop_id": "ginger",
+    "model_path": "models/ginger/disease.onnx",
+    "classes": [
+      "Bacterial Wilt",
+      "Rhizome Rot",
+      "Healthy"
+    ],
+    "num_classes": 3,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "tea": {
+    "crop_id": "tea",
+    "model_path": "models/tea/disease.onnx",
+    "classes": [
+      "Algal Leaf",
+      "Anthracnose",
+      "Bird Eye Spot",
+      "Brown Blight",
+      "Gray Blight",
+      "Red Leaf Spot",
+      "White Spot",
+      "Healthy"
+    ],
+    "num_classes": 8,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "coffee": {
+    "crop_id": "coffee",
+    "model_path": "models/coffee/disease.onnx",
+    "classes": [
+      "Cercospora Leaf Spot",
+      "Red Spider Mite",
+      "Rust",
+      "Healthy"
+    ],
+    "num_classes": 4,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "banana_leaf": {
+    "crop_id": "banana_leaf",
+    "model_path": "models/banana_leaf/disease.onnx",
+    "classes": [
+      "Cordana Leaf Spot",
+      "Pestalotiopsis",
+      "Sigatoka Leaf Spot",
+      "Healthy"
+    ],
+    "num_classes": 4,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "banana_fruit": {
+    "crop_id": "banana_fruit",
+    "model_path": "models/banana_fruit/disease.onnx",
+    "classes": [
+      "Overripe",
+      "Ripe",
+      "Rotten",
+      "Unripe"
+    ],
+    "num_classes": 4,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "apple": {
+    "crop_id": "apple",
+    "model_path": "models/apple/disease.onnx",
+    "classes": [
+      "Black Rot",
+      "Rust",
+      "Scab",
+      "Healthy"
+    ],
+    "num_classes": 4,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "cherry": {
+    "crop_id": "cherry",
+    "model_path": "models/cherry/disease.onnx",
+    "classes": [
+      "Powdery Mildew",
+      "Healthy"
+    ],
+    "num_classes": 2,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "grape": {
+    "crop_id": "grape",
+    "model_path": "models/grape/disease.onnx",
+    "classes": [
+      "Black Measles",
+      "Black Rot",
+      "Leaf Blight (Isariopsis)",
+      "Healthy"
+    ],
+    "num_classes": 4,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "guava": {
+    "crop_id": "guava",
+    "model_path": "models/guava/disease.onnx",
+    "classes": [
+      "Diseased",
+      "Healthy"
+    ],
+    "num_classes": 2,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "jamun": {
+    "crop_id": "jamun",
+    "model_path": "models/jamun/disease.onnx",
+    "classes": [
+      "Diseased",
+      "Healthy"
+    ],
+    "num_classes": 2,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "lemon": {
+    "crop_id": "lemon",
+    "model_path": "models/lemon/disease.onnx",
+    "classes": [
+      "Diseased / Citrus Canker",
+      "Healthy"
+    ],
+    "num_classes": 2,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "mango": {
+    "crop_id": "mango",
+    "model_path": "models/mango/disease.onnx",
+    "classes": [
+      "Anthracnose / Diseased",
+      "Healthy"
+    ],
+    "num_classes": 2,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "peach": {
+    "crop_id": "peach",
+    "model_path": "models/peach/disease.onnx",
+    "classes": [
+      "Bacterial Spot",
+      "Healthy"
+    ],
+    "num_classes": 2,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "pomegranate": {
+    "crop_id": "pomegranate",
+    "model_path": "models/pomegranate/disease.onnx",
+    "classes": [
+      "Bacterial Blight / Diseased",
+      "Healthy"
+    ],
+    "num_classes": 2,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "strawberry": {
+    "crop_id": "strawberry",
+    "model_path": "models/strawberry/disease.onnx",
+    "classes": [
+      "Leaf Scorch",
+      "Healthy"
+    ],
+    "num_classes": 2,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "bitter_gourd": {
+    "crop_id": "bitter_gourd",
+    "model_path": "models/bitter_gourd/disease.onnx",
+    "classes": [
+      "Fresh (Healthy)",
+      "Nitrogen Deficiency",
+      "Potassium Deficiency"
+    ],
+    "num_classes": 3,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "ash_gourd": {
+    "crop_id": "ash_gourd",
+    "model_path": "models/ash_gourd/disease.onnx",
+    "classes": [
+      "Fresh (Healthy)",
+      "Nitrogen Deficiency",
+      "Potassium Deficiency"
+    ],
+    "num_classes": 3,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "snake_gourd": {
+    "crop_id": "snake_gourd",
+    "model_path": "models/snake_gourd/disease.onnx",
+    "classes": [
+      "Fresh (Healthy)",
+      "Nitrogen Deficiency",
+      "Potassium Deficiency"
+    ],
+    "num_classes": 3,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "groundnut_detection": {
+    "crop_id": "groundnut_detection",
+    "model_path": "models/groundnut_detection/disease.onnx",
+    "classes": [
+      "GroundNut Leaf Lesion Detection"
+    ],
+    "num_classes": 1,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "paddy_yield_advisory": {
+    "crop_id": "paddy_yield_advisory",
+    "model_path": "models/paddy_yield_advisory/disease.onnx",
+    "classes": [
+      "Paddy Nitrogen-Phosphorus-Potassium Yield Advisory"
+    ],
+    "num_classes": 1,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "ragi_remote_sensing": {
+    "crop_id": "ragi_remote_sensing",
+    "model_path": "models/ragi_remote_sensing/disease.onnx",
+    "classes": [
+      "Vegetation Index Classification",
+      "Water Stress Index",
+      "Nitrogen Band",
+      "Canopy Chlorophyll",
+      "Soil Moisture"
+    ],
+    "num_classes": 5,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  },
+  "pumpkin": {
+    "crop_id": "pumpkin",
+    "model_path": "models/pumpkin/disease.onnx",
+    "classes": [
+      "Bacterial Leaf Spot",
+      "Downy Mildew",
+      "Healthy",
+      "Mosaic Disease",
+      "Powdery Mildew"
+    ],
+    "num_classes": 5,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "runtime": "onnxruntime-web / onnxruntime-react-native",
+    "status": "READY"
+  }
+}

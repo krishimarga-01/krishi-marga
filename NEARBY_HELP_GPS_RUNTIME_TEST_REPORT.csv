@@ -1,0 +1,14 @@
+test_id,name,status,notes
+TEST-GPS-01,GPS Permission Optional Prompt at Top,PASSED,"Prompt displays ""Find Agriculture Support Near You"" with Find Near Me & Search Manually buttons. Screen is never blocked."
+TEST-GPS-02,Find Near Me Permission Request Flow,PASSED,expo-location requestForegroundPermissionsAsync triggered only upon user tap. Never requested on app startup.
+TEST-GPS-03,Real Distance Haversine Calculation,PASSED,"Calculated real distance from coordinates. IIHR: 20.1 km, Dharwad: 396.1 km."
+TEST-GPS-04,Missing Coordinates Zero-Hallucination Guard,PASSED,"All 611 RSK records without GPS coordinates strictly report ""Distance unavailable"". Never fake/invented distance."
+TEST-GPS-05,State A: GPS Available Sorting,PASSED,Centers with verified distance sorted ascending. Centers with unavailable distance sorted after by priority.
+TEST-GPS-06,State B: GPS Denied Fallback,PASSED,"Displays ""Location access was not allowed"" with Try Location Again and Search Manually buttons. Manual search remains 100% active."
+TEST-GPS-07,State C: GPS Unavailable / Timeout,PASSED,"Displays ""Location could not be determined"" with Search Manually button. App never crashes."
+TEST-GPS-08,State D: No Nearby Coordinated Centers,PASSED,Displays guidance to search by district/taluk/hobli with Search Manually CTA.
+TEST-GPS-09,Single Search Box Filter,PASSED,"Verified matches for district (""Hassan""), taluk (""Belur""), Hobli (""Shanthigrama""), and pincode (""573115"")."
+TEST-GPS-10,Directions Button Validation,PASSED,Opens geo/maps: coordinates when lat/lon exist. Falls back to verified place/taluk address when coords absent.
+TEST-GPS-11,Call Button Validation,PASSED,Call button shown only when verified phone number exists (tel: URI). Hidden when phone is unlisted.
+TEST-GPS-12,Offline Bundled Operation,PASSED,All 611 Karnataka RSKs and 14 research centers indexed locally. Zero network required for manual search.
+TEST-GPS-13,6-Language Parity Audit,PASSED,"All 20 new GPS and Nearby Help keys verified in en, kn, ta, te, ml, hi."

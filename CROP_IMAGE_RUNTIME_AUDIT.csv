@@ -1,0 +1,77 @@
+crop_id,crop_name,image_reference,asset_path,file_exists,file_size,is_placeholder,is_generic_icon,is_correct_crop,status
+paddy,Paddy,"require(""../../assets/crops/paddy.png"")",assets/crops/paddy.png,YES,21658 bytes,NO,NO,YES,PASS
+maize,Maize,"require(""../../assets/crops/maize.png"")",assets/crops/maize.png,YES,18454 bytes,NO,NO,YES,PASS
+ragi,Ragi / Finger Millet,"require(""../../assets/crops/ragi.png"")",assets/crops/ragi.png,YES,76447 bytes,NO,NO,YES,PASS
+sorghum,Sorghum / Jowar,"require(""../../assets/crops/sorghum.png"")",assets/crops/sorghum.png,YES,66203 bytes,NO,NO,YES,PASS
+pearl_millet,Pearl Millet / Bajra,"require(""../../assets/crops/pearl_millet.png"")",assets/crops/pearl_millet.png,YES,73547 bytes,NO,NO,YES,PASS
+foxtail_millet,Foxtail Millet,"require(""../../assets/crops/foxtail_millet.png"")",assets/crops/foxtail_millet.png,YES,64216 bytes,NO,NO,YES,PASS
+little_millet,Little Millet,"require(""../../assets/crops/little_millet.png"")",assets/crops/little_millet.png,YES,75007 bytes,NO,NO,YES,PASS
+kodo_millet,Kodo Millet,"require(""../../assets/crops/kodo_millet.png"")",assets/crops/kodo_millet.png,YES,25168 bytes,NO,NO,YES,PASS
+barnyard_millet,Barnyard Millet,"require(""../../assets/crops/barnyard_millet.png"")",assets/crops/barnyard_millet.png,YES,62204 bytes,NO,NO,YES,PASS
+proso_millet,Proso Millet,"require(""../../assets/crops/proso_millet.png"")",assets/crops/proso_millet.png,YES,71377 bytes,NO,NO,YES,PASS
+red_gram,Red Gram / Pigeon Pea,"require(""../../assets/crops/red_gram.png"")",assets/crops/red_gram.png,YES,19210 bytes,NO,NO,YES,PASS
+black_gram,Black Gram / Urad,"require(""../../assets/crops/black_gram.png"")",assets/crops/black_gram.png,YES,63146 bytes,NO,NO,YES,PASS
+green_gram,Green Gram / Moong,"require(""../../assets/crops/green_gram.png"")",assets/crops/green_gram.png,YES,36055 bytes,NO,NO,YES,PASS
+bengal_gram,Bengal Gram / Chickpea,"require(""../../assets/crops/bengal_gram.png"")",assets/crops/bengal_gram.png,YES,16377 bytes,NO,NO,YES,PASS
+cowpea,Cowpea / Lobia,"require(""../../assets/crops/cowpea.png"")",assets/crops/cowpea.png,YES,71979 bytes,NO,NO,YES,PASS
+field_bean,Field Bean / Avarekalu,"require(""../../assets/crops/field_bean.png"")",assets/crops/field_bean.png,YES,49455 bytes,NO,NO,YES,PASS
+groundnut,Groundnut / Peanut,"require(""../../assets/crops/groundnut.png"")",assets/crops/groundnut.png,YES,45632 bytes,NO,NO,YES,PASS
+sesame,Sesame / Gingelly,"require(""../../assets/crops/sesame.png"")",assets/crops/sesame.png,YES,40436 bytes,NO,NO,YES,PASS
+sunflower,Sunflower,"require(""../../assets/crops/sunflower.png"")",assets/crops/sunflower.png,YES,57372 bytes,NO,NO,YES,PASS
+castor,Castor,"require(""../../assets/crops/castor.png"")",assets/crops/castor.png,YES,66364 bytes,NO,NO,YES,PASS
+safflower,Safflower,"require(""../../assets/crops/safflower.png"")",assets/crops/safflower.png,YES,68670 bytes,NO,NO,YES,PASS
+soybean,Soybean,"require(""../../assets/crops/soybean.png"")",assets/crops/soybean.png,YES,51179 bytes,NO,NO,YES,PASS
+cotton,Cotton,"require(""../../assets/crops/cotton.png"")",assets/crops/cotton.png,YES,10971 bytes,NO,NO,YES,PASS
+sugarcane,Sugarcane,"require(""../../assets/crops/sugarcane.png"")",assets/crops/sugarcane.png,YES,17971 bytes,NO,NO,YES,PASS
+tobacco,Tobacco,"require(""../../assets/crops/tobacco.png"")",assets/crops/tobacco.png,YES,29059 bytes,NO,NO,YES,PASS
+tomato,Tomato,"require(""../../assets/crops/tomato.png"")",assets/crops/tomato.png,YES,15679 bytes,NO,NO,YES,PASS
+chilli,Chilli,"require(""../../assets/crops/chilli.png"")",assets/crops/chilli.png,YES,15733 bytes,NO,NO,YES,PASS
+brinjal,Brinjal,"require(""../../assets/crops/brinjal.png"")",assets/crops/brinjal.png,YES,13676 bytes,NO,NO,YES,PASS
+onion,Onion,"require(""../../assets/crops/onion.png"")",assets/crops/onion.png,YES,45960 bytes,NO,NO,YES,PASS
+okra,Okra / Lady's Finger,"require(""../../assets/crops/okra.png"")",assets/crops/okra.png,YES,64144 bytes,NO,NO,YES,PASS
+potato,Potato,"require(""../../assets/crops/potato.png"")",assets/crops/potato.png,YES,13008 bytes,NO,NO,YES,PASS
+tapioca,Tapioca / Cassava,"require(""../../assets/crops/tapioca.png"")",assets/crops/tapioca.png,YES,46487 bytes,NO,NO,YES,PASS
+sweet_potato,Sweet Potato,"require(""../../assets/crops/sweet_potato.png"")",assets/crops/sweet_potato.png,YES,61325 bytes,NO,NO,YES,PASS
+drumstick,Drumstick / Moringa,"require(""../../assets/crops/drumstick.png"")",assets/crops/drumstick.png,YES,53198 bytes,NO,NO,YES,PASS
+cucumber,Cucumber,"require(""../../assets/crops/cucumber.png"")",assets/crops/cucumber.png,YES,64744 bytes,NO,NO,YES,PASS
+pumpkin,Pumpkin,"require(""../../assets/crops/pumpkin.png"")",assets/crops/pumpkin.png,YES,61227 bytes,NO,NO,YES,PASS
+bitter_gourd,Bitter Gourd,"require(""../../assets/crops/bitter_gourd.png"")",assets/crops/bitter_gourd.png,YES,26240 bytes,NO,NO,YES,PASS
+bottle_gourd,Bottle Gourd,"require(""../../assets/crops/bottle_gourd.png"")",assets/crops/bottle_gourd.png,YES,62554 bytes,NO,NO,YES,PASS
+ridge_gourd,Ridge Gourd,"require(""../../assets/crops/ridge_gourd.png"")",assets/crops/ridge_gourd.png,YES,52160 bytes,NO,NO,YES,PASS
+beans,Beans (French Beans),"require(""../../assets/crops/beans.png"")",assets/crops/beans.png,YES,67468 bytes,NO,NO,YES,PASS
+cabbage,Cabbage,"require(""../../assets/crops/cabbage.png"")",assets/crops/cabbage.png,YES,27744 bytes,NO,NO,YES,PASS
+cauliflower,Cauliflower,"require(""../../assets/crops/cauliflower.png"")",assets/crops/cauliflower.png,YES,32446 bytes,NO,NO,YES,PASS
+carrot,Carrot,"require(""../../assets/crops/carrot.png"")",assets/crops/carrot.png,YES,24521 bytes,NO,NO,YES,PASS
+beetroot,Beetroot,"require(""../../assets/crops/beetroot.png"")",assets/crops/beetroot.png,YES,56553 bytes,NO,NO,YES,PASS
+banana,Banana,"require(""../../assets/crops/banana.png"")",assets/crops/banana.png,YES,16440 bytes,NO,NO,YES,PASS
+mango,Mango,"require(""../../assets/crops/mango.png"")",assets/crops/mango.png,YES,32273 bytes,NO,NO,YES,PASS
+papaya,Papaya,"require(""../../assets/crops/papaya.png"")",assets/crops/papaya.png,YES,34639 bytes,NO,NO,YES,PASS
+pomegranate,Pomegranate,"require(""../../assets/crops/pomegranate.png"")",assets/crops/pomegranate.png,YES,27850 bytes,NO,NO,YES,PASS
+guava,Guava,"require(""../../assets/crops/guava.png"")",assets/crops/guava.png,YES,31550 bytes,NO,NO,YES,PASS
+sapota,Sapota / Chikoo,"require(""../../assets/crops/sapota.png"")",assets/crops/sapota.png,YES,65476 bytes,NO,NO,YES,PASS
+pineapple,Pineapple,"require(""../../assets/crops/pineapple.png"")",assets/crops/pineapple.png,YES,61488 bytes,NO,NO,YES,PASS
+grapes,Grapes,"require(""../../assets/crops/grapes.png"")",assets/crops/grapes.png,YES,57242 bytes,NO,NO,YES,PASS
+jackfruit,Jackfruit,"require(""../../assets/crops/jackfruit.png"")",assets/crops/jackfruit.png,YES,72836 bytes,NO,NO,YES,PASS
+watermelon,Watermelon,"require(""../../assets/crops/watermelon.png"")",assets/crops/watermelon.png,YES,63635 bytes,NO,NO,YES,PASS
+muskmelon,Muskmelon,"require(""../../assets/crops/muskmelon.png"")",assets/crops/muskmelon.png,YES,65788 bytes,NO,NO,YES,PASS
+citrus_lime,Citrus / Acid Lime,"require(""../../assets/crops/citrus_lime.png"")",assets/crops/citrus_lime.png,YES,48864 bytes,NO,NO,YES,PASS
+coconut,Coconut,"require(""../../assets/crops/coconut.png"")",assets/crops/coconut.png,YES,24944 bytes,NO,NO,YES,PASS
+arecanut,Arecanut / Betel Nut,"require(""../../assets/crops/arecanut.png"")",assets/crops/arecanut.png,YES,22476 bytes,NO,NO,YES,PASS
+cashew,Cashew,"require(""../../assets/crops/cashew.png"")",assets/crops/cashew.png,YES,24056 bytes,NO,NO,YES,PASS
+coffee,Coffee,"require(""../../assets/crops/coffee.png"")",assets/crops/coffee.png,YES,27597 bytes,NO,NO,YES,PASS
+tea,Tea,"require(""../../assets/crops/tea.png"")",assets/crops/tea.png,YES,21022 bytes,NO,NO,YES,PASS
+rubber,Rubber,"require(""../../assets/crops/rubber.png"")",assets/crops/rubber.png,YES,18464 bytes,NO,NO,YES,PASS
+cocoa,Cocoa,"require(""../../assets/crops/cocoa.png"")",assets/crops/cocoa.png,YES,62253 bytes,NO,NO,YES,PASS
+oil_palm,Oil Palm,"require(""../../assets/crops/oil_palm.png"")",assets/crops/oil_palm.png,YES,56797 bytes,NO,NO,YES,PASS
+palmyrah,Palmyrah Palm,"require(""../../assets/crops/palmyrah.png"")",assets/crops/palmyrah.png,YES,51947 bytes,NO,NO,YES,PASS
+black_pepper,Black Pepper,"require(""../../assets/crops/black_pepper.png"")",assets/crops/black_pepper.png,YES,24276 bytes,NO,NO,YES,PASS
+cardamom,Cardamom,"require(""../../assets/crops/cardamom.png"")",assets/crops/cardamom.png,YES,23347 bytes,NO,NO,YES,PASS
+turmeric,Turmeric,"require(""../../assets/crops/turmeric.png"")",assets/crops/turmeric.png,YES,25060 bytes,NO,NO,YES,PASS
+ginger,Ginger,"require(""../../assets/crops/ginger.png"")",assets/crops/ginger.png,YES,42637 bytes,NO,NO,YES,PASS
+clove,Clove,"require(""../../assets/crops/clove.png"")",assets/crops/clove.png,YES,44391 bytes,NO,NO,YES,PASS
+coriander,Coriander,"require(""../../assets/crops/coriander.png"")",assets/crops/coriander.png,YES,37137 bytes,NO,NO,YES,PASS
+cumin,Cumin / Jeera,"require(""../../assets/crops/cumin.png"")",assets/crops/cumin.png,YES,33625 bytes,NO,NO,YES,PASS
+fenugreek,Fenugreek / Methi,"require(""../../assets/crops/fenugreek.png"")",assets/crops/fenugreek.png,YES,28242 bytes,NO,NO,YES,PASS
+wheat,Wheat,"require(""../../assets/crops/wheat.png"")",assets/crops/wheat.png,YES,21541 bytes,NO,NO,YES,PASS
+betel_vine,Betel Vine / Paan,"require(""../../assets/crops/betel_vine.png"")",assets/crops/betel_vine.png,YES,68773 bytes,NO,NO,YES,PASS
+tamarind,Tamarind,"require(""../../assets/crops/tamarind.png"")",assets/crops/tamarind.png,YES,73493 bytes,NO,NO,YES,PASS

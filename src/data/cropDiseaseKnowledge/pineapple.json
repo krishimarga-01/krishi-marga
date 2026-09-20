@@ -1,0 +1,68 @@
+{
+  "crop": "Pineapple",
+  "crop_id": "pineapple",
+  "category": "fruit",
+  "diseases": [
+    {
+      "disease_name": "Black Rot",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Black Rot."
+      ],
+      "severity": "Severe",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Rust",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Rust."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Scab",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Scab."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Glossy green canopy with active flush of new growth",
+    "Symmetrical fruit development with clean rind free from anthracnose spots or fruit-fly punctures",
+    "Intact branch terminals without dieback or gummosis",
+    "Healthy root zone with efficient moisture absorption"
+  ],
+  "management": [
+    "Prune infected twigs 5 cm into healthy tissue and paste cut ends with copper oxychloride",
+    "Collect and deeply bury fallen diseased fruits in compost pits with lime",
+    "Apply balanced micronutrient foliar spray (zinc, boron, iron) to restore tree vigor"
+  ],
+  "prevention": [
+    "Sanitize orchards by pruning dead, crisscrossing, or diseased twigs after harvest",
+    "Paint trunk bases with Bordeaux paste (1:1:10) before monsoon onset to prevent foot rot",
+    "Ensure adequate drainage in tree basins; prevent standing water near the trunk",
+    "Install methyl eugenol fruit fly traps across orchard borders"
+  ]
+}

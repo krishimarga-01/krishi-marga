@@ -1,0 +1,77 @@
+crop,category,training_status,model_architecture,trained_epochs,dataset_source,recommended_action
+Paddy,cereal,TRAINED_AND_EXPORTED,MobileNetV3-Small,5,Rice Leaf Disease Dataset (DS_RICE_02),Production deployment
+Maize,cereal,TRAINED_AND_EXPORTED,MobileNetV3-Small,5,PlantVillage Maize Leaf Disease Dataset,Production deployment
+Ragi,cereal,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Sorghum,cereal,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Pearl Millet,cereal,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Foxtail Millet,cereal,INSUFFICIENT_DATA,None,0,Sparse data (<400 images); untrainable without major collection,Initiate South India field image collection
+Little Millet,cereal,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Kodo Millet,cereal,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Barnyard Millet,cereal,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Proso Millet,cereal,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Wheat,cereal,READY_FOR_TRAINING,MobileNetV3 / EfficientNet-Lite (Planned),0,Large-scale Wheat Disease Dataset (public repository),Execute training pipeline
+Red Gram,pulse,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Black Gram,pulse,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Green Gram,pulse,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Bengal Gram,pulse,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Cowpea,pulse,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Field Bean,pulse,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Groundnut,oilseed,READY_FOR_TRAINING,MobileNetV3 / EfficientNet-Lite (Planned),0,Groundnut Leaf Spot and Rust Dataset (public repository),Execute training pipeline
+Sesame,oilseed,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Sunflower,oilseed,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Castor,oilseed,INSUFFICIENT_DATA,None,0,Sparse data (<400 images); untrainable without major collection,Initiate South India field image collection
+Safflower,oilseed,INSUFFICIENT_DATA,None,0,Sparse data (<400 images); untrainable without major collection,Initiate South India field image collection
+Soybean,oilseed,READY_FOR_TRAINING,MobileNetV3 / EfficientNet-Lite (Planned),0,Soybean Leaf Disease Dataset (public repository),Execute training pipeline
+Cotton,commercial,TRAINED_AND_EXPORTED,MobileNetV3-Small,15,Cotton Leaf Disease Dataset (DS_COTTON_01),Production deployment
+Sugarcane,commercial,TRAINED_AND_EXPORTED,MobileNetV3-Small,5,Sugarcane Leaf Disease Detection (DS_SUGAR_01),Production deployment
+Tobacco,commercial,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Tomato,vegetable,TRAINED_AND_EXPORTED,MobileNetV3-Small,5,PlantVillage Tomato Leaf Disease Benchmark,Production deployment
+Chilli,vegetable,TRAINED_AND_EXPORTED,MobileNetV3-Small,5,Chilli Leaf Disease and Pest Classification Dataset,Production deployment
+Brinjal,vegetable,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Onion,vegetable,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Okra,vegetable,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Potato,vegetable,TRAINED_AND_EXPORTED,MobileNetV3-Small,5,PlantVillage Potato Disease Dataset,Production deployment
+Tapioca,vegetable,NO_VERIFIED_DATA,None,0,No verified public image dataset available on local disk,Initiate South India field image collection
+Sweet Potato,vegetable,INSUFFICIENT_DATA,None,0,Sparse data (<400 images); untrainable without major collection,Initiate South India field image collection
+Drumstick,vegetable,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Cucumber,vegetable,READY_FOR_TRAINING,MobileNetV3 / EfficientNet-Lite (Planned),0,Cucumber Leaf Disease Dataset (public repository),Execute training pipeline
+Pumpkin,vegetable,INSUFFICIENT_DATA,None,0,Sparse data (<400 images); untrainable without major collection,Initiate South India field image collection
+Bitter Gourd,vegetable,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Bottle Gourd,vegetable,INSUFFICIENT_DATA,None,0,Sparse data (<400 images); untrainable without major collection,Initiate South India field image collection
+Ridge Gourd,vegetable,INSUFFICIENT_DATA,None,0,Sparse data (<400 images); untrainable without major collection,Initiate South India field image collection
+Beans,vegetable,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Cabbage,vegetable,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Cauliflower,vegetable,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Carrot,vegetable,INSUFFICIENT_DATA,None,0,Sparse data (<400 images); untrainable without major collection,Initiate South India field image collection
+Beetroot,vegetable,INSUFFICIENT_DATA,None,0,Sparse data (<400 images); untrainable without major collection,Initiate South India field image collection
+Banana,fruit,TRAINED_AND_EXPORTED,MobileNetV3-Small,5,Banana Leaf Fungal & Bacterial Disease Dataset,Production deployment
+Mango,fruit,READY_FOR_TRAINING,MobileNetV3 / EfficientNet-Lite (Planned),0,MangoLeafBD: Mango Leaf Disease Dataset (public repository),Execute training pipeline
+Papaya,fruit,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Pomegranate,fruit,READY_FOR_TRAINING,MobileNetV3 / EfficientNet-Lite (Planned),0,Pomegranate Bacterial Blight (Telya) Dataset (public repository),Execute training pipeline
+Guava,fruit,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Sapota,fruit,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Pineapple,fruit,INSUFFICIENT_DATA,None,0,Sparse data (<400 images); untrainable without major collection,Initiate South India field image collection
+Grapes,fruit,READY_FOR_TRAINING,MobileNetV3 / EfficientNet-Lite (Planned),0,PlantVillage Grape Leaf Disease Dataset (public repository),Execute training pipeline
+Jackfruit,fruit,INSUFFICIENT_DATA,None,0,Sparse data (<400 images); untrainable without major collection,Initiate South India field image collection
+Watermelon,fruit,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Muskmelon,fruit,INSUFFICIENT_DATA,None,0,Sparse data (<400 images); untrainable without major collection,Initiate South India field image collection
+Acid Lime,fruit,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Coconut,plantation,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Arecanut,plantation,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Cashew,plantation,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Coffee,plantation,READY_FOR_TRAINING,MobileNetV3 / EfficientNet-Lite (Planned),0,RoCoLe: A Robust Coffee Leaf Dataset (public repository),Execute training pipeline
+Tea,plantation,READY_FOR_TRAINING,MobileNetV3 / EfficientNet-Lite (Planned),0,Tea Leaf Disease Identification Dataset (public repository),Execute training pipeline
+Rubber,plantation,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Cocoa,plantation,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Oil Palm,plantation,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Palmyrah,plantation,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Black Pepper,spice,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Cardamom,spice,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Turmeric,spice,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Ginger,spice,NEEDS_MORE_DATA,Planned,0,Moderate dataset (<800 images); needs augmentation or field additions,Initiate South India field image collection
+Clove,spice,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Coriander,spice,INSUFFICIENT_DATA,None,0,Sparse data (<400 images); untrainable without major collection,Initiate South India field image collection
+Cumin,spice,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Fenugreek,spice,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Betel Vine,other,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection
+Tamarind,other,NO_VERIFIED_DATA,None,0,No verified public image dataset available,Initiate South India field image collection

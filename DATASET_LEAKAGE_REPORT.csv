@@ -1,0 +1,4 @@
+dataset,crop,train_count,val_count,test_count,sha256_leakage_detected,leakage_rate,validation_integrity
+DS_SUGAR_01,Sugarcane,210,30,60,0,0.00%,SECURE
+DS_RICE_02,Paddy / Rice,157,84,0,0,0.00%,SECURE
+DS_COTTON_01,Cotton,1884,235,236,0,0.00%,SECURE
