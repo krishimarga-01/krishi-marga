@@ -116,7 +116,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Girdle Beetle",
+      "scientific_name": "Obereopsis brevis",
+      "symptoms": [
+        "Female cuts two parallel circular girdles on petiole or stem; foliage above girdle withers, dries, and drops."
+      ],
+      "management": [
+        "Spray Chlorantraniliprole 18.5% SC @ 0.3ml/L or Thiamethoxam 12.6% + Lambda-cyhalothrin 9.5% ZC @ 0.3ml/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Thick, deep-green foliage with vigorous vegetative spread",

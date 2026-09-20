@@ -1,4 +1,5 @@
-import { NormalizedResult, ConfidenceLevel, HealthStatus } from '../models/index';
+import { NormalizedResult, ConfidenceLevel, HealthStatus, PestAssessment, NutrientAssessment } from '../models/index';
+import { OnnxEngine } from '../offline/onnxEngine';
 import { Config, NetworkBudget, BackendNotConfiguredError } from './config';
 import { ImageOptimizer, UploadBudget } from './imageOptimizer';
 import { ApiError, HttpClient, UploadHandle } from './httpClient';
@@ -200,8 +201,53 @@ export const DiagnosisApi = {
     const asArray = (v: any): string[] =>
       Array.isArray(v) ? v.filter((x) => typeof x === 'string' && x.trim()) : v ? [String(v)] : [];
 
+    const cropName = raw.crop_selected || res.crop || fallbackCrop;
+
+    let pestAssessment: PestAssessment | undefined = res.pest_assessment;
+    if (!pestAssessment) {
+      if (res.problem_type === 'PEST') {
+        const pestRef = OnnxEngine.getPestReference(cropName);
+        pestAssessment = {
+          status: 'AI_AVAILABLE',
+          pest_detected: res.disease,
+          scientific_name: pestRef?.scientific_name,
+          pest_type: pestRef?.pest_type,
+          confidence: confidenceScore,
+          damage_symptoms: asArray(res.symptoms).length ? asArray(res.symptoms) : pestRef?.damage_symptoms,
+          associated_disease: pestRef?.associated_disease,
+          is_disease_vector: pestRef?.is_disease_vector,
+          vector_explanation: pestRef?.vector_explanation,
+          management: asArray(res.recommendations).length ? asArray(res.recommendations) : pestRef?.management,
+          prevention: asArray(res.prevention).length ? asArray(res.prevention) : pestRef?.prevention,
+          source_verification: 'Gemini Multimodal AI / ICAR-NBAIR',
+        };
+      } else {
+        pestAssessment = OnnxEngine.getPestReference(cropName);
+      }
+    }
+
+    let nutrientAssessment: NutrientAssessment | undefined = res.nutrient_assessment;
+    if (!nutrientAssessment) {
+      if (res.problem_type === 'NUTRIENT_DEFICIENCY') {
+        const nutRef = OnnxEngine.getNutrientReference(cropName);
+        nutrientAssessment = {
+          status: 'AI_AVAILABLE',
+          deficiency_detected: res.disease,
+          nutrient_name: nutRef?.nutrient_name || res.disease,
+          confidence: confidenceScore,
+          visual_symptoms: asArray(res.symptoms).length ? asArray(res.symptoms) : nutRef?.visual_symptoms,
+          affected_plant_part: nutRef?.affected_plant_part,
+          soil_relationship: nutRef?.soil_relationship,
+          management: asArray(res.recommendations).length ? asArray(res.recommendations) : nutRef?.management,
+          source_verification: 'Gemini Multimodal AI / ICAR-IISS',
+        };
+      } else {
+        nutrientAssessment = OnnxEngine.getNutrientReference(cropName);
+      }
+    }
+
     return {
-      crop: raw.crop_selected || res.crop || fallbackCrop,
+      crop: cropName,
       health_status: health,
       disease:
         res.disease ||
@@ -217,6 +263,8 @@ export const DiagnosisApi = {
       organic_management: Array.isArray(res.organic_management) ? res.organic_management : undefined,
       regional_advice: res.regional_advice,
       user_message: res.user_message || res.farmer_message,
+      pest_assessment: pestAssessment,
+      nutrient_assessment: nutrientAssessment,
       analysis_source: 'online',
       is_diagnosis: true,
       timestamp: raw.timestamp || new Date().toISOString(),

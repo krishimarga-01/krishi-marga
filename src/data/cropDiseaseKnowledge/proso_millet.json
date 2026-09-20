@@ -18,7 +18,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Proso Millet Shoot Fly",
+      "scientific_name": "Atherigona miliaceae",
+      "symptoms": [
+        "Dead hearts and excessive profuse tillering without productive panicles."
+      ],
+      "management": [
+        "Foliar spray of Azadirachtin 10,000 ppm @ 2ml/L at 14 and 28 days."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Vigorous upright tillering with uniform emerald-green foliage",

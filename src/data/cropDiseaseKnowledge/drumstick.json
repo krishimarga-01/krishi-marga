@@ -18,7 +18,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Moringa Hairy Caterpillar",
+      "scientific_name": "Eupterote mollifera",
+      "symptoms": [
+        "Hairy caterpillars congregate in large masses on tree trunks during day and defoliate entire canopy at night."
+      ],
+      "management": [
+        "Burn caterpillar clusters on trunk using torch; spray Chlorpyrifos 20% EC @ 2ml/L or Dichlorvos 76% EC @ 1ml/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Turgid, deep green leaves with crisp texture and no chlorosis",

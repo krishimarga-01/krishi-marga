@@ -102,7 +102,28 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Ragi Stem Borer",
+      "scientific_name": "Sesamia inferens",
+      "symptoms": [
+        "Dead hearts in vegetative phase; earheads become chaffy and white in reproductive phase."
+      ],
+      "management": [
+        "Spray Chlorantraniliprole 18.5% SC @ 0.3ml/L or Dimethoate 30% EC @ 1.7ml/L if dead hearts exceed 5%."
+      ]
+    },
+    {
+      "pest_name": "Finger Millet Aphid",
+      "scientific_name": "Hysteroneura setariae",
+      "symptoms": [
+        "Dense colonies on earheads sucking sap; honeydew secretion leads to sooty mold and shriveled grains."
+      ],
+      "management": [
+        "Spray Neem Seed Kernel Extract (NSKE 5%) or Azadirachtin 10,000 ppm @ 2ml/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Vigorous upright tillering with uniform emerald-green foliage",

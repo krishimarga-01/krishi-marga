@@ -19,7 +19,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Cumin Aphid",
+      "scientific_name": "Myzus persicae",
+      "symptoms": [
+        "Sap suction results in stunted umbels, yellowing, poor seed formation, and black sooty mold."
+      ],
+      "management": [
+        "Spray Thiamethoxam 25% WG @ 0.3g/L or Acetamiprid 20% SP @ 0.3g/L at aphid appearance."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Crisp, aromatic foliage free from leaf spot lesions or marginal blight",

@@ -388,5 +388,6 @@
   "directions": "दिशा-निर्देश (Maps)",
   "call": "कॉल करें",
   "clearLocation": "स्थान साफ़ करें",
-  "locating": "स्थान प्राप्त किया जा रहा है..."
+  "locating": "स्थान प्राप्त किया जा रहा है...",
+  "pesticideIntendedUseTitle": "कीटनाशक का उद्देश्य व विवरण"
 }

@@ -32,7 +32,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Potato Tuber Moth (PTM)",
+      "scientific_name": "Phthorimaea operculella",
+      "symptoms": [
+        "Larvae mine leaves and bore into stems; tunnel into tubers in field and storage leaving black frass."
+      ],
+      "management": [
+        "Earthing up to prevent tuber exposure; spray Chlorantraniliprole 18.5% SC @ 0.3ml/L in field; store tubers covered with 2.5cm sand."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Turgid, deep green leaves with crisp texture and no chlorosis",

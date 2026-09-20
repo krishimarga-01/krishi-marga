@@ -20,7 +20,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Pearl Millet Shoot Fly",
+      "scientific_name": "Atherigona approximata",
+      "symptoms": [
+        "Dead heart formation in 2-4 week old crop; rotting whorl leaf comes out easily."
+      ],
+      "management": [
+        "Seed treatment with Thiamethoxam 30% FS @ 4ml/kg; spray Quinalphos 25% EC @ 2ml/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Vigorous upright tillering with uniform emerald-green foliage",

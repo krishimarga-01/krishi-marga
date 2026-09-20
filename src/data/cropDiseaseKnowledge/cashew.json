@@ -20,11 +20,23 @@
   ],
   "pests": [
     {
-      "pest_name": "Tea Mosquito Bug (TMB)",
+      "pest_name": "Tea Mosquito Bug",
       "scientific_name": "Helopeltis antonii",
-      "symptoms": [],
+      "symptoms": [
+        "Necrotic angular brown lesions on leaves and shoots; blossom blight where panicles dry up like scorched by fire; fruit drop."
+      ],
       "management": [
-        "Install pheromone traps and apply bio-control agents."
+        "Sequential spray schedule: 1st spray at flushing with Lambda-cyhalothrin 5% EC @ 0.6ml/L; 2nd at flowering with Acetamiprid 20% SP @ 0.5g/L; 3rd at fruit set."
+      ]
+    },
+    {
+      "pest_name": "Cashew Stem and Root Borer (CSRB)",
+      "scientific_name": "Plocaederus ferrugineus",
+      "symptoms": [
+        "Extrusion of reddish-brown fibrous frass and gum at base; yellowing and drying of canopy; tree death."
+      ],
+      "management": [
+        "Chisel out grubs from trunk; swab trunk with Chlorpyrifos 20% EC @ 10ml/L or Carbaryl 50% WP @ 20g/L."
       ]
     }
   ],

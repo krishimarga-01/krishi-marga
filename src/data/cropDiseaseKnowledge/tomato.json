@@ -143,9 +143,21 @@
     {
       "pest_name": "Tomato Fruit Borer",
       "scientific_name": "Helicoverpa armigera",
-      "symptoms": [],
+      "symptoms": [
+        "Larvae bore round circular holes into tomato fruits and feed while keeping anterior body inside and posterior outside; fruits rot and drop prematurely."
+      ],
       "management": [
-        "Install pheromone traps and apply bio-control agents."
+        "Release egg parasitoid Trichogramma chilonis @ 50,000/ha; spray HaNPV @ 250 LE/ha; spray Chlorantraniliprole 18.5% SC @ 0.3ml/L (PHI: 3 days) or Emamectin Benzoate 5% SG @ 0.4g/L."
+      ]
+    },
+    {
+      "pest_name": "Whitefly",
+      "scientific_name": "Bemisia tabaci",
+      "symptoms": [
+        "Nymphs and adults suck cell sap from leaf undersides causing chlorotic stippling and downward leaf curling; heavy honeydew excretion leads to black sooty mold."
+      ],
+      "management": [
+        "Spray neem oil 10,000 ppm @ 2ml/L; spray Diafenthiuron 50% WP @ 1.25g/L or Acetamiprid 20% SP @ 0.2g/L."
       ]
     }
   ],

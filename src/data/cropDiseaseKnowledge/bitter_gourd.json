@@ -46,7 +46,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Melon Fruit Fly",
+      "scientific_name": "Bactrocera cucurbitae",
+      "symptoms": [
+        "Resinous puncture marks on fruits; maggots feed on seeds and pulp, causing fruit deformation and rotting."
+      ],
+      "management": [
+        "Install cue-lure traps @ 10/acre; bait spray (10g jaggery + 2ml Malathion 50% EC / litre)."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Turgid, deep green leaves with crisp texture and no chlorosis",

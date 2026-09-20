@@ -148,9 +148,21 @@
     {
       "pest_name": "Chilli Thrips",
       "scientific_name": "Scirtothrips dorsalis",
-      "symptoms": [],
+      "symptoms": [
+        "Leaves curl upwards (boat-shaped); crinkling of foliage with bronze coloration on undersurface; vector of Chilli Leaf Curl Virus."
+      ],
       "management": [
-        "Install pheromone traps and apply bio-control agents."
+        "Spray Spinetoram 11.7% SC @ 0.8ml/L or Fipronil 5% SC @ 1.5ml/L or Diafenthiuron 50% WP @ 1.25g/L."
+      ]
+    },
+    {
+      "pest_name": "Yellow Mite",
+      "scientific_name": "Polyphagotarsonemus latus",
+      "symptoms": [
+        "Leaves curl downwards (inverted boat); elongation of petiole (rat-tail symptom); leaves turn deep green and brittle."
+      ],
+      "management": [
+        "Spray Spiromesifen 22.9% SC @ 1ml/L or Wettable Sulphur 80% WP @ 3g/L or Abamectin 1.9% EC @ 0.75ml/L."
       ]
     }
   ],

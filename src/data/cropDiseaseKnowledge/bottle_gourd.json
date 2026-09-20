@@ -19,7 +19,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Red Pumpkin Beetle",
+      "scientific_name": "Aulacophora foveicollis",
+      "symptoms": [
+        "Shot holes on leaves; grubs damage root system underground causing wilting."
+      ],
+      "management": [
+        "Dust wood ash on foliage; spray Quinalphos 25% EC @ 2ml/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Turgid, deep green leaves with crisp texture and no chlorosis",

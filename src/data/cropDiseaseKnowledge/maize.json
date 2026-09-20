@@ -64,9 +64,21 @@
     {
       "pest_name": "Fall Armyworm (FAW)",
       "scientific_name": "Spodoptera frugiperda",
-      "symptoms": [],
+      "symptoms": [
+        "Ragged leaves with pinholes, extensive windowing of whorl leaves packed with copious sawdust-like frass."
+      ],
       "management": [
-        "Install pheromone traps and apply bio-control agents."
+        "Whorl application of sand + lime mixture (9:1); spray Bacillus thuringiensis (Bt) @ 2g/L or Emamectin Benzoate 5% SG @ 0.4g/L or Spinetoram 11.7% SC @ 0.5ml/L."
+      ]
+    },
+    {
+      "pest_name": "Maize Stem Borer",
+      "scientific_name": "Chilo partellus",
+      "symptoms": [
+        "Parallel pinhole rows across unfolding leaves; dead heart formation in young seedlings."
+      ],
+      "management": [
+        "Release Trichogramma chilonis @ 175,000/ha; apply carbofuran 3% CG @ 5kg/ha into whorls."
       ]
     }
   ],

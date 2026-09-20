@@ -20,11 +20,23 @@
   ],
   "pests": [
     {
-      "pest_name": "Shoot Borer",
-      "scientific_name": "Conogethes punctiferalis",
-      "symptoms": [],
+      "pest_name": "Gram Pod Borer",
+      "scientific_name": "Helicoverpa armigera",
+      "symptoms": [
+        "Defoliation during vegetative phase; round holes bored into pods with head inside and body outside; damaged empty pods."
+      ],
       "management": [
-        "Install pheromone traps and apply bio-control agents."
+        "Spray HaNPV @ 250 LE/ha; spray Chlorantraniliprole 18.5% SC @ 0.3ml/L or Flubendiamide 39.35% SC @ 0.2ml/L."
+      ]
+    },
+    {
+      "pest_name": "Pigeonpea Pod Fly",
+      "scientific_name": "Melanagromyza obtusa",
+      "symptoms": [
+        "Maggots feed internally on seeds without external pod holes; exit pinholes visible only when adult emerges."
+      ],
+      "management": [
+        "Spray Dimethoate 30% EC @ 1.7ml/L or Quinalphos 25% EC @ 2ml/L at 50% flowering stage."
       ]
     }
   ],

@@ -405,5 +405,6 @@
   "contradictingSymptomsLabel": "Signs that mean a different problem:",
   "farmerChecklistTitle": "What You Can Do in the Field",
   "confidenceNoticeMedium": "Similar signs seen in other crop conditions. Check the differences below before taking action.",
-  "confidenceNoticeLow": "Symptoms look like other crop conditions. Please check the differences below or ask an RSK specialist."
+  "confidenceNoticeLow": "Symptoms look like other crop conditions. Please check the differences below or ask an RSK specialist.",
+  "pesticideIntendedUseTitle": "Pesticide Intended Use & Explanation"
 }

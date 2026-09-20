@@ -19,7 +19,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Carrot Semi-Looper",
+      "scientific_name": "Thysanoplusia orichalcea",
+      "symptoms": [
+        "Caterpillars feed voraciously on feathery carrot leaves from margins inwards."
+      ],
+      "management": [
+        "Spray Quinalphos 25% EC @ 2ml/L or Emamectin Benzoate 5% SG @ 0.4g/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Turgid, deep green leaves with crisp texture and no chlorosis",

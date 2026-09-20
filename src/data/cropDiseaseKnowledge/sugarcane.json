@@ -62,11 +62,23 @@
   ],
   "pests": [
     {
-      "pest_name": "Early Shoot Borer",
+      "pest_name": "Early Shoot Borer (ESB)",
       "scientific_name": "Chilo infuscatellus",
-      "symptoms": [],
+      "symptoms": [
+        "Dead hearts in mother shoots and tillers during first 90 days; foul smell when pulled; base shows tiny entry hole."
+      ],
       "management": [
-        "Install pheromone traps and apply bio-control agents."
+        "Release egg parasitoid Trichogramma chilonis @ 50,000/ha at 10-day intervals; soil drenching of Chlorantraniliprole 18.5% SC @ 1.5ml/L along cane furrow."
+      ]
+    },
+    {
+      "pest_name": "Sugarcane Woolly Aphid",
+      "scientific_name": "Ceratovacuna lanigera",
+      "symptoms": [
+        "Dense white woolly waxy colonies on lower leaf surface; leaves turn yellow and dry; copious honeydew leads to thick black sooty mold."
+      ],
+      "management": [
+        "Conserve or release predator Dipha aphidivora / Micromus igorotus; spot spray Dimethoate 30% EC @ 1.7ml/L or Acephate 75% SP @ 1.5g/L on lower leaves."
       ]
     }
   ],

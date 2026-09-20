@@ -18,7 +18,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Melon Fruit Fly",
+      "scientific_name": "Bactrocera cucurbitae",
+      "symptoms": [
+        "Female punctures fruit to lay eggs; maggots feed on internal pulp; fruits rot, deform, and drop."
+      ],
+      "management": [
+        "Install cue-lure pheromone traps @ 8-10/acre; bait spray of Malathion 50% EC (2ml) + Jaggery (10g) per litre of water on border plants."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Turgid, deep green leaves with crisp texture and no chlorosis",

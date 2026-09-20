@@ -18,7 +18,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Safflower Aphid",
+      "scientific_name": "Uroleucon compositae",
+      "symptoms": [
+        "Dense black colonies covering stems; sap suction leads to stunting, poor capitulum development and yield loss up to 70%."
+      ],
+      "management": [
+        "Spray Dimethoate 30% EC @ 1.7ml/L or Thiamethoxam 25% WG @ 0.3g/L at aphid colonization."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Thick, deep-green foliage with vigorous vegetative spread",

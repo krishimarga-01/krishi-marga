@@ -102,7 +102,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Diamondback Moth (DBM)",
+      "scientific_name": "Plutella xylostella",
+      "symptoms": [
+        "Windowing of leaf lamina with whitish transparent patches; older caterpillars make irregular holes in inner leaves."
+      ],
+      "management": [
+        "Intercrop with Indian Mustard (2 rows for every 25 rows cabbage) as trap crop; spray Bacillus thuringiensis (Bt) @ 2g/L or Spinosad 45% SC @ 0.3ml/L or Chlorantraniliprole 18.5% SC @ 0.3ml/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Turgid, deep green leaves with crisp texture and no chlorosis",

@@ -102,7 +102,28 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Banana Pseudostem Weevil",
+      "scientific_name": "Odoiporus longicollis",
+      "symptoms": [
+        "Tiny pinhole punctures on pseudostem exuding transparent jelly-like gum; internal tunneling leads to lodging under wind pressure."
+      ],
+      "management": [
+        "Stem injection of Chlorpyrifos 20% EC @ 2.5ml/L or Swab pseudostem with Carbaryl 50% WP (2g/L); apply entomopathogenic fungus Beauveria bassiana."
+      ]
+    },
+    {
+      "pest_name": "Banana Aphid",
+      "scientific_name": "Pentalonia nigronervosa",
+      "symptoms": [
+        "Aphids congregate in leaf axils; exclusive vector of deadly Banana Bunchy Top Virus (BBTV)."
+      ],
+      "management": [
+        "Inject pseudostem with Dimethoate 30% EC @ 1ml/tree or spray leaf axils with Imidacloprid 17.8% SL @ 0.3ml/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Glossy green canopy with active flush of new growth",

@@ -64,9 +64,21 @@
     {
       "pest_name": "Coffee White Stem Borer",
       "scientific_name": "Xylotrechus quadripes",
-      "symptoms": [],
+      "symptoms": [
+        "Ridiged rings on stem bark; yellowing and wilting of foliage; plants easily break at ground level; wood full of compact frass tunnels."
+      ],
       "management": [
-        "Install pheromone traps and apply bio-control agents."
+        "Trace, uproot and burn infested plants (tracing); swab main stem with Chlorpyrifos 20% EC @ 6ml/L with wetting agent in April and October."
+      ]
+    },
+    {
+      "pest_name": "Coffee Berry Borer",
+      "scientific_name": "Hypothenemus hampei",
+      "symptoms": [
+        "Pin-sized entrance hole drilled into navel (calyx) region of berry; beans hollowed out and powderized."
+      ],
+      "management": [
+        "Spray Beauveria bassiana @ 1x10^8 conidia/ml at berry development; spray Chlorpyrifos 20% EC @ 2ml/L if infestation >10%."
       ]
     }
   ],

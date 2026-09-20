@@ -62,11 +62,23 @@
   ],
   "pests": [
     {
-      "pest_name": "Wheat Aphids",
-      "scientific_name": "Rhopalosiphum padi & Sitobion avenae",
-      "symptoms": [],
+      "pest_name": "Wheat Aphid",
+      "scientific_name": "Sitobion avenae",
+      "symptoms": [
+        "Dense colonies sucking sap from leaves and earheads; plants turn yellow and produce shriveled, light grains."
+      ],
       "management": [
-        "Install pheromone traps and apply bio-control agents."
+        "Spray Thiamethoxam 25% WG @ 0.3g/L or Dimethoate 30% EC @ 1.5ml/L at economic threshold (>5 aphids/earhead)."
+      ]
+    },
+    {
+      "pest_name": "Termites (White Ants)",
+      "scientific_name": "Microtermes obesi",
+      "symptoms": [
+        "Plants dry up in patches; damaged roots show hollowed tunnels filled with soil particles."
+      ],
+      "management": [
+        "Seed treatment with Chlorpyrifos 20% EC @ 4ml/kg; drench affected patches with Chlorpyrifos 20% EC @ 3ml/L."
       ]
     }
   ],

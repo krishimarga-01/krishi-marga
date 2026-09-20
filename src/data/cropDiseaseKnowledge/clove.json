@@ -18,7 +18,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Clove Stem Borer",
+      "scientific_name": "Sahyadrassus malabaricus",
+      "symptoms": [
+        "Larvae bore circular tunnels in wood, covered with coarse mat of wood particles and silk; branches wither and snap."
+      ],
+      "management": [
+        "Clear webbing and inject Quinalphos 25% EC (2ml/L) or Kerosene into hole and seal with mud."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Crisp, aromatic foliage free from leaf spot lesions or marginal blight",

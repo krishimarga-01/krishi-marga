@@ -46,7 +46,28 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Grapevine Flea Beetle",
+      "scientific_name": "Scelodonta strigicollis",
+      "symptoms": [
+        "Adults feed voraciously on emerging buds after October pruning, preventing shoot emergence; leaves riddled with shot holes."
+      ],
+      "management": [
+        "Spray Imidacloprid 17.8% SL @ 0.3ml/L or Spinosad 45% SC @ 0.3ml/L immediately after bud burst."
+      ]
+    },
+    {
+      "pest_name": "Grapevine Mealybug",
+      "scientific_name": "Maconellicoccus hirsutus",
+      "symptoms": [
+        "Cottony white wax covering bunches; berries crack, dry, and become coated in sticky sooty mold."
+      ],
+      "management": [
+        "Release predatory ladybird beetle Cryptolaemus montrouzieri @ 1500/ha; spray Buprofezin 25% SC @ 1.5ml/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Glossy green canopy with active flush of new growth",

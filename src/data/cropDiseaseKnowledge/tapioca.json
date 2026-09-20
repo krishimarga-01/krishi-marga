@@ -60,7 +60,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Cassava Whitefly",
+      "scientific_name": "Bemisia tabaci",
+      "symptoms": [
+        "Sap draining; major vector of Cassava Mosaic Disease producing distorted, stunted mosaic leaves."
+      ],
+      "management": [
+        "Spray Thiamethoxam 25% WG @ 0.3g/L or Dimethoate 30% EC @ 1.5ml/L; spray neem oil 10,000 ppm @ 2ml/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Turgid, deep green leaves with crisp texture and no chlorosis",

@@ -32,7 +32,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Sweet Potato Weevil",
+      "scientific_name": "Cylas formicarius",
+      "symptoms": [
+        "Grubs and adult weevils tunnel into tubers and vines; infested tubers turn dark, emit foul terpene odor, and become unpalatable."
+      ],
+      "management": [
+        "Dip vine cuttings in Chlorpyrifos 20% EC @ 2ml/L for 10 min before planting; spray Fipronil 5% SC @ 1.5ml/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Turgid, deep green leaves with crisp texture and no chlorosis",

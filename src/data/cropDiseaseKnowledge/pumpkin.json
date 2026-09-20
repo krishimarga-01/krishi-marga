@@ -19,7 +19,28 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Red Pumpkin Beetle",
+      "scientific_name": "Aulacophora foveicollis",
+      "symptoms": [
+        "Adults feed voraciously on cotyledons and leaves making circular holes; grubs feed underground on roots causing seedling collapse."
+      ],
+      "management": [
+        "Dust wood ash on seedling leaves early morning; spray Chlorpyrifos 20% EC @ 2ml/L or Carbaryl 50% WP @ 2g/L."
+      ]
+    },
+    {
+      "pest_name": "Melon Fruit Fly",
+      "scientific_name": "Bactrocera cucurbitae",
+      "symptoms": [
+        "Oviposition punctures ooze fluid; maggots feed inside causing watery pulp decay and premature fruit drop."
+      ],
+      "management": [
+        "Install cue-lure traps @ 10/acre; spray bait solution of Jaggery 10g + Malathion 50% EC 2ml/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Turgid, deep green leaves with crisp texture and no chlorosis",

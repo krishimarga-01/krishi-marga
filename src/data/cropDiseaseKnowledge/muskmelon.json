@@ -19,7 +19,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Melon Fruit Fly",
+      "scientific_name": "Bactrocera cucurbitae",
+      "symptoms": [
+        "Puncture spots on rind; internal tunneling by larvae resulting in premature fruit rot."
+      ],
+      "management": [
+        "Install cue-lure pheromone traps; bait spray of jaggery + Malathion."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Glossy green canopy with active flush of new growth",

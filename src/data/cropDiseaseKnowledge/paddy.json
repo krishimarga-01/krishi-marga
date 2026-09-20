@@ -216,19 +216,23 @@
   ],
   "pests": [
     {
-      "pest_name": "Brown Plant Hopper (BPH)",
-      "scientific_name": "Nilaparvata lugens",
-      "symptoms": [],
+      "pest_name": "Yellow Stem Borer",
+      "scientific_name": "Scirpophaga incertulas",
+      "symptoms": [
+        "Dead hearts in vegetative tillers; white heads (chaffy, empty panicles) at heading stage."
+      ],
       "management": [
-        "Install pheromone traps and apply bio-control agents."
+        "Release Trichogramma japonicum @ 100,000/ha; spray Chlorantraniliprole 18.5% SC @ 0.3ml/L or Cartap hydrochloride 50% SP @ 2g/L."
       ]
     },
     {
-      "pest_name": "Yellow Stem Borer",
-      "scientific_name": "Scirpophaga incertulas",
-      "symptoms": [],
+      "pest_name": "Brown Plant Hopper (BPH)",
+      "scientific_name": "Nilaparvata lugens",
+      "symptoms": [
+        "Nymphs and adults suck sap at stem base causing circular patches of dry brown plants (hopper burn)."
+      ],
       "management": [
-        "Install pheromone traps and apply bio-control agents."
+        "Alternate wetting and drying (AWD); drain field; spray Triflumezopyrim 10% SC @ 0.5ml/L or Pymetrozine 50% WG @ 0.6g/L."
       ]
     }
   ],

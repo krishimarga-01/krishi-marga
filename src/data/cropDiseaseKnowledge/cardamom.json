@@ -22,9 +22,21 @@
     {
       "pest_name": "Cardamom Thrips",
       "scientific_name": "Sciothrips cardamomi",
-      "symptoms": [],
+      "symptoms": [
+        "Rasping on capsules produces corky encrustations, scabs, and shedding of flowers; infested capsules fetch low commercial grade."
+      ],
       "management": [
-        "Install pheromone traps and apply bio-control agents."
+        "Spray Quinalphos 25% EC @ 2ml/L or Fipronil 5% SC @ 1.5ml/L or Diafenthiuron 50% WP @ 1.25g/L on panicles."
+      ]
+    },
+    {
+      "pest_name": "Cardamom Shoot and Capsule Borer",
+      "scientific_name": "Conogethes punctiferalis",
+      "symptoms": [
+        "Bore holes on pseudostem plugged with frass; central leaf dries (dead heart); capsules bored with hollow seeds."
+      ],
+      "management": [
+        "Spray Chlorantraniliprole 18.5% SC @ 0.3ml/L or Spinosad 45% SC @ 0.3ml/L."
       ]
     }
   ],

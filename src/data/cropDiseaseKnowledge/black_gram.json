@@ -20,7 +20,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Whitefly",
+      "scientific_name": "Bemisia tabaci",
+      "symptoms": [
+        "Sap sucking produces leaf chlorosis; vector of devastating yellow mosaic virus."
+      ],
+      "management": [
+        "Spray Acetamiprid 20% SP @ 0.2g/L or Diafenthiuron 50% WP @ 1.25g/L; neem oil 10,000 ppm @ 2ml/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Dark green trifoliate leaves with robust branching",

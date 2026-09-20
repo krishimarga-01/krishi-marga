@@ -22,9 +22,11 @@
     {
       "pest_name": "Tobacco Caterpillar",
       "scientific_name": "Spodoptera litura",
-      "symptoms": [],
+      "symptoms": [
+        "Early instars skeletonize leaf lamina gregariously; older larvae defoliate large irregular patches leaving only midribs."
+      ],
       "management": [
-        "Install pheromone traps and apply bio-control agents."
+        "Spray SlNPV @ 250 LE/ha with 1% jaggery; spray Emamectin Benzoate 5% SG @ 0.4g/L or Chlorantraniliprole 18.5% SC @ 0.3ml/L."
       ]
     }
   ],

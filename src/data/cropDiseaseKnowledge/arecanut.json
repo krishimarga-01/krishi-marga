@@ -22,9 +22,11 @@
     {
       "pest_name": "Arecanut Spindle Bug",
       "scientific_name": "Carvalhoia arecae",
-      "symptoms": [],
+      "symptoms": [
+        "Bugs suck sap from unexpanded spindle leaf; opened leaflets show brown necrotic linear patches and shot holes; stunted palm growth."
+      ],
       "management": [
-        "Install pheromone traps and apply bio-control agents."
+        "Spray or place Thiamethoxam 25% WG @ 0.3g/L or Dimethoate 30% EC @ 1.5ml/L directly into innermost leaf axils."
       ]
     }
   ],

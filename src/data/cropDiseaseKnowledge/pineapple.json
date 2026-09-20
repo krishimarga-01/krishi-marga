@@ -46,7 +46,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Pineapple Mealybug",
+      "scientific_name": "Dysmicoccus brevipes",
+      "symptoms": [
+        "Fluffy white colonies at plant base; causes mealybug wilt leading to flaccid, bronze-red wilted leaves and root rot."
+      ],
+      "management": [
+        "Dip suckers in Chlorpyrifos 20% EC (2.5ml/L) before planting; spray Dimethoate 30% EC @ 1.7ml/L around base."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Glossy green canopy with active flush of new growth",

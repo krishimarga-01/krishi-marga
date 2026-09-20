@@ -18,7 +18,28 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Groundnut Leaf Miner",
+      "scientific_name": "Aproaerema modicella",
+      "symptoms": [
+        "Small translucent blister mines on leaves; later leaflets webbed together and skeletonized, giving burnt appearance."
+      ],
+      "management": [
+        "Spray Quinalphos 25% EC @ 2ml/L or Dimethoate 30% EC @ 1.7ml/L or Chlorantraniliprole 18.5% SC @ 0.3ml/L."
+      ]
+    },
+    {
+      "pest_name": "Red Hairy Caterpillar",
+      "scientific_name": "Amsacta albistriga",
+      "symptoms": [
+        "Mass gregarious feeding of hairy reddish-brown caterpillars defoliating entire crop canopy."
+      ],
+      "management": [
+        "Dig trenches (30cm deep) around fields and dust with methyl parathion 2%; spray Chlorpyrifos 20% EC @ 2.5ml/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Thick, deep-green foliage with vigorous vegetative spread",

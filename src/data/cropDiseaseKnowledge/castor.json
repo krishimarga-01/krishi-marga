@@ -19,7 +19,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Castor Semilooper",
+      "scientific_name": "Achaea janata",
+      "symptoms": [
+        "Voracious defoliation leaving only midribs and main veins; plants completely stripped of foliage."
+      ],
+      "management": [
+        "Release egg parasitoid Trichogramma chilonis @ 50,000/ha; spray Bacillus thuringiensis @ 2g/L or Profenofos 50% EC @ 2ml/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Thick, deep-green foliage with vigorous vegetative spread",

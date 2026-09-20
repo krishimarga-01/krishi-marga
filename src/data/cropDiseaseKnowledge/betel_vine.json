@@ -19,7 +19,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Betelvine Bug",
+      "scientific_name": "Disphinctus politus",
+      "symptoms": [
+        "Nymphs and adults puncture tender leaves; necrotic angular brown punctures develop making leaves unfit for market."
+      ],
+      "management": [
+        "Spray Azadirachtin 10,000 ppm @ 2ml/L or Malathion 50% EC @ 1.5ml/L (observe 15-day pre-harvest interval)."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Glossy, turgid leaves with deep green pigmentation and no necrotic spots",

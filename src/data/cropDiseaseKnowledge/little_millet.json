@@ -18,7 +18,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Little Millet Shoot Fly",
+      "scientific_name": "Atherigona pulla",
+      "symptoms": [
+        "Withered dried central shoot (dead heart) in young plants 2 to 4 weeks after emergence."
+      ],
+      "management": [
+        "Spray NSKE 5% at 15 and 25 days after sowing; ensure clean cultivation."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Vigorous upright tillering with uniform emerald-green foliage",

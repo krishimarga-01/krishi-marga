@@ -18,7 +18,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Tamarind Fruit Borer",
+      "scientific_name": "Cryptophlebia ombrodelta",
+      "symptoms": [
+        "Caterpillars bore into maturing pods; internal pulp and seeds damaged and filled with granular excreta."
+      ],
+      "management": [
+        "Spray Quinalphos 25% EC @ 2ml/L or Chlorantraniliprole 18.5% SC @ 0.3ml/L during pod development."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Glossy, turgid leaves with deep green pigmentation and no necrotic spots",

@@ -32,7 +32,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Ginger Shoot Borer",
+      "scientific_name": "Conogethes punctiferalis",
+      "symptoms": [
+        "Bore holes on pseudostem with protruding frass; central shoots yellow and dry up forming dead hearts."
+      ],
+      "management": [
+        "Spray Chlorantraniliprole 18.5% SC @ 0.3ml/L or Quinalphos 25% EC @ 2ml/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Crisp, aromatic foliage free from leaf spot lesions or marginal blight",

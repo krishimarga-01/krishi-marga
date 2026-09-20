@@ -18,7 +18,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Foxtail Millet Shoot Fly",
+      "scientific_name": "Atherigona atripalpis",
+      "symptoms": [
+        "Dead hearts in young shoots, causing excessive tillering and stunted head formation."
+      ],
+      "management": [
+        "Spray Azadirachtin 10,000 ppm @ 2ml/L or Dimethoate 30% EC @ 1.5ml/L at 15 DAS."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Vigorous upright tillering with uniform emerald-green foliage",

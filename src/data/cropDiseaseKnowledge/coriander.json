@@ -19,7 +19,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Coriander Aphid",
+      "scientific_name": "Hyadaphis coriandri",
+      "symptoms": [
+        "Colonies suck sap from tender shoots and flowering umbels; umbels dry up and fail to set seed; heavy honeydew."
+      ],
+      "management": [
+        "Spray Dimethoate 30% EC @ 1.5ml/L or Imidacloprid 17.8% SL @ 0.3ml/L or NSKE 5%."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Crisp, aromatic foliage free from leaf spot lesions or marginal blight",

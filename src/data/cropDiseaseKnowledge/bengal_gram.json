@@ -20,7 +20,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Gram Pod Borer",
+      "scientific_name": "Helicoverpa armigera",
+      "symptoms": [
+        "Young caterpillars skeletonize leaves; older larvae bore circular holes into pods to consume seeds."
+      ],
+      "management": [
+        "Spray HaNPV 250 LE/ha; spray Chlorantraniliprole 18.5% SC @ 0.3ml/L or Emamectin Benzoate 5% SG @ 0.4g/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Dark green trifoliate leaves with robust branching",

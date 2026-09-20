@@ -19,7 +19,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Papaya Mealybug",
+      "scientific_name": "Paracoccus marginatus",
+      "symptoms": [
+        "Thick white cottony mealybug wax clusters on leaves and fruits; leaf crinkling, fruit distortion, and heavy sooty mold."
+      ],
+      "management": [
+        "Release exotic parasitoid Acerophagus papayae @ 100-250 per village/field; spray Profenofos 50% EC @ 2ml/L or Buprofezin 25% SC @ 1.5ml/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Glossy green canopy with active flush of new growth",

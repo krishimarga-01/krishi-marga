@@ -19,7 +19,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Capitulum Borer / Head Borer",
+      "scientific_name": "Helicoverpa armigera",
+      "symptoms": [
+        "Caterpillars feed on disc florets and bore into developing seeds, lining head with dark excreta."
+      ],
+      "management": [
+        "Spray Chlorantraniliprole 18.5% SC @ 0.3ml/L or Spinosad 45% SC @ 0.3ml/L directly on heads."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Thick, deep-green foliage with vigorous vegetative spread",

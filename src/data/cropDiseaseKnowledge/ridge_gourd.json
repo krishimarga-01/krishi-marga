@@ -18,7 +18,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Melon Fruit Fly",
+      "scientific_name": "Bactrocera cucurbitae",
+      "symptoms": [
+        "Puncture punctures on fruit ridges; larvae tunnel through internal flesh causing rot and premature drop."
+      ],
+      "management": [
+        "Install cue-lure traps @ 8/acre; spray bait solution of jaggery + Malathion."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Turgid, deep green leaves with crisp texture and no chlorosis",

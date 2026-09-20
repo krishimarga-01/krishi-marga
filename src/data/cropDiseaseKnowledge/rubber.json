@@ -20,11 +20,13 @@
   ],
   "pests": [
     {
-      "pest_name": "Scale Insects and Mealybugs",
-      "scientific_name": "Saissetia nigra & Planococcus citri",
-      "symptoms": [],
+      "pest_name": "Bark Eating Caterpillar",
+      "scientific_name": "Indarbela quadrinotata",
+      "symptoms": [
+        "Silken webbing ribbons containing wood frass and excreta on bark; tunnels bored into wood disrupt latex tapping."
+      ],
       "management": [
-        "Install pheromone traps and apply bio-control agents."
+        "Clean webbing and inject Quinalphos 25% EC (2ml/L) or Kerosene into hole and plug with wet mud."
       ]
     }
   ],

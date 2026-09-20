@@ -19,7 +19,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Cocoa Tea Mosquito Bug",
+      "scientific_name": "Helopeltis antonii",
+      "symptoms": [
+        "Dark necrotic spots on pods; cherelles wither and dry up (cherelle wilt); pod surface develops scab-like encrustations."
+      ],
+      "management": [
+        "Spray Thiamethoxam 25% WG @ 0.3g/L or Dimethoate 30% EC @ 1.5ml/L at cherelle formation."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Large, deep green fronds/leaves arranged symmetrically in crown/canopy",

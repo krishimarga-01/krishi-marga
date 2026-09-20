@@ -20,7 +20,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Whitefly",
+      "scientific_name": "Bemisia tabaci",
+      "symptoms": [
+        "Sap drainage, honeydew secretion, vector of Mungbean Yellow Mosaic Virus."
+      ],
+      "management": [
+        "Foliar spray of Thiamethoxam 25% WG @ 0.3g/L or Dimethoate 30% EC @ 1.7ml/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Dark green trifoliate leaves with robust branching",

@@ -18,7 +18,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Jackfruit Shoot and Fruit Borer",
+      "scientific_name": "Diaphania caesalis",
+      "symptoms": [
+        "Larvae bore into tender shoots and developing fruits, leaving prominent holes filled with dark gummy frass."
+      ],
+      "management": [
+        "Spray Chlorantraniliprole 18.5% SC @ 0.3ml/L or Quinalphos 25% EC @ 2ml/L during early fruit set."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Glossy green canopy with active flush of new growth",

@@ -1,77 +1,77 @@
 crop_id,crop_name,category,online_ai_enabled,offline_onnx_enabled,disease_knowledge_available,pest_knowledge_available,nutrient_knowledge_available,status
 paddy,Paddy,cereal,true,true,true,true,true,ONLINE_AI_ENABLED + OFFLINE_ONNX
 maize,Maize,cereal,true,true,true,true,true,ONLINE_AI_ENABLED + OFFLINE_ONNX
-ragi,Ragi,cereal,true,false,true,false,false,ONLINE_AI_ENABLED
-sorghum,Sorghum,cereal,true,false,true,false,false,ONLINE_AI_ENABLED
-pearl_millet,Pearl Millet,cereal,true,false,true,false,false,ONLINE_AI_ENABLED
-foxtail_millet,Foxtail Millet,cereal,true,false,true,false,false,ONLINE_AI_ENABLED
-little_millet,Little Millet,cereal,true,false,true,false,false,ONLINE_AI_ENABLED
-kodo_millet,Kodo Millet,cereal,true,false,true,false,false,ONLINE_AI_ENABLED
-barnyard_millet,Barnyard Millet,cereal,true,false,true,false,false,ONLINE_AI_ENABLED
-proso_millet,Proso Millet,cereal,true,false,true,false,false,ONLINE_AI_ENABLED
+ragi,Ragi,cereal,true,false,true,true,false,ONLINE_AI_ENABLED
+sorghum,Sorghum,cereal,true,false,true,true,false,ONLINE_AI_ENABLED
+pearl_millet,Pearl Millet,cereal,true,false,true,true,false,ONLINE_AI_ENABLED
+foxtail_millet,Foxtail Millet,cereal,true,false,true,true,false,ONLINE_AI_ENABLED
+little_millet,Little Millet,cereal,true,false,true,true,false,ONLINE_AI_ENABLED
+kodo_millet,Kodo Millet,cereal,true,false,true,true,false,ONLINE_AI_ENABLED
+barnyard_millet,Barnyard Millet,cereal,true,false,true,true,false,ONLINE_AI_ENABLED
+proso_millet,Proso Millet,cereal,true,false,true,true,false,ONLINE_AI_ENABLED
 wheat,Wheat,cereal,true,false,true,true,false,ONLINE_AI_ENABLED
 red_gram,Red Gram,pulse,true,false,true,true,false,ONLINE_AI_ENABLED
-black_gram,Black Gram,pulse,true,false,true,false,false,ONLINE_AI_ENABLED
-green_gram,Green Gram,pulse,true,false,true,false,false,ONLINE_AI_ENABLED
-bengal_gram,Bengal Gram,pulse,true,false,true,false,false,ONLINE_AI_ENABLED
-cowpea,Cowpea,pulse,true,false,true,false,false,ONLINE_AI_ENABLED
-field_bean,Field Bean,pulse,true,false,true,false,false,ONLINE_AI_ENABLED
-groundnut,Groundnut,oilseed,true,false,true,false,false,ONLINE_AI_ENABLED
-sesame,Sesame,oilseed,true,false,true,false,false,ONLINE_AI_ENABLED
-sunflower,Sunflower,oilseed,true,false,true,false,false,ONLINE_AI_ENABLED
-castor,Castor,oilseed,true,false,true,false,false,ONLINE_AI_ENABLED
-safflower,Safflower,oilseed,true,false,true,false,false,ONLINE_AI_ENABLED
-soybean,Soybean,oilseed,true,false,true,false,false,ONLINE_AI_ENABLED
+black_gram,Black Gram,pulse,true,false,true,true,false,ONLINE_AI_ENABLED
+green_gram,Green Gram,pulse,true,false,true,true,false,ONLINE_AI_ENABLED
+bengal_gram,Bengal Gram,pulse,true,false,true,true,false,ONLINE_AI_ENABLED
+cowpea,Cowpea,pulse,true,false,true,true,false,ONLINE_AI_ENABLED
+field_bean,Field Bean,pulse,true,false,true,true,false,ONLINE_AI_ENABLED
+groundnut,Groundnut,oilseed,true,false,true,true,false,ONLINE_AI_ENABLED
+sesame,Sesame,oilseed,true,false,true,true,false,ONLINE_AI_ENABLED
+sunflower,Sunflower,oilseed,true,false,true,true,false,ONLINE_AI_ENABLED
+castor,Castor,oilseed,true,false,true,true,false,ONLINE_AI_ENABLED
+safflower,Safflower,oilseed,true,false,true,true,false,ONLINE_AI_ENABLED
+soybean,Soybean,oilseed,true,false,true,true,false,ONLINE_AI_ENABLED
 cotton,Cotton,commercial,true,true,true,true,true,ONLINE_AI_ENABLED + OFFLINE_ONNX
 sugarcane,Sugarcane,commercial,true,true,true,true,true,ONLINE_AI_ENABLED + OFFLINE_ONNX
 tobacco,Tobacco,commercial,true,false,true,true,false,ONLINE_AI_ENABLED
 tomato,Tomato,vegetable,true,true,true,true,true,ONLINE_AI_ENABLED + OFFLINE_ONNX
 chilli,Chilli,vegetable,true,true,true,true,true,ONLINE_AI_ENABLED + OFFLINE_ONNX
-brinjal,Brinjal,vegetable,true,false,true,false,false,ONLINE_AI_ENABLED
-onion,Onion,vegetable,true,false,true,false,false,ONLINE_AI_ENABLED
-okra,Okra,vegetable,true,false,true,false,false,ONLINE_AI_ENABLED
-potato,Potato,vegetable,true,true,true,false,false,ONLINE_AI_ENABLED + OFFLINE_ONNX
-tapioca,Tapioca,vegetable,true,false,true,false,false,ONLINE_AI_ENABLED
-sweet_potato,Sweet Potato,vegetable,true,false,true,false,false,ONLINE_AI_ENABLED
-drumstick,Drumstick,vegetable,true,false,true,false,false,ONLINE_AI_ENABLED
-cucumber,Cucumber,vegetable,true,false,true,false,false,ONLINE_AI_ENABLED
-pumpkin,Pumpkin,vegetable,true,false,true,false,false,ONLINE_AI_ENABLED
-bitter_gourd,Bitter Gourd,vegetable,true,false,true,false,false,ONLINE_AI_ENABLED
-bottle_gourd,Bottle Gourd,vegetable,true,false,true,false,false,ONLINE_AI_ENABLED
-ridge_gourd,Ridge Gourd,vegetable,true,false,true,false,false,ONLINE_AI_ENABLED
-beans,Beans,vegetable,true,false,true,false,false,ONLINE_AI_ENABLED
-cabbage,Cabbage,vegetable,true,false,true,false,false,ONLINE_AI_ENABLED
-cauliflower,Cauliflower,vegetable,true,false,true,false,false,ONLINE_AI_ENABLED
-carrot,Carrot,vegetable,true,false,true,false,false,ONLINE_AI_ENABLED
-beetroot,Beetroot,vegetable,true,false,true,false,false,ONLINE_AI_ENABLED
-banana,Banana,fruit,true,true,true,false,false,ONLINE_AI_ENABLED + OFFLINE_ONNX
-mango,Mango,fruit,true,false,true,false,false,ONLINE_AI_ENABLED
-papaya,Papaya,fruit,true,false,true,false,false,ONLINE_AI_ENABLED
-pomegranate,Pomegranate,fruit,true,false,true,false,false,ONLINE_AI_ENABLED
-guava,Guava,fruit,true,false,true,false,false,ONLINE_AI_ENABLED
-sapota,Sapota,fruit,true,false,true,false,false,ONLINE_AI_ENABLED
-pineapple,Pineapple,fruit,true,false,true,false,false,ONLINE_AI_ENABLED
-grapes,Grapes,fruit,true,false,true,false,false,ONLINE_AI_ENABLED
-jackfruit,Jackfruit,fruit,true,false,true,false,false,ONLINE_AI_ENABLED
-watermelon,Watermelon,fruit,true,false,true,false,false,ONLINE_AI_ENABLED
-muskmelon,Muskmelon,fruit,true,false,true,false,false,ONLINE_AI_ENABLED
-citrus_lime,Acid Lime,fruit,true,false,true,false,false,ONLINE_AI_ENABLED
+brinjal,Brinjal,vegetable,true,false,true,true,false,ONLINE_AI_ENABLED
+onion,Onion,vegetable,true,false,true,true,false,ONLINE_AI_ENABLED
+okra,Okra,vegetable,true,false,true,true,false,ONLINE_AI_ENABLED
+potato,Potato,vegetable,true,true,true,true,false,ONLINE_AI_ENABLED + OFFLINE_ONNX
+tapioca,Tapioca,vegetable,true,false,true,true,false,ONLINE_AI_ENABLED
+sweet_potato,Sweet Potato,vegetable,true,false,true,true,false,ONLINE_AI_ENABLED
+drumstick,Drumstick,vegetable,true,false,true,true,false,ONLINE_AI_ENABLED
+cucumber,Cucumber,vegetable,true,false,true,true,false,ONLINE_AI_ENABLED
+pumpkin,Pumpkin,vegetable,true,false,true,true,false,ONLINE_AI_ENABLED
+bitter_gourd,Bitter Gourd,vegetable,true,false,true,true,false,ONLINE_AI_ENABLED
+bottle_gourd,Bottle Gourd,vegetable,true,false,true,true,false,ONLINE_AI_ENABLED
+ridge_gourd,Ridge Gourd,vegetable,true,false,true,true,false,ONLINE_AI_ENABLED
+beans,Beans,vegetable,true,false,true,true,false,ONLINE_AI_ENABLED
+cabbage,Cabbage,vegetable,true,false,true,true,false,ONLINE_AI_ENABLED
+cauliflower,Cauliflower,vegetable,true,false,true,true,false,ONLINE_AI_ENABLED
+carrot,Carrot,vegetable,true,false,true,true,false,ONLINE_AI_ENABLED
+beetroot,Beetroot,vegetable,true,false,true,true,false,ONLINE_AI_ENABLED
+banana,Banana,fruit,true,true,true,true,false,ONLINE_AI_ENABLED + OFFLINE_ONNX
+mango,Mango,fruit,true,false,true,true,false,ONLINE_AI_ENABLED
+papaya,Papaya,fruit,true,false,true,true,false,ONLINE_AI_ENABLED
+pomegranate,Pomegranate,fruit,true,false,true,true,false,ONLINE_AI_ENABLED
+guava,Guava,fruit,true,false,true,true,false,ONLINE_AI_ENABLED
+sapota,Sapota,fruit,true,false,true,true,false,ONLINE_AI_ENABLED
+pineapple,Pineapple,fruit,true,false,true,true,false,ONLINE_AI_ENABLED
+grapes,Grapes,fruit,true,false,true,true,false,ONLINE_AI_ENABLED
+jackfruit,Jackfruit,fruit,true,false,true,true,false,ONLINE_AI_ENABLED
+watermelon,Watermelon,fruit,true,false,true,true,false,ONLINE_AI_ENABLED
+muskmelon,Muskmelon,fruit,true,false,true,true,false,ONLINE_AI_ENABLED
+citrus_lime,Acid Lime,fruit,true,false,true,true,false,ONLINE_AI_ENABLED
 coconut,Coconut,plantation,true,false,true,true,true,ONLINE_AI_ENABLED
 arecanut,Arecanut,plantation,true,false,true,true,true,ONLINE_AI_ENABLED
 cashew,Cashew,plantation,true,false,true,true,false,ONLINE_AI_ENABLED
 coffee,Coffee,plantation,true,false,true,true,false,ONLINE_AI_ENABLED
 tea,Tea,plantation,true,false,true,true,false,ONLINE_AI_ENABLED
 rubber,Rubber,plantation,true,false,true,true,false,ONLINE_AI_ENABLED
-cocoa,Cocoa,plantation,true,false,true,false,false,ONLINE_AI_ENABLED
-oil_palm,Oil Palm,plantation,true,false,true,false,false,ONLINE_AI_ENABLED
-palmyrah,Palmyrah,plantation,true,false,true,false,false,ONLINE_AI_ENABLED
+cocoa,Cocoa,plantation,true,false,true,true,false,ONLINE_AI_ENABLED
+oil_palm,Oil Palm,plantation,true,false,true,true,false,ONLINE_AI_ENABLED
+palmyrah,Palmyrah,plantation,true,false,true,true,false,ONLINE_AI_ENABLED
 black_pepper,Black Pepper,spice,true,false,true,true,false,ONLINE_AI_ENABLED
 cardamom,Cardamom,spice,true,false,true,true,false,ONLINE_AI_ENABLED
 turmeric,Turmeric,spice,true,false,true,true,false,ONLINE_AI_ENABLED
-ginger,Ginger,spice,true,false,true,false,false,ONLINE_AI_ENABLED
-clove,Clove,spice,true,false,true,false,false,ONLINE_AI_ENABLED
-coriander,Coriander,spice,true,false,true,false,false,ONLINE_AI_ENABLED
-cumin,Cumin,spice,true,false,true,false,false,ONLINE_AI_ENABLED
-fenugreek,Fenugreek,spice,true,false,true,false,false,ONLINE_AI_ENABLED
-betel_vine,Betel Vine,other,true,false,true,false,false,ONLINE_AI_ENABLED
-tamarind,Tamarind,other,false,false,true,false,false,OUTSIDE_75_TARGET
+ginger,Ginger,spice,true,false,true,true,false,ONLINE_AI_ENABLED
+clove,Clove,spice,true,false,true,true,false,ONLINE_AI_ENABLED
+coriander,Coriander,spice,true,false,true,true,false,ONLINE_AI_ENABLED
+cumin,Cumin,spice,true,false,true,true,false,ONLINE_AI_ENABLED
+fenugreek,Fenugreek,spice,true,false,true,true,false,ONLINE_AI_ENABLED
+betel_vine,Betel Vine,other,true,false,true,true,false,ONLINE_AI_ENABLED
+tamarind,Tamarind,other,false,false,true,true,false,OUTSIDE_75_TARGET

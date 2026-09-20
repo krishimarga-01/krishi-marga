@@ -92,17 +92,21 @@
     {
       "pest_name": "Rhinoceros Beetle",
       "scientific_name": "Oryctes rhinoceros",
-      "symptoms": [],
+      "symptoms": [
+        "V-shaped geometric cuts on opened fronds; holes bored into crown base plugged with chewed fiber; destroyed growing tips."
+      ],
       "management": [
-        "Install pheromone traps and apply bio-control agents."
+        "Hook out beetles from crown with curved iron hook; place naphthalene balls (3 balls) covered with fine sand in top leaf axils; apply Metarhizium anisopliae to manure pits."
       ]
     },
     {
       "pest_name": "Red Palm Weevil",
       "scientific_name": "Rhynchophorus ferrugineus",
-      "symptoms": [],
+      "symptoms": [
+        "Oozing of viscous brown fluid from trunk holes; chewed fibrous frass ejected; gnawing sound heard from trunk; central spindle wilts."
+      ],
       "management": [
-        "Install pheromone traps and apply bio-control agents."
+        "Trunk injection of Imidacloprid 17.8% SL (3-5 ml in 10-15 ml water) or stem furrow treatment; seal all wounds with coal tar."
       ]
     }
   ],

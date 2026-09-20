@@ -78,9 +78,21 @@
     {
       "pest_name": "Pollu Beetle",
       "scientific_name": "Longitarsus nigripennis",
-      "symptoms": [],
+      "symptoms": [
+        "Adults scrape leaves; grubs bore into berries and hollow them out, turning them into dry empty shells (pollu berries)."
+      ],
       "management": [
-        "Install pheromone traps and apply bio-control agents."
+        "Spray Quinalphos 25% EC @ 2ml/L in June-July and October; or spray Neemgold 0.5%."
+      ]
+    },
+    {
+      "pest_name": "Top Shoot Borer",
+      "scientific_name": "Cydia hemidoxa",
+      "symptoms": [
+        "Caterpillars bore into growing terminal shoots causing shoot tip wilting and dieback."
+      ],
+      "management": [
+        "Spray Dimethoate 30% EC @ 1.7ml/L or Quinalphos 25% EC @ 2ml/L on new shoots."
       ]
     }
   ],

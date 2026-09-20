@@ -20,7 +20,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Sorghum Shoot Fly",
+      "scientific_name": "Atherigona soccata",
+      "symptoms": [
+        "Dead hearts in 1-4 week old seedlings; decaying central whorl emits foul rot odor when pulled."
+      ],
+      "management": [
+        "Seed treatment with Imidacloprid 70% WS @ 5g/kg; spray Chlorpyrifos 20% EC @ 2ml/L on seedling stage."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Vigorous upright tillering with uniform emerald-green foliage",

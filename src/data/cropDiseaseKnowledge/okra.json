@@ -19,7 +19,28 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Okra Shoot and Fruit Borer",
+      "scientific_name": "Earias vittella",
+      "symptoms": [
+        "Terminal shoot drooping; bore holes in fruit sealed with frass; deformed, crooked fruits unsuitable for market."
+      ],
+      "management": [
+        "Prompt collection and destruction of infested shoots/fruits; spray Chlorantraniliprole 18.5% SC @ 0.3ml/L or Spinosad 45% SC @ 0.3ml/L."
+      ]
+    },
+    {
+      "pest_name": "Whitefly",
+      "scientific_name": "Bemisia tabaci",
+      "symptoms": [
+        "Vectors destructive Yellow Vein Mosaic Virus; causes leaf chlorosis and sooty mold."
+      ],
+      "management": [
+        "Spray Diafenthiuron 50% WP @ 1.25g/L or Acetamiprid 20% SP @ 0.2g/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Turgid, deep green leaves with crisp texture and no chlorosis",

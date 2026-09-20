@@ -19,7 +19,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Onion Thrips",
+      "scientific_name": "Thrips tabaci",
+      "symptoms": [
+        "Silvery white patches and sunken chlorotic spots on leaves; leaf tips turn brown, curl and wither."
+      ],
+      "management": [
+        "Spray Fipronil 5% SC @ 1.5ml/L or Acetamiprid 20% SP @ 0.3g/L with non-ionic sticker."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Turgid, deep green leaves with crisp texture and no chlorosis",

@@ -60,7 +60,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Brinjal Shoot and Fruit Borer",
+      "scientific_name": "Leucinodes orbonalis",
+      "symptoms": [
+        "Withering and drooping of terminal shoots in vegetative phase; bore holes plugged with excreta in fruits."
+      ],
+      "management": [
+        "Continuous prompt clipping of withered shoots; spray Chlorantraniliprole 18.5% SC @ 0.3ml/L or Emamectin Benzoate 5% SG @ 0.4g/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Turgid, deep green leaves with crisp texture and no chlorosis",

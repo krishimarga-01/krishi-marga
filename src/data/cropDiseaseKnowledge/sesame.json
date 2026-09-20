@@ -18,7 +18,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Til Leaf and Pod Caterpillar",
+      "scientific_name": "Antigastra catalaunalis",
+      "symptoms": [
+        "Tender leaves webbed together; larvae feed inside web and bore into capsules, resulting in empty seedless pods."
+      ],
+      "management": [
+        "Spray Quinalphos 25% EC @ 2ml/L or Emamectin Benzoate 5% SG @ 0.4g/L at flowering."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Thick, deep-green foliage with vigorous vegetative spread",

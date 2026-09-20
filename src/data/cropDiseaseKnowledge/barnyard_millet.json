@@ -18,7 +18,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Barnyard Millet Shoot Fly",
+      "scientific_name": "Atherigona falcata",
+      "symptoms": [
+        "Central leaf drying and dead heart formation in seedlings 15 to 30 days after sowing."
+      ],
+      "management": [
+        "Seed treatment with Imidacloprid 600 FS @ 5ml/kg; spray NSKE 5%."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Vigorous upright tillering with uniform emerald-green foliage",

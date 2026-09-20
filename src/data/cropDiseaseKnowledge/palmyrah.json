@@ -18,7 +18,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Black Headed Caterpillar",
+      "scientific_name": "Opisina arenosella",
+      "symptoms": [
+        "Caterpillars build silken galleries on leaf undersides and scrape green chlorophyll, giving a burnt, scorched grey appearance."
+      ],
+      "management": [
+        "Release larval parasitoids Goniozus nephantidis @ 20.5% and Bracon brevicornis; root feeding with Chlorpyrifos 20% EC @ 10ml + 10ml water."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Large, deep green fronds/leaves arranged symmetrically in crown/canopy",

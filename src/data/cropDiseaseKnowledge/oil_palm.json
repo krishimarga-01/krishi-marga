@@ -19,7 +19,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Rhinoceros Beetle",
+      "scientific_name": "Oryctes rhinoceros",
+      "symptoms": [
+        "Geometric V-shaped cuts on newly opened fronds; holes bored into spear leaf base."
+      ],
+      "management": [
+        "Place naphthalene balls (10g) in upper leaf axils; apply Metarhizium anisopliae to organic compost pits."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Large, deep green fronds/leaves arranged symmetrically in crown/canopy",

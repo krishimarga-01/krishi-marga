@@ -542,6 +542,57 @@ export const PesticideScannerScreen = ({ navigation, route }: any) => {
                   </View>
                 )}
 
+                {/* PESTICIDE INTENDED USE & EXPLANATION CARD */}
+                <View style={styles.intendedUseCard}>
+                  <View style={styles.intendedUseHeaderRow}>
+                    <Text style={styles.intendedUseIcon}>📋</Text>
+                    <View style={{ flex: 1 }}>
+                      <Text style={styles.intendedUseTitle}>
+                        {t('pesticideIntendedUseTitle') || 'Pesticide Intended Use & Explanation'}
+                      </Text>
+                      <Text style={styles.intendedUseSubtitle}>
+                        {scanResult.category || 'Agricultural Crop Protection Chemical'}
+                      </Text>
+                    </View>
+                  </View>
+
+                  {/* 1. Primary Intended Use */}
+                  <View style={styles.intendedUseRow}>
+                    <Text style={styles.intendedUseKey}>🎯 Intended Use:</Text>
+                    <Text style={styles.intendedUseVal}>
+                      {scanResult.target_pests && scanResult.target_pests.length > 0 && scanResult.suitable_crops && scanResult.suitable_crops.length > 0
+                        ? `Used to control ${scanResult.target_pests.join(', ')} in ${scanResult.suitable_crops.join(', ')}.`
+                        : scanResult.general_use || scanResult.why_farmers_use_it || 'Formulated for registered agricultural target pest and disease management.'}
+                    </Text>
+                  </View>
+
+                  {/* 2. Active Ingredient & Concentration */}
+                  <View style={styles.intendedUseRow}>
+                    <Text style={styles.intendedUseKey}>🧪 Active Ingredient:</Text>
+                    <Text style={styles.intendedUseVal}>
+                      {scanResult.active_ingredient || 'As stated on container'} {scanResult.formulation ? `(${scanResult.formulation})` : ''}
+                    </Text>
+                  </View>
+
+                  {/* 3. Application & Dosage */}
+                  <View style={styles.intendedUseRow}>
+                    <Text style={styles.intendedUseKey}>⚖️ Application & Dosage:</Text>
+                    <Text style={styles.intendedUseVal}>
+                      {scanResult.localRecord?.dosage_guidance || scanResult.dosage_notice}
+                    </Text>
+                  </View>
+
+                  {/* 4. Safety Precautions & Waiting Period (PHI) */}
+                  <View style={styles.intendedUseRow}>
+                    <Text style={styles.intendedUseKey}>🛡️ Safety & Waiting Period (PHI):</Text>
+                    <Text style={styles.intendedUseVal}>
+                      {scanResult.safety_guidance && scanResult.safety_guidance.length > 0
+                        ? `${scanResult.safety_guidance.slice(0, 2).join('. ')}. Always observe label pre-harvest waiting interval (PHI) before harvesting.`
+                        : 'Wear protective gear during handling. Observe label pre-harvest waiting interval (PHI) before harvesting.'}
+                    </Text>
+                  </View>
+                </View>
+
                 {/* 2x2 Specs Grid */}
                 <View style={styles.specsGrid}>
                   <View style={styles.specBox}>
@@ -1623,5 +1674,49 @@ const styles = StyleSheet.create({
   emptySearchText: {
     fontSize: 14,
     color: '#64748B',
+  },
+  intendedUseCard: {
+    backgroundColor: '#F0FDF4',
+    borderColor: '#86EFAC',
+    borderWidth: 1.5,
+    borderRadius: 14,
+    padding: 14,
+    marginVertical: 12,
+  },
+  intendedUseHeaderRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#DCFCE7',
+    paddingBottom: 8,
+  },
+  intendedUseIcon: {
+    fontSize: 22,
+    marginRight: 8,
+  },
+  intendedUseTitle: {
+    fontSize: 15,
+    fontWeight: '800',
+    color: '#166534',
+  },
+  intendedUseSubtitle: {
+    fontSize: 12,
+    color: '#15803D',
+    fontWeight: '500',
+  },
+  intendedUseRow: {
+    marginBottom: 8,
+  },
+  intendedUseKey: {
+    fontSize: 12.5,
+    fontWeight: '700',
+    color: '#14532D',
+    marginBottom: 2,
+  },
+  intendedUseVal: {
+    fontSize: 12.5,
+    color: '#1E293B',
+    lineHeight: 18,
   },
 });

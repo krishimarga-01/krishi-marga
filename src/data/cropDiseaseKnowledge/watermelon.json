@@ -19,7 +19,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Melon Fruit Fly",
+      "scientific_name": "Bactrocera cucurbitae",
+      "symptoms": [
+        "Sunken brown puncture spots exuding fluid; internal rotting with maggots."
+      ],
+      "management": [
+        "Install cue-lure traps @ 10/acre; bait spray of Malathion 50% EC (2ml) + Jaggery (10g) / L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Glossy green canopy with active flush of new growth",

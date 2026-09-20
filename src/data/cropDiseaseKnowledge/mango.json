@@ -18,7 +18,28 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Mango Hopper",
+      "scientific_name": "Idioscopus nitidulus",
+      "symptoms": [
+        "Nymphs and adults suck sap from panicles causing them to wither and dry (blossom blight); honeydew covers leaves with black sooty mold."
+      ],
+      "management": [
+        "First spray at panicle emergence: Imidacloprid 17.8% SL @ 0.3ml/L or Thiamethoxam 25% WG @ 0.25g/L; second spray at pea stage: Dimethoate 30% EC @ 1.5ml/L."
+      ]
+    },
+    {
+      "pest_name": "Oriental Fruit Fly",
+      "scientific_name": "Bactrocera dorsalis",
+      "symptoms": [
+        "Oviposition punctures with dark liquid exudate; internal pulp consumed by maggots causing fruit rotting and drop."
+      ],
+      "management": [
+        "Install methyl eugenol pheromone traps @ 6-8/acre; bait spray of protein hydrolysate + Malathion 50% EC."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Glossy green canopy with active flush of new growth",

@@ -18,7 +18,28 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Citrus Butterfly",
+      "scientific_name": "Papilio demoleus",
+      "symptoms": [
+        "Young caterpillars resemble bird droppings; mature caterpillars feed voraciously on leaves, completely defoliating seedlings and nursery stock."
+      ],
+      "management": [
+        "Hand collection of caterpillars in small gardens/nurseries; spray Bacillus thuringiensis @ 2g/L or Quinalphos 25% EC @ 2ml/L."
+      ]
+    },
+    {
+      "pest_name": "Citrus Leaf Miner",
+      "scientific_name": "Phyllocnistis citrella",
+      "symptoms": [
+        "Silvery serpentine winding mines on lower leaf surface; leaves curl and crinkle; provides entry points for Citrus Canker bacterium."
+      ],
+      "management": [
+        "Spray Thiamethoxam 25% WG @ 0.3g/L or Imidacloprid 17.8% SL @ 0.3ml/L or NSKE 5% at flush emergence."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Glossy green canopy with active flush of new growth",

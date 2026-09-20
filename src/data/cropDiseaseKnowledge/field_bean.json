@@ -19,7 +19,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Lablab Pod Borer",
+      "scientific_name": "Adisura atkinsoni",
+      "symptoms": [
+        "Larvae bore into buds and green pods, sealing the entry hole with silk and faecal pellets."
+      ],
+      "management": [
+        "Spray Spinosad 45% SC @ 0.3ml/L or Chlorantraniliprole 18.5% SC @ 0.3ml/L at flower initiation."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Dark green trifoliate leaves with robust branching",

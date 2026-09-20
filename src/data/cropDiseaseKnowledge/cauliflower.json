@@ -19,7 +19,18 @@
       ]
     }
   ],
-  "pests": [],
+  "pests": [
+    {
+      "pest_name": "Diamondback Moth (DBM)",
+      "scientific_name": "Plutella xylostella",
+      "symptoms": [
+        "Window-paning of leaves, feeding on curd surface causing discoloration and contamination with faeces."
+      ],
+      "management": [
+        "Spray Bt @ 2g/L or Chlorantraniliprole 18.5% SC @ 0.3ml/L or Flubendiamide 39.35% SC @ 0.2ml/L."
+      ]
+    }
+  ],
   "nutrient_deficiencies": [],
   "healthy_signs": [
     "Turgid, deep green leaves with crisp texture and no chlorosis",

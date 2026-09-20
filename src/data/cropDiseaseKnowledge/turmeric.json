@@ -20,11 +20,13 @@
   ],
   "pests": [
     {
-      "pest_name": "Shoot Borer",
+      "pest_name": "Turmeric Shoot Borer",
       "scientific_name": "Conogethes punctiferalis",
-      "symptoms": [],
+      "symptoms": [
+        "Larvae bore into pseudostem; central leaf dries up producing dead hearts; bore hole shows frass exudation."
+      ],
       "management": [
-        "Install pheromone traps and apply bio-control agents."
+        "Spray Dimethoate 30% EC @ 1.7ml/L or Chlorantraniliprole 18.5% SC @ 0.3ml/L at 21-day intervals."
       ]
     }
   ],
