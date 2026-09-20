@@ -1,0 +1,11 @@
+{
+  name: krishi-marga-download,
+  version: 1.0.0,
+  description: Krishi Marga Download Landing Page for Android APK,
+  main: index.html,
+  scripts: {
+    start: npx serve .
+  },
+  keywords: [krishi-marga, agriculture, android, apk],
+  license: MIT
+}

@@ -5,21 +5,44 @@ package-lock.json.bak
 # Expo and Metro Cache
 .expo/
 dist/
+build/
 web-build/
 .metro/
+coverage/
 
 # Environment Variables and Local Secrets
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
 *.pem
 *.key
+*.p12
+*.keystore
+*.jks
 
-# Raw and Processed Image Datasets (>100MB / Gigabytes of training images)
+# IDE and Editor Directories
+.vscode/
+.idea/
+
+# Credentials and API Tokens
+credentials/
+secrets/
+kaggle.json
+
+# Large Training Datasets, Checkpoints, and Caches
 data/raw/
 data/processed/
 data/intermediate/
 dataset_research/KRISHI_MARGA_DATASETS/
+training/dataset/*
+!training/dataset/README.md
+training/models/checkpoints/
+training/models/*.pth
+training/logs/
+training/outputs/
+*.zip
+*.tar
+*.tar.gz
 
 # Test / Scratch artifacts
 test_leaf*.jpg
