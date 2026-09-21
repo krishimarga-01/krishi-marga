@@ -8,7 +8,7 @@
 // ============================================================================
 // CONFIGURATION: CENTRAL APK DOWNLOAD URL
 // ============================================================================
-const APK_DOWNLOAD_URL = "https://expo.dev/artifacts/eas/t_tjjlgnO3r90v6FPbQonC98-5yj5NEFY2wWnKp-u3c.apk";
+const APK_DOWNLOAD_URL = "https://expo.dev/artifacts/eas/FJQ2iur1ZvSI7265QkyMiMfTpkXIeloFPk3-p7eAPdM.apk";
 
 // ============================================================================
 // INITIALIZE PAGE & QR CODE
