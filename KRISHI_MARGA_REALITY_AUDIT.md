@@ -124,7 +124,7 @@
 
 ## 15. ONLINE GEMINI DIAGNOSIS AUDIT
 
-- **Server Endpoint**: `http://localhost:5678/webhook/detect-disease` (or LAN IP)
+- **Server Endpoint**: Backend URL is resolved at runtime via `Config.getBackendUrl()` (or LAN IP fallback)
 - **Engine**: n8n workflow (`current_wf.json`) orchestrating **Gemini 3.5 Flash Lite** with 3-model failover.
 - **Multi-Image Latency Tests**:
   - **1 Image**: HTTP 200 in **1.82s** (Anthracnose / Dieback detected with 0.92 confidence)

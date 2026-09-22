@@ -1,0 +1,41 @@
+{
+  "crop": "Cowpea",
+  "crop_id": "cowpea",
+  "category": "pulse",
+  "diseases": [
+    {
+      "disease_name": "Cowpea Anthracnose",
+      "scientific_name": "Colletotrichum lindemuthianum",
+      "symptoms": [
+        "Dark brown to black sunken spots on pods, stems, and leaf veins"
+      ],
+      "severity": "Moderate to Severe",
+      "management": [
+        "Foliar spray of Carbendazim 50% WP @ 1 g/L"
+      ],
+      "prevention": [
+        "Crop rotation with non-leguminous crops",
+        "Hot water seed treatment"
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Dark green trifoliate leaves with robust branching",
+    "Abundant pink active Rhizobium root nodules upon sectioning",
+    "Profuse flowering and well-set pods without necrosis or pod-borer entry holes",
+    "Erect stem with no vascular wilting"
+  ],
+  "management": [
+    "Remove and safely destroy severely infected plants to prevent field-wide spread",
+    "Spray neem oil (3000 ppm @ 3ml/L) or approved target-specific bio-pesticides",
+    "Ensure proper soil aeration through light intercultivation"
+  ],
+  "prevention": [
+    "Treat seeds with Rhizobium culture and Trichoderma viride prior to sowing",
+    "Avoid water stagnation through raised-bed planting or broad-bed furrow system",
+    "Practice 2-3 year crop rotation with cereals like sorghum or maize",
+    "Install yellow sticky traps and pheromone traps early in the season"
+  ]
+}

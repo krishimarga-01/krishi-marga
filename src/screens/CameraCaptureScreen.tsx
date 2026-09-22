@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useRef, useState, useCallback } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Image, ScrollView, TextInput, Alert, ActivityIndicator } from 'react-native';
+import { useFocusEffect } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import * as ImagePicker from 'expo-image-picker';
 import * as Location from 'expo-location';
@@ -24,6 +25,16 @@ export const CameraCaptureScreen = ({ route, navigation }: any) => {
   const [isLocating, setIsLocating] = useState(false);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [lowQualityNotice, setLowQualityNotice] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const isSubmittingRef = useRef(false);
+
+  useFocusEffect(
+    useCallback(() => {
+      isSubmittingRef.current = false;
+      setIsSubmitting(false);
+    }, [])
+  );
+
 
   const handleTakePhoto = async () => {
     if (images.length >= 10) {
@@ -105,35 +116,48 @@ export const CameraCaptureScreen = ({ route, navigation }: any) => {
   };
 
   const handleStartDiagnosis = async () => {
+    if (isSubmittingRef.current || isSubmitting) {
+      return;
+    }
     if (images.length === 0) {
       Alert.alert(t('captureTitle'), `${t('atLeastOnePhotoAlert')} (${cropDisplayName})`);
       return;
     }
 
-    // 1. Image Quality Sanity Check before upload
-    const qualityAssessment = await ImageQualityService.inspectBatch(images);
-    
-    // Reject ONLY truly unusable photos (<120px or <4KB)
-    if (!qualityAssessment.allUsable) {
-      Alert.alert(t('photoUnusableTitle'), t('photoUnusableError'));
-      return;
-    }
+    isSubmittingRef.current = true;
+    setIsSubmitting(true);
 
-    // If usable but low-quality (240p/360p, WhatsApp compressed, poor lighting), set farmer advisory
-    if (qualityAssessment.hasLowQualityWarning) {
-      setLowQualityNotice(t('photoQualityLowWarning'));
-    }
+    try {
+      // 1. Image Quality Sanity Check before upload
+      const qualityAssessment = await ImageQualityService.inspectBatch(images);
+      
+      // Reject ONLY truly unusable photos (<120px or <4KB)
+      if (!qualityAssessment.allUsable) {
+        Alert.alert(t('photoUnusableTitle'), t('photoUnusableError'));
+        isSubmittingRef.current = false;
+        setIsSubmitting(false);
+        return;
+      }
 
-    // Navigate to dedicated AnalyzingScreen (Reference 1)
-    navigation.navigate('Analyzing', {
-      crop,
-      imageUris: images,
-      language,
-      symptoms,
-      latitude: locationCoords?.latitude,
-      longitude: locationCoords?.longitude,
-      cropDisplayName,
-    });
+      // If usable but low-quality (240p/360p, WhatsApp compressed, poor lighting), set farmer advisory
+      if (qualityAssessment.hasLowQualityWarning) {
+        setLowQualityNotice(t('photoQualityLowWarning'));
+      }
+
+      // Navigate to dedicated AnalyzingScreen (Reference 1)
+      navigation.navigate('Analyzing', {
+        crop,
+        imageUris: images,
+        language,
+        symptoms,
+        latitude: locationCoords?.latitude,
+        longitude: locationCoords?.longitude,
+        cropDisplayName,
+      });
+    } catch (err) {
+      isSubmittingRef.current = false;
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -161,11 +185,23 @@ export const CameraCaptureScreen = ({ route, navigation }: any) => {
 
           {/* Action Buttons: Take Photo & Gallery */}
           <View style={styles.buttonRow}>
-            <TouchableOpacity style={styles.cameraBtn} activeOpacity={0.85} onPress={handleTakePhoto}>
+            <TouchableOpacity
+              style={styles.cameraBtn}
+              activeOpacity={0.85}
+              accessibilityRole="button"
+              accessibilityLabel={t('takePhoto')}
+              onPress={handleTakePhoto}
+            >
               <Text style={styles.btnEmoji}>📷</Text>
               <Text style={styles.cameraBtnText}>{t('takePhoto')}</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.galleryBtn} activeOpacity={0.85} onPress={handleChooseGallery}>
+            <TouchableOpacity
+              style={styles.galleryBtn}
+              activeOpacity={0.85}
+              accessibilityRole="button"
+              accessibilityLabel={t('chooseGallery')}
+              onPress={handleChooseGallery}
+            >
               <Text style={styles.btnEmoji}>🖼️</Text>
               <Text style={styles.galleryBtnText}>{t('chooseGallery')}</Text>
             </TouchableOpacity>
@@ -183,7 +219,13 @@ export const CameraCaptureScreen = ({ route, navigation }: any) => {
               {images.map((uri, idx) => (
                 <View key={idx} style={styles.thumbWrap}>
                   <Image source={{ uri }} style={styles.thumb} />
-                  <TouchableOpacity style={styles.removeBtn} onPress={() => handleRemoveImage(idx)}>
+                  <TouchableOpacity
+                    style={styles.removeBtn}
+                    hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+                    accessibilityRole="button"
+                    accessibilityLabel={`Remove photo ${idx + 1}`}
+                    onPress={() => handleRemoveImage(idx)}
+                  >
                     <Text style={styles.removeText}>✕</Text>
                   </TouchableOpacity>
                   <Text style={styles.thumbIndex}>#{idx + 1}</Text>
@@ -200,14 +242,20 @@ export const CameraCaptureScreen = ({ route, navigation }: any) => {
               multiline
               numberOfLines={3}
               placeholder={t('optionalSymptomsPlaceholder')}
-              placeholderTextColor={Colors.textMuted}
+              placeholderTextColor="#718096"
               value={symptoms}
               onChangeText={setSymptoms}
             />
           </View>
 
           {/* Optional Location */}
-          <TouchableOpacity style={styles.locationCard} activeOpacity={0.8} onPress={handleToggleLocation}>
+          <TouchableOpacity
+            style={styles.locationCard}
+            activeOpacity={0.8}
+            accessibilityRole="button"
+            accessibilityLabel={t('optionalLocationTitle')}
+            onPress={handleToggleLocation}
+          >
             <Text style={styles.locEmoji}>📍</Text>
             <View style={styles.locTextWrap}>
               <Text style={styles.locTitle}>{t('optionalLocationTitle')}</Text>
@@ -226,11 +274,15 @@ export const CameraCaptureScreen = ({ route, navigation }: any) => {
 
           {/* Analyze Button */}
           <TouchableOpacity
-            style={[styles.analyzeBtn, images.length === 0 && styles.disabledBtn]}
-            disabled={images.length === 0}
+            style={[styles.analyzeBtn, (images.length === 0 || isSubmitting) && styles.disabledBtn]}
+            disabled={images.length === 0 || isSubmitting}
+            accessibilityRole="button"
+            accessibilityLabel={isSubmitting ? 'Starting Analysis' : `${t('startDiagnosis')} (${images.length})`}
             onPress={handleStartDiagnosis}
           >
-            <Text style={styles.analyzeBtnText}>{t('startDiagnosis')} ({images.length})</Text>
+            <Text style={styles.analyzeBtnText}>
+              {isSubmitting ? 'Starting Analysis...' : `${t('startDiagnosis')} (${images.length})`}
+            </Text>
           </TouchableOpacity>
           <LandscapeBanner />
         </ScrollView>
@@ -258,13 +310,13 @@ const styles = StyleSheet.create({
   counterRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginVertical: 8 },
   counterText: { fontSize: 15, color: Colors.textPrimary },
   counterBold: { fontWeight: '800', color: Colors.primary },
-  counterNotice: { fontSize: 12, color: Colors.textMuted },
+  counterNotice: { fontSize: 12, color: '#4B5563', fontWeight: '500' },
   thumbScroll: { flexDirection: 'row', marginVertical: 10 },
   thumbWrap: { position: 'relative', marginRight: 12, alignItems: 'center' },
   thumb: { width: 85, height: 85, borderRadius: 12, borderWidth: 1, borderColor: Colors.cardBorder },
-  removeBtn: { position: 'absolute', top: -6, right: -6, backgroundColor: Colors.danger, width: 22, height: 22, borderRadius: 11, justifyContent: 'center', alignItems: 'center' },
-  removeText: { color: '#FFFFFF', fontSize: 12, fontWeight: '800' },
-  thumbIndex: { fontSize: 11, color: Colors.textMuted, marginTop: 3 },
+  removeBtn: { position: 'absolute', top: -6, right: -6, backgroundColor: Colors.danger, width: 26, height: 26, borderRadius: 13, justifyContent: 'center', alignItems: 'center', elevation: 2 },
+  removeText: { color: '#FFFFFF', fontSize: 13, fontWeight: '800' },
+  thumbIndex: { fontSize: 11, color: '#4B5563', marginTop: 3, fontWeight: '600' },
   cardInput: { backgroundColor: Colors.surface, padding: 14, borderRadius: 14, borderWidth: 1, borderColor: Colors.cardBorder, marginVertical: 12 },
   cardLabel: { fontSize: 15, fontWeight: '600', color: Colors.textPrimary, marginBottom: 6 },
   textInput: { minHeight: 60, fontSize: 15, color: Colors.textPrimary, textAlignVertical: 'top' },
@@ -272,7 +324,7 @@ const styles = StyleSheet.create({
   locEmoji: { fontSize: 24, marginRight: 12 },
   locTextWrap: { flex: 1 },
   locTitle: { fontSize: 15, fontWeight: '600', color: Colors.textPrimary },
-  locSubtitle: { fontSize: 12, color: Colors.textMuted, marginTop: 2 },
+  locSubtitle: { fontSize: 12, color: '#4B5563', marginTop: 2 },
   locStatusBtn: { fontSize: 13, fontWeight: '700', color: Colors.primary },
   advisoryBanner: {
     backgroundColor: '#FEF3C7',

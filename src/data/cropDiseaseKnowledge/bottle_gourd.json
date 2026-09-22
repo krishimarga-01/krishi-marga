@@ -1,0 +1,41 @@
+{
+  "crop": "Bottle Gourd",
+  "crop_id": "bottle_gourd",
+  "category": "vegetable",
+  "diseases": [
+    {
+      "disease_name": "Anthracnose",
+      "scientific_name": "Colletotrichum orbiculare",
+      "symptoms": [
+        "Circular water-soaked brown lesions on leaves and sunken water-soaked spots on fruits"
+      ],
+      "severity": "Moderate to Severe",
+      "management": [
+        "Spray Chlorothalonil @ 2 g/L"
+      ],
+      "prevention": [
+        "Use treated seeds",
+        "Mulching to prevent soil splash"
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Turgid, deep green leaves with crisp texture and no chlorosis",
+    "Vigorous flowering and uniform fruit set free from blemishes or sunken spots",
+    "Clean root crown without fungal damping-off or collar decay",
+    "Absence of curling, puckering, or mosaic leaf mottling"
+  ],
+  "management": [
+    "Prune lower diseased foliage with sanitized secateurs; dispose of off-field",
+    "Apply targeted bio-fungicides (Bacillus subtilis / Trichoderma) or copper-based sprays",
+    "Control sucking insect vectors promptly using yellow sticky traps and botanical sprays"
+  ],
+  "prevention": [
+    "Adopt raised nursery beds with nylon insect netting to prevent early vector transmission",
+    "Mulch beds with silver-black reflective plastic mulch to deter thrips and aphids",
+    "Water using drip irrigation at the base to keep foliage completely dry",
+    "Regularly rogue out and safely destroy virus-infected or blighted plants"
+  ]
+}

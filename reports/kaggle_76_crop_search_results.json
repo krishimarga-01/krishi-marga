@@ -1,0 +1,2254 @@
+{
+  "paddy": {
+    "query": "paddy disease",
+    "count": 20,
+    "candidates": [
+      {
+        "ref": "shankarpriya2913/crop-and-soil-dataset",
+        "title": "Crop and Soil DataSet",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "imbikramsaha/paddy-doctor",
+        "title": "Paddy Disease Classification all 480*640 px image",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "sujaradha/thermal-images-diseased-healthy-leaves-paddy",
+        "title": "Thermal images - diseased & healthy leaves - paddy",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "yusufmurtaza01/rice-leaf-diseases",
+        "title": "RICE Leaf Diseases",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "shuvokumarbasak4004/paddy-algae-monitoring-dataset-bd",
+        "title": "Paddy Algae Monitoring Dataset BD",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "maize": {
+    "query": "maize disease",
+    "count": 20,
+    "candidates": [
+      {
+        "ref": "smaranjitghose/corn-or-maize-leaf-disease-dataset",
+        "title": "Corn or Maize Leaf Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "vbookshelf/rice-leaf-diseases",
+        "title": "Rice Leaf Diseases Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "mohitsingh1804/plantvillage",
+        "title": "PlantVillage",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "nirmalsankalana/crop-pest-and-disease-detection",
+        "title": "Crop Pest and Disease Detection",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "shankarpriya2913/crop-and-soil-dataset",
+        "title": "Crop and Soil DataSet",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "ragi": {
+    "query": "ragi disease",
+    "count": 1,
+    "candidates": [
+      {
+        "ref": "dhruvkp07/indian-agriculture-dataset",
+        "title": "Indian Agriculture Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "sorghum": {
+    "query": "sorghum disease",
+    "count": 6,
+    "candidates": [
+      {
+        "ref": "miguelroca/global-health-nutrition-mortality-economic-data",
+        "title": "Global Health, Nutrition, Mortality, Economic Data",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "patricklford/distance-based-decision-making-red-flour-beetles",
+        "title": "Oviposition in T. Castaneum: Distance and Flour",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "kanishkasalgude/d59india",
+        "title": "D59India",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "rogfsdafdsafdsa/sorghum",
+        "title": "Sorghum",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "sanskarparadeshi/sorghum-disease-image-dataset",
+        "title": "Sorghum Disease Image Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "pearl_millet": {
+    "query": "pearl millet disease",
+    "count": 1,
+    "candidates": [
+      {
+        "ref": "ankitasubhashpatil/pearl-millet-disease-dataset",
+        "title": "pearl-millet-disease-dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "foxtail_millet": {
+    "query": "foxtail millet disease",
+    "count": 0,
+    "candidates": []
+  },
+  "little_millet": {
+    "query": "little millet disease",
+    "count": 0,
+    "candidates": []
+  },
+  "kodo_millet": {
+    "query": "kodo millet disease",
+    "count": 0,
+    "candidates": []
+  },
+  "barnyard_millet": {
+    "query": "barnyard millet disease",
+    "count": 0,
+    "candidates": []
+  },
+  "proso_millet": {
+    "query": "proso millet disease",
+    "count": 0,
+    "candidates": []
+  },
+  "wheat": {
+    "query": "wheat disease",
+    "count": 20,
+    "candidates": [
+      {
+        "ref": "vbookshelf/rice-leaf-diseases",
+        "title": "Rice Leaf Diseases Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "shankarpriya2913/crop-and-soil-dataset",
+        "title": "Crop and Soil DataSet",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "alinedobrovsky/plant-disease-classification-merged-dataset",
+        "title": "Plant Disease Classification Merged Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "atharvasoundankar/smart-farming-sensor-data-for-yield-prediction",
+        "title": "\ud83c\udf3e Smart Farming Sensor Data for Yield Prediction",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "kushagra3204/wheat-plant-diseases",
+        "title": "Wheat Plant Diseases",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "red_gram": {
+    "query": "red gram disease",
+    "count": 1,
+    "candidates": [
+      {
+        "ref": "mexwell/food-vitamins-minerals-macronutrient",
+        "title": "\ud83c\udf54 Food Vitamins, Minerals, Macronutrient",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "black_gram": {
+    "query": "black gram disease",
+    "count": 7,
+    "candidates": [
+      {
+        "ref": "patricklford/water-and-air-quality",
+        "title": "Water Quality -  Every Drop Matters.",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "parvezkabir221155539/rose-leaf-disease-dataset",
+        "title": "Rose Leaf Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "karimipavan/smart-crop-recommendation",
+        "title": "smart crop recommendation",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "turjahanislam/black-gram-leaf",
+        "title": "Black Gram leaf",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "andytingzhiwei/black-gram-plant-leaf-disease",
+        "title": "Black Gram Plant Leaf Disease (BPLD)",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "green_gram": {
+    "query": "green gram disease",
+    "count": 2,
+    "candidates": [
+      {
+        "ref": "mexwell/food-vitamins-minerals-macronutrient",
+        "title": "\ud83c\udf54 Food Vitamins, Minerals, Macronutrient",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "rakshitajulapi/green-grammung-bean-leaf-disease-and-pest-dataset",
+        "title": "Green Gram(Mung bean) Leaf disease & Pest dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "bengal_gram": {
+    "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+    "candidates": []
+  },
+  "cowpea": {
+    "query": "cowpea disease",
+    "count": 0,
+    "candidates": []
+  },
+  "field_bean": {
+    "query": "field bean disease",
+    "count": 2,
+    "candidates": [
+      {
+        "ref": "codewithsk/plantcity-a-comprehensive-images-multicrop-leaves",
+        "title": "PlantCity: MultiCrop leaves Images 52 Class 2025",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "codewithsk/apricot-leaf-diseases-on-plantcity-2025",
+        "title": "Apricot Leaf Diseases on PlantCity 2025",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "groundnut": {
+    "query": "groundnut disease",
+    "count": 11,
+    "candidates": [
+      {
+        "ref": "adiithape1/plant-disease-detection-dataset-master-version",
+        "title": "Plant Leaf Disease MasterDataset (19 Crops)",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "muhammadazeemabbas/groundnut-leaves-dataset",
+        "title": "GroundNut Leaves Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "ammar019/indian-crop-disease-dataset-hindi-and-marathi",
+        "title": "Indian Crop Disease Dataset - Hindi and Marathi",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "harisri2005/plant-disease-processed",
+        "title": "Master Plant Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "kanishkasalgude/d59india",
+        "title": "D59India",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "sesame": {
+    "query": "sesame disease",
+    "count": 4,
+    "candidates": [
+      {
+        "ref": "thedevastator/childhood-allergies-prevalence-diagnosis-and-tre",
+        "title": "Childhood Allergies: Prevalence, Demographics",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "patricklford/hemochromatosis",
+        "title": "Haemochromatosis/Hemochromatosis.",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "agriaisolutions/agriaiseg",
+        "title": "AgriAIseg",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "ankitasubhashpatil/sesame-leaf-disease-dataset",
+        "title": "sesame-leaf-disease-dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "sunflower": {
+    "query": "sunflower disease",
+    "count": 6,
+    "candidates": [
+      {
+        "ref": "shankarpriya2913/crop-and-soil-dataset",
+        "title": "Crop and Soil DataSet",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "madhankumar789/crop-yield-and-environmental-factors-2014-2023",
+        "title": "Crop Yield and Environmental Factors ",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "noamaanabdulazeem/sunflower-fruits-and-leaves-dataset",
+        "title": "Sunflower Fruits and Leaves Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "patricklford/hemochromatosis",
+        "title": "Haemochromatosis/Hemochromatosis.",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "weisibuluk/sunflower-disease-dataset",
+        "title": "Sunflower Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "castor": {
+    "query": "castor disease",
+    "count": 1,
+    "candidates": [
+      {
+        "ref": "dhruvkp07/indian-agriculture-dataset",
+        "title": "Indian Agriculture Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "safflower": {
+    "query": "safflower disease",
+    "count": 0,
+    "candidates": []
+  },
+  "soybean": {
+    "query": "soybean disease",
+    "count": 20,
+    "candidates": [
+      {
+        "ref": "sadmansakibmahi/plant-disease-expert",
+        "title": "Plant Disease Expert",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "alinedobrovsky/plant-disease-classification-merged-dataset",
+        "title": "Plant Disease Classification Merged Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "atharvasoundankar/smart-farming-sensor-data-for-yield-prediction",
+        "title": "\ud83c\udf3e Smart Farming Sensor Data for Yield Prediction",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "jocelyndumlao/liming-and-rhizoctonia-root-rot-of-soybean",
+        "title": "Liming and Rhizoctonia Root Rot of Soybean",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "madhankumar789/crop-yield-and-environmental-factors-2014-2023",
+        "title": "Crop Yield and Environmental Factors ",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "cotton": {
+    "query": "cotton disease",
+    "count": 20,
+    "candidates": [
+      {
+        "ref": "shankarpriya2913/crop-and-soil-dataset",
+        "title": "Crop and Soil DataSet",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "atharvasoundankar/smart-farming-sensor-data-for-yield-prediction",
+        "title": "\ud83c\udf3e Smart Farming Sensor Data for Yield Prediction",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "janmejaybhoi/cotton-disease-dataset",
+        "title": "Cotton Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "dhamur/cotton-plant-disease",
+        "title": "Cotton plant disease \ud83c\udf31\ud83c\udf42\ud83c\udf42\ud83c\udf31",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "jawadali1045/20k-multi-class-crop-disease-images",
+        "title": "20k+ Multi-Class Crop Disease Images",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "sugarcane": {
+    "query": "sugarcane disease",
+    "count": 20,
+    "candidates": [
+      {
+        "ref": "shankarpriya2913/crop-and-soil-dataset",
+        "title": "Crop and Soil DataSet",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "alinedobrovsky/plant-disease-classification-merged-dataset",
+        "title": "Plant Disease Classification Merged Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "nirmalsankalana/sugarcane-leaf-disease-dataset",
+        "title": "Sugarcane Leaf Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "patricklford/life-but-not-as-we-know-it",
+        "title": "We did not weave the web of life !",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "jawadali1045/20k-multi-class-crop-disease-images",
+        "title": "20k+ Multi-Class Crop Disease Images",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "tobacco": {
+    "query": "tobacco disease",
+    "count": 20,
+    "candidates": [
+      {
+        "ref": "andrewmvd/heart-failure-clinical-data",
+        "title": "Heart Failure Prediction",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "meirnizri/covid19-dataset",
+        "title": "COVID-19 Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "utkarshxy/who-worldhealth-statistics-2020-complete",
+        "title": "World Health Statistics 2020|Complete|Geo-Analysis",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "cdc/national-health-and-nutrition-examination-survey",
+        "title": "National Health and Nutrition Examination Survey",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "jillanisofttech/brain-stroke-dataset",
+        "title": "Brain Stroke Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "tomato": {
+    "query": "tomato disease",
+    "count": 20,
+    "candidates": [
+      {
+        "ref": "kaustubhb999/tomatoleaf",
+        "title": "Tomato leaf disease detection",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "ashishmotwani/tomato",
+        "title": "Tomato Leaves Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "sadmansakibmahi/plant-disease-expert",
+        "title": "Plant Disease Expert",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "patricklford/water-and-air-quality",
+        "title": "Water Quality -  Every Drop Matters.",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "mohitsingh1804/plantvillage",
+        "title": "PlantVillage",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "chilli": {
+    "query": "chilli disease",
+    "count": 11,
+    "candidates": [
+      {
+        "ref": "prudhvi143413s/anthracnose-disease-in-chilli-mobile-captured",
+        "title": "Anthracnose_Disease_in_Chilli_Mobile_captured",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "prudhvi143413s/anthracnose-disease-in-chili-palnadu-ap",
+        "title": "Anthracnose Disease in Chili",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "patricklford/can-we-enhance-therapeutic-outcomes-with-plants",
+        "title": "Can we enhance therapeutic outcomes with plants ?",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "ravindubandara3002/chilli-plant-diseases-dataset",
+        "title": "Chilli Plant Diseases Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "harisri2005/plant-disease-processed",
+        "title": "Master Plant Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "brinjal": {
+    "query": "brinjal disease",
+    "count": 11,
+    "candidates": [
+      {
+        "ref": "ibrahimagabardiop/niayes-crops-disease-v2",
+        "title": "PEST_AI Plant Leaf Disease Recognition Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "ziya07/solanaceae-family-leaves-dataset",
+        "title": "Solanaceae Family Leaves Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "rithambararajput/custom-dataset-100-split",
+        "title": "customised_100_category_plant_disease_dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "krishnx09/crop-leaf-disease-image-dataset-jalgaon-region",
+        "title": "Crop Leaf Disease Image Dataset (Jalgaon Region)",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "mdzahid155686/hassnian",
+        "title": "Hasnain Ahmad",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "onion": {
+    "query": "onion disease",
+    "count": 8,
+    "candidates": [
+      {
+        "ref": "patricklford/immunity-and-the-connections-of-mental-well-being",
+        "title": "Immunity and the Connections of Mental Well Being.",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "patricklford/love-is-the-most-potent-elixir",
+        "title": "Love: Sacred Elixir of the Heart.",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "ammar019/indian-crop-disease-dataset-hindi-and-marathi",
+        "title": "Indian Crop Disease Dataset - Hindi and Marathi",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "tejasbargujepatil/onion-diseases",
+        "title": "Onion Diseases",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "dhruvkp07/indian-agriculture-dataset",
+        "title": "Indian Agriculture Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "okra": {
+    "query": "okra disease",
+    "count": 3,
+    "candidates": [
+      {
+        "ref": "manojgadde/yellow-vein-mosaic-disease",
+        "title": "Yellow Vein Mosaic Disease",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "manhhoangvan/yeesidtaset",
+        "title": "YeesiDataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "rithambararajput/custom-dataset-100-split",
+        "title": "customised_100_category_plant_disease_dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "potato": {
+    "query": "potato disease",
+    "count": 20,
+    "candidates": [
+      {
+        "ref": "sadmansakibmahi/plant-disease-expert",
+        "title": "Plant Disease Expert",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "mohitsingh1804/plantvillage",
+        "title": "PlantVillage",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "nirmalsankalana/plant-diseases-training-dataset",
+        "title": "Plant Leaf Diseases Training Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "lavaman151/plantifydr-dataset",
+        "title": "PlantifyDr Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "nafishamoin/new-bangladeshi-crop-disease",
+        "title": "New Bangladeshi Crop Disease",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "tapioca": {
+    "query": "tapioca disease",
+    "count": 0,
+    "candidates": []
+  },
+  "sweet_potato": {
+    "query": "sweet potato disease",
+    "count": 0,
+    "candidates": []
+  },
+  "drumstick": {
+    "query": "drumstick disease",
+    "count": 0,
+    "candidates": []
+  },
+  "cucumber": {
+    "query": "cucumber disease",
+    "count": 19,
+    "candidates": [
+      {
+        "ref": "alinedobrovsky/plant-disease-classification-merged-dataset",
+        "title": "Plant Disease Classification Merged Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "kareem3egm/cucumber-plant-diseases-dataset",
+        "title": "Cucumber plant diseases dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "raiaone/olid-i",
+        "title": "OLID I",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "adiithape1/plant-disease-detection-dataset-master-version",
+        "title": "Plant Leaf Disease MasterDataset (19 Crops)",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "sujaykapadnis/cucumber-disease-recognition-dataset",
+        "title": "Cucumber Disease Recognition Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "pumpkin": {
+    "query": "pumpkin disease",
+    "count": 11,
+    "candidates": [
+      {
+        "ref": "tahmidmir/pumpkin-leaf-diseases-dataset-from-bangladesh",
+        "title": "Pumpkin Leaf Diseases Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "ravisinghiitbhu/nfhs5",
+        "title": "National Family and Health Survey-5",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "rashidthihan/plant-disease-dataset",
+        "title": "Plant Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "adiithape1/plant-disease-detection-dataset-master-version",
+        "title": "Plant Leaf Disease MasterDataset (19 Crops)",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "patricklford/hemochromatosis",
+        "title": "Haemochromatosis/Hemochromatosis.",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "bitter_gourd": {
+    "query": "bitter gourd disease",
+    "count": 9,
+    "candidates": [
+      {
+        "ref": "raiaone/olid-i",
+        "title": "OLID I",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "sbshila55/plant-disases",
+        "title": "plant disases",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "krishndey/plant-leaf-freshness-disease-detection-dataset-bd",
+        "title": "Plant Leaf Freshness  Disease Detection Dataset BD",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "fahadbd/plant-leaf-freshness",
+        "title": "Plant Leaf Freshness",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "sumitnath8987/plantleaf",
+        "title": "plantleaf",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "bottle_gourd": {
+    "query": "bottle gourd disease",
+    "count": 8,
+    "candidates": [
+      {
+        "ref": "raiaone/olid-i",
+        "title": "OLID I",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "minturoy2026/agri-vision",
+        "title": "agri-vision",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "atkiyamaisha/multi-crop-leaf-disease-dataset",
+        "title": "Multi-Crop Leaf Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "aman980980/bottle-gourd-leaf-disease",
+        "title": "Bottle Gourd Leaf Disease",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "samareshkumar/multipleplantdiseases",
+        "title": "Multiple Plant Diseases",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "ridge_gourd": {
+    "query": "ridge gourd disease",
+    "count": 1,
+    "candidates": [
+      {
+        "ref": "raiaone/olid-i",
+        "title": "OLID I",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "beans": {
+    "query": "beans disease",
+    "count": 11,
+    "candidates": [
+      {
+        "ref": "nguyenngocphung/behavioral-risk-factor-surveillance-system2013",
+        "title": "Behavioral Risk Factor Surveillance System-2013",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "ravisinghiitbhu/nfhs5",
+        "title": "National Family and Health Survey-5",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "msjahid/bean-crop-disease-diagnosis-and-spatial-analysis",
+        "title": "Marconi Lab Bean Crop Disease Diagnosis",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "patricklford/hemochromatosis",
+        "title": "Haemochromatosis/Hemochromatosis.",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "manhhoangvan/yeesidtaset",
+        "title": "YeesiDataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "cabbage": {
+    "query": "cabbage disease",
+    "count": 8,
+    "candidates": [
+      {
+        "ref": "shankarpriya2913/crop-and-soil-dataset",
+        "title": "Crop and Soil DataSet",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "ibrahimagabardiop/niayes-crops-disease-v2",
+        "title": "PEST_AI Plant Leaf Disease Recognition Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "manhhoangvan/yeesidtaset",
+        "title": "YeesiDataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "mubbassir/balanced-cabbage-dataset-200-each",
+        "title": "Balanced Cabbage Disease Dataset (200 each)",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "samareshkumar/multipleplantdiseases",
+        "title": "Multiple Plant Diseases",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "cauliflower": {
+    "query": "cauliflower disease",
+    "count": 19,
+    "candidates": [
+      {
+        "ref": "noamaanabdulazeem/cauliflower-dataset",
+        "title": "Cauliflower Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "rashidthihan/plant-disease-dataset",
+        "title": "Plant Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "shuvokumarbasak2030/cauliflower-disease-multi-transformation-dataset",
+        "title": "Cauliflower Disease Multi Transformation Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "jocelyndumlao/cauliflower-leaf-diseases-datase",
+        "title": "Cauliflower Leaf Diseases Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "patricklford/can-we-enhance-therapeutic-outcomes-with-plants",
+        "title": "Can we enhance therapeutic outcomes with plants ?",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "carrot": {
+    "query": "carrot disease",
+    "count": 5,
+    "candidates": [
+      {
+        "ref": "patricklford/immunity-and-the-connections-of-mental-well-being",
+        "title": "Immunity and the Connections of Mental Well Being.",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "patricklford/love-is-the-most-potent-elixir",
+        "title": "Love: Sacred Elixir of the Heart.",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "willianoliveiragibin/combinator-companies",
+        "title": "Combinator Companies",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "muhamadmuslih/raw-data-modeling-cnnfreshscan",
+        "title": "Raw Data Modeling CnnFreshScan",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "sadiqulislamshakib/agroleaf-ai-v3",
+        "title": "agroleaf-ai-v3",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "beetroot": {
+    "query": "beetroot disease",
+    "count": 0,
+    "candidates": []
+  },
+  "banana": {
+    "query": "banana disease",
+    "count": 20,
+    "candidates": [
+      {
+        "ref": "sujaykapadnis/banana-disease-recognition-dataset",
+        "title": "Banana Disease Recognition Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "shifatearman/bananalsd",
+        "title": "Banana Leaf Spot Diseases (BananaLSD) Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "shuvokumarbasak4004/flower-leaf-diseases-dataset-new-and-update",
+        "title": "Flower Leaf Diseases Dataset New and Update",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "shuvokumarbasak4004/banana-tree-disease-detection-new-and-update-dataset",
+        "title": "Banana Tree  Disease Detection New&Update Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "rashidthihan/plant-disease-dataset",
+        "title": "Plant Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "mango": {
+    "query": "mango disease",
+    "count": 20,
+    "candidates": [
+      {
+        "ref": "aryashah2k/mango-leaf-disease-dataset",
+        "title": "Mango\ud83e\udd6d Leaf\ud83c\udf43\ud83c\udf42 Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "meetnagadia/collection-of-different-category-of-leaf-images",
+        "title": "Collection of Different Category of Leaf Images",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "warcoder/mango-leaf-disease-dataset",
+        "title": "Mango Leaf Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "warcoder/mangofruitdds",
+        "title": "MangoFruitDDS",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "shuvokumarbasak4004/the-mango-leaf-disease-classification-dataset",
+        "title": "The mango leaf disease classification dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "papaya": {
+    "query": "papaya disease",
+    "count": 13,
+    "candidates": [
+      {
+        "ref": "mexwell/food-vitamins-minerals-macronutrient",
+        "title": "\ud83c\udf54 Food Vitamins, Minerals, Macronutrient",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "rashidthihan/plant-disease-dataset",
+        "title": "Plant Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "shuvokumarbasak4004/papaya-fruit-white-fungus-dataset",
+        "title": "Papaya Fruit White Fungus Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "minturoy2026/agri-vision",
+        "title": "agri-vision",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "karimipavan/smart-crop-recommendation",
+        "title": "smart crop recommendation",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "pomegranate": {
+    "query": "pomegranate disease",
+    "count": 14,
+    "candidates": [
+      {
+        "ref": "meetnagadia/collection-of-different-category-of-leaf-images",
+        "title": "Collection of Different Category of Leaf Images",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "patricklford/immunity-and-the-connections-of-mental-well-being",
+        "title": "Immunity and the Connections of Mental Well Being.",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "ateebnoone/fruits-dataset-for-fruit-disease-classification",
+        "title": "FRUITS DATASET FOR FRUIT DISEASE CLASSIFICATION",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "karimipavan/smart-crop-recommendation",
+        "title": "smart crop recommendation",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "siddharth2308/a-database-of-leaf-images",
+        "title": "A Database of Leaf Images",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "guava": {
+    "query": "guava disease",
+    "count": 20,
+    "candidates": [
+      {
+        "ref": "asadullahgalib/guava-disease-dataset",
+        "title": "Guava Fruit Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "meetnagadia/collection-of-different-category-of-leaf-images",
+        "title": "Collection of Different Category of Leaf Images",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "shuvokumarbasak4004/guava-leaf-disease-dataset-gldd",
+        "title": "Guava Leaf Disease Dataset (GLDD)",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "noamaanabdulazeem/guava-dataset",
+        "title": "Guava Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "shuvokumarbasak4004/guava-fruit-and-leaf-diseases-data-latest-and-updated",
+        "title": "Guava Fruit & Leaf Diseases Data Latest & Updated",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "sapota": {
+    "query": "sapota disease",
+    "count": 0,
+    "candidates": []
+  },
+  "pineapple": {
+    "query": "pineapple disease",
+    "count": 2,
+    "candidates": [
+      {
+        "ref": "rashidthihan/plant-disease-dataset",
+        "title": "Plant Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "renshuddd/pineapple-leaf-disease-dataset",
+        "title": "Pineapple Leaf disease dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "grapes": {
+    "query": "grapes disease",
+    "count": 13,
+    "candidates": [
+      {
+        "ref": "nicolaasregnier/pinotnoirgrapes",
+        "title": "PinotNoirGrapes",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "miguelroca/global-health-nutrition-mortality-economic-data",
+        "title": "Global Health, Nutrition, Mortality, Economic Data",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "nirmalsankalana/esca-grapes-black-measles-dataset",
+        "title": "ESCA (grapes black measles) dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "codewithsk/grapes-leafs-disease-7-classes-plantcity-2025",
+        "title": "Grapes Leafs Disease 7 Classes PlantCity 2025",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "karimipavan/smart-crop-recommendation",
+        "title": "smart crop recommendation",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "jackfruit": {
+    "query": "jackfruit disease",
+    "count": 2,
+    "candidates": [
+      {
+        "ref": "shuvokumarbasak4004/jackfruit-leaf-diseases",
+        "title": "Jackfruit Leaf Diseases ",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "rashidthihan/plant-disease-dataset",
+        "title": "Plant Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "watermelon": {
+    "query": "watermelon disease",
+    "count": 5,
+    "candidates": [
+      {
+        "ref": "rashidthihan/plant-disease-dataset",
+        "title": "Plant Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "sujaykapadnis/watermelon-disease-recognition-dataset",
+        "title": "Watermelon Disease Recognition Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "nirmalsankalana/watermelon-disease-dataset",
+        "title": "Watermelon Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "karimipavan/smart-crop-recommendation",
+        "title": "smart crop recommendation",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "ayyappaswamythati/leafy-plant-pathology",
+        "title": "Leafy - plant pathology",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "muskmelon": {
+    "query": "muskmelon disease",
+    "count": 1,
+    "candidates": [
+      {
+        "ref": "karimipavan/smart-crop-recommendation",
+        "title": "smart crop recommendation",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "acid_lime": {
+    "query": "acid lime disease",
+    "count": 0,
+    "candidates": []
+  },
+  "coconut": {
+    "query": "coconut disease",
+    "count": 20,
+    "candidates": [
+      {
+        "ref": "shankarpriya2913/crop-and-soil-dataset",
+        "title": "Crop and Soil DataSet",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "samitha96/coconutdiseases",
+        "title": "Coconut Diseases and Pest Infestations",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "shuvokumarbasak2030/coconut-disease-multi-transformation-dataset",
+        "title": "Coconut Disease Multi Transformation Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "shuvokumarbasak2030/coconut-disease-multi-transformation-sttv-dataset",
+        "title": "Coconut Disease Multi Transformation sTTV Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "osamajalilhassan/agriculture-crops-dataset",
+        "title": "Agriculture Crops Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "arecanut": {
+    "query": "arecanut disease",
+    "count": 5,
+    "candidates": [
+      {
+        "ref": "sumanthsadiga/arecanut-plant-disease-dataset",
+        "title": "Arecanut Plant Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "dhruvkp07/indian-agriculture-dataset",
+        "title": "Indian Agriculture Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "kannadapranesh/coconut-and-arecanut-diseases",
+        "title": "Coconut and arecanut diseases",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "kannadapranesh/coconut-and-arecanut-diseases-augmented",
+        "title": "Coconut and arecanut diseases_augmented",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "amarinsights/karnataka-arecanut-farm-dataset",
+        "title": "Karnataka Arecanut Farm Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "cashew": {
+    "query": "cashew disease",
+    "count": 20,
+    "candidates": [
+      {
+        "ref": "nirmalsankalana/crop-pest-and-disease-detection",
+        "title": "Crop Pest and Disease Detection",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "akshajsinghbisht/ccmt-augmented-split",
+        "title": "ccmt-augmented-split",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "irakozekelly/crop-pest-and-disease-dataset",
+        "title": "Crop Pest and Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "gunarakulangr/cashew-leaves-dataset-anacardium-occidentale",
+        "title": "Cashew Leaf Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "karaagroaiprojects/cadi-ai",
+        "title": "Cashew Disease Identification with AI (CADI-AI) ",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "coffee": {
+    "query": "coffee disease",
+    "count": 20,
+    "candidates": [
+      {
+        "ref": "patricklford/water-and-air-quality",
+        "title": "Water Quality -  Every Drop Matters.",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "shankarpriya2913/crop-and-soil-dataset",
+        "title": "Crop and Soil DataSet",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "alinedobrovsky/plant-disease-classification-merged-dataset",
+        "title": "Plant Disease Classification Merged Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "alvarole/coffee-leaves-disease",
+        "title": "Disease and pest in coffee leaves",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "ravisinghiitbhu/nfhs5",
+        "title": "National Family and Health Survey-5",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "tea": {
+    "query": "tea disease",
+    "count": 20,
+    "candidates": [
+      {
+        "ref": "sadmansakibmahi/plant-disease-expert",
+        "title": "Plant Disease Expert",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "shankarpriya2913/crop-and-soil-dataset",
+        "title": "Crop and Soil DataSet",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "shashwatwork/identifying-disease-in-tea-leafs",
+        "title": "Identifying Disease in Tea leaves",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "ravisinghiitbhu/nfhs5",
+        "title": "National Family and Health Survey-5",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "patricklford/increased-risk-of-dvt-after-total-hip-arthroplasty",
+        "title": "Increased Risk of DVT after Total Hip Arthroplasty",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "rubber": {
+    "query": "rubber disease",
+    "count": 2,
+    "candidates": [
+      {
+        "ref": "kongkityeesai/rubber-disease-final-datasetss",
+        "title": "rubber disease final datasetss",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "dhruvkp07/indian-agriculture-dataset",
+        "title": "Indian Agriculture Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "cocoa": {
+    "query": "cocoa disease",
+    "count": 14,
+    "candidates": [
+      {
+        "ref": "serranosebas/enfermedades-cacao-yolov4",
+        "title": "Cocoa Diseases (YOLOv4)",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "ohagwucollinspatrick/amini-cocoa-contamination-dataset",
+        "title": "Amini Cocoa Contamination Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "bryandarquea/cocoa-diseases",
+        "title": "Cocoa Diseases Localization",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "cosheimil/zindi-cocoa",
+        "title": "Zindi-Cocoa",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "toku404/local-cocoa-dataset",
+        "title": "Local Cocoa Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "oil_palm": {
+    "query": "oil palm disease",
+    "count": 0,
+    "candidates": []
+  },
+  "palmyrah": {
+    "query": "palmyrah disease",
+    "count": 0,
+    "candidates": []
+  },
+  "black_pepper": {
+    "query": "black pepper disease",
+    "count": 12,
+    "candidates": [
+      {
+        "ref": "lavaman151/plantifydr-dataset",
+        "title": "PlantifyDr Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "patricklford/increased-risk-of-dvt-after-total-hip-arthroplasty",
+        "title": "Increased Risk of DVT after Total Hip Arthroplasty",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "rashidthihan/plant-disease-dataset",
+        "title": "Plant Disease Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "patricklford/hemochromatosis",
+        "title": "Haemochromatosis/Hemochromatosis.",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "ibrahimagabardiop/niayes-crops-disease-v2",
+        "title": "PEST_AI Plant Leaf Disease Recognition Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "cardamom": {
+    "query": "cardamom disease",
+    "count": 2,
+    "candidates": [
+      {
+        "ref": "rivaakter/cardamom",
+        "title": "cardamom dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "noahjos/kerala-cardamom-intelligence-dataset-kcid",
+        "title": "Kerala Cardamom Intelligence Dataset (KCID)",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "turmeric": {
+    "query": "turmeric disease",
+    "count": 9,
+    "candidates": [
+      {
+        "ref": "patricklford/increased-risk-of-dvt-after-total-hip-arthroplasty",
+        "title": "Increased Risk of DVT after Total Hip Arthroplasty",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "patricklford/immunity-and-the-connections-of-mental-well-being",
+        "title": "Immunity and the Connections of Mental Well Being.",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "patricklford/hemochromatosis",
+        "title": "Haemochromatosis/Hemochromatosis.",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "patricklford/can-we-enhance-therapeutic-outcomes-with-plants",
+        "title": "Can we enhance therapeutic outcomes with plants ?",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "yuvrajsalve/dis-tur",
+        "title": "dis_tur",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "ginger": {
+    "query": "ginger disease",
+    "count": 4,
+    "candidates": [
+      {
+        "ref": "patricklford/immunity-and-the-connections-of-mental-well-being",
+        "title": "Immunity and the Connections of Mental Well Being.",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "patricklford/hemochromatosis",
+        "title": "Haemochromatosis/Hemochromatosis.",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "patricklford/can-we-enhance-therapeutic-outcomes-with-plants",
+        "title": "Can we enhance therapeutic outcomes with plants ?",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      },
+      {
+        "ref": "hamza202404/ginger-adrak-disease-detection",
+        "title": "Ginger Adrak Disease Detection",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "clove": {
+    "query": "clove disease",
+    "count": 1,
+    "candidates": [
+      {
+        "ref": "patricklford/love-is-the-most-potent-elixir",
+        "title": "Love: Sacred Elixir of the Heart.",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "coriander": {
+    "query": "coriander disease",
+    "count": 1,
+    "candidates": [
+      {
+        "ref": "patricklford/love-is-the-most-potent-elixir",
+        "title": "Love: Sacred Elixir of the Heart.",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "cumin": {
+    "query": "cumin disease",
+    "count": 1,
+    "candidates": [
+      {
+        "ref": "dhruvkp07/indian-agriculture-dataset",
+        "title": "Indian Agriculture Dataset",
+        "size_bytes": 0,
+        "vote_count": 0,
+        "download_count": 0,
+        "license_name": "unknown"
+      }
+    ]
+  },
+  "fenugreek": {
+    "query": "fenugreek disease",
+    "count": 0,
+    "candidates": []
+  },
+  "betel_vine": {
+    "query": "betel vine disease",
+    "count": 0,
+    "candidates": []
+  },
+  "tamarind": {
+    "query": "tamarind disease",
+    "count": 0,
+    "candidates": []
+  }
+}

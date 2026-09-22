@@ -1,0 +1,40 @@
+{
+  "crop": "Clove",
+  "crop_id": "clove",
+  "category": "spice",
+  "diseases": [
+    {
+      "disease_name": "Leaf Rot / Dieback",
+      "scientific_name": "Cylindrocladium quinqueseptatum",
+      "symptoms": [
+        "Dark brown spots on leaves with premature leaf fall, leading to dieback of twigs from tip downwards"
+      ],
+      "severity": "Severe",
+      "management": [
+        "Spray 1% Bordeaux mixture or Carbendazim @ 1 g/L"
+      ],
+      "prevention": [
+        "Prune diseased dead twigs during dry season"
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Crisp, aromatic foliage free from leaf spot lesions or marginal blight",
+    "Vigorous rhizome/vine growth with vibrant green shoots",
+    "Clean floral spikes/umbels with high fruit set",
+    "Basal root collar completely firm without water-soaked decay"
+  ],
+  "management": [
+    "Prune and remove infected runners or lateral branches early in the day",
+    "Spray 1% Bordeaux mixture on foliar canopy and drench root basin with bio-fungicide",
+    "Regulate canopy shade to reduce damp microclimate"
+  ],
+  "prevention": [
+    "Use shade regulation (50-60% filtered sunlight) during monsoon to prevent high humidity buildup",
+    "Drench plant basins with Copper Oxychloride or Trichoderma-enriched compost",
+    "Ensure zero waterlogging in hill slopes through contour trench drainage",
+    "Collect and destroy fallen infected leaves, spikes, and diseased capsules"
+  ]
+}

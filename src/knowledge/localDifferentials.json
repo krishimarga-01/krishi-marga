@@ -1,0 +1,272 @@
+{
+  "version": "1.0.0",
+  "source": "ICAR-IIHR Bengaluru / TNAU Agritech / UAS Dharwad Verified Guides",
+  "differentials": {
+    "tomato": [
+      {
+        "disease_keywords": [
+          "early blight",
+          "alternaria"
+        ],
+        "condition_name": "Early Blight (Alternaria solani)",
+        "lookalikes": [
+          {
+            "name": "Potassium (K) Deficiency",
+            "type": "NUTRIENT",
+            "overlap_symptoms": "Brown necrotic margins and spotting on older, lower foliage.",
+            "distinguishing_feature": "Early blight lesions have concentric target-like rings surrounded by yellow halos. Potassium deficiency causes marginal scorching and tip burn without concentric circular target spots.",
+            "confirmation_advice": "Examine underside of lesion with hand lens for dark fungal spore velvety growth, or conduct soil testing for exchangeable K (<100 mg/kg)."
+          },
+          {
+            "name": "Septoria Leaf Spot",
+            "type": "DISEASE",
+            "overlap_symptoms": "Numerous circular leaf spots on lower leaves.",
+            "distinguishing_feature": "Septoria spots are smaller (2-3 mm) with distinct grey-white centres and dark brown borders with tiny black specks (pycnidia), lacking concentric rings.",
+            "confirmation_advice": "Check spot size; Septoria spots rarely exceed 3mm and do not form large target boards."
+          }
+        ],
+        "symptom_crosscheck": {
+          "expected_present": [
+            "Concentric dark rings ('target board' pattern) on spots",
+            "Initial appearance on oldest, lowest leaves first",
+            "Chlorotic yellow halo surrounding brown spots"
+          ],
+          "contradicting_symptoms": [
+            "Water-soaked oily dark green lesions rapidly expanding in cool fog (suggests Late Blight)",
+            "Uniform marginal scorching along all leaf edges without circular spots (suggests K deficiency)"
+          ]
+        },
+        "farmer_action_checklist": [
+          "Prune and safely burn or bury severely affected lowest foliage touching the soil.",
+          "Avoid overhead sprinkler irrigation; switch to root drip to keep leaves dry.",
+          "Check recent rainfall or heavy dew; high humidity (>85%) with warm days (24-29°C) triggers rapid spread.",
+          "Consult local RSK/KVK for verified CIBRC contact fungicide (e.g. Copper Oxychloride 50 WP) if threshold exceeds 5% foliage."
+        ]
+      },
+      {
+        "disease_keywords": [
+          "late blight",
+          "phytophthora"
+        ],
+        "condition_name": "Late Blight (Phytophthora infestans)",
+        "lookalikes": [
+          {
+            "name": "Magnesium (Mg) Deficiency",
+            "type": "NUTRIENT",
+            "overlap_symptoms": "Interveinal chlorosis turning brown and necrotic on older foliage.",
+            "distinguishing_feature": "Magnesium deficiency remains strictly interveinal with green veins intact and no white fuzzy growth on leaf undersides. Late blight produces large, water-soaked, irregular black/pale lesions that destroy veins rapidly.",
+            "confirmation_advice": "Inspect undersides in morning humidity for white downy fungal mildew. Check soil pH (<5.5 favors Mg deficiency)."
+          }
+        ],
+        "symptom_crosscheck": {
+          "expected_present": [
+            "Rapidly enlarging water-soaked, dark olive-brown to purple lesions",
+            "White delicate downy mildew growth on underside of leaves in humid mornings",
+            "Brown firm rot on green and ripe fruits"
+          ],
+          "contradicting_symptoms": [
+            "Dry concentric rings with yellow halo (indicates Early Blight)",
+            "Veins remain strictly green while interveinal areas yellow (indicates Mg deficiency)"
+          ]
+        },
+        "farmer_action_checklist": [
+          "Inspect entire field immediately; Late Blight can destroy the crop in 3-5 days in cool, misty weather.",
+          "Do not irrigate or enter the field while leaves are wet to prevent carrying zoospores across rows.",
+          "Check stems and fruits for brown greasy lesions.",
+          "Contact local RSK officer immediately for verified CIBRC systemic/contact protection."
+        ]
+      },
+      {
+        "disease_keywords": [
+          "leaf curl",
+          "begomovirus",
+          "yellow leaf curl"
+        ],
+        "condition_name": "Tomato Leaf Curl Virus (ToLCV)",
+        "lookalikes": [
+          {
+            "name": "Calcium (Ca) Deficiency",
+            "type": "NUTRIENT",
+            "overlap_symptoms": "Young leaf curling, cupping, and stunted growing tips.",
+            "distinguishing_feature": "Leaf Curl Virus produces severe thick vein swelling, yellowing margins, and stunted bushy growth transmitted by whiteflies. Calcium deficiency causes blunt necrotic margins and blossom end rot on fruits without vein clearing.",
+            "confirmation_advice": "Check underside of young leaves for silver-white tiny flying insects (Whitefly - Bemisia tabaci)."
+          },
+          {
+            "name": "Herbicide Drift / 2,4-D Injury",
+            "type": "PHYSIOLOGICAL",
+            "overlap_symptoms": "Downward curling and strapping of youngest leaflets.",
+            "distinguishing_feature": "Herbicide drift shows parallel veining without yellow netting; virus causes thick stunted nodes and chlorotic interveinal netting.",
+            "confirmation_advice": "Check if adjacent cereal fields were recently sprayed with weedicides."
+          }
+        ],
+        "symptom_crosscheck": {
+          "expected_present": [
+            "Upward and inward curling of leaflet margins",
+            "Interveinal yellowing and reduced leaf size ('little leaf' appearance)",
+            "Stunted plant with excessive branching and aborted flowers"
+          ],
+          "contradicting_symptoms": [
+            "Necrotic sunken black patch at fruit bottom (Blossom End Rot / Ca deficiency)",
+            "Chewed leaf margins or visible webbing (Spider mites / caterpillars)"
+          ]
+        },
+        "farmer_action_checklist": [
+          "Rogue out and destroy severely infected young plants immediately to prevent virus source.",
+          "Install yellow sticky traps (15-20 per acre) at canopy level to monitor whitefly vector population.",
+          "Do not spray systemic fungicides; viruses cannot be cured with fungicides.",
+          "Contact RSK/KVK for IPM management of the whitefly vector."
+        ]
+      }
+    ],
+    "paddy": [
+      {
+        "disease_keywords": [
+          "blast",
+          "magnaporthe",
+          "pyricularia"
+        ],
+        "condition_name": "Rice Blast (Magnaporthe oryzae)",
+        "lookalikes": [
+          {
+            "name": "Zinc (Zn) Deficiency (Khaira Disease)",
+            "type": "NUTRIENT",
+            "overlap_symptoms": "Reddish-brown pigmentation and spots on leaves with reduced tillering.",
+            "distinguishing_feature": "Blast lesions are distinct spindle-shaped or eye-shaped with grey/whitish ash centers and brown margins. Zinc deficiency produces irregular rusty brown blotches starting along the lower leaf midrib.",
+            "confirmation_advice": "Blast lesions cross leaf veins into diamond spindles. Zinc deficiency occurs across entire soil patches 2-3 weeks after transplanting in poorly drained calcareous soils."
+          },
+          {
+            "name": "Brown Spot (Bipolaris oryzae)",
+            "type": "DISEASE",
+            "overlap_symptoms": "Oval brown spots on leaf blades.",
+            "distinguishing_feature": "Brown spot lesions are oval or circular like sesame seeds, uniform dark brown without pointed spindle ends.",
+            "confirmation_advice": "Check lesion shape; Blast has pointed spindle ends, Brown spot has rounded oval margins."
+          }
+        ],
+        "symptom_crosscheck": {
+          "expected_present": [
+            "Spindle or diamond-shaped lesions wider in the middle with pointed ends",
+            "Ash-grey or whitish center with brownish/reddish-brown margin",
+            "Lesions coalescing to cause complete leaf drying"
+          ],
+          "contradicting_symptoms": [
+            "Wavy translucent lesions with yellowish margins starting from leaf tip down (Bacterial Leaf Blight)",
+            "Circular sesame-seed-sized uniform brown spots (Brown Spot)"
+          ]
+        },
+        "farmer_action_checklist": [
+          "Avoid excessive split applications of nitrogenous fertilizers (urea), which makes tissues succulent and blast-prone.",
+          "Maintain proper standing water depth (2-5 cm) in fields; avoid letting soil dry out as blast severity peaks in drought-stressed upland soils.",
+          "Check leaf collar and neck node for blackening (Neck Blast).",
+          "Consult local RSK/KVK for verified CIBRC fungicide spray (e.g. Tricyclazole 75 WP) at boot-leaf stage if disease is advancing."
+        ]
+      },
+      {
+        "disease_keywords": [
+          "bacterial leaf blight",
+          "blb",
+          "xanthomonas"
+        ],
+        "condition_name": "Bacterial Leaf Blight (Xanthomonas oryzae)",
+        "lookalikes": [
+          {
+            "name": "Potassium (K) Deficiency",
+            "type": "NUTRIENT",
+            "overlap_symptoms": "Drying and browning of leaf margins from tip downwards.",
+            "distinguishing_feature": "Bacterial blight shows wavy, water-soaked margins with milky-white/yellow bacterial ooze droplets in early morning. Potassium deficiency produces clean dry marginal scorching without water-soaking or ooze.",
+            "confirmation_advice": "Conduct bacterial ooze test: cut freshly blighted leaf section and place in a clear glass tube of clean water. Cloudy white bacterial strands streaming from cut edge confirms bacterial blight within 5 minutes."
+          }
+        ],
+        "symptom_crosscheck": {
+          "expected_present": [
+            "Water-soaked stripes starting along one or both leaf edges from tip",
+            "Wavy margin along the advancing edge of yellow-orange lesion",
+            "Bacterial exudate (amber droplets) visible on lesions under humid conditions"
+          ],
+          "contradicting_symptoms": [
+            "Spindle-shaped diamond spots with grey centers (indicates Blast)",
+            "Snake-like grey-green banded sheath spots at waterline (indicates Sheath Blight)"
+          ]
+        },
+        "farmer_action_checklist": [
+          "Immediately drain excess standing field water for 2-3 days if possible to reduce bacterial spread.",
+          "Strictly stop further urea top-dressing until crop recovers.",
+          "Avoid field movement during rainy/windy mornings when leaves are wet with bacterial dew.",
+          "Contact local RSK officer for verified bactericide or potassium top-dressing advice."
+        ]
+      }
+    ],
+    "chilli": [
+      {
+        "disease_keywords": [
+          "anthracnose",
+          "die back",
+          "colletotrichum",
+          "fruit rot"
+        ],
+        "condition_name": "Chilli Anthracnose & Dieback (Colletotrichum capsici)",
+        "lookalikes": [
+          {
+            "name": "Sunscald (Physiological)",
+            "type": "PHYSIOLOGICAL",
+            "overlap_symptoms": "Bleached papery patches on fruit surface.",
+            "distinguishing_feature": "Anthracnose forms sunken circular lesions with concentric rings of minute black dots (acervuli) or salmon-pink spore masses. Sunscald is smooth, papery white, occurs exclusively on sun-exposed fruit shoulders without concentric black dots.",
+            "confirmation_advice": "Inspect sunken lesion for concentric black specks; sunscald never develops fungal fruiting dots."
+          }
+        ],
+        "symptom_crosscheck": {
+          "expected_present": [
+            "Sunken, circular to oblong dark brown lesions on green or ripe pods",
+            "Concentric rings of minute black specks (spores) inside fruit rot",
+            "Dieback of twigs starting from tender tips backwards with white bleached stems"
+          ],
+          "contradicting_symptoms": [
+            "Smooth bleached white patch on top fruit face without black dots (Sunscald)",
+            "Distorted upward leaf curling with no fruit lesions (Thrips / virus)"
+          ]
+        },
+        "farmer_action_checklist": [
+          "Pick and remove all infected dried fruits and twigs from the field to break fungal inoculum.",
+          "Avoid picking fruits or spraying while foliage is wet with morning dew.",
+          "Ensure adequate soil drainage; waterlogging promotes root asphyxiation and dieback.",
+          "Consult local RSK/KVK for verified CIBRC fungicide spray (e.g. Mancozeb or Azoxystrobin) during flowering and fruit setting."
+        ]
+      }
+    ],
+    "cotton": [
+      {
+        "disease_keywords": [
+          "bacterial blight",
+          "angular leaf spot",
+          "blackarm"
+        ],
+        "condition_name": "Bacterial Blight / Angular Leaf Spot (Xanthomonas citri pv. malvacearum)",
+        "lookalikes": [
+          {
+            "name": "Magnesium (Mg) Deficiency (Reddening)",
+            "type": "NUTRIENT",
+            "overlap_symptoms": "Discoloration and leaf distress on older cotton leaves.",
+            "distinguishing_feature": "Bacterial blight produces strictly angular water-soaked dark brown spots restricted by leaf veinlets, progressing to black arm lesions on petioles. Magnesium deficiency causes uniform purplish-red interveinal discoloration with veins remaining green.",
+            "confirmation_advice": "Check spot shape; angular edges bound by veins indicates bacterial blight. Uniform reddening of interveinal lamina indicates Mg deficiency."
+          }
+        ],
+        "symptom_crosscheck": {
+          "expected_present": [
+            "Angular water-soaked lesions bounded strictly by veinlets on lower leaf surface",
+            "Lesions turning dark brown to black and papery",
+            "Black elongated lesions on petioles and stems ('Blackarm' phase)"
+          ],
+          "contradicting_symptoms": [
+            "Broad purplish-red leaf reddening between veins without angular boundaries (Mg deficiency / leaf reddening)",
+            "White powder on leaf surfaces (Powdery mildew)"
+          ]
+        },
+        "farmer_action_checklist": [
+          "Avoid overhead sprinkler irrigation; furrow or drip keeps the cotton canopy dry.",
+          "Remove and safely burn severely blighted lower stems after harvesting.",
+          "Check boll surfaces for water-soaked circular dark spots (Boll rot phase).",
+          "Consult RSK/KVK for verified CIBRC copper bactericide guidance."
+        ]
+      }
+    ]
+  }
+}

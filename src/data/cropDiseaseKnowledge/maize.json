@@ -1,0 +1,106 @@
+{
+  "crop": "Maize",
+  "crop_id": "maize",
+  "category": "cereal",
+  "diseases": [
+    {
+      "disease_name": "Maydis Leaf Blight / Southern Corn Leaf Blight",
+      "scientific_name": "Bipolaris maydis (Cochliobolus heterostrophus)",
+      "symptoms": [
+        "Small diamond-shaped to elongated rectangular lesions delimited by leaf veins; buff to brown centers with darker reddish borders; coalescing lesions cause complete leaf blight."
+      ],
+      "severity": "Moderate to Severe",
+      "management": [
+        "Consult local agricultural university / KVK package of practices for registered treatment."
+      ],
+      "prevention": [
+        "Practice crop rotation, field hygiene, and use certified seeds."
+      ]
+    },
+    {
+      "disease_name": "Common Rust",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Common Rust."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Gray Leaf Spot",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Gray Leaf Spot."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    },
+    {
+      "disease_name": "Northern Leaf Blight",
+      "scientific_name": "",
+      "symptoms": [
+        "Characteristic visual lesions, discoloration or foliar distress associated with Northern Leaf Blight."
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Isolate affected foliage, apply approved bio-fungicide or targeted treatment."
+      ],
+      "prevention": [
+        "Implement crop rotation, avoid water stagnation, and sanitize farm implements regularly."
+      ]
+    }
+  ],
+  "pests": [
+    {
+      "pest_name": "Fall Armyworm (FAW)",
+      "scientific_name": "Spodoptera frugiperda",
+      "symptoms": [],
+      "management": [
+        "Install pheromone traps and apply bio-control agents."
+      ]
+    }
+  ],
+  "nutrient_deficiencies": [
+    {
+      "deficiency": "Nitrogen (N)",
+      "symptoms": [],
+      "correction": [
+        "Foliar spray of 2% Urea or side-dress with Ammonium Sulphate / Urea as per soil test."
+      ]
+    },
+    {
+      "deficiency": "Zinc (Zn)",
+      "symptoms": [],
+      "correction": [
+        "Foliar spray of Chelated Zinc (EDTA-Zn 12%) @ 1g/L or Zinc Sulphate @ 5g/L neutralized with 2.5g lime."
+      ]
+    }
+  ],
+  "healthy_signs": [
+    "Vigorous upright tillering with uniform emerald-green foliage",
+    "Sturdy culms free from lodging or fungal discoloration",
+    "Clean leaf sheaths and fully emerged, well-filled panicles/cobs",
+    "Healthy fibrous root system without rotting or browning"
+  ],
+  "management": [
+    "Drain standing water upon initial detection of root or sheath disease",
+    "Apply university-recommended biocontrol or registered fungicide early in the morning",
+    "Balance fertilizer regime by supplementing muriate of potash to strengthen culms"
+  ],
+  "prevention": [
+    "Use certified disease-free, high-germination seed lots treated with Trichoderma @ 4g/kg",
+    "Maintain optimal plant spacing to allow adequate ventilation and reduce canopy humidity",
+    "Avoid excessive nitrogen application; apply balanced NPK with silicon and zinc",
+    "Practice timely field drainage and weed sanitation around bunds"
+  ]
+}

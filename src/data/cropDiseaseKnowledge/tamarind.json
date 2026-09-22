@@ -1,0 +1,40 @@
+{
+  "crop": "Tamarind",
+  "crop_id": "tamarind",
+  "category": "other",
+  "diseases": [
+    {
+      "disease_name": "Powdery Mildew",
+      "scientific_name": "Oidium sp.",
+      "symptoms": [
+        "Ash-grey powdery growth on tender leaves and flowers resulting in premature defoliation"
+      ],
+      "severity": "Mild to Moderate",
+      "management": [
+        "Spray Wettable Sulphur @ 3 g/L"
+      ],
+      "prevention": [
+        "Prune dead branches"
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Glossy, turgid leaves with deep green pigmentation and no necrotic spots",
+    "Firm stems with healthy node development",
+    "Vigorous climbing vines or canopies with strong root anchorage",
+    "Clean foliage free from sucking pest colonies or sooty mold"
+  ],
+  "management": [
+    "Isolate affected plants and eliminate debris from previous seasons",
+    "Provide adequate light and airflow to discourage fungal sporulation",
+    "Consult local Krishi Vigyan Kendra (KVK) for exact regional prescription"
+  ],
+  "prevention": [
+    "Ensure good drainage and aeration around vine roots or tree bases",
+    "Apply well-decomposed FYM enriched with biocontrol agents (Trichoderma + Pseudomonas)",
+    "Maintain clean field hygiene and avoid working in wet crops to prevent spore spread",
+    "Use resistant varieties recommended by regional Agricultural Universities"
+  ]
+}

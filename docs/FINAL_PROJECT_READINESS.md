@@ -90,7 +90,7 @@ A comprehensive pixel and byte audit was executed across physical datasets locat
 ## 3. ITEM 3: FINAL SERVER STRESS, FAILURE & FAILOVER TESTING (🟢 COMPLETED)
 
 ### Live Server Architecture & Hardening
-- **n8n Webhook**: `http://localhost:5678/webhook/detect-disease`
+- **n8n Webhook**: Backend URL is resolved at runtime via `Config.getBackendUrl()`
 - **Workflow ID**: `Hr2DwMRfJZpqSYDQ`
 - **Primary AI Model**: `gemini-3.5-flash-lite:generateContent`
 - **Input Validation**: Enforces 17 South India crop whitelist, validates 1–10 images, checks binary image signatures, generates unique request tracking IDs (`KRISHI-YYYYMMDD-XXXX`).
@@ -141,7 +141,7 @@ Measured live from multipart HTTP submissions using real leaf photography:
 ## 4. FRONTEND APPLICATION STATUS
 
 - **TypeScript Compilation**: Executed `npx tsc --noEmit` -> **0 errors, clean build**.
-- **Backend URL**: Configured to `http://172.20.253.63:5678/webhook/detect-disease` in [`src/services/config.ts`](file:///C:/Users/Prathach%20Raj%20P/.gemini/antigravity/scratch/krishi-marga/src/services/config.ts).
+- **Backend URL**: Determined at runtime via `Config.getBackendUrl()`. See `src/services/config.ts` for the resolution logic.
 - **Tracking & Latency Metadata**: Request ID (`KRISHI-YYYYMMDD-XXXX`) and `latency_ms` mapped in [`src/services/diagnosisApi.ts`](file:///C:/Users/Prathach%20Raj%20P/.gemini/antigravity/scratch/krishi-marga/src/services/diagnosisApi.ts) and [`src/models/index.ts`](file:///C:/Users/Prathach%20Raj%20P/.gemini/antigravity/scratch/krishi-marga/src/models/index.ts).
 - **Agronomic Knowledge Base**: Enriched in [`src/knowledge/localDiseases.json`](file:///C:/Users/Prathach%20Raj%20P/.gemini/antigravity/scratch/krishi-marga/src/knowledge/localDiseases.json) covering Tomato and Cotton across English, Kannada, Tamil, Telugu, Malayalam, and Hindi.
 

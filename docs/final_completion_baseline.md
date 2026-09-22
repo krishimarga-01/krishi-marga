@@ -26,9 +26,9 @@ The objective of this final mission is to verify and complete the three remainin
 | **Drive F: Space** | 10.32 GB Free | Primary dataset storage drive (`F:\SIH_DATASET`, `F:\coconut_final`) |
 | **Python Environment** | 3.11.x Active | PyTorch 2.14.0+cpu, Torchvision 0.29.0+cpu |
 | **Inference Libraries** | Installed | `onnx` (1.22.0), `onnxruntime` (1.30.0), `pillow` (12.3.0) |
-| **n8n Server** | Active (PID 23828) | Running on `http://localhost:5678`, webhook active at `/webhook/detect-disease` |
+| **n8n Server** | Active (PID 23828) | Backend URL is resolved at runtime via `Config.getBackendUrl()` |
 | **n8n Workflow** | Deployed & Hardened | Workflow ID: `Hr2DwMRfJZpqSYDQ` |
-| **Active Backend URL** | Configured | `http://172.20.253.63:5678/webhook/detect-disease` in `src/services/config.ts` |
+| **Active Backend URL** | Configured at runtime via `Config.getBackendUrl()` |
 | **TypeScript Health** | 0 Errors | Verified via `npx tsc --noEmit` |
 
 ---

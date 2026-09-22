@@ -12,11 +12,15 @@ import { Colors } from '../theme';
 import { CROPS_CONFIG } from '../config/crops';
 import { VERIFIED_CROP_DOCTORS } from '../services/expertService';
 import { Config } from '../services/config';
+import { probeRuntime } from '../offline/onnxRuntimeStatus';
 import modelRegistryData from '../models/model_registry.json';
 
 export const DevBuildStatusScreen = ({ navigation }: any) => {
-  const [onlineStatus, setOnlineStatus] = useState<'checking' | 'online' | 'offline'>('checking');
+  const [onlineStatus, setOnlineStatus] = useState<'checking' | 'online' | 'offline' | 'unconfigured'>('checking');
   const [serverLatency, setServerLatency] = useState<number | null>(null);
+
+  // Ground truth about the offline runtime — reported, never assumed.
+  const runtimeProbe = probeRuntime();
 
   // Runtime counts directly from imported runtime code
   const totalCrops = CROPS_CONFIG.length;
@@ -41,7 +45,23 @@ export const DevBuildStatusScreen = ({ navigation }: any) => {
 
   const checkServerConnection = async () => {
     setOnlineStatus('checking');
-    const targetUrl = Config.getBackendUrl();
+
+    // An unconfigured build must report exactly that rather than "offline".
+    if (!Config.isConfigured()) {
+      setOnlineStatus('unconfigured');
+      setServerLatency(null);
+      return;
+    }
+
+    let targetUrl: string;
+    try {
+      targetUrl = Config.getBackendUrl();
+    } catch {
+      setOnlineStatus('unconfigured');
+      setServerLatency(null);
+      return;
+    }
+
     const t0 = Date.now();
     try {
       const ctrl = new AbortController();
@@ -148,29 +168,52 @@ export const DevBuildStatusScreen = ({ navigation }: any) => {
               <ActivityIndicator size="small" color={Colors.primary} />
             ) : (
               <Text style={[styles.statusPill, onlineStatus === 'online' ? styles.pillGreen : styles.pillAmber]}>
-                {onlineStatus === 'online' ? `ONLINE (${serverLatency}ms)` : 'UNREACHABLE'}
+                {onlineStatus === 'online'
+                  ? `ONLINE (${serverLatency}ms)`
+                  : onlineStatus === 'unconfigured'
+                  ? 'NOT CONFIGURED'
+                  : 'UNREACHABLE'}
               </Text>
             )}
           </View>
           <View style={styles.row}>
             <Text style={styles.label}>Server Target URL:</Text>
-            <Text style={[styles.valueMonospace, { fontSize: 11 }]}>{Config.getBackendUrl()}</Text>
+            <Text style={[styles.valueMonospace, { fontSize: 11 }]}>{Config.describeBackend()}</Text>
           </View>
           <View style={styles.row}>
             <Text style={styles.label}>Cloud Vision Model:</Text>
             <Text style={styles.value}>Gemini 3.5 Flash Lite (Failover to 2.5 Pro)</Text>
           </View>
           <View style={styles.row}>
-            <Text style={styles.label}>Offline ONNX Models:</Text>
-            <Text style={styles.value}>8 crops trained & exported (MobileNetV3)</Text>
+            <Text style={styles.label}>Model Registry Entries:</Text>
+            <Text style={styles.value}>{registryEntries} crops</Text>
           </View>
           <View style={styles.row}>
-            <Text style={styles.label}>Mobile Native ONNX Execution:</Text>
-            <Text style={[styles.statusPill, styles.pillBlue]}>REQUIRES NATIVE BUILD</Text>
+            <Text style={styles.label}>ONNX Native Runtime:</Text>
+            <Text style={[styles.statusPill, runtimeProbe.ortAvailable ? styles.pillGreen : styles.pillBlue]}>
+              {runtimeProbe.ortAvailable ? 'LINKED' : 'NOT LINKED'}
+            </Text>
           </View>
           <View style={styles.row}>
-            <Text style={styles.label}>Expo Go Offline Fallback:</Text>
-            <Text style={styles.value}>Embedded Agronomic Database Active</Text>
+            <Text style={styles.label}>Image Decoder (jpeg-js):</Text>
+            <Text style={[styles.statusPill, runtimeProbe.decoderAvailable ? styles.pillGreen : styles.pillBlue]}>
+              {runtimeProbe.decoderAvailable ? 'AVAILABLE' : 'NOT INSTALLED'}
+            </Text>
+          </View>
+          <View style={styles.row}>
+            <Text style={styles.label}>On-Device Inference:</Text>
+            <Text
+              style={[
+                styles.statusPill,
+                runtimeProbe.ortAvailable && runtimeProbe.decoderAvailable ? styles.pillGreen : styles.pillAmber,
+              ]}
+            >
+              {runtimeProbe.ortAvailable && runtimeProbe.decoderAvailable ? 'POSSIBLE' : 'UNAVAILABLE'}
+            </Text>
+          </View>
+          <View style={styles.row}>
+            <Text style={styles.label}>Offline Without Model:</Text>
+            <Text style={styles.value}>Knowledge-base reference only (not a diagnosis)</Text>
           </View>
         </View>
 

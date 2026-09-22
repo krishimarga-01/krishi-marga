@@ -1,0 +1,41 @@
+{
+  "crop": "Betel Vine",
+  "crop_id": "betel_vine",
+  "category": "other",
+  "diseases": [
+    {
+      "disease_name": "Foot Rot / Phytophthora Wilt",
+      "scientific_name": "Phytophthora nicotianae var. parasitica",
+      "symptoms": [
+        "Water-soaked dark brown discoloration at vine collar region; sudden wilting and yellowing of foliage"
+      ],
+      "severity": "Critical",
+      "management": [
+        "Drench vine root zone with 0.5% Bordeaux mixture or Metalaxyl @ 2 g/L"
+      ],
+      "prevention": [
+        "Use disease-free vine sets",
+        "Provide good drainage in betelvine conservatory (bareja)"
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Glossy, turgid leaves with deep green pigmentation and no necrotic spots",
+    "Firm stems with healthy node development",
+    "Vigorous climbing vines or canopies with strong root anchorage",
+    "Clean foliage free from sucking pest colonies or sooty mold"
+  ],
+  "management": [
+    "Isolate affected plants and eliminate debris from previous seasons",
+    "Provide adequate light and airflow to discourage fungal sporulation",
+    "Consult local Krishi Vigyan Kendra (KVK) for exact regional prescription"
+  ],
+  "prevention": [
+    "Ensure good drainage and aeration around vine roots or tree bases",
+    "Apply well-decomposed FYM enriched with biocontrol agents (Trichoderma + Pseudomonas)",
+    "Maintain clean field hygiene and avoid working in wet crops to prevent spore spread",
+    "Use resistant varieties recommended by regional Agricultural Universities"
+  ]
+}

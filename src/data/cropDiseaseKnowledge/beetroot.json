@@ -1,0 +1,41 @@
+{
+  "crop": "Beetroot",
+  "crop_id": "beetroot",
+  "category": "vegetable",
+  "diseases": [
+    {
+      "disease_name": "Cercospora Leaf Spot",
+      "scientific_name": "Cercospora beticola",
+      "symptoms": [
+        "Circular brown to ash-grey spots with conspicuous dark reddish-purple margins on leaves"
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Spray Copper Oxychloride @ 2.5 g/L"
+      ],
+      "prevention": [
+        "Use certified seeds",
+        "Destroy old infected beet foliage"
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Turgid, deep green leaves with crisp texture and no chlorosis",
+    "Vigorous flowering and uniform fruit set free from blemishes or sunken spots",
+    "Clean root crown without fungal damping-off or collar decay",
+    "Absence of curling, puckering, or mosaic leaf mottling"
+  ],
+  "management": [
+    "Prune lower diseased foliage with sanitized secateurs; dispose of off-field",
+    "Apply targeted bio-fungicides (Bacillus subtilis / Trichoderma) or copper-based sprays",
+    "Control sucking insect vectors promptly using yellow sticky traps and botanical sprays"
+  ],
+  "prevention": [
+    "Adopt raised nursery beds with nylon insect netting to prevent early vector transmission",
+    "Mulch beds with silver-black reflective plastic mulch to deter thrips and aphids",
+    "Water using drip irrigation at the base to keep foliage completely dry",
+    "Regularly rogue out and safely destroy virus-infected or blighted plants"
+  ]
+}

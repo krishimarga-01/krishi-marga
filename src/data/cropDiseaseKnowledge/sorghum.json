@@ -1,0 +1,42 @@
+{
+  "crop": "Sorghum",
+  "crop_id": "sorghum",
+  "category": "cereal",
+  "diseases": [
+    {
+      "disease_name": "Grain Mold / Anthracnose",
+      "scientific_name": "Colletotrichum sublineolum",
+      "symptoms": [
+        "Reddish to purple elliptical leaf spots",
+        "Black fungal discoloration of mature grain"
+      ],
+      "severity": "Moderate to Severe",
+      "management": [
+        "Spray Mancozeb @ 2 g/L on early foliage"
+      ],
+      "prevention": [
+        "Crop rotation with pulses",
+        "Harvest promptly at physiological maturity"
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Vigorous upright tillering with uniform emerald-green foliage",
+    "Sturdy culms free from lodging or fungal discoloration",
+    "Clean leaf sheaths and fully emerged, well-filled panicles/cobs",
+    "Healthy fibrous root system without rotting or browning"
+  ],
+  "management": [
+    "Drain standing water upon initial detection of root or sheath disease",
+    "Apply university-recommended biocontrol or registered fungicide early in the morning",
+    "Balance fertilizer regime by supplementing muriate of potash to strengthen culms"
+  ],
+  "prevention": [
+    "Use certified disease-free, high-germination seed lots treated with Trichoderma @ 4g/kg",
+    "Maintain optimal plant spacing to allow adequate ventilation and reduce canopy humidity",
+    "Avoid excessive nitrogen application; apply balanced NPK with silicon and zinc",
+    "Practice timely field drainage and weed sanitation around bunds"
+  ]
+}

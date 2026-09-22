@@ -1,0 +1,40 @@
+{
+  "crop": "Ridge Gourd",
+  "crop_id": "ridge_gourd",
+  "category": "vegetable",
+  "diseases": [
+    {
+      "disease_name": "Powdery Mildew",
+      "scientific_name": "Podosphaera xanthii",
+      "symptoms": [
+        "White talcum-powder like circular patches on leaves and tender stems"
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Spray Wettable Sulphur @ 3 g/L or Dinocap @ 1 ml/L"
+      ],
+      "prevention": [
+        "Collect and burn infected lower leaves"
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Turgid, deep green leaves with crisp texture and no chlorosis",
+    "Vigorous flowering and uniform fruit set free from blemishes or sunken spots",
+    "Clean root crown without fungal damping-off or collar decay",
+    "Absence of curling, puckering, or mosaic leaf mottling"
+  ],
+  "management": [
+    "Prune lower diseased foliage with sanitized secateurs; dispose of off-field",
+    "Apply targeted bio-fungicides (Bacillus subtilis / Trichoderma) or copper-based sprays",
+    "Control sucking insect vectors promptly using yellow sticky traps and botanical sprays"
+  ],
+  "prevention": [
+    "Adopt raised nursery beds with nylon insect netting to prevent early vector transmission",
+    "Mulch beds with silver-black reflective plastic mulch to deter thrips and aphids",
+    "Water using drip irrigation at the base to keep foliage completely dry",
+    "Regularly rogue out and safely destroy virus-infected or blighted plants"
+  ]
+}

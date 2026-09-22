@@ -60,11 +60,11 @@ export const HomeScreen = ({ navigation }: any) => {
         {/* Farmer Greeting */}
         <View style={styles.greetingSection}>
           <View style={styles.greetingRow}>
-            <Text style={styles.greetingTitle}>Namaste, Kisan!</Text>
+            <Text style={styles.greetingTitle}>{t('farmerGreeting') || 'Namaste, Kisan!'}</Text>
             <Text style={styles.leafEmoji}> 🍃</Text>
           </View>
           <Text style={styles.greetingSubtitle}>
-            Let's keep your crops healthy.
+            {t('checkCropSubtitle') || "Let's keep your crops healthy."}
           </Text>
         </View>
 
@@ -73,18 +73,48 @@ export const HomeScreen = ({ navigation }: any) => {
           style={styles.heroCard}
           activeOpacity={0.9}
           onPress={() => navigation.navigate('CropSelect')}
+          accessibilityRole="button"
+          accessibilityLabel={t('detectDisease') || 'Detect Disease'}
         >
           <View style={styles.heroIconCircle}>
             <Text style={styles.heroCameraEmoji}>📷</Text>
           </View>
           <View style={styles.heroTextWrap}>
-            <Text style={styles.heroTitle}>Detect Disease</Text>
+            <Text style={styles.heroTitle}>{t('detectDisease') || 'Detect Disease'}</Text>
             <Text style={styles.heroSubtitle}>
-              Take a photo of your crop leaf to inspect for diseases instantly
+              {t('checkCropSubtitle') || 'Take a photo of your crop leaf to inspect for diseases instantly'}
             </Text>
           </View>
           <View style={styles.heroArrowCircle}>
             <Text style={styles.heroArrowText}>➔</Text>
+          </View>
+        </TouchableOpacity>
+
+        {/* Scan Pesticide Entry Card */}
+        <TouchableOpacity
+          style={styles.pesticideFeatureCard}
+          activeOpacity={0.88}
+          onPress={() => navigation.navigate('PesticideScanner')}
+          accessibilityRole="button"
+          accessibilityLabel={t('scanPesticideTitle') || 'Scan Pesticide'}
+        >
+          <View style={styles.pesticideIconCircle}>
+            <Text style={styles.pesticideEmoji}>💊</Text>
+          </View>
+          <View style={styles.pesticideTextWrap}>
+            <View style={styles.pesticideTitleRow}>
+              <Text style={styles.pesticideTitle}>{t('scanPesticideTitle') || 'Scan Pesticide'}</Text>
+              <View style={styles.cibrcBadge}>
+                <Text style={styles.cibrcBadgeText}>CIBRC AI</Text>
+              </View>
+            </View>
+            <Text style={styles.pesticideSubtitle}>
+              {t('scanPesticideDesc') ||
+                'Scan pesticide bottle or sachet to identify active ingredients and verified use'}
+            </Text>
+          </View>
+          <View style={styles.pesticideArrowCircle}>
+            <Text style={styles.pesticideArrowText}>➔</Text>
           </View>
         </TouchableOpacity>
 
@@ -95,15 +125,19 @@ export const HomeScreen = ({ navigation }: any) => {
             style={styles.gridCard}
             activeOpacity={0.85}
             onPress={() => navigation.navigate('My Cases')}
+            accessibilityRole="button"
+            accessibilityLabel={t('myHistory') || 'My History'}
           >
             <View style={styles.cardIconCircleBeige}>
               <Text style={styles.gridEmoji}>📋</Text>
             </View>
-            <Text style={styles.cardTitle}>My History</Text>
-            <Text style={styles.cardSubtitle}>View your past inspections</Text>
+            <Text style={styles.cardTitle}>{t('myHistory') || 'My History'}</Text>
+            <Text style={styles.cardSubtitle} numberOfLines={2}>
+              {t('myCasesSubtitle') || 'View your past inspections'}
+            </Text>
             <View style={styles.cardActionRow}>
               <Text style={styles.cardActionText}>
-                {recentCases.length} records saved
+                {recentCases.length} {t('recordsSaved') || 'records saved'}
               </Text>
               <Text style={styles.chevron}>›</Text>
             </View>
@@ -114,16 +148,18 @@ export const HomeScreen = ({ navigation }: any) => {
             style={styles.gridCard}
             activeOpacity={0.85}
             onPress={() => navigation.navigate('Nearby Help')}
+            accessibilityRole="button"
+            accessibilityLabel={t('nearbyHelp') || 'Nearby Help'}
           >
             <View style={styles.cardIconCircleGreen}>
               <Text style={styles.gridEmoji}>📞</Text>
             </View>
-            <Text style={styles.cardTitle}>Nearby Help</Text>
-            <Text style={styles.cardSubtitle}>
-              Connect with crop doctors & experts
+            <Text style={styles.cardTitle}>{t('nearbyHelp') || 'Nearby Help'}</Text>
+            <Text style={styles.cardSubtitle} numberOfLines={2}>
+              {t('nearbyHelpSubtitle') || 'Connect with crop doctors & experts'}
             </Text>
             <View style={styles.cardActionRow}>
-              <Text style={styles.cardActionText}>Find experts</Text>
+              <Text style={styles.cardActionText}>{t('findCropExpert') || 'Find experts'}</Text>
               <Text style={styles.chevron}>›</Text>
             </View>
           </TouchableOpacity>
@@ -134,24 +170,26 @@ export const HomeScreen = ({ navigation }: any) => {
           style={styles.fieldModeCard}
           activeOpacity={0.85}
           onPress={() => navigation.navigate('Settings')}
+          accessibilityRole="button"
+          accessibilityLabel={t('offlineModeAvailable') || 'Field Mode'}
         >
           <View style={styles.fieldModeIconCircle}>
             <Text style={styles.fieldModeEmoji}>📡</Text>
           </View>
           <View style={styles.fieldModeTextWrap}>
-            <Text style={styles.fieldModeTitle}>Field Mode</Text>
+            <Text style={styles.fieldModeTitle}>{t('offlineModeAvailable') || 'Field Mode'}</Text>
             <Text style={styles.fieldModeSubtitle}>
-              Check your crops even without internet.
+              {t('offlineModeDesc') || 'Check your crops even without internet.'}
             </Text>
           </View>
           <View style={styles.learnMorePill}>
-            <Text style={styles.learnMoreText}>Learn More</Text>
+            <Text style={styles.learnMoreText}>{t('viewAll') || 'Learn More'}</Text>
           </View>
         </TouchableOpacity>
 
         {/* Crop Protection & Farm Guides Section */}
         <View style={styles.guidesSection}>
-          <Text style={styles.sectionHeaderTitle}>Crop Protection & Guides</Text>
+          <Text style={styles.sectionHeaderTitle}>{t('cropProtectionTitle') || 'Crop Protection & Guides'}</Text>
           <View style={styles.guidesGrid}>
             {/* Guide 1: Pesticide Guide */}
             <TouchableOpacity
@@ -162,8 +200,8 @@ export const HomeScreen = ({ navigation }: any) => {
               <View style={[styles.guideIconCircle, { backgroundColor: '#FEF3C7' }]}>
                 <Text style={styles.guideEmoji}>🧪</Text>
               </View>
-              <Text style={styles.guideCardTitle}>Pesticide Guide</Text>
-              <Text style={styles.guideCardDesc}>CIBRC dosages & safety</Text>
+              <Text style={styles.guideCardTitle} numberOfLines={1}>{t('tabDirectory') || 'Pesticide Guide'}</Text>
+              <Text style={styles.guideCardDesc} numberOfLines={1}>CIBRC dosages</Text>
             </TouchableOpacity>
 
             {/* Guide 2: Pests & Diseases */}
@@ -175,8 +213,8 @@ export const HomeScreen = ({ navigation }: any) => {
               <View style={[styles.guideIconCircle, { backgroundColor: '#FEE2E2' }]}>
                 <Text style={styles.guideEmoji}>🐛</Text>
               </View>
-              <Text style={styles.guideCardTitle}>Pests & Disease</Text>
-              <Text style={styles.guideCardDesc}>14 verified pests</Text>
+              <Text style={styles.guideCardTitle} numberOfLines={1}>{t('viewPestExplorer') || 'Pests & Disease'}</Text>
+              <Text style={styles.guideCardDesc} numberOfLines={1}>14 verified pests</Text>
             </TouchableOpacity>
 
             {/* Guide 3: Nutrient & Fertilizer */}
@@ -188,8 +226,8 @@ export const HomeScreen = ({ navigation }: any) => {
               <View style={[styles.guideIconCircle, { backgroundColor: '#E0F2FE' }]}>
                 <Text style={styles.guideEmoji}>🌾</Text>
               </View>
-              <Text style={styles.guideCardTitle}>Nutrient / Soil</Text>
-              <Text style={styles.guideCardDesc}>Deficiency signs</Text>
+              <Text style={styles.guideCardTitle} numberOfLines={1}>{t('viewNutrientGuide') || 'Nutrient / Soil'}</Text>
+              <Text style={styles.guideCardDesc} numberOfLines={1}>Deficiency signs</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -284,6 +322,77 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '800',
     color: '#1E6335',
+  },
+  pesticideFeatureCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#FFFFFF',
+    borderRadius: 20,
+    padding: 16,
+    borderWidth: 1.5,
+    borderColor: '#CBE5D3',
+    shadowColor: '#1E6335',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.08,
+    shadowRadius: 6,
+    elevation: 2,
+    marginBottom: 16,
+  },
+  pesticideIconCircle: {
+    width: 46,
+    height: 46,
+    borderRadius: 23,
+    backgroundColor: '#E6F4EA',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 12,
+  },
+  pesticideEmoji: {
+    fontSize: 24,
+  },
+  pesticideTextWrap: {
+    flex: 1,
+  },
+  pesticideTitleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 2,
+  },
+  pesticideTitle: {
+    fontSize: 16,
+    fontWeight: '800',
+    color: '#162836',
+    marginRight: 8,
+  },
+  cibrcBadge: {
+    backgroundColor: '#FEF3C7',
+    paddingHorizontal: 7,
+    paddingVertical: 2,
+    borderRadius: 8,
+  },
+  cibrcBadgeText: {
+    fontSize: 10,
+    fontWeight: '800',
+    color: '#92400E',
+  },
+  pesticideSubtitle: {
+    fontSize: 12,
+    color: '#5A6E60',
+    lineHeight: 16,
+  },
+  pesticideArrowCircle: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    backgroundColor: '#E8F5E9',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 8,
+  },
+  pesticideArrowText: {
+    fontSize: 15,
+    fontWeight: '800',
+    color: '#2E7D32',
   },
   twoColumnRow: {
     flexDirection: 'row',

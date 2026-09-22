@@ -1,9 +1,15 @@
 import { NormalizedResult, ConfidenceLevel, HealthStatus } from '../models/index';
+import { Config, NetworkBudget, BackendNotConfiguredError } from './config';
+import { ImageOptimizer, UploadBudget } from './imageOptimizer';
+import { ApiError, HttpClient, UploadHandle } from './httpClient';
 
-// Configurable backend endpoint (dev default, can be overridden via config or settings)
-import { Config } from './config';
-
-export const DEFAULT_N8N_WEBHOOK_URL = Config.getBackendUrl();
+/**
+ * Backwards-compatible export. Resolved lazily so that an unconfigured build
+ * does not crash at module-import time (the old eager call did).
+ */
+export function getDefaultWebhookUrl(): string {
+  return Config.describeBackend();
+}
 
 export interface DiagnosisRequestParams {
   crop: string;
@@ -13,32 +19,94 @@ export interface DiagnosisRequestParams {
   latitude?: number;
   longitude?: number;
   apiUrl?: string;
+  /** Receives 0..1 upload progress for the loading UI. */
+  onUploadProgress?: (fraction: number) => void;
+  /** Receives a cancel handle so the caller can abort on unmount. */
+  registerHandle?: (handle: UploadHandle) => void;
 }
 
-export class DiagnosisApiError extends Error {
-  caseType: 'NETWORK_ERROR' | 'EMPTY_RESPONSE' | 'SERVER_ERROR' | 'INVALID_JSON';
-  httpStatus?: number;
+export type DiagnosisErrorCase =
+  | 'NOT_CONFIGURED'
+  | 'NETWORK_ERROR'
+  | 'TIMEOUT'
+  | 'ABORTED'
+  | 'EMPTY_RESPONSE'
+  | 'SERVER_ERROR'
+  | 'INVALID_JSON'
+  | 'INVALID_RESPONSE'
+  | 'NO_IMAGES';
 
-  constructor(
-    caseType: 'NETWORK_ERROR' | 'EMPTY_RESPONSE' | 'SERVER_ERROR' | 'INVALID_JSON',
-    message: string,
-    httpStatus?: number
-  ) {
+export class DiagnosisApiError extends Error {
+  caseType: DiagnosisErrorCase;
+  httpStatus?: number;
+  retryable: boolean;
+
+  constructor(caseType: DiagnosisErrorCase, message: string, httpStatus?: number, retryable = true) {
     super(message);
     this.name = 'DiagnosisApiError';
     this.caseType = caseType;
     this.httpStatus = httpStatus;
+    this.retryable = retryable;
   }
+}
+
+function toDiagnosisError(err: any): DiagnosisApiError {
+  if (err instanceof DiagnosisApiError) return err;
+  if (err instanceof BackendNotConfiguredError) {
+    return new DiagnosisApiError('NOT_CONFIGURED', err.message, undefined, false);
+  }
+  if (err instanceof ApiError) {
+    return new DiagnosisApiError(err.kind, err.message, err.httpStatus, err.retryable);
+  }
+  return new DiagnosisApiError('NETWORK_ERROR', err?.message || 'Diagnosis request failed.');
+}
+
+/** Stable signature used to suppress accidental duplicate submissions. */
+function buildDedupeKey(params: DiagnosisRequestParams): string {
+  return [
+    'disease',
+    params.crop,
+    params.language,
+    params.imageUris.length,
+    params.imageUris.join('|'),
+    (params.symptoms || '').trim(),
+  ].join('::');
 }
 
 export const DiagnosisApi = {
   async detectDiseaseOnline(params: DiagnosisRequestParams): Promise<NormalizedResult> {
-    const targetUrl = params.apiUrl || Config.getBackendUrl();
-    const formData = new FormData();
+    if (!params.imageUris || params.imageUris.length === 0) {
+      throw new DiagnosisApiError('NO_IMAGES', 'Please add at least one photo before analysing.', undefined, false);
+    }
 
+    let targetUrl: string;
+    try {
+      targetUrl = params.apiUrl || Config.getEndpointUrl('diagnosis');
+    } catch (e) {
+      throw toDiagnosisError(e);
+    }
+
+    // Client-side optimization: sequential resize/compress, batch-size aware, so
+    // large multi-image requests cannot overwhelm the device or the server.
+    const optimized = await ImageOptimizer.optimizeBatchDetailed(
+      params.imageUris.slice(0, UploadBudget.maxImages)
+    );
+
+    const usable = optimized.filter((img) => img.optimized || img.sizeBytes > 0 || !!img.uri);
+    if (usable.length === 0) {
+      throw new DiagnosisApiError(
+        'NO_IMAGES',
+        'The selected photos could not be prepared for upload. Please retake them.',
+        undefined,
+        false
+      );
+    }
+
+    const formData = new FormData();
+    formData.append('scan_type', 'disease');
     formData.append('crop', params.crop);
     formData.append('language', params.language);
-    formData.append('imageCount', String(params.imageUris.length));
+    formData.append('imageCount', String(usable.length));
 
     if (params.symptoms && params.symptoms.trim()) {
       formData.append('symptoms', params.symptoms.trim());
@@ -48,122 +116,117 @@ export const DiagnosisApi = {
       formData.append('longitude', String(params.longitude));
     }
 
-    for (let i = 0; i < params.imageUris.length; i++) {
-      const uri = params.imageUris[i];
-      const filename = uri.split('/').pop() || `leaf_${i + 1}.jpg`;
-      formData.append('images', {
-        uri,
-        name: filename,
-        type: 'image/jpeg',
-      } as any);
-    }
-
-    if (__DEV__) {
-      console.log('[DIAGNOSIS_REQUEST] UPLOAD TRANSPORT: XMLHttpRequest');
-      console.log('[DIAGNOSIS_REQUEST] Target URL:', targetUrl);
-      console.log('[DIAGNOSIS_REQUEST] Crop:', params.crop);
-      console.log('[DIAGNOSIS_REQUEST] Language:', params.language);
-      console.log('[DIAGNOSIS_REQUEST] Number of images:', params.imageUris.length);
-      for (let i = 0; i < params.imageUris.length; i++) {
-        const uri = params.imageUris[i];
-        const filename = uri.split('/').pop() || `leaf_${i + 1}.jpg`;
-        const scheme = uri.includes('://') ? uri.split('://')[0] + '://' : 'unknown';
-        console.log(`[DIAGNOSIS_REQUEST] Image [${i}]: scheme=${scheme}, filename=${filename}, mimeType=image/jpeg`);
-      }
-    }
-
-    const raw = await new Promise<any>((resolve, reject) => {
-      const xhr = new XMLHttpRequest();
-      xhr.open('POST', targetUrl);
-      xhr.timeout = 60000; // 60s timeout for multi-image Gemini diagnosis
-
-      xhr.onload = () => {
-        const contentType = xhr.getResponseHeader('content-type') || '';
-        const responseText = xhr.responseText || '';
-        const responseLength = responseText.length;
-
-        if (__DEV__) {
-          console.log('[DIAGNOSIS_RESPONSE] HTTP Status:', xhr.status, xhr.statusText);
-          console.log('[DIAGNOSIS_RESPONSE] Content-Type:', contentType);
-          console.log('[DIAGNOSIS_RESPONSE] Response Length:', responseLength);
-          console.log('[DIAGNOSIS_RESPONSE] Response Body:', responseText);
-        }
-
-        if (xhr.status >= 200 && xhr.status < 300) {
-          if (!responseText || !responseText.trim()) {
-            // CASE B: HTTP 200 but response body is empty
-            reject(new DiagnosisApiError('EMPTY_RESPONSE', 'Diagnosis server returned an empty response.', xhr.status));
-            return;
-          }
-          try {
-            const json = JSON.parse(responseText);
-            if (json.success === false) {
-              // Server-controlled error JSON (CASE C)
-              reject(new DiagnosisApiError('SERVER_ERROR', json.message || json.error?.message || 'Online diagnosis could not be completed.', xhr.status));
-              return;
-            }
-            resolve(json);
-          } catch (jsonErr) {
-            reject(new DiagnosisApiError('INVALID_JSON', `Invalid JSON response from server: ${responseText}`, xhr.status));
-          }
-        } else {
-          // CASE C: HTTP 4xx/5xx
-          reject(new DiagnosisApiError('SERVER_ERROR', 'Online diagnosis could not be completed.', xhr.status));
-        }
-      };
-
-      xhr.onerror = (e) => {
-        if (__DEV__) {
-          console.log('[DIAGNOSIS_NETWORK_ERROR] Network request failed connecting to', targetUrl, e);
-        }
-        // CASE A: Fails before receiving HTTP status
-        reject(new DiagnosisApiError('NETWORK_ERROR', 'Cannot reach the diagnosis server. Please ensure your phone is connected to the same network as your server.'));
-      };
-
-      xhr.ontimeout = () => {
-        if (__DEV__) {
-          console.log('[DIAGNOSIS_TIMEOUT] Request timed out connecting to', targetUrl);
-        }
-        // CASE A: Timeout before receiving HTTP status
-        reject(new DiagnosisApiError('NETWORK_ERROR', 'Cannot reach the diagnosis server. Please ensure your phone is connected to the same network as your server.'));
-      };
-
-      if (__DEV__) {
-        console.log('[DIAGNOSIS_REQUEST] Calling xhr.send(formData)...');
-      }
-      xhr.send(formData);
+    usable.forEach((img, i) => {
+      const filename = img.uri.split('/').pop() || `leaf_${i + 1}.jpg`;
+      formData.append('images', { uri: img.uri, name: filename, type: 'image/jpeg' } as any);
     });
 
-    return DiagnosisApi.normalizeBackendResponse(raw, params.crop);
+    if (__DEV__) {
+      console.log('[DIAGNOSIS_REQUEST] url=%s crop=%s images=%d', targetUrl, params.crop, usable.length);
+    }
+
+    let raw: any;
+    try {
+      raw = await HttpClient.upload({
+        url: targetUrl,
+        formData,
+        timeoutMs: NetworkBudget.diagnosisTimeoutMs,
+        dedupeKey: buildDedupeKey(params),
+        onUploadProgress: params.onUploadProgress,
+        registerHandle: params.registerHandle,
+        label: 'diagnosis',
+      });
+    } catch (e) {
+      throw toDiagnosisError(e);
+    }
+
+    return DiagnosisApi.parseAndNormalize(raw, params.crop);
+  },
+
+  /**
+   * Validates the server envelope before normalizing. A structurally wrong or
+   * server-rejected response fails in a controlled way instead of producing a
+   * confident-looking but empty diagnosis card.
+   */
+  parseAndNormalize(raw: any, fallbackCrop: string): NormalizedResult {
+    if (!raw || typeof raw !== 'object') {
+      throw new DiagnosisApiError('INVALID_RESPONSE', 'The server returned an unreadable result.');
+    }
+
+    if (raw.success === false) {
+      throw new DiagnosisApiError(
+        'SERVER_ERROR',
+        raw.message || raw.error?.message || 'The diagnosis could not be completed.',
+        undefined,
+        raw.errorCode !== 'UNSUPPORTED_CROP' && raw.errorCode !== 'INVALID_CROP'
+      );
+    }
+
+    const res = raw.result || raw;
+    const hasAnyDiagnosisField =
+      res &&
+      typeof res === 'object' &&
+      (res.health_status !== undefined ||
+        res.disease !== undefined ||
+        res.problem_type !== undefined);
+
+    if (!hasAnyDiagnosisField) {
+      throw new DiagnosisApiError('INVALID_RESPONSE', 'The server result was incomplete. Please try again.');
+    }
+
+    return DiagnosisApi.normalizeBackendResponse(raw, fallbackCrop);
   },
 
   normalizeBackendResponse(raw: any, fallbackCrop: string): NormalizedResult {
     const res = raw.result || raw;
-    const confidenceScore = typeof res.confidence === 'number' ? res.confidence : 0.85;
+
+    // Confidence is only trusted when the server actually supplied a number.
+    // A missing confidence is treated as unknown rather than silently assumed high.
+    const rawConfidence = typeof res.confidence === 'number' ? res.confidence : Number(res.confidence);
+    const hasConfidence = Number.isFinite(rawConfidence);
+    const confidenceScore = hasConfidence ? Math.max(0, Math.min(1, rawConfidence)) : 0;
+
     let level: ConfidenceLevel = 'High';
-    if (confidenceScore < 0.5) level = 'Low';
+    if (!hasConfidence || confidenceScore < 0.5) level = 'Low';
     else if (confidenceScore < 0.75) level = 'Medium';
 
-    const health: HealthStatus = (res.health_status === 'Healthy' || res.disease?.toLowerCase().includes('healthy'))
-      ? 'Healthy' : 'Diseased';
+    const health: HealthStatus =
+      res.health_status === 'Healthy' || res.disease?.toLowerCase?.().includes('healthy')
+        ? 'Healthy'
+        : res.health_status === 'Uncertain' || res.disease?.toLowerCase?.() === 'unknown' || !hasConfidence
+        ? 'Uncertain'
+        : 'Diseased';
+
+    const asArray = (v: any): string[] =>
+      Array.isArray(v) ? v.filter((x) => typeof x === 'string' && x.trim()) : v ? [String(v)] : [];
 
     return {
       crop: raw.crop_selected || res.crop || fallbackCrop,
       health_status: health,
-      disease: res.disease || (health === 'Healthy' ? 'Healthy Crop' : 'Detected Problem'),
+      disease:
+        res.disease ||
+        (health === 'Healthy' ? 'Healthy Crop' : health === 'Uncertain' ? 'Unknown' : 'Detected Problem'),
       confidence: confidenceScore,
       confidence_level: level,
       severity: res.severity || (health === 'Healthy' ? 'None' : 'Moderate'),
-      symptoms: Array.isArray(res.symptoms) ? res.symptoms : (res.symptoms ? [res.symptoms] : []),
-      recommendations: Array.isArray(res.recommendations) ? res.recommendations : (res.recommendations ? [res.recommendations] : []),
-      prevention: Array.isArray(res.prevention) ? res.prevention : (res.prevention ? [res.prevention] : []),
+      problem_type:
+        res.problem_type || (health === 'Healthy' ? 'HEALTHY' : health === 'Uncertain' ? 'UNKNOWN' : 'DISEASE'),
+      symptoms: asArray(res.symptoms),
+      recommendations: asArray(res.recommendations),
+      prevention: asArray(res.prevention),
       organic_management: Array.isArray(res.organic_management) ? res.organic_management : undefined,
       regional_advice: res.regional_advice,
       user_message: res.user_message || res.farmer_message,
+      pest_assessment: res.pest_assessment,
+      nutrient_assessment: res.nutrient_assessment,
+      differential_assessment: res.differential_assessment,
+      crop_protection: res.crop_protection,
+      fertilizer_advisory: res.fertilizer_advisory,
       analysis_source: 'online',
+      is_diagnosis: true,
       timestamp: raw.timestamp || new Date().toISOString(),
       requestId: raw.requestId || res.requestId,
       latency_ms: raw.latency_ms || res.latency_ms,
     };
-  }
+  },
 };

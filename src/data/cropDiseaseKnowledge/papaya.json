@@ -1,0 +1,41 @@
+{
+  "crop": "Papaya",
+  "crop_id": "papaya",
+  "category": "fruit",
+  "diseases": [
+    {
+      "disease_name": "Papaya Ringspot Virus (PRSV)",
+      "scientific_name": "Papaya ringspot virus",
+      "symptoms": [
+        "Vein clearing, prominent dark green mosaic puckering, oily water-soaked streaks on petiole and trunk, ring spots on fruit"
+      ],
+      "severity": "Critical",
+      "management": [
+        "Rogue out infected plants immediately"
+      ],
+      "prevention": [
+        "Surround papaya orchard with 2 rows of barrier crops (maize/sorghum)",
+        "Control aphid vectors"
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Glossy green canopy with active flush of new growth",
+    "Symmetrical fruit development with clean rind free from anthracnose spots or fruit-fly punctures",
+    "Intact branch terminals without dieback or gummosis",
+    "Healthy root zone with efficient moisture absorption"
+  ],
+  "management": [
+    "Prune infected twigs 5 cm into healthy tissue and paste cut ends with copper oxychloride",
+    "Collect and deeply bury fallen diseased fruits in compost pits with lime",
+    "Apply balanced micronutrient foliar spray (zinc, boron, iron) to restore tree vigor"
+  ],
+  "prevention": [
+    "Sanitize orchards by pruning dead, crisscrossing, or diseased twigs after harvest",
+    "Paint trunk bases with Bordeaux paste (1:1:10) before monsoon onset to prevent foot rot",
+    "Ensure adequate drainage in tree basins; prevent standing water near the trunk",
+    "Install methyl eugenol fruit fly traps across orchard borders"
+  ]
+}

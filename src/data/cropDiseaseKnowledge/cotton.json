@@ -1,0 +1,150 @@
+{
+  "crop": "Cotton",
+  "crop_id": "cotton",
+  "category": "commercial",
+  "diseases": [
+    {
+      "disease_name": "Bacterial Blight / Angular Leaf Spot / Blackarm",
+      "scientific_name": "Xanthomonas citri pv. malvacearum",
+      "symptoms": [
+        "Angular water-soaked spots bounded by leaf veinlets; lesions turn brown to black; blackarm lesion girdles branches; circular water-soaked sunken spots on bolls."
+      ],
+      "severity": "Severe",
+      "management": [
+        "Consult local agricultural university / KVK package of practices for registered treatment."
+      ],
+      "prevention": [
+        "Practice crop rotation, field hygiene, and use certified seeds."
+      ]
+    },
+    {
+      "disease_name": "Fusarium Wilt",
+      "scientific_name": "Fusarium oxysporum f. sp. vasinfectum",
+      "symptoms": [
+        "Yellowing and browning along leaf margins extending inwards; wilting starts from lower leaves upwards; dark brown vascular discoloration inside peeled taproot."
+      ],
+      "severity": "Critical",
+      "management": [
+        "Consult local agricultural university / KVK package of practices for registered treatment."
+      ],
+      "prevention": [
+        "Practice crop rotation, field hygiene, and use certified seeds."
+      ]
+    },
+    {
+      "disease_name": "Bacterial Blight (Xanthomonas citri pv. malvacearum)",
+      "scientific_name": "Xanthomonas citri pv. malvacearum",
+      "symptoms": [
+        "Angular water-soaked lesions on leaves delimited by veins",
+        "Lesions turn dark brown to black over time",
+        "Blackarm symptoms on stems and petiole wilting"
+      ],
+      "severity": "Severe",
+      "management": [
+        "Spray copper oxychloride (50 WP) @ 2.5 g/L plus Streptocycline @ 0.1 g/L",
+        "Remove and destroy heavily infested crop residues",
+        "Avoid excessive nitrogen fertilization"
+      ],
+      "prevention": [
+        "Delint and treat seeds with Carbendazim or carboxin prior to sowing",
+        "Adopt resistant or tolerant cotton cultivars",
+        "Follow crop rotation with non-host crops like cereals"
+      ]
+    },
+    {
+      "disease_name": "Cotton Leaf Curl Virus (CLCuV)",
+      "scientific_name": "CLCuV",
+      "symptoms": [
+        "Upward or downward curling of leaf margins",
+        "Thickening and enation (leaf-like outgrowths) on leaf undersides",
+        "Severe plant stunting and reduced boll production"
+      ],
+      "severity": "Severe",
+      "management": [
+        "Manage whitefly vector with systemic insecticides (Diafenthiuron or Acetamiprid)",
+        "Uproot and bury severely infected stunted plants",
+        "Eradicate alternate weed hosts in and around fields"
+      ],
+      "prevention": [
+        "Sow CLCuD resistant hybrid varieties",
+        "Install yellow sticky traps (10-15 per acre) to monitor and control whiteflies",
+        "Avoid sowing near tobacco or ladyfinger fields"
+      ]
+    },
+    {
+      "disease_name": "Fusarium Wilt (Fusarium oxysporum f. sp. vasinfectum)",
+      "scientific_name": "Fusarium oxysporum f. sp. vasinfectum",
+      "symptoms": [
+        "Yellowing and wilting of leaves starting from the bottom upward",
+        "Dark brown to black vascular discoloration inside the taproot and stem",
+        "Stunting and premature death of plants"
+      ],
+      "severity": "Critical",
+      "management": [
+        "Drench root zone with Carbendazim (1 g/L) or Trichoderma viride formulation",
+        "Avoid waterlogging in clay soils",
+        "Apply balanced potash nutrition to boost disease resistance"
+      ],
+      "prevention": [
+        "Soil solarization during hot summer months",
+        "Seed treatment with Trichoderma viride @ 4-6 g/kg seed",
+        "Practice minimum 3-year crop rotation with non-susceptible crops"
+      ]
+    },
+    {
+      "disease_name": "Healthy Plant",
+      "scientific_name": "",
+      "symptoms": [
+        "Uniform vibrant green foliage",
+        "No spots, curling, or lesions",
+        "Vigorous vegetative and reproductive growth"
+      ],
+      "severity": "None",
+      "management": [
+        "Maintain regular irrigation schedule without water stagnation",
+        "Apply recommended NPK and micronutrient dosage as per soil test",
+        "Monitor weekly for pest scouts (bollworms, aphids, thrips)"
+      ],
+      "prevention": [
+        "Continue balanced soil and plant health management",
+        "Ensure adequate border vegetation for beneficial predator insects"
+      ]
+    }
+  ],
+  "pests": [
+    {
+      "pest_name": "Pink Bollworm",
+      "scientific_name": "Pectinophora gossypiella",
+      "symptoms": [],
+      "management": [
+        "Install pheromone traps and apply bio-control agents."
+      ]
+    }
+  ],
+  "nutrient_deficiencies": [
+    {
+      "deficiency": "Potassium (K)",
+      "symptoms": [],
+      "correction": [
+        "Foliar spray of Potassium Nitrate (13:0:45) @ 10g/L or SOP (0:0:50) @ 10g/L at weekly intervals during boll development."
+      ]
+    }
+  ],
+  "healthy_signs": [
+    "Robust, thick cane stalks or deep-lobed green leaves with vigorous growth",
+    "Strong internodes free from boreholes or internal red rot",
+    "Clean foliar canopy with active photosynthesis",
+    "Sturdy root anchoring with no basal wilt"
+  ],
+  "management": [
+    "Uproot and burn severely wilted or red-rot infected canes/plants immediately",
+    "Drench border rows with biocontrol formulations to create protective barrier zones",
+    "Follow integrated pest management (IPM) guidelines strictly"
+  ],
+  "prevention": [
+    "Select healthy setts/seeds from certified nurseries or disease-free mother plants",
+    "Adopt drip irrigation to avoid excess soil moisture around root crowns",
+    "Practice deep summer ploughing to expose soil-borne resting spores and pupae",
+    "Rotate with green manure crops such as sunnhemp or daincha"
+  ]
+}

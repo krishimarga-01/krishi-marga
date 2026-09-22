@@ -7,6 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { SplashScreen } from '../screens/SplashScreen';
 import { HomeScreen } from '../screens/HomeScreen';
 import { CropSelectScreen } from '../screens/CropSelectScreen';
+import { CropPreparationScreen } from '../screens/CropPreparationScreen';
 import { CameraCaptureScreen } from '../screens/CameraCaptureScreen';
 import { AnalyzingScreen } from '../screens/AnalyzingScreen';
 import { ResultScreen } from '../screens/ResultScreen';
@@ -106,6 +107,7 @@ export const RootNavigator = () => {
 
         {/* 1-Crop Inspection Flow */}
         <Stack.Screen name="CropSelect" component={CropSelectScreen} />
+        <Stack.Screen name="CropPreparation" component={CropPreparationScreen} />
         <Stack.Screen name="CameraCapture" component={CameraCaptureScreen} />
         <Stack.Screen name="Analyzing" component={AnalyzingScreen} />
         <Stack.Screen name="Result" component={ResultScreen} />

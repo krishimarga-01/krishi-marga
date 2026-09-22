@@ -1,0 +1,458 @@
+{
+  "paddy": {
+    "crop_name": "Paddy",
+    "category": "cereal",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "maize": {
+    "crop_name": "Maize",
+    "category": "cereal",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "ragi": {
+    "crop_name": "Ragi",
+    "category": "cereal",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "sorghum": {
+    "crop_name": "Sorghum",
+    "category": "cereal",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "pearl_millet": {
+    "crop_name": "Pearl Millet",
+    "category": "cereal",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "foxtail_millet": {
+    "crop_name": "Foxtail Millet",
+    "category": "cereal",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "little_millet": {
+    "crop_name": "Little Millet",
+    "category": "cereal",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "kodo_millet": {
+    "crop_name": "Kodo Millet",
+    "category": "cereal",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "barnyard_millet": {
+    "crop_name": "Barnyard Millet",
+    "category": "cereal",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "proso_millet": {
+    "crop_name": "Proso Millet",
+    "category": "cereal",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "wheat": {
+    "crop_name": "Wheat",
+    "category": "cereal",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "red_gram": {
+    "crop_name": "Red Gram",
+    "category": "pulse",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "black_gram": {
+    "crop_name": "Black Gram",
+    "category": "pulse",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "green_gram": {
+    "crop_name": "Green Gram",
+    "category": "pulse",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "bengal_gram": {
+    "crop_name": "Bengal Gram",
+    "category": "pulse",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "cowpea": {
+    "crop_name": "Cowpea",
+    "category": "pulse",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "field_bean": {
+    "crop_name": "Field Bean",
+    "category": "pulse",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "groundnut": {
+    "crop_name": "Groundnut",
+    "category": "oilseed",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "sesame": {
+    "crop_name": "Sesame",
+    "category": "oilseed",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "sunflower": {
+    "crop_name": "Sunflower",
+    "category": "oilseed",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "castor": {
+    "crop_name": "Castor",
+    "category": "oilseed",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "safflower": {
+    "crop_name": "Safflower",
+    "category": "oilseed",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "soybean": {
+    "crop_name": "Soybean",
+    "category": "oilseed",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "cotton": {
+    "crop_name": "Cotton",
+    "category": "commercial",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "sugarcane": {
+    "crop_name": "Sugarcane",
+    "category": "commercial",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "tobacco": {
+    "crop_name": "Tobacco",
+    "category": "commercial",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "tomato": {
+    "crop_name": "Tomato",
+    "category": "vegetable",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "chilli": {
+    "crop_name": "Chilli",
+    "category": "vegetable",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "brinjal": {
+    "crop_name": "Brinjal",
+    "category": "vegetable",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "onion": {
+    "crop_name": "Onion",
+    "category": "vegetable",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "okra": {
+    "crop_name": "Okra",
+    "category": "vegetable",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "potato": {
+    "crop_name": "Potato",
+    "category": "vegetable",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "tapioca": {
+    "crop_name": "Tapioca",
+    "category": "vegetable",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "sweet_potato": {
+    "crop_name": "Sweet Potato",
+    "category": "vegetable",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "drumstick": {
+    "crop_name": "Drumstick",
+    "category": "vegetable",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "cucumber": {
+    "crop_name": "Cucumber",
+    "category": "vegetable",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "pumpkin": {
+    "crop_name": "Pumpkin",
+    "category": "vegetable",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "bitter_gourd": {
+    "crop_name": "Bitter Gourd",
+    "category": "vegetable",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "bottle_gourd": {
+    "crop_name": "Bottle Gourd",
+    "category": "vegetable",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "ridge_gourd": {
+    "crop_name": "Ridge Gourd",
+    "category": "vegetable",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "beans": {
+    "crop_name": "Beans",
+    "category": "vegetable",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "cabbage": {
+    "crop_name": "Cabbage",
+    "category": "vegetable",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "cauliflower": {
+    "crop_name": "Cauliflower",
+    "category": "vegetable",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "carrot": {
+    "crop_name": "Carrot",
+    "category": "vegetable",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "beetroot": {
+    "crop_name": "Beetroot",
+    "category": "vegetable",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "banana": {
+    "crop_name": "Banana",
+    "category": "fruit",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "mango": {
+    "crop_name": "Mango",
+    "category": "fruit",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "papaya": {
+    "crop_name": "Papaya",
+    "category": "fruit",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "pomegranate": {
+    "crop_name": "Pomegranate",
+    "category": "fruit",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "guava": {
+    "crop_name": "Guava",
+    "category": "fruit",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "sapota": {
+    "crop_name": "Sapota",
+    "category": "fruit",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "pineapple": {
+    "crop_name": "Pineapple",
+    "category": "fruit",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "grapes": {
+    "crop_name": "Grapes",
+    "category": "fruit",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "jackfruit": {
+    "crop_name": "Jackfruit",
+    "category": "fruit",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "watermelon": {
+    "crop_name": "Watermelon",
+    "category": "fruit",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "muskmelon": {
+    "crop_name": "Muskmelon",
+    "category": "fruit",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "acid_lime": {
+    "crop_name": "Acid Lime",
+    "category": "fruit",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "coconut": {
+    "crop_name": "Coconut",
+    "category": "plantation",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "arecanut": {
+    "crop_name": "Arecanut",
+    "category": "plantation",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "cashew": {
+    "crop_name": "Cashew",
+    "category": "plantation",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "coffee": {
+    "crop_name": "Coffee",
+    "category": "plantation",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "tea": {
+    "crop_name": "Tea",
+    "category": "plantation",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "rubber": {
+    "crop_name": "Rubber",
+    "category": "plantation",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "cocoa": {
+    "crop_name": "Cocoa",
+    "category": "plantation",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "oil_palm": {
+    "crop_name": "Oil Palm",
+    "category": "plantation",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "palmyrah": {
+    "crop_name": "Palmyrah",
+    "category": "plantation",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "black_pepper": {
+    "crop_name": "Black Pepper",
+    "category": "spice",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "cardamom": {
+    "crop_name": "Cardamom",
+    "category": "spice",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "turmeric": {
+    "crop_name": "Turmeric",
+    "category": "spice",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "ginger": {
+    "crop_name": "Ginger",
+    "category": "spice",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "clove": {
+    "crop_name": "Clove",
+    "category": "spice",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "coriander": {
+    "crop_name": "Coriander",
+    "category": "spice",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "cumin": {
+    "crop_name": "Cumin",
+    "category": "spice",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "fenugreek": {
+    "crop_name": "Fenugreek",
+    "category": "spice",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "betel_vine": {
+    "crop_name": "Betel Vine",
+    "category": "other",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  },
+  "tamarind": {
+    "crop_name": "Tamarind",
+    "category": "other",
+    "kaggle_datasets": [],
+    "_comment": "Fill kaggle_datasets with real, verified entries only, e.g. {\"kaggle_id\": \"owner/dataset-name\", \"license\": \"...\", \"notes\": \"...\"}. Leave empty if none verified."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "crop": "Proso Millet",
+  "crop_id": "proso_millet",
+  "category": "cereal",
+  "diseases": [
+    {
+      "disease_name": "Bacterial Leaf Stripe",
+      "scientific_name": "Pseudomonas avenae",
+      "symptoms": [
+        "Long brown water-soaked stripes between veins on foliage"
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Spray Copper Oxychloride @ 2.5 g/L"
+      ],
+      "prevention": [
+        "Use pathogen-free seed stock"
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Vigorous upright tillering with uniform emerald-green foliage",
+    "Sturdy culms free from lodging or fungal discoloration",
+    "Clean leaf sheaths and fully emerged, well-filled panicles/cobs",
+    "Healthy fibrous root system without rotting or browning"
+  ],
+  "management": [
+    "Drain standing water upon initial detection of root or sheath disease",
+    "Apply university-recommended biocontrol or registered fungicide early in the morning",
+    "Balance fertilizer regime by supplementing muriate of potash to strengthen culms"
+  ],
+  "prevention": [
+    "Use certified disease-free, high-germination seed lots treated with Trichoderma @ 4g/kg",
+    "Maintain optimal plant spacing to allow adequate ventilation and reduce canopy humidity",
+    "Avoid excessive nitrogen application; apply balanced NPK with silicon and zinc",
+    "Practice timely field drainage and weed sanitation around bunds"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "crop": "Cocoa",
+  "crop_id": "cocoa",
+  "category": "plantation",
+  "diseases": [
+    {
+      "disease_name": "Black Pod Disease",
+      "scientific_name": "Phytophthora palmivora",
+      "symptoms": [
+        "Small brown spot on pod expanding rapidly to cover entire pod within 2 weeks; internal bean rotting"
+      ],
+      "severity": "Critical",
+      "management": [
+        "Spray Bordeaux mixture 1% or Metalaxyl + Mancozeb @ 2.5 g/L on developing pods"
+      ],
+      "prevention": [
+        "Remove and bury mummified and black pods",
+        "Regulate shade trees in monsoon"
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Large, deep green fronds/leaves arranged symmetrically in crown/canopy",
+    "Robust trunk/stem free from bleeding patches or fungal conks",
+    "Heavy bunches/berries with uniform maturity and no premature shedding",
+    "Active feeder roots in organic mulch basin"
+  ],
+  "management": [
+    "Clean decaying tissues from infected crowns/trunks and apply protective healing paste",
+    "Drench palm basins with Trichoderma viride culture mixed with neem cake",
+    "Improve basin drainage to lower water table during monsoon peaks"
+  ],
+  "prevention": [
+    "Clean palm crowns/canopies before South-West and North-East monsoon rains",
+    "Apply Bordeaux mixture (1%) spray to bunches and crowns prophylactically",
+    "Grow cover crops (e.g. Mucuna bracteata, Calopogonium) in basins for moisture conservation",
+    "Avoid mechanical injuries to stems and root zones during weeding"
+  ]
+}

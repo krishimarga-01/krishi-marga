@@ -18,16 +18,16 @@ import { GlobalHeader } from '../components/GlobalHeader';
 import { TopLeafDecoration } from '../components/TopLeafDecoration';
 import { LandscapeBanner } from '../components/LandscapeBanner';
 
-const CATEGORIES: { id: string; label: string }[] = [
-  { id: 'all', label: 'All Crops' },
-  { id: 'vegetable', label: 'Vegetables' },
-  { id: 'fruit', label: 'Fruits' },
-  { id: 'cereal', label: 'Cereals' },
-  { id: 'pulse', label: 'Pulses' },
-  { id: 'plantation', label: 'Plantation' },
-  { id: 'spice', label: 'Spices' },
-  { id: 'commercial', label: 'Commercial' },
-  { id: 'oilseed', label: 'Oilseeds' },
+const CATEGORIES: { id: string; label: string; key: string }[] = [
+  { id: 'all', label: 'All Crops', key: 'cropCategory.all' },
+  { id: 'vegetable', label: 'Vegetables', key: 'cropCategory.vegetable' },
+  { id: 'fruit', label: 'Fruits', key: 'cropCategory.fruit' },
+  { id: 'cereal', label: 'Cereals', key: 'cropCategory.cereal' },
+  { id: 'pulse', label: 'Pulses', key: 'cropCategory.pulse' },
+  { id: 'plantation', label: 'Plantation', key: 'cropCategory.plantation' },
+  { id: 'spice', label: 'Spices', key: 'cropCategory.spice' },
+  { id: 'commercial', label: 'Commercial', key: 'cropCategory.commercial' },
+  { id: 'oilseed', label: 'Oilseeds', key: 'cropCategory.oilseed' },
 ];
 
 export const CropSelectScreen = ({ navigation }: any) => {
@@ -93,25 +93,21 @@ export const CropSelectScreen = ({ navigation }: any) => {
   }, [selectedCategory, search, t]);
 
   const handleSelectCrop = (crop: CropConfig) => {
-    if (!crop.modelAvailable) {
-      Alert.alert(
-        'Model Under Preparation',
-        `AI disease detection for ${t(crop.nameKey)} is currently being trained. You can still scan and consult crop experts in Nearby Help.`,
-        [
-          { text: 'Cancel', style: 'cancel' },
-          {
-            text: 'Consult Expert',
-            onPress: () => navigation.navigate('Nearby Help'),
-          },
-        ]
-      );
+    // If online diagnosis is enabled for this crop, navigate to standard diagnosis flow
+    if (crop.onlineAiAvailable ?? crop.modelAvailable) {
+      navigation.navigate('CameraCapture', {
+        crop: crop.rawName,
+        cropDisplayName: t(crop.nameKey),
+        cropId: crop.id,
+      });
       return;
     }
 
-    navigation.navigate('CameraCapture', {
+    // Only crops outside target catalogue (e.g. Tamarind) navigate to preparation state
+    navigation.navigate('CropPreparation', {
+      cropId: crop.id,
       crop: crop.rawName,
       cropDisplayName: t(crop.nameKey),
-      cropId: crop.id,
     });
   };
 
@@ -134,16 +130,18 @@ export const CropSelectScreen = ({ navigation }: any) => {
               style={styles.backButton}
               activeOpacity={0.7}
               onPress={() => navigation.goBack()}
+              accessibilityRole="button"
+              accessibilityLabel={t('back') || 'Back'}
             >
               <Text style={styles.backArrow}>←</Text>
-              <Text style={styles.backText}>Back</Text>
+              <Text style={styles.backText}>{t('back') || 'Back'}</Text>
             </TouchableOpacity>
 
             {/* Screen Title & Subtitle */}
             <View style={styles.titleSection}>
-              <Text style={styles.screenTitle}>Select Your Crop</Text>
+              <Text style={styles.screenTitle}>{t('selectCropTitle') || 'Select Your Crop'}</Text>
               <Text style={styles.screenSubtitle}>
-                Choose the crop you want to inspect
+                {t('selectCropNotice') || 'Choose the crop you want to inspect'}
               </Text>
             </View>
 
@@ -152,7 +150,7 @@ export const CropSelectScreen = ({ navigation }: any) => {
               <Text style={styles.searchIcon}>🔍</Text>
               <TextInput
                 style={styles.searchInput}
-                placeholder="Search crops..."
+                placeholder={t('searchCropPlaceholder') || 'Search crops...'}
                 placeholderTextColor="#78909C"
                 value={search}
                 onChangeText={setSearch}
@@ -162,6 +160,8 @@ export const CropSelectScreen = ({ navigation }: any) => {
                 <TouchableOpacity
                   onPress={() => setSearch('')}
                   style={styles.clearBtn}
+                  accessibilityRole="button"
+                  accessibilityLabel="Clear search"
                 >
                   <Text style={styles.clearText}>✕</Text>
                 </TouchableOpacity>
@@ -193,7 +193,7 @@ export const CropSelectScreen = ({ navigation }: any) => {
                           isActive && styles.categoryChipTextActive,
                         ]}
                       >
-                        {cat.label}
+                        {t(cat.key) || cat.label}
                       </Text>
                     </TouchableOpacity>
                   );

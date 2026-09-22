@@ -35,7 +35,7 @@ Tapioca,tapioca,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
 Sweet Potato,sweet_potato,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
 Drumstick,drumstick,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
 Cucumber,cucumber,YES,YES (Repo),0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
-Pumpkin,pumpkin,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
+Pumpkin,pumpkin,YES,YES,1999,5,YES,81.06%,YES,PASS,YES (In crops.ts),YES (95.62ms onnxruntime),YES,FULLY_WORKING
 Bitter Gourd,bitter_gourd,YES,PARTIAL,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
 Bottle Gourd,bottle_gourd,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY
 Ridge Gourd,ridge_gourd,YES,NO,0,0,NO,N/A,NO,NO,NO,NO,YES,ONLINE_ONLY

@@ -1,49 +1,62 @@
-import { NormalizedResult, ConfidenceLevel, HealthStatus } from '../models/index';
+import {
+  NormalizedResult,
+  ConfidenceLevel,
+  HealthStatus,
+  PestAssessment,
+  NutrientAssessment,
+  CropProtectionAdvisory,
+  FertilizerAdvisory,
+  DifferentialAssessment,
+} from '../models/index';
 import localDiseasesData from '../knowledge/localDiseases.json';
+import localPestsData from '../knowledge/localPests.json';
+import localNutrientsData from '../knowledge/localNutrients.json';
+import localDifferentialsData from '../knowledge/localDifferentials.json';
 import modelRegistryData from '../models/model_registry.json';
+import { ModelAssets } from './modelAssets';
+import { Preprocessor, TENSOR_SPEC } from './preprocess';
+import { OfflineCapability, getOrt, probeRuntime } from './onnxRuntimeStatus';
+
+/**
+ * KRISHI MARGA — OFFLINE ENGINE
+ * ------------------------------------------------------------------
+ * Two clearly separated behaviours, never blended:
+ *
+ *   1. MODEL INFERENCE — a real ONNX session runs over the farmer's photos and
+ *      produces a class distribution. Results are marked analysis_source
+ *      'offline' with is_diagnosis: true and the model's own confidence.
+ *
+ *   2. KNOWLEDGE LOOKUP — when inference is not possible (no native runtime,
+ *      no decoder, or no weight file for the crop), the app shows reference
+ *      information from the bundled agricultural knowledge base. Results are
+ *      marked analysis_source 'offline_knowledge' with is_diagnosis: false and
+ *      confidence 0. No diagnosis is invented, and no confidence is fabricated.
+ *
+ * The previous implementation returned knowledge-base text while claiming a
+ * calibrated 78-94% "offline diagnosis". That behaviour has been removed.
+ */
 
 const LOCALIZED_FALLBACK: Record<string, string> = {
   en: 'Information unavailable',
   kn: 'ಮಾಹಿತಿ ಲಭ್ಯವಿಲ್ಲ',
   ta: 'தகவல் கிடைக்கவில்லை',
-  ml: 'ವಿವರങ്ങൾ ലഭ്യമല്ല',
+  ml: 'വിവരങ്ങൾ ലഭ്യമല്ല',
   hi: 'जानकारी उपलब्ध नहीं है',
   te: 'సమాచారం అందుబాటులో లేదు',
 };
 
-/**
- * Mobile ONNX Preprocessing & Inference Specification
- * 
- * 1. TENSOR CONTRACT:
- *    - Input Shape: [1, 3, 224, 224] (NCHW layout, float32)
- *    - Color Space: RGB (normalized from [0, 255] to [0.0, 1.0])
- *    - Normalization:
- *        mean = [0.485, 0.456, 0.406]
- *        std  = [0.229, 0.224, 0.225]
- *        pixel_val = (rgb / 255.0 - mean[c]) / std[c]
- * 
- * 2. LOW-RESOLUTION INPUT HANDLING (e.g. 240p, 360p, WhatsApp compressed):
- *    - Aspect Ratio Preserving Letterbox:
- *      Resize image maintaining aspect ratio such that the max dimension fits 224.
- *      Pad remaining borders with neutral padding (114/255) rather than distorting
- *      leaf lesions with non-uniform stretching.
- *    - Interpolation: Bilinear / Bicubic filtering preserves gradient edges on blurry leaves.
- *    - Confidence Calibration: Blurry or sub-224px images carry an uncertainty penalty
- *      factor so low-res photos do not trigger false 99% certainties.
- * 
- * 3. MULTI-IMAGE (1 to 10 images) ENSEMBLE:
- *    - Each photo is inferred individually through the ONNX runtime.
- *    - Output logits are converted via Softmax to class probabilities.
- *    - Probabilities across all N images are aggregated using a weighted average.
- *    - The top class and its calibrated confidence determine the disease diagnosis.
- * 
- * 4. DYNAMIC DECOUPLED CROP MODEL LOADING:
- *    - Only the user's selected crop model is loaded into memory (< 9MB RAM).
- *    - When switching crops, previous sessions are released to avoid memory leaks.
- */
+const KNOWLEDGE_NOTE: Record<string, string> = {
+  en: 'Reference information from the offline crop knowledge base. This is not an AI diagnosis — connect to the internet for an image-based diagnosis.',
+  kn: 'ಆಫ್‌ಲೈನ್ ಬೆಳೆ ಜ್ಞಾನಕೋಶದಿಂದ ಮಾಹಿತಿ. ಇದು AI ರೋಗನಿರ್ಣಯವಲ್ಲ — ಚಿತ್ರ ಆಧಾರಿತ ರೋಗನಿರ್ಣಯಕ್ಕೆ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕಿಸಿ.',
+  ta: 'ஆஃப்லைன் பயிர் தகவல் தொகுப்பிலிருந்து குறிப்புத் தகவல். இது AI நோயறிதல் அல்ல — படம் சார்ந்த நோயறிதலுக்கு இணையத்தை இணைக்கவும்.',
+  ml: 'ഓഫ്‌ലൈൻ വിള വിജ്ഞാനശേഖരത്തിൽ നിന്നുള്ള വിവരം. ഇത് AI രോഗനിർണയമല്ല — ചിത്രാധിഷ്ഠിത രോഗനിർണയത്തിന് ഇന്റർനെറ്റ് ബന്ധിപ്പിക്കുക.',
+  hi: 'ऑफ़लाइन फसल ज्ञानकोश से संदर्भ जानकारी। यह AI निदान नहीं है — चित्र आधारित निदान के लिए इंटरनेट से जुड़ें।',
+  te: 'ఆఫ్‌లైన్ పంట విజ్ఞాన నిధి నుండి సమాచారం. ఇది AI నిర్ధారణ కాదు — చిత్రం ఆధారిత నిర్ధారణ కోసం ఇంటర్నెట్‌కు కనెక్ట్ అవ్వండి.',
+};
+
 export interface OnnxTensorContract {
   inputName: string;
-  shape: [number, number, number, number]; // [1, 3, 224, 224]
+  shape: [number, number, number, number];
   layout: 'NCHW';
   dataType: 'float32';
   mean: [number, number, number];
@@ -55,8 +68,8 @@ export const ONNX_CONFIG: OnnxTensorContract = {
   shape: [1, 3, 224, 224],
   layout: 'NCHW',
   dataType: 'float32',
-  mean: [0.485, 0.456, 0.406],
-  std: [0.229, 0.224, 0.225],
+  mean: TENSOR_SPEC.mean,
+  std: TENSOR_SPEC.std,
 };
 
 export interface CropModelMetadata {
@@ -71,205 +84,525 @@ export interface CropModelMetadata {
   status: string;
 }
 
-// Active session cache for single-crop dynamic loading
+export interface OfflineCapabilityReport {
+  capability: OfflineCapability;
+  cropId: string | null;
+  hasRegistryEntry: boolean;
+  hasKnowledgeEntry: boolean;
+  modelPath: string | null;
+  details: string;
+}
+
+// Active session cache — only ONE crop model is held in memory at a time.
 let activeCropId: string | null = null;
 let activeSession: any = null;
 
+const CROP_MODEL_ALIASES: Record<string, string> = {
+  paddy: 'rice_leaf',
+  rice: 'rice_leaf',
+  maize: 'corn',
+  corn: 'corn',
+  banana: 'banana_leaf',
+  capsicum: 'pepper_bell',
+  tapioca: 'cassava',
+  sweet_potato: 'potato',
+  citrus_lime: 'lemon',
+  lime: 'lemon',
+  lemon: 'lemon',
+  grapes: 'grape',
+  grape: 'grape',
+};
+
+function normalizeCropKey(crop: string): string {
+  const raw = (crop || '').toLowerCase().trim().replace(/ /g, '_');
+  return CROP_MODEL_ALIASES[raw] || raw;
+}
+
+function findKnowledgeEntries(crop: string): any[] {
+  const cropsDict = (localDiseasesData as any).crops as Record<string, any[]>;
+  const cropTitle = (crop || '').replace(/_/g, ' ').trim().toLowerCase();
+  for (const key of Object.keys(cropsDict || {})) {
+    if (key.toLowerCase() === cropTitle || key.toLowerCase() === (crop || '').toLowerCase()) {
+      return cropsDict[key] || [];
+    }
+  }
+  return [];
+}
+
 export const OnnxEngine = {
   /**
-   * Returns true if ONNX model registry or offline knowledge is ready for the crop.
+   * True when the app has SOMETHING useful offline for this crop — either a
+   * model or knowledge-base content. Callers should use getCapability() when
+   * they need to know which of the two it is.
    */
   isModelAvailable(crop?: string): boolean {
-    if (!crop) return true;
-    const norm = crop.toLowerCase().trim().replace(/ /g, '_');
-    const registry = modelRegistryData as Record<string, CropModelMetadata>;
+    if (!crop) return false;
+    const norm = normalizeCropKey(crop);
+    const registry = modelRegistryData as unknown as Record<string, CropModelMetadata>;
     if (registry[norm]) return true;
-
-    // Check by alias or raw title
-    const match = Object.keys(registry).find(
-      (k) => k === norm || norm.includes(k) || k.includes(norm)
-    );
-    return !!match || !!(localDiseasesData.crops as Record<string, any[]>)[crop.toLowerCase()];
+    const match = Object.keys(registry).find((k) => k === norm || norm.includes(k) || k.includes(norm));
+    return !!match || findKnowledgeEntries(crop).length > 0;
   },
 
-  /**
-   * Retrieves the model metadata for the selected crop from the model registry.
-   */
   getModelMetadata(crop: string): CropModelMetadata | null {
-    const norm = crop.toLowerCase().trim().replace(/ /g, '_');
-    const registry = modelRegistryData as Record<string, CropModelMetadata>;
+    const norm = normalizeCropKey(crop);
+    const registry = modelRegistryData as unknown as Record<string, CropModelMetadata>;
     if (registry[norm]) return registry[norm];
-
-    const matchKey = Object.keys(registry).find(
-      (k) => k === norm || norm.includes(k) || k.includes(norm)
-    );
+    const matchKey = Object.keys(registry).find((k) => k === norm || norm.includes(k) || k.includes(norm));
     return matchKey ? registry[matchKey] : null;
   },
 
   /**
-   * Dynamically loads ONLY the selected crop's ONNX model into memory.
-   * Path: assets/models/<crop>/disease.onnx
-   * If onnxruntime-react-native is compiled in custom native/dev client, it creates an InferenceSession.
-   * Otherwise, safely falls back to native WebGL/WASM or verified offline knowledge.
+   * Reports precisely what offline capability exists for a crop right now.
+   * Used by the analysing screen and by the diagnostics screen so the app can
+   * tell the farmer the truth about what it is doing.
    */
-  async loadCropModel(crop: string): Promise<any> {
-    const norm = crop.toLowerCase().trim().replace(/ /g, '_');
-    if (activeCropId === norm && activeSession) {
-      return activeSession;
-    }
-
-    // Release previous model to keep memory strictly < 10MB
-    if (activeSession && typeof activeSession.release === 'function') {
-      try {
-        await activeSession.release();
-      } catch (e) {
-        console.warn('Failed to release previous ONNX session:', e);
-      }
-    }
-    activeSession = null;
-    activeCropId = null;
-
+  async getCapability(crop: string): Promise<OfflineCapabilityReport> {
     const meta = OnnxEngine.getModelMetadata(crop);
+    const knowledge = findKnowledgeEntries(crop);
+    const probe = probeRuntime();
+
+    const base = {
+      cropId: meta?.crop_id || null,
+      hasRegistryEntry: !!meta,
+      hasKnowledgeEntry: knowledge.length > 0,
+      modelPath: null as string | null,
+    };
+
+    if (!probe.ortAvailable) {
+      return {
+        ...base,
+        capability: knowledge.length > 0 ? 'RUNTIME_MISSING' : 'KNOWLEDGE_ONLY',
+        details: probe.details,
+      };
+    }
+
+    if (!probe.decoderAvailable) {
+      return { ...base, capability: 'DECODER_MISSING', details: probe.details };
+    }
+
     if (!meta) {
-      console.log(`[ONNX] No metadata found for ${crop}, using fallback agronomic database.`);
-      return null;
+      return { ...base, capability: 'KNOWLEDGE_ONLY', details: 'No model registry entry for this crop.' };
     }
 
-    try {
-      // Check if native onnxruntime is available in this environment
-      let ort: any = null;
-      try {
-        // @ts-ignore
-        ort = require('onnxruntime-react-native');
-      } catch {
-        try {
-          // @ts-ignore
-          ort = require('onnxruntime-web');
-        } catch {
-          ort = null;
-        }
-      }
-
-      if (ort && ort.InferenceSession) {
-        const modelPath = `assets/models/${meta.crop_id}/disease.onnx`;
-        const session = await ort.InferenceSession.create(modelPath);
-        activeSession = session;
-        activeCropId = norm;
-        console.log(`[ONNX] Successfully loaded model session for ${crop} from ${modelPath} (${meta.num_classes} classes)`);
-        return session;
-      }
-    } catch (err) {
-      console.log(`[ONNX] Native runtime session creation skipped in Expo Go:`, err);
+    const modelPath = await ModelAssets.resolveModelPath(meta.crop_id);
+    if (!modelPath) {
+      return {
+        ...base,
+        capability: 'MODEL_FILE_MISSING',
+        details: `disease.onnx not found. Searched: ${ModelAssets.describeSearchPaths(meta.crop_id).join(', ')}`,
+      };
     }
 
-    activeCropId = norm;
-    return null;
-  },
-
-  /**
-   * Preprocessing specification helper
-   * Describes the mathematical transform applied to raw pixels
-   */
-  getPreprocessingSpec() {
     return {
-      targetWidth: 224,
-      targetHeight: 224,
-      layout: 'NCHW',
-      channels: 3,
-      resampleMethod: 'Bilinear/Bicubic with Aspect-Ratio Letterbox Padding',
-      normalization: {
-        mean: ONNX_CONFIG.mean,
-        std: ONNX_CONFIG.std,
-      },
+      ...base,
+      modelPath,
+      capability: 'MODEL_INFERENCE',
+      details: 'Native runtime, decoder and model weights are all present.',
     };
   },
 
   /**
-   * Execute offline inference supporting 1 to 10 images with weighted probability ensemble.
-   * Works on-device without internet or external APIs.
+   * Loads ONLY the selected crop's model, releasing any previously loaded one
+   * so memory stays bounded to a single session. Returns null when a real
+   * session cannot be created — it never returns a stand-in object.
+   */
+  async loadCropModel(crop: string): Promise<any | null> {
+    const norm = normalizeCropKey(crop);
+    if (activeCropId === norm && activeSession) return activeSession;
+
+    await OnnxEngine.releaseSession();
+
+    const ort = getOrt();
+    if (!ort) return null;
+
+    const meta = OnnxEngine.getModelMetadata(crop);
+    if (!meta) return null;
+
+    const modelPath = await ModelAssets.resolveModelPath(meta.crop_id);
+    if (!modelPath) {
+      console.log(`[ONNX] Weights not present on device for ${meta.crop_id}`);
+      return null;
+    }
+
+    try {
+      const session = await ort.InferenceSession.create(modelPath);
+      activeSession = session;
+      activeCropId = norm;
+      console.log(`[ONNX] Session created for ${meta.crop_id} (${meta.num_classes} classes)`);
+      return session;
+    } catch (err) {
+      console.warn('[ONNX] Session creation failed:', err);
+      activeSession = null;
+      activeCropId = null;
+      return null;
+    }
+  },
+
+  /** Releases the active session and frees its memory. */
+  async releaseSession(): Promise<void> {
+    if (activeSession && typeof activeSession.release === 'function') {
+      try {
+        await activeSession.release();
+      } catch (e) {
+        console.warn('[ONNX] Failed to release previous session:', e);
+      }
+    }
+    activeSession = null;
+    activeCropId = null;
+  },
+
+  getPreprocessingSpec() {
+    return {
+      targetWidth: TENSOR_SPEC.width,
+      targetHeight: TENSOR_SPEC.height,
+      layout: TENSOR_SPEC.layout,
+      channels: TENSOR_SPEC.channels,
+      resampleMethod: 'Aspect-ratio preserving resize with neutral letterbox padding',
+      normalization: { mean: TENSOR_SPEC.mean, std: TENSOR_SPEC.std },
+    };
+  },
+
+  /**
+   * Runs the offline path for a crop.
+   *
+   * Attempts genuine ONNX inference first. If any required piece is missing it
+   * falls back to a clearly-labelled knowledge-base lookup. The two outcomes
+   * are distinguishable by `analysis_source` and `is_diagnosis`.
    */
   async runInference(crop: string, imageUris: string[], language: string = 'en'): Promise<NormalizedResult> {
     if (!imageUris || imageUris.length === 0) {
       throw new Error('NO_IMAGES_PROVIDED_FOR_OFFLINE_INFERENCE');
     }
 
-    const lang = (language || 'en').toLowerCase();
-    const fallbackText = LOCALIZED_FALLBACK[lang] || LOCALIZED_FALLBACK.en;
+    const capability = await OnnxEngine.getCapability(crop);
+
+    if (capability.capability === 'MODEL_INFERENCE') {
+      const inferred = await OnnxEngine.runModelInference(crop, imageUris, language);
+      if (inferred) return inferred;
+      // Inference was possible in principle but failed at runtime; fall through
+      // to the knowledge base rather than returning a fabricated result.
+    }
+
+    return OnnxEngine.buildKnowledgeResult(crop, language, capability);
+  },
+
+  /**
+   * Genuine multi-image ONNX inference.
+   * Each photo is preprocessed and run separately; softmax probabilities are
+   * averaged across photos, and the top class becomes the result. The reported
+   * confidence is the model's own averaged probability — it is not adjusted,
+   * boosted by image count, or floored to a minimum value.
+   * Returns null if the session, tensors, or outputs are unusable.
+   */
+  async runModelInference(
+    crop: string,
+    imageUris: string[],
+    language: string = 'en'
+  ): Promise<NormalizedResult | null> {
+    const ort = getOrt();
     const meta = OnnxEngine.getModelMetadata(crop);
+    if (!ort || !meta) return null;
 
-    // Multi-image aggregation confidence
-    const imageCount = Math.min(imageUris.length, 10);
-    const multiAngleBonus = Math.min(0.12, (imageCount - 1) * 0.03);
-    const calibratedConfidence = Math.min(0.94, 0.78 + multiAngleBonus);
+    const session = await OnnxEngine.loadCropModel(crop);
+    if (!session) return null;
 
+    const perImageProbabilities: number[][] = [];
+    // Bounded to 10 images and processed one at a time so peak memory stays at
+    // roughly one decoded image plus one tensor.
+    const uris = imageUris.slice(0, 10);
+
+    for (const uri of uris) {
+      try {
+        const tensorData = await Preprocessor.toTensor(uri);
+        if (!tensorData) continue;
+
+        const inputName = session.inputNames?.[0] || ONNX_CONFIG.inputName;
+        const feeds: Record<string, any> = {
+          [inputName]: new ort.Tensor('float32', tensorData.data, tensorData.dims),
+        };
+
+        const output = await session.run(feeds);
+        const outputName = session.outputNames?.[0] || Object.keys(output)[0];
+        const raw = output[outputName]?.data;
+        if (!raw || raw.length === 0) continue;
+
+        perImageProbabilities.push(Preprocessor.softmax(raw as Float32Array));
+      } catch (e) {
+        console.warn('[ONNX] Inference failed for one image:', e);
+      }
+    }
+
+    if (perImageProbabilities.length === 0) return null;
+
+    const averaged = Preprocessor.averageProbabilities(perImageProbabilities);
+    let topIndex = 0;
+    for (let i = 1; i < averaged.length; i++) {
+      if (averaged[i] > averaged[topIndex]) topIndex = i;
+    }
+
+    const classes = meta.classes || [];
+    const predictedClass = classes[topIndex];
+    if (!predictedClass) return null;
+
+    const confidence = averaged[topIndex];
     let confidenceLevel: ConfidenceLevel = 'High';
-    if (calibratedConfidence < 0.5) confidenceLevel = 'Low';
-    else if (calibratedConfidence < 0.75) confidenceLevel = 'Medium';
+    if (confidence < 0.5) confidenceLevel = 'Low';
+    else if (confidence < 0.75) confidenceLevel = 'Medium';
 
-    // 1. Attempt dynamic model load
-    let session = null;
-    try {
-      session = await OnnxEngine.loadCropModel(crop);
-    } catch (e) {
-      console.log('Dynamic model load exception, using embedded knowledge:', e);
-    }
+    const lang = (language || 'en').toLowerCase();
+    const isHealthy = /healthy|fresh/i.test(predictedClass);
+    const health: HealthStatus = isHealthy ? 'Healthy' : confidence < 0.5 ? 'Uncertain' : 'Diseased';
 
-    // 2. Resolve crop classes from registry or knowledge base
-    const cropTitle = crop.replace(/_/g, ' ').trim();
-    const cropsDict = localDiseasesData.crops as Record<string, any[]>;
-    
-    // Case-insensitive lookup
-    let cropDiseases: any[] = [];
-    for (const key of Object.keys(cropsDict)) {
-      if (key.toLowerCase() === cropTitle.toLowerCase() || key.toLowerCase() === crop.toLowerCase()) {
-        cropDiseases = cropsDict[key];
-        break;
-      }
-    }
-
-    // Match the primary disease diagnosis
-    let match = cropDiseases.length > 0 ? cropDiseases[0] : null;
-
-    // If classes exist in registry, align with primary class
-    if (meta && meta.classes && meta.classes.length > 0) {
-      const topClass = meta.classes[0];
-      const matchedDisease = cropDiseases.find((d) =>
-        d.disease.toLowerCase().includes(topClass.toLowerCase()) ||
-        topClass.toLowerCase().includes(d.disease.toLowerCase())
-      );
-      if (matchedDisease) {
-        match = matchedDisease;
-      }
-    }
-
-    const trans = match?.translations?.[lang] || (lang === 'en' ? match : null);
-    const diseaseName = trans?.disease || match?.disease || meta?.classes?.[0] || 'Early Stage Symptoms Detected';
-    const isHealthy = diseaseName.toLowerCase().includes('healthy') || diseaseName.toLowerCase().includes('fresh');
+    // Enrich the predicted class with verified agronomic text where the
+    // knowledge base has a matching entry. The prediction itself comes only
+    // from the model.
+    const knowledge = findKnowledgeEntries(crop);
+    const matched = knowledge.find(
+      (d: any) =>
+        d.disease &&
+        (d.disease.toLowerCase() === predictedClass.toLowerCase() ||
+          d.disease.toLowerCase().includes(predictedClass.toLowerCase()) ||
+          predictedClass.toLowerCase().includes(d.disease.toLowerCase()))
+    );
+    const trans = matched?.translations?.[lang] || (lang === 'en' ? matched : null);
 
     return {
       crop,
-      health_status: match ? match.health_status : (isHealthy ? 'Healthy' : 'Diseased'),
-      disease: diseaseName,
-      confidence: calibratedConfidence,
+      health_status: health,
+      disease: trans?.disease || matched?.disease || predictedClass,
+      confidence,
       confidence_level: confidenceLevel,
-      severity: match ? match.severity : (isHealthy ? 'None' : 'Moderate'),
-      symptoms: trans?.symptoms || match?.symptoms || [
-        `Characteristic foliar symptoms observed on ${crop} foliage under 100% offline inspection.`
-      ],
-      recommendations: trans?.recommendations || match?.recommendations || [
-        'Inspect plant leaves, isolate severely affected shoots, and avoid excessive humidity.'
-      ],
-      prevention: trans?.prevention || match?.prevention || [
-        'Practice field hygiene and use certified healthy planting material.'
-      ],
-      organic_management: trans?.organic_management || match?.organic_management || [
-        'Apply 5% Neem Seed Kernel Extract (NSKE) spray as a protective preventative.'
-      ],
-      regional_advice: trans?.regional_advice || match?.regional_advice || `Validated for South India agro-climatic conditions for ${crop}.`,
-      user_message: trans?.farmer_message || match?.farmer_message || `Offline diagnosis confirmed ${diseaseName} on ${crop}.`,
+      severity: matched?.severity || (isHealthy ? 'None' : 'Moderate'),
+      problem_type: isHealthy ? 'HEALTHY' : health === 'Uncertain' ? 'UNKNOWN' : 'DISEASE',
+      symptoms: trans?.symptoms || matched?.symptoms || [],
+      recommendations: trans?.recommendations || matched?.recommendations || [],
+      prevention: trans?.prevention || matched?.prevention || [],
+      organic_management: trans?.organic_management || matched?.organic_management,
+      regional_advice: trans?.regional_advice || matched?.regional_advice,
+      user_message: trans?.farmer_message || matched?.farmer_message,
+      pest_assessment: OnnxEngine.getPestReference(crop),
+      nutrient_assessment: OnnxEngine.getNutrientReference(crop),
+      differential_assessment: OnnxEngine.getDifferentialReference(crop, trans?.disease || matched?.disease || predictedClass),
+      crop_protection: OnnxEngine.getCropProtectionReference(matched),
+      fertilizer_advisory: OnnxEngine.getFertilizerReference(crop),
       analysis_source: 'offline',
+      is_diagnosis: true,
+      source_note: `On-device model inference (${meta.crop_id}, ${uris.length} image(s) analysed).`,
       timestamp: new Date().toISOString(),
-      latency_ms: 1.45,
+    };
+  },
+
+  /**
+   * Knowledge-base lookup. This is explicitly NOT a diagnosis:
+   *  - confidence is 0 and confidence_level is 'Low'
+   *  - health_status is 'Uncertain'
+   *  - is_diagnosis is false and source_note explains the limitation
+   *  - reference_conditions lists the conditions known for this crop
+   */
+  buildKnowledgeResult(
+    crop: string,
+    language: string,
+    capability: OfflineCapabilityReport
+  ): NormalizedResult {
+    const lang = (language || 'en').toLowerCase();
+    const note = KNOWLEDGE_NOTE[lang] || KNOWLEDGE_NOTE.en;
+    const unavailable = LOCALIZED_FALLBACK[lang] || LOCALIZED_FALLBACK.en;
+
+    const knowledge = findKnowledgeEntries(crop);
+    const conditions = knowledge
+      .map((d: any) => {
+        const t = d?.translations?.[lang];
+        return t?.disease || d?.disease;
+      })
+      .filter(Boolean);
+
+    const primary = knowledge.length > 0 ? knowledge[0] : null;
+    const trans = primary?.translations?.[lang] || (lang === 'en' ? primary : null);
+
+    return {
+      crop,
+      health_status: 'Uncertain',
+      disease: conditions.length > 0 ? conditions[0] : unavailable,
+      confidence: 0,
+      confidence_level: 'Low',
+      severity: 'None',
+      problem_type: 'UNKNOWN',
+      symptoms: trans?.symptoms || primary?.symptoms || [],
+      recommendations: trans?.recommendations || primary?.recommendations || [],
+      prevention: trans?.prevention || primary?.prevention || [],
+      organic_management: trans?.organic_management || primary?.organic_management,
+      regional_advice: trans?.regional_advice || primary?.regional_advice,
+      user_message: note,
+      reference_conditions: conditions,
+      pest_assessment: OnnxEngine.getPestReference(crop),
+      nutrient_assessment: OnnxEngine.getNutrientReference(crop),
+      differential_assessment: OnnxEngine.getDifferentialReference(crop, conditions.length > 0 ? conditions[0] : undefined),
+      crop_protection: OnnxEngine.getCropProtectionReference(primary),
+      fertilizer_advisory: OnnxEngine.getFertilizerReference(crop),
+      analysis_source: 'offline_knowledge',
+      is_diagnosis: false,
+      source_note: `${note} (offline capability: ${capability.capability})`,
+      timestamp: new Date().toISOString(),
+    };
+  },
+
+  /**
+   * Pest reference information from the bundled dataset.
+   * Status is KNOWLEDGE_AVAILABLE — this is a lookup of pests common to the
+   * crop, not a detection, so no confidence score is attached.
+   */
+  getPestReference(crop: string): PestAssessment {
+    const cropKey = (crop || '').toLowerCase().trim().replace(/ /g, '_');
+    const allPests = (localPestsData as any).pests || {};
+    const records: any[] = allPests[cropKey] || allPests[(crop || '').toLowerCase().trim()] || [];
+
+    if (!records.length) {
+      return {
+        status: 'NEEDS_MORE_DATA',
+        management: ['Regular scouting recommended. Contact your local KVK about emerging pests.'],
+        prevention: ['Install yellow and blue sticky traps (10-12 per acre) for early monitoring.'],
+        source_verification: 'ICAR-NBAIR / Regional Agriculture University',
+      };
+    }
+
+    const record = records[0];
+    const isVector = Boolean(
+      record.is_disease_vector ||
+        (record.cause_relationship && String(record.cause_relationship).toLowerCase().includes('vector'))
+    );
+
+    return {
+      status: 'KNOWLEDGE_AVAILABLE',
+      pest_detected: record.pest,
+      scientific_name: record.scientific_name,
+      pest_type: record.pest_type,
+      damage_symptoms: record.damage_symptoms ? [record.damage_symptoms] : [],
+      associated_disease: record.affected_diseases || undefined,
+      is_disease_vector: isVector,
+      vector_explanation: isVector
+        ? `${record.pest} is a known vector of ${record.affected_diseases}. Controlling it helps stop transmission.`
+        : undefined,
+      management: record.management ? [record.management] : [],
+      prevention: record.prevention ? [record.prevention] : [],
+      source_verification: record.source || 'ICAR-NBAIR / CIBRC',
+    };
+  },
+
+  /** Nutrient reference information from the bundled dataset (lookup, not detection). */
+  getNutrientReference(crop: string): NutrientAssessment {
+    const cropKey = (crop || '').toLowerCase().trim().replace(/ /g, '_');
+    const allNutrients = (localNutrientsData as any).nutrients || {};
+    const records: any[] = allNutrients[cropKey] || allNutrients[(crop || '').toLowerCase().trim()] || [];
+
+    if (!records.length) {
+      return {
+        status: 'NEEDS_MORE_DATA',
+        soil_relationship: 'Perform routine soil testing (pH and electrical conductivity) every 2 years.',
+        management: ['Apply a balanced basal dose of NPK as recommended by the package of practices.'],
+        source_verification: 'ICAR-IISS / ICAR PoP',
+      };
+    }
+
+    const primary = records[0];
+    return {
+      status: 'KNOWLEDGE_AVAILABLE',
+      deficiency_detected: primary.deficiency_name,
+      nutrient_name: primary.nutrient,
+      visual_symptoms: primary.visual_symptoms ? [primary.visual_symptoms] : [],
+      affected_plant_part: primary.affected_plant_part,
+      soil_relationship: primary.soil_relationship
+        ? `${primary.soil_relationship}. Possible causes: ${primary.possible_causes}.`
+        : undefined,
+      management: [
+        `Confirm with a soil test before correcting ${primary.nutrient}.`,
+        'Maintain soil moisture and a pH of 6.0-7.5 for nutrient uptake.',
+      ],
+      source_verification: primary.source || 'ICAR-IISS Bhopal / TNAU Agri Portal',
+    };
+  },
+
+  /**
+   * Crop protection advisory.
+   * Active ingredients are listed ONLY when the bundled CIBRC-sourced dataset
+   * has them for the matched condition. Nothing is invented.
+   */
+  getCropProtectionReference(matched: any): CropProtectionAdvisory {
+    const ingredients: string[] = Array.isArray(matched?.cibrc_pesticides) ? matched.cibrc_pesticides : [];
+    return {
+      active_ingredients: ingredients,
+      application_guidance: ingredients.length
+        ? 'Apply during cool evening hours with uniform coverage and full protective equipment. Follow the dose printed on the product label.'
+        : 'No verified chemical recommendation is available offline for this crop. Consult your RSK or KVK officer before applying any product.',
+      cibrc_status: 'REGISTERED',
+      safety_interval_days: ingredients.length ? 7 : undefined,
+    };
+  },
+
+  /** General soil/fertility guidance from the bundled dataset. */
+  getFertilizerReference(crop: string): FertilizerAdvisory {
+    const nutrient = OnnxEngine.getNutrientReference(crop);
+    return {
+      soil_link:
+        nutrient.soil_relationship ||
+        `Maintain organic matter (FYM 10-12 t/ha) and test soil pH annually for ${crop}.`,
+      deficiency_correction: nutrient.management || [
+        'Apply well-decomposed farmyard manure before sowing.',
+        'Confirm any micronutrient spray with a soil or leaf test first.',
+      ],
+    };
+  },
+
+  /**
+   * Evidence-based Differential Diagnosis & Lookalike Analysis from verified ICAR/TNAU guides.
+   * Helps farmers distinguish look-alike conditions (disease vs nutrient deficiency vs physiological stress)
+   * and provides a physical symptom cross-check and farmer action checklist.
+   */
+  getDifferentialReference(crop: string, disease?: string): DifferentialAssessment {
+    const rawCrop = (crop || '').toLowerCase().trim().replace(/ /g, '_');
+    const cropAliases: Record<string, string> = {
+      rice: 'paddy',
+      rice_leaf: 'paddy',
+      pepper: 'chilli',
+      bell_pepper: 'chilli',
+      capsicum: 'chilli',
+    };
+    const cropKey = cropAliases[rawCrop] || rawCrop;
+    const allDifferentials = (localDifferentialsData as any).differentials || {};
+    const records: any[] = allDifferentials[cropKey] || [];
+
+    if (!records.length) {
+      return {
+        status: 'NOT_AVAILABLE',
+        source_verification: (localDifferentialsData as any).source || 'ICAR-IIHR Bengaluru / TNAU Agritech',
+      };
+    }
+
+    let matched = records[0];
+    if (disease && disease.trim()) {
+      const diseaseLower = disease.toLowerCase().trim();
+      const found = records.find((rec: any) => {
+        if (rec.condition_name && rec.condition_name.toLowerCase().includes(diseaseLower)) return true;
+        if (diseaseLower.includes(rec.condition_name?.toLowerCase() || '___')) return true;
+        if (Array.isArray(rec.disease_keywords)) {
+          return rec.disease_keywords.some(
+            (kw: string) => diseaseLower.includes(kw.toLowerCase()) || kw.toLowerCase().includes(diseaseLower)
+          );
+        }
+        return false;
+      });
+      if (found) {
+        matched = found;
+      }
+    }
+
+    return {
+      status: 'AVAILABLE',
+      condition_name: matched.condition_name,
+      lookalikes: matched.lookalikes || [],
+      symptom_crosscheck: matched.symptom_crosscheck || { expected_present: [], contradicting_symptoms: [] },
+      farmer_action_checklist: matched.farmer_action_checklist || [],
+      source_verification: (localDifferentialsData as any).source || 'ICAR-IIHR Bengaluru / TNAU Agritech',
     };
   },
 };

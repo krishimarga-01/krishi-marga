@@ -1,0 +1,40 @@
+{
+  "crop": "Palmyrah",
+  "crop_id": "palmyrah",
+  "category": "plantation",
+  "diseases": [
+    {
+      "disease_name": "Bud Rot",
+      "scientific_name": "Phytophthora palmivora",
+      "symptoms": [
+        "Central spindle leaf yellows and rots; death of central cabbage"
+      ],
+      "severity": "Critical",
+      "management": [
+        "Remove dead spindle and pack central crown with Bordeaux paste"
+      ],
+      "prevention": [
+        "Prophylactic spraying of crowns with 1% Bordeaux mixture before monsoon"
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Large, deep green fronds/leaves arranged symmetrically in crown/canopy",
+    "Robust trunk/stem free from bleeding patches or fungal conks",
+    "Heavy bunches/berries with uniform maturity and no premature shedding",
+    "Active feeder roots in organic mulch basin"
+  ],
+  "management": [
+    "Clean decaying tissues from infected crowns/trunks and apply protective healing paste",
+    "Drench palm basins with Trichoderma viride culture mixed with neem cake",
+    "Improve basin drainage to lower water table during monsoon peaks"
+  ],
+  "prevention": [
+    "Clean palm crowns/canopies before South-West and North-East monsoon rains",
+    "Apply Bordeaux mixture (1%) spray to bunches and crowns prophylactically",
+    "Grow cover crops (e.g. Mucuna bracteata, Calopogonium) in basins for moisture conservation",
+    "Avoid mechanical injuries to stems and root zones during weeding"
+  ]
+}

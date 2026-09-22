@@ -21,13 +21,13 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 interface I18nContextType {
   language: SupportedLanguage;
   setLanguage: (lang: SupportedLanguage) => Promise<void>;
-  t: (key: string) => string;
+  t: (key: string, params?: Record<string, string | number>) => string;
 }
 
 const I18nContext = createContext<I18nContextType>({
   language: 'en',
   setLanguage: async () => {},
-  t: (key: string) => key,
+  t: (key: string, params?: Record<string, string | number>) => key,
 });
 
 export const I18nProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -46,15 +46,25 @@ export const I18nProvider: React.FC<{ children: React.ReactNode }> = ({ children
     await AsyncStorage.setItem('app_language', lang);
   };
 
-  const t = (key: string): string => {
+  const t = (key: string, params?: Record<string, string | number>): string => {
     const current = translations[language];
+    let text = '';
     if (current && current[key]) {
-      return current[key];
+      text = current[key];
+    } else {
+      if (__DEV__) {
+        console.warn(`[i18n] Missing translation key "${key}" for language "${language}"`);
+      }
+      text = (translations.en && translations.en[key]) || key;
     }
-    if (__DEV__) {
-      console.warn(`[i18n] Missing translation key "${key}" for language "${language}"`);
+
+    if (params) {
+      Object.entries(params).forEach(([paramKey, val]) => {
+        text = text.replace(new RegExp(`\\{${paramKey}\\}`, 'g'), String(val));
+      });
     }
-    return (translations.en && translations.en[key]) || key;
+
+    return text;
   };
 
   return (

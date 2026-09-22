@@ -1,0 +1,82 @@
+{
+  "groundnut": {
+    "ref": "kalkivilla/groundnut-disease-yolo-obb-dataset",
+    "title": "Groundnut-disease-yolo-obb-dataset",
+    "size_mb": 5390.96,
+    "license": "Unknown",
+    "vote_count": 1,
+    "download_count": 6
+  },
+  "tobacco": {
+    "ref": "chzili/dataset-for-tobacco-leaf-disease-segmentation",
+    "title": "Dataset for Tobacco Leaf Disease Segmentation",
+    "size_mb": 2626.01,
+    "license": "Database: Open Database, Contents: \u00a9 Original Authors",
+    "vote_count": 6,
+    "download_count": 1209
+  },
+  "onion": {
+    "ref": "tejasbargujepatil/onion-diseases",
+    "title": "Onion Diseases",
+    "size_mb": 477.75,
+    "license": "Database: Open Database, Contents: Database Contents",
+    "vote_count": 5,
+    "download_count": 524
+  },
+  "pumpkin": {
+    "ref": "tahmidmir/pumpkin-leaf-diseases-dataset-from-bangladesh",
+    "title": "Pumpkin Leaf Diseases Dataset",
+    "size_mb": 269.79,
+    "license": "Attribution 4.0 International (CC BY 4.0)",
+    "vote_count": 154,
+    "download_count": 1468
+  },
+  "cauliflower": {
+    "ref": "shuvokumarbasak2030/cauliflower-disease-multi-transformation-dataset",
+    "title": "Cauliflower Disease Multi Transformation Dataset",
+    "size_mb": 690.37,
+    "license": "MIT",
+    "vote_count": 17,
+    "download_count": 78
+  },
+  "watermelon": {
+    "ref": "sujaykapadnis/watermelon-disease-recognition-dataset",
+    "title": "Watermelon Disease Recognition Dataset",
+    "size_mb": 6368.98,
+    "license": "Attribution 4.0 International (CC BY 4.0)",
+    "vote_count": 12,
+    "download_count": 1501
+  },
+  "arecanut": {
+    "ref": "sumanthsadiga/arecanut-plant-disease-dataset",
+    "title": "Arecanut Plant Disease Dataset",
+    "size_mb": 1067.41,
+    "license": "CC BY-NC-SA 4.0",
+    "vote_count": 3,
+    "download_count": 968
+  },
+  "cashew": {
+    "ref": "gunarakulangr/cashew-leaves-dataset-anacardium-occidentale",
+    "title": "Cashew Leaf Dataset",
+    "size_mb": 28964.68,
+    "license": "Attribution 4.0 International (CC BY 4.0)",
+    "vote_count": 4,
+    "download_count": 213
+  },
+  "rubber": {
+    "ref": "kongkityeesai/rubber-disease-final-datasetss",
+    "title": "rubber disease final datasetss",
+    "size_mb": 369.83,
+    "license": "Unknown",
+    "vote_count": 1,
+    "download_count": 56
+  },
+  "cocoa": {
+    "ref": "serranosebas/enfermedades-cacao-yolov4",
+    "title": "Cocoa Diseases (YOLOv4)",
+    "size_mb": 1593.93,
+    "license": "Database: Open Database, Contents: \u00a9 Original Authors",
+    "vote_count": 39,
+    "download_count": 1902
+  }
+}

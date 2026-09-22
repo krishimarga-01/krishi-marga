@@ -1,0 +1,49 @@
+{
+  "crop": "Tobacco",
+  "crop_id": "tobacco",
+  "category": "commercial",
+  "diseases": [
+    {
+      "disease_name": "Black Shank",
+      "scientific_name": "Phytophthora nicotianae",
+      "symptoms": [
+        "Blackening and necrosis of stem at soil level (shank); internal stem pith splits into disc-like plates separated by empty gaps; leaves wilt rapidly."
+      ],
+      "severity": "Severe to Critical",
+      "management": [
+        "Consult local agricultural university / KVK package of practices for registered treatment."
+      ],
+      "prevention": [
+        "Practice crop rotation, field hygiene, and use certified seeds."
+      ]
+    }
+  ],
+  "pests": [
+    {
+      "pest_name": "Tobacco Caterpillar",
+      "scientific_name": "Spodoptera litura",
+      "symptoms": [],
+      "management": [
+        "Install pheromone traps and apply bio-control agents."
+      ]
+    }
+  ],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Robust, thick cane stalks or deep-lobed green leaves with vigorous growth",
+    "Strong internodes free from boreholes or internal red rot",
+    "Clean foliar canopy with active photosynthesis",
+    "Sturdy root anchoring with no basal wilt"
+  ],
+  "management": [
+    "Uproot and burn severely wilted or red-rot infected canes/plants immediately",
+    "Drench border rows with biocontrol formulations to create protective barrier zones",
+    "Follow integrated pest management (IPM) guidelines strictly"
+  ],
+  "prevention": [
+    "Select healthy setts/seeds from certified nurseries or disease-free mother plants",
+    "Adopt drip irrigation to avoid excess soil moisture around root crowns",
+    "Practice deep summer ploughing to expose soil-borne resting spores and pupae",
+    "Rotate with green manure crops such as sunnhemp or daincha"
+  ]
+}

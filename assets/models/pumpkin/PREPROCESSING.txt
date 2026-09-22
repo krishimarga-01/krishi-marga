@@ -1,0 +1,10 @@
+CROP: pumpkin
+INPUT_SHAPE: [1, 3, 224, 224]
+COLOR_FORMAT: RGB
+NORMALIZATION: ImageNet (mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+NUM_CLASSES: 5
+CLASSES: Bacterial Leaf Spot, Downy Mildew, Healthy, Mosaic Disease, Powdery Mildew
+SOURCE_DATASET: tahmidmir/pumpkin-leaf-diseases-dataset-from-bangladesh (Kaggle)
+LICENSE: CC BY 4.0
+ACCURACY: 81.06% on 301 held-out test images
+MODEL_SIZE: 3.52 MB (Optimized FP32, single self-contained ONNX graph)

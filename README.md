@@ -27,10 +27,19 @@ AI-Powered Crop Disease, Pest & Agricultural Intelligence Platform for South Ind
 - **Multi-Image Diagnosis (1–10 Images)**: Farmers can upload up to 10 leaves or disease angles with client-side image compression, sharpness validation, and ensembled consensus diagnosis.
 - **Dual Diagnosis Architecture**:
   - **Online Cloud AI**: Powered by an automated **n8n workflow** orchestrating **Gemini 3.5 Flash Lite** with strict JSON schemas, multi-model failover, and regional treatment advice.
-  - **Offline Edge AI**: Powered by lightweight **ONNX MobileNetV3** models running locally on-device without internet connectivity (8 trained and verified crop models ready on-device).
+  - **Offline Edge AI**: Offline AI inference is available for supported/validated crops using on-device ONNX models without requiring an internet connection.
 - **Comprehensive Agricultural Knowledge**: Curated masters covering diseases, pests, bio-pesticides, chemical controls, fertilizer schedules, and soil health guidelines.
 - **Crop Doctor Directory**: Verified agricultural university scientists, KVK (Krishi Vigyan Kendra) extension officers, and district-level specialists.
 - **6 Vernacular Languages**: Fully localized in English, Kannada (ಕನ್ನಡ), Tamil (தமிழ்), Telugu (తెలుగు), Malayalam (മലയാളം), and Hindi (हिन्दी).
+
+### 📱 Offline AI
+
+Krishi Marga includes an offline-first AI inference layer using ONNX Runtime and locally bundled models. Supported and validated crop models can perform inference directly on the device without requiring an internet connection.
+
+The application maintains a model registry and local inference pipeline for the currently available offline models, while online AI provides broader diagnostic coverage.
+
+- **ONLINE AI** → Broader crop/disease diagnostic coverage orchestrated via cloud AI.
+- **OFFLINE AI** → Currently supported and validated on-device models for instant, zero-connectivity diagnosis.
 
 ---
 
@@ -183,7 +192,7 @@ krishi-marga/
 ---
 
 ### 4. Running Offline ONNX Models
-To run inference directly with Python on any of the 8 included models:
+To run inference directly with Python on supported offline crop models:
 ```bash
 python -c "
 import onnxruntime as ort, numpy as np

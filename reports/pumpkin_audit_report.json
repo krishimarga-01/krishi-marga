@@ -1,0 +1,30 @@
+{
+  "dataset_id": "tahmidmir/pumpkin-leaf-diseases-dataset-from-bangladesh",
+  "license": "CC BY 4.0",
+  "crop": "pumpkin",
+  "raw_images": 2000,
+  "corrupted_images": 0,
+  "duplicate_images": 1,
+  "usable_images": 1999,
+  "disease_classes": 4,
+  "healthy_classes": 1,
+  "classes": [
+    "bacterial_leaf_spot",
+    "downy_mildew",
+    "healthy",
+    "mosaic_disease",
+    "powdery_mildew"
+  ],
+  "splits": {
+    "train": 1399,
+    "val": 299,
+    "test": 301
+  },
+  "per_class_counts": {
+    "bacterial_leaf_spot": 400,
+    "downy_mildew": 400,
+    "healthy": 400,
+    "mosaic_disease": 400,
+    "powdery_mildew": 399
+  }
+}

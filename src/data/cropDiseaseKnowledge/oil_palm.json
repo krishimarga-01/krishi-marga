@@ -1,0 +1,41 @@
+{
+  "crop": "Oil Palm",
+  "crop_id": "oil_palm",
+  "category": "plantation",
+  "diseases": [
+    {
+      "disease_name": "Basal Stem Rot",
+      "scientific_name": "Ganoderma boninense",
+      "symptoms": [
+        "Multiple unopened spear leaves in crown; lower fronds collapse hanging downwards; bracket conks at palm base"
+      ],
+      "severity": "Critical",
+      "management": [
+        "Mound soil around base with Hexaconazole drenching"
+      ],
+      "prevention": [
+        "Clean clearing of diseased oil palm trunks before replanting",
+        "Apply Trichoderma to planting hole"
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Large, deep green fronds/leaves arranged symmetrically in crown/canopy",
+    "Robust trunk/stem free from bleeding patches or fungal conks",
+    "Heavy bunches/berries with uniform maturity and no premature shedding",
+    "Active feeder roots in organic mulch basin"
+  ],
+  "management": [
+    "Clean decaying tissues from infected crowns/trunks and apply protective healing paste",
+    "Drench palm basins with Trichoderma viride culture mixed with neem cake",
+    "Improve basin drainage to lower water table during monsoon peaks"
+  ],
+  "prevention": [
+    "Clean palm crowns/canopies before South-West and North-East monsoon rains",
+    "Apply Bordeaux mixture (1%) spray to bunches and crowns prophylactically",
+    "Grow cover crops (e.g. Mucuna bracteata, Calopogonium) in basins for moisture conservation",
+    "Avoid mechanical injuries to stems and root zones during weeding"
+  ]
+}

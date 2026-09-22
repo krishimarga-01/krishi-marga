@@ -1,0 +1,41 @@
+{
+  "crop": "Okra",
+  "crop_id": "okra",
+  "category": "vegetable",
+  "diseases": [
+    {
+      "disease_name": "Yellow Vein Mosaic Virus (YVMV)",
+      "scientific_name": "Bhendi yellow vein mosaic virus",
+      "symptoms": [
+        "Thickening of veins, yellow vein network against dark green lamina, stunted chlorotic fruits"
+      ],
+      "severity": "Critical",
+      "management": [
+        "Spray Acetamiprid 20% SP @ 0.2 g/L to suppress whitefly vectors"
+      ],
+      "prevention": [
+        "Grow resistant hybrids (Arka Anamika, Parbhani Kranti)",
+        "Remove wild malvaceous weeds"
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Turgid, deep green leaves with crisp texture and no chlorosis",
+    "Vigorous flowering and uniform fruit set free from blemishes or sunken spots",
+    "Clean root crown without fungal damping-off or collar decay",
+    "Absence of curling, puckering, or mosaic leaf mottling"
+  ],
+  "management": [
+    "Prune lower diseased foliage with sanitized secateurs; dispose of off-field",
+    "Apply targeted bio-fungicides (Bacillus subtilis / Trichoderma) or copper-based sprays",
+    "Control sucking insect vectors promptly using yellow sticky traps and botanical sprays"
+  ],
+  "prevention": [
+    "Adopt raised nursery beds with nylon insect netting to prevent early vector transmission",
+    "Mulch beds with silver-black reflective plastic mulch to deter thrips and aphids",
+    "Water using drip irrigation at the base to keep foliage completely dry",
+    "Regularly rogue out and safely destroy virus-infected or blighted plants"
+  ]
+}

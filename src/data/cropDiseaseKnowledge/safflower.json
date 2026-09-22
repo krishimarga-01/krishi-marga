@@ -1,0 +1,40 @@
+{
+  "crop": "Safflower",
+  "crop_id": "safflower",
+  "category": "oilseed",
+  "diseases": [
+    {
+      "disease_name": "Ramularia Leaf Spot",
+      "scientific_name": "Ramularia carthami",
+      "symptoms": [
+        "Small round brown spots with whitish centers on lower leaves, spreading upwards"
+      ],
+      "severity": "Moderate",
+      "management": [
+        "Foliar spray of Mancozeb @ 2.5 g/L"
+      ],
+      "prevention": [
+        "Seed treatment with Trichoderma @ 4 g/kg"
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Thick, deep-green foliage with vigorous vegetative spread",
+    "Uniform capitulum/pod development free from sucking pest damage",
+    "Clean stem base without collar rot or gummy exudates",
+    "Bright yellow flower opening with high honeybee activity"
+  ],
+  "management": [
+    "Remove weed hosts from field margins that harbor sucking pests and viral inoculum",
+    "Spray recommended protective fungicides or bio-agents on appearance of initial leaf spots",
+    "Avoid moisture stress during flowering and pod development phases"
+  ],
+  "prevention": [
+    "Sow treated seeds in well-drained loamy soils during recommended planting window",
+    "Maintain optimum field density and destroy crop residues after harvest",
+    "Apply recommended gypsum and sulfur for healthy seed and oil development",
+    "Monitor regularly for early nymph/larval infestation"
+  ]
+}

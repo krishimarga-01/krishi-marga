@@ -1,0 +1,25 @@
+test_image,model_evaluated,task_type,predicted_class,confidence,latency_ms,independent_execution,memory_load_mb,test_status
+DSC_0006.JPG,pest_classifier.onnx,Pest Detection,Whitefly_Damage,0.2651,2.89,YES,<4.0MB,PASSED
+DSC_0006.JPG,nutrient_classifier.onnx,Nutrient Deficiency Detection,Calcium_Deficiency,0.2125,2.51,YES,<4.0MB,PASSED
+DSC_0007.JPG,pest_classifier.onnx,Pest Detection,Whitefly_Damage,0.2651,3.73,YES,<4.0MB,PASSED
+DSC_0007.JPG,nutrient_classifier.onnx,Nutrient Deficiency Detection,Calcium_Deficiency,0.2125,13.54,YES,<4.0MB,PASSED
+DSC_0042.JPG,pest_classifier.onnx,Pest Detection,Whitefly_Damage,0.2651,2.53,YES,<4.0MB,PASSED
+DSC_0042.JPG,nutrient_classifier.onnx,Nutrient Deficiency Detection,Calcium_Deficiency,0.2125,2.93,YES,<4.0MB,PASSED
+DSC_0043.JPG,pest_classifier.onnx,Pest Detection,Whitefly_Damage,0.2651,2.05,YES,<4.0MB,PASSED
+DSC_0043.JPG,nutrient_classifier.onnx,Nutrient Deficiency Detection,Calcium_Deficiency,0.2125,1.71,YES,<4.0MB,PASSED
+DSC_0044.JPG,pest_classifier.onnx,Pest Detection,Whitefly_Damage,0.2651,2.40,YES,<4.0MB,PASSED
+DSC_0044.JPG,nutrient_classifier.onnx,Nutrient Deficiency Detection,Calcium_Deficiency,0.2125,2.24,YES,<4.0MB,PASSED
+DSC_0045.JPG,pest_classifier.onnx,Pest Detection,Whitefly_Damage,0.2651,2.91,YES,<4.0MB,PASSED
+DSC_0045.JPG,nutrient_classifier.onnx,Nutrient Deficiency Detection,Calcium_Deficiency,0.2125,8.77,YES,<4.0MB,PASSED
+DSC_0046.JPG,pest_classifier.onnx,Pest Detection,Whitefly_Damage,0.2651,1.89,YES,<4.0MB,PASSED
+DSC_0046.JPG,nutrient_classifier.onnx,Nutrient Deficiency Detection,Calcium_Deficiency,0.2125,2.02,YES,<4.0MB,PASSED
+DSC_0047.JPG,pest_classifier.onnx,Pest Detection,Whitefly_Damage,0.2651,1.88,YES,<4.0MB,PASSED
+DSC_0047.JPG,nutrient_classifier.onnx,Nutrient Deficiency Detection,Calcium_Deficiency,0.2125,2.52,YES,<4.0MB,PASSED
+DSC_0048.JPG,pest_classifier.onnx,Pest Detection,Whitefly_Damage,0.2651,2.02,YES,<4.0MB,PASSED
+DSC_0048.JPG,nutrient_classifier.onnx,Nutrient Deficiency Detection,Calcium_Deficiency,0.2125,1.65,YES,<4.0MB,PASSED
+DSC_0049.JPG,pest_classifier.onnx,Pest Detection,Whitefly_Damage,0.2651,2.22,YES,<4.0MB,PASSED
+DSC_0049.JPG,nutrient_classifier.onnx,Nutrient Deficiency Detection,Calcium_Deficiency,0.2125,6.31,YES,<4.0MB,PASSED
+DSC_0050.JPG,pest_classifier.onnx,Pest Detection,Whitefly_Damage,0.2651,1.85,YES,<4.0MB,PASSED
+DSC_0050.JPG,nutrient_classifier.onnx,Nutrient Deficiency Detection,Calcium_Deficiency,0.2125,2.13,YES,<4.0MB,PASSED
+DSC_0053.JPG,pest_classifier.onnx,Pest Detection,Whitefly_Damage,0.2651,1.99,YES,<4.0MB,PASSED
+DSC_0053.JPG,nutrient_classifier.onnx,Nutrient Deficiency Detection,Calcium_Deficiency,0.2125,2.60,YES,<4.0MB,PASSED

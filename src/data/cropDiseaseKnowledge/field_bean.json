@@ -1,0 +1,41 @@
+{
+  "crop": "Field Bean",
+  "crop_id": "field_bean",
+  "category": "pulse",
+  "diseases": [
+    {
+      "disease_name": "Yellow Mosaic",
+      "scientific_name": "Dolichos yellow mosaic virus",
+      "symptoms": [
+        "Faint yellow chlorotic specks coalescing into bright yellow mosaic patches on leaves"
+      ],
+      "severity": "Severe",
+      "management": [
+        "Control whiteflies using yellow sticky traps and systemic insecticide"
+      ],
+      "prevention": [
+        "Remove weed hosts around fields",
+        "Use clean certified seeds"
+      ]
+    }
+  ],
+  "pests": [],
+  "nutrient_deficiencies": [],
+  "healthy_signs": [
+    "Dark green trifoliate leaves with robust branching",
+    "Abundant pink active Rhizobium root nodules upon sectioning",
+    "Profuse flowering and well-set pods without necrosis or pod-borer entry holes",
+    "Erect stem with no vascular wilting"
+  ],
+  "management": [
+    "Remove and safely destroy severely infected plants to prevent field-wide spread",
+    "Spray neem oil (3000 ppm @ 3ml/L) or approved target-specific bio-pesticides",
+    "Ensure proper soil aeration through light intercultivation"
+  ],
+  "prevention": [
+    "Treat seeds with Rhizobium culture and Trichoderma viride prior to sowing",
+    "Avoid water stagnation through raised-bed planting or broad-bed furrow system",
+    "Practice 2-3 year crop rotation with cereals like sorghum or maize",
+    "Install yellow sticky traps and pheromone traps early in the season"
+  ]
+}

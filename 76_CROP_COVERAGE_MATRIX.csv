@@ -35,7 +35,7 @@ tapioca,Tapioca,vegetable,YES,NO_VERIFIED_DATA,NO,YES (Gemini Flash Lite + n8n),
 sweet_potato,Sweet Potato,vegetable,YES,INSUFFICIENT_DATA,NO,YES (Gemini Flash Lite + n8n),NO (Dataset Required)
 drumstick,Drumstick,vegetable,YES,NO_VERIFIED_DATA,NO,YES (Gemini Flash Lite + n8n),NO (Dataset Required)
 cucumber,Cucumber,vegetable,YES,READY_FOR_TRAINING,NO,YES (Gemini Flash Lite + n8n),NO (Dataset Required)
-pumpkin,Pumpkin,vegetable,YES,INSUFFICIENT_DATA,NO,YES (Gemini Flash Lite + n8n),NO (Dataset Required)
+pumpkin,Pumpkin,vegetable,YES,TRAINED_AND_EXPORTED,YES,YES (Gemini Flash Lite + n8n),YES (ONNX Runtime)
 bitter_gourd,Bitter Gourd,vegetable,YES,NEEDS_MORE_DATA,NO,YES (Gemini Flash Lite + n8n),NO (Dataset Required)
 bottle_gourd,Bottle Gourd,vegetable,YES,INSUFFICIENT_DATA,NO,YES (Gemini Flash Lite + n8n),NO (Dataset Required)
 ridge_gourd,Ridge Gourd,vegetable,YES,INSUFFICIENT_DATA,NO,YES (Gemini Flash Lite + n8n),NO (Dataset Required)
