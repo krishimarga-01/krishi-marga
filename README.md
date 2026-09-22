@@ -324,7 +324,7 @@ The following modules are planned or under active iterative development:
 
 - **Team Name**: `P_Hackaathon Hashiras`
 - **Team ID**: `143514`
-- **Team Members**: `[ADD ACTUAL TEAM MEMBERS]`
+- **Team Members**: `Prathick raj P, Kushal N, Preetham, Sangeetha, Vineeth, Adhisheshan`
 
 ---
 
