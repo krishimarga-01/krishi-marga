@@ -322,8 +322,8 @@ The following modules are planned or under active iterative development:
 
 ## Team
 
-- **Team Name**: `[TEAM NAME EXACTLY AS IN AUTHORIZATION LETTER]`
-- **Team ID**: `[TEAM ID]`
+- **Team Name**: `P_Hackaathon Hashiras`
+- **Team ID**: `143514`
 - **Team Members**: `[ADD ACTUAL TEAM MEMBERS]`
 
 ---
