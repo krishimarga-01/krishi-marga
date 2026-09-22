@@ -1,7 +1,14 @@
 # 🏆 Smart India Hackathon 2026
 
-## Team: P_Hackaathon Hashiras
-### Team ID: 143514
+- **Team Name**: `P_Hackaathon Hashiras`
+- **Team ID**: `143514`
+- **Team Members**:
+  - **LEADER** — Prathick Raj P
+  - **TEAM_MEMBER** — Kushal. N
+  - **TEAM_MEMBER** — Preetham
+  - **TEAM_MEMBER** — Sangeetha
+  - **TEAM_MEMBER** — Vineeth
+  - **TEAM_MEMBER** — Adhisheshan
 
 ---
 
