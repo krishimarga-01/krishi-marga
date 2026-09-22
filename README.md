@@ -1,7 +1,13 @@
-# Krishi Marga (ಕೃಷಿ ಮಾರ್ಗ / உழவர் வழி / కృషి మార్గం)
+# 🏆 Smart India Hackathon 2026
 
-> **Farmer-Facing Crop Health & Disease Diagnosis Assistance Platform for South India**  
-> *Smart India Hackathon (SIH) Project*
+## Team: P_Hackaathon Hashiras
+### Team ID: 143514
+
+---
+
+# 🌾 Krishi Marga
+
+AI-Powered Crop Disease, Pest & Agricultural Intelligence Platform for South Indian Farmers
 
 ---
 
