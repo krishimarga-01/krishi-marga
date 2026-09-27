@@ -20,6 +20,8 @@ data/raw/
 data/processed/
 data/intermediate/
 dataset_research/KRISHI_MARGA_DATASETS/
+dataset_research/nutrient_datasets/
+training_output/
 
 # Test / Scratch artifacts
 test_leaf*.jpg

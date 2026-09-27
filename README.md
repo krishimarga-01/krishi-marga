@@ -36,10 +36,11 @@ AI-Powered Crop Disease, Pest & Agricultural Intelligence Platform for South Ind
 
 Krishi Marga includes an offline-first AI inference layer using ONNX Runtime and locally bundled models. Supported and validated crop models can perform inference directly on the device without requiring an internet connection.
 
-The application maintains a model registry and local inference pipeline for the currently available offline models, while online AI provides broader diagnostic coverage.
+The application maintains an on-device model registry and a local preprocessing and inference pipeline for the currently available offline models, including offline disease, pest, and nutrient intelligence where implemented, while online AI provides broader diagnostic coverage across the complete agricultural catalogue.
 
-- **ONLINE AI** → Broader crop/disease diagnostic coverage orchestrated via cloud AI.
-- **OFFLINE AI** → Currently supported and validated on-device models for instant, zero-connectivity diagnosis.
+Clearly distinguish:
+- **ONLINE AI** → Broader crop/disease coverage orchestrated via cloud AI and multimodal LLMs.
+- **OFFLINE AI** → Currently supported and validated on-device models using ONNX Runtime.
 
 ---
 
@@ -57,7 +58,7 @@ The application maintains a model registry and local inference pipeline for the 
         (/webhook/detect-disease)                 (onnxEngine.ts)
                  │                                         │
                  ▼                                         ▼
-      Gemini 3.5 Flash Lite                   8x MobileNetV3 ONNX Models
+      Gemini 3.5 Flash Lite                   On-Device ONNX Models    
       (Structured JSON Schema)                (Sub-10ms CPU latency)
                  │                                         │
                  └────────────────────┬────────────────────┘
