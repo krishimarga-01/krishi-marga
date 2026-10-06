@@ -5,7 +5,7 @@ import Constants from 'expo-constants';
  * ------------------------------------------------------------------
  * PRODUCTION ARCHITECTURE:
  *
- *   Phone  ->  HTTPS production endpoint  ->  Cloud n8n  ->  Gemini  ->  Response
+ *   Phone  ->  HTTPS production endpoint  ->  FastAPI Backend  ->  Gemini / ONNX  ->  Response
  *
  * The production build NEVER depends on:
  *   - LAN IP addresses (192.168.x.x / 10.x.x.x)
@@ -44,7 +44,7 @@ function trimTrailingSlash(url: string): string {
  */
 function deriveWebhookBase(raw: string): string {
   const url = trimTrailingSlash(raw.trim());
-  // Legacy full URL that already points at a specific webhook path.
+  // Full URL that already points at a specific webhook path.
   const legacyMatch = url.match(/^(.*)\/(detect-disease|scan-pesticide)$/);
   if (legacyMatch) return legacyMatch[1];
   if (/\/webhook(-test)?$/.test(url)) return url;
@@ -53,16 +53,16 @@ function deriveWebhookBase(raw: string): string {
 
 const WEBHOOK_PATHS: Record<BackendEndpoint, string> = {
   diagnosis: 'detect-disease',
-  pesticide: 'detect-disease',
+  pesticide: 'scan-pesticide',
 };
 
 /**
  * Network/timeout budget.
  *
- * The server may run a sequential 3-model Gemini failover. The client budget is
- * deliberately larger than the realistic server worst case, but still bounded so
- * the UI can never hang forever. These are NOT "very large timeouts": they are
- * matched to the documented server budget (see n8n/README_N8N.md).
+ * The server may run a sequential 3-model Gemini failover with local ONNX backup.
+ * The client budget is deliberately larger than the realistic server worst case,
+ * but still bounded so the UI can never hang forever. These are NOT "very large timeouts":
+ * they are matched to the documented server budget.
  */
 export const NetworkBudget = {
   /** Whole-request ceiling for a disease diagnosis upload + inference. */

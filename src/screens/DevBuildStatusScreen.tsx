@@ -75,7 +75,7 @@ export const DevBuildStatusScreen = ({ navigation }: any) => {
       clearTimeout(timeoutId);
       const dur = Date.now() - t0;
       setServerLatency(dur);
-      if (resp.status === 200 || resp.status === 400) {
+      if (resp.status === 200 || resp.status === 400 || resp.status === 422) {
         setOnlineStatus('online');
       } else {
         setOnlineStatus('offline');
@@ -163,7 +163,7 @@ export const DevBuildStatusScreen = ({ navigation }: any) => {
           <Text style={styles.sectionHeader}>🧠 AI & DIAGNOSIS ENGINE</Text>
           
           <View style={styles.row}>
-            <Text style={styles.label}>Online Server (n8n Webhook):</Text>
+            <Text style={styles.label}>Online Server (FastAPI):</Text>
             {onlineStatus === 'checking' ? (
               <ActivityIndicator size="small" color={Colors.primary} />
             ) : (

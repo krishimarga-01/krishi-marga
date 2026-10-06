@@ -58,7 +58,7 @@
       "expo-video"
     ],
     "extra": {
-      "backendUrl": "https://krishimarga01.app.n8n.cloud/webhook/detect-disease"
+      "backendUrl": "https://api.krishimarga.org/webhook/detect-disease"
     }
   }
 }

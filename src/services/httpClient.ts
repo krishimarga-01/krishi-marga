@@ -3,7 +3,7 @@ import { NetworkBudget } from './config';
 /**
  * KRISHI MARGA — SHARED UPLOAD CLIENT
  * ------------------------------------------------------------------
- * A single place where every image upload to the n8n backend is performed, so
+ * A single place where every image upload to the FastAPI backend is performed, so
  * that timeout handling, cancellation, duplicate suppression and bounded retry
  * behave identically for the disease scanner and the pesticide scanner.
  *
